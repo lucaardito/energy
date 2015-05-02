@@ -773,7 +773,7 @@ int main(int argc, char* argv[]) {
   fseek(f, 0, SEEK_SET);
   size_t read = fread(buf, 1, size, f);
   fclose(f);
-
+/*
   for(int i=0;i<20;i++){
 
     std::cout<<"Pausing for 5 sec..";
@@ -784,14 +784,14 @@ int main(int argc, char* argv[]) {
     std::cout<<"DONE\n";
 
     clock_t start=clock();
-
+    */
 		if (argv[2] == NULL)
 			strcpy(out_filename, "out.bmp");
 		else
 			strcpy(out_filename, argv[2]);
 
 		Jpeg::Decoder decoder(buf, size);
-    for(int j=0;j<5;j++){
+    //for(int j=0;j<5;j++){
 
       if (decoder.GetResult() != Jpeg::Decoder::OK)
       {
@@ -799,16 +799,16 @@ int main(int argc, char* argv[]) {
         return 1;
       }
 
-    }
+    //}
 
     WriteBMP24(out_filename, decoder.GetWidth(), decoder.GetHeight(), decoder.GetImage());
-    std::cout<<"Time:"<<((clock()-start)/(1.0*CLOCKS_PER_SEC))<<"s"<<std::endl;
+    /*std::cout<<"Time:"<<((clock()-start)/(1.0*CLOCKS_PER_SEC))<<"s"<<std::endl;
 
     std::cout<<"Sleep for 5  sec..";
     sleep(5);
     std::cout<<"DONE\n";
-
-  }
+    */
+  //}
 
     //f = fopen((argc > 2) ? argv[2] : (decoder.IsColor() ? "jpeg_out.ppm" : "jpeg_out.pgm"), "wb");
 //    if (!f) {
