@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #Checking the presence of input parameter (at least)
-if [ $# -lt 2 ]
+if [ $# -lt 1 ]
   then
-  echo "Usage: jpegencoder.sh <compression> <input.jpeg> [<output.bmp>]"
+  echo "Usage: jpegencoder.sh <input.jpeg> [<output.bmp>]"
   exit
 fi
 
@@ -15,7 +15,13 @@ if [ ! -f $1 ]
 fi
 
 #Recording cpu-clock and page-faults for the decoding operation
-perf record -e cpu-clock,faults -o ../data/jpgencoder.data ../bin/jpgencoder $1 $2
+# for 3 different level of compression: 20, 40 and 80
+comp=20
+for (( i=0 ; i<3; i++))
+do
+  perf record -e cpu-clock,faults -o ../data/jpgencoder$comp.data ../bin/jpgencoder $comp $2
+  comp=$comp * 2
+done
 
 #Looping on decoding to collect more samples.
 #It seems that --append option is not working
