@@ -19,8 +19,10 @@ fi
 comp=20
 for (( i=0 ; i<3; i++))
 do
-  perf record -e cpu-clock,faults -o ../data/jpgencoder$comp.data ../bin/jpgencoder $comp $2
-  comp=$comp * 2
+  perf record -e cpu-clock,faults -g -o ../data/jpgencoder$comp.data ../bin/jpgencoder $comp $1
+  perf script -i ../data/jpgencoder$comp.data | ./stackcollapse-perf.pl > ../data/encoder${comp}_stacks-folded
+  ./flamegraph.pl ../data/encoder${comp}_stacks-folded > ../data/jpegencoder$comp.svg
+  comp=$(($comp * 2))
 done
 
 #Looping on decoding to collect more samples.
