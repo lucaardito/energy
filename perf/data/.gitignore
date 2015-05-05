@@ -1,3 +1,5 @@
 *
 **
 !.gitignore
+!*.svg
+!*.stacks-folded

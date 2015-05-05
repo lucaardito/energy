@@ -1,23 +1,31 @@
-*Download a snapshot
+I have encountered problems in building the lttng modules with the raspberrypi2_defconfig. The packaged lttng-module version is compatible with Linux 2.6.38 to 3.16, but the defconfig uses 3.18 Linux kernel.
+
+#Instructions
+* Download a snapshot
+```bash
 wget http://buildroot.uclibc.org/downloads/snapshots/buildroot-20150505.tar.bz2
+```
 The daily snapshot is http://buildroot.uclibc.org/downloads/snapshots/buildroot-snapshot.tar.bz2
 
-*Extract
+* Extract
+```bash
 tar -xvf buildroot-20150505.tar.bz2
-
-*Import default configuration
+```
+* Import default configuration
+```bash
 cd buildroot
-make defconfig BR2_DEFCONFIG=configs/raspberrypi2_defconfig
-
-*Tweak parameters
+make raspberrypi2_defconfig
+```
+* Tweak parameters
+```bash
 make nconfig
+```
+* Add lttng (http://lttng.org/docs/#doc-buildroot)
 
-*Add lttng
-http://lttng.org/docs/#doc-buildroot
+* Compile the system
+```bash
+make
+```
+* Buildroot output is stored in a single directory (output/)
 
-*Compile the system
-make BR2_JLEVEL=4
-
-*Buildroot output is stored in a single directory, output/
-
-*https://github.com/gamaral/rpi-buildroot
+* https://github.com/gamaral/rpi-buildroot

@@ -16,8 +16,8 @@ fi
 
 #Recording cpu-clock and page-faults for the decoding operation
 perf record -e cpu-clock,faults -g -o ../data/jpgdecoder.data ../bin/jpgdecoder $1
-perf script -i ../data/jpgdecoder.data | ./stackcollapse-perf.pl > ../data/decoder_stacks-folded
-./flamegraph.pl ../data/decoder_stacks-folded > ../data/jpegdecoder.svg
+perf script -i ../data/jpgdecoder.data | ./stackcollapse-perf.pl > ../data/decoder.stacks-folded
+./flamegraph.pl ../data/decoder.stacks-folded > ../data/jpegdecoder.svg
 
 #Looping on decoding to collect more samples.
 #It seems that --append option is not working
