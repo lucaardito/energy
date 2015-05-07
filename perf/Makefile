@@ -2,7 +2,7 @@ CC=g++
 RM=rm -f
 BIN=./bin
 SRC=./src
-FLAGS=-ggdb
+FLAGS=-g
 
 all: jpgencoder jpgdecoder
 
