@@ -1,0 +1,128 @@
+# ========
+# captured on: Fri May  8 16:34:33 2015
+# hostname : Crucyal
+# os release : 3.13.0-52-generic
+# perf version : 3.13.11-ckt18
+# arch : x86_64
+# nrcpus online : 4
+# nrcpus avail : 4
+# cpudesc : Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz
+# cpuid : GenuineIntel,6,58,9
+# total memory : 8092504 kB
+# cmdline : /usr/lib/linux-tools-3.13.0-52/perf record -e cpu-clock:u -g -o ./data/home/jpgencoder40.data ./bin/jpgencoder 40 input/img.bmp ./output/out.jpg 
+# event : name = cpu-clock:u, type = 1, config = 0x0, config1 = 0x0, config2 = 0x0, excl_usr = 0, excl_kern = 1, excl_host = 0, excl_guest = 0, precise_ip = 0, attr_mmap2 = 0, attr_mmap  = 1, attr_mmap_data = 0
+# sibling cores   : 0-3
+# sibling threads : 0
+# sibling threads : 1
+# sibling threads : 2
+# sibling threads : 3
+# node0 meminfo  : total = 8092504 kB, free = 2825312 kB
+# node0 cpu list : 0-3
+# pmu mappings: cpu = 4, software = 1, tracepoint = 2, uncore_cbox_0 = 6, uncore_cbox_1 = 7, uncore_cbox_2 = 8, uncore_cbox_3 = 9, breakpoint = 5
+# ========
+#
+# Samples: 615  of event 'cpu-clock:u'
+# Event count (approx.): 153750000
+#
+# Overhead       Samples     Command  Shared Object                                                                Symbol
+# ........  ............  ..........  .............  ....................................................................
+#
+    42.93%           264  jpgencoder  jpgencoder     [.] fdct_and_quantization(signed char*, float*, short*)             
+            |
+            --- fdct_and_quantization(signed char*, float*, short*)
+                process_DU(signed char*, float*, short*, bitstring*, bitstring*)
+                main_encoder()
+                SaveJpgFile(char*, char*)
+                main
+                __libc_start_main
+
+    22.28%           137  jpgencoder  jpgencoder     [.] process_DU(signed char*, float*, short*, bitstring*, bitstring*)
+            |
+            --- process_DU(signed char*, float*, short*, bitstring*, bitstring*)
+                main_encoder()
+                SaveJpgFile(char*, char*)
+                main
+                __libc_start_main
+
+    17.89%           110  jpgencoder  jpgencoder     [.] writebits(bitstring)                                            
+            |
+            --- writebits(bitstring)
+               |          
+               |--99.09%-- process_DU(signed char*, float*, short*, bitstring*, bitstring*)
+               |          main_encoder()
+               |          SaveJpgFile(char*, char*)
+               |          main
+               |          __libc_start_main
+               |          
+                --0.91%-- main_encoder()
+                          SaveJpgFile(char*, char*)
+                          main
+                          __libc_start_main
+
+    13.17%            81  jpgencoder  jpgencoder     [.] load_data_units_from_RGB_buffer(unsigned short, unsigned short) 
+            |
+            --- load_data_units_from_RGB_buffer(unsigned short, unsigned short)
+                main_encoder()
+                SaveJpgFile(char*, char*)
+                main
+                __libc_start_main
+
+     2.44%            15  jpgencoder  libc-2.19.so   [.] fputc                                                           
+            |
+            --- fputc
+                process_DU(signed char*, float*, short*, bitstring*, bitstring*)
+                main_encoder()
+                SaveJpgFile(char*, char*)
+                main
+                __libc_start_main
+
+     0.33%             2  jpgencoder  libc-2.19.so   [.] __memcpy_sse2_unaligned                                         
+            |
+            --- __memcpy_sse2_unaligned
+                SaveJpgFile(char*, char*)
+                main
+                __libc_start_main
+
+     0.16%             1  jpgencoder  libc-2.19.so   [.] __GI___mempcpy                                                  
+            |
+            --- __GI___mempcpy
+
+     0.16%             1  jpgencoder  libc-2.19.so   [.] __memcpy_sse2                                                   
+            |
+            --- __memcpy_sse2
+
+     0.16%             1  jpgencoder  ld-2.19.so     [.] _dl_lookup_symbol_x                                             
+            |
+            --- _dl_lookup_symbol_x
+                _dl_relocate_object
+                dl_main
+                _dl_sysdep_start
+
+     0.16%             1  jpgencoder  ld-2.19.so     [.] match_symbol                                                    
+            |
+            --- match_symbol
+                _dl_check_map_versions
+                _dl_check_all_versions
+
+     0.16%             1  jpgencoder  jpgencoder     [.] fputc@plt                                                       
+            |
+            --- fputc@plt
+                process_DU(signed char*, float*, short*, bitstring*, bitstring*)
+                main_encoder()
+                SaveJpgFile(char*, char*)
+                main
+                __libc_start_main
+
+     0.16%             1  jpgencoder  jpgencoder     [.] set_numbers_category_and_bitcode()                              
+            |
+            --- set_numbers_category_and_bitcode()
+                init_all()
+                SaveJpgFile(char*, char*)
+                main
+                __libc_start_main
+
+
+
+#
+# (For a higher level overview, try: perf report --sort comm,dso)
+#

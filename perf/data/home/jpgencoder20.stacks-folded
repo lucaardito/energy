@@ -1,0 +1,13 @@
+jpgencoder;[unknown];[unknown];__run_exit_handlers;_dl_fini 1
+jpgencoder;[unknown];[unknown];_init 1
+jpgencoder;__libc_start_main;main;SaveJpgFile;__memcpy_sse2_unaligned 2
+jpgencoder;__libc_start_main;main;SaveJpgFile;init_all;prepare_quant_tables 1
+jpgencoder;__libc_start_main;main;SaveJpgFile;init_all;set_DQTinfo;set_quant_table 1
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;load_data_units_from_RGB_buffer 78
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU 157
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU;fdct_and_quantization 249
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU;fputc 17
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU;writebits 132
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;writebits 6
+jpgencoder;__libc_start_main;main;SaveJpgFile;process_DU 1
+jpgencoder;__memcpy_sse2 2

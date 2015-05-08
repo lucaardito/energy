@@ -20,7 +20,9 @@ make raspberrypi2_defconfig
 ```bash
 make nconfig
 ```
-* Add lttng (http://lttng.org/docs/#doc-buildroot)
+* Add some default utilities (better to provide the entire image)
+
+* (Add lttng (http://lttng.org/docs/#doc-buildroot))
 
 * Compile the system
 ```bash

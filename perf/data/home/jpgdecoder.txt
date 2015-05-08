@@ -1,0 +1,298 @@
+# ========
+# captured on: Fri May  8 16:34:33 2015
+# hostname : Crucyal
+# os release : 3.13.0-52-generic
+# perf version : 3.13.11-ckt18
+# arch : x86_64
+# nrcpus online : 4
+# nrcpus avail : 4
+# cpudesc : Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz
+# cpuid : GenuineIntel,6,58,9
+# total memory : 8092504 kB
+# cmdline : /usr/lib/linux-tools-3.13.0-52/perf record -e cpu-clock:u -g -o ./data/home/jpgdecoder.data ./bin/jpgdecoder input/img.jpg ./output/out.bmp 
+# event : name = cpu-clock:u, type = 1, config = 0x0, config1 = 0x0, config2 = 0x0, excl_usr = 0, excl_kern = 1, excl_host = 0, excl_guest = 0, precise_ip = 0, attr_mmap2 = 0, attr_mmap  = 1, attr_mmap_data = 0
+# sibling cores   : 0-3
+# sibling threads : 0
+# sibling threads : 1
+# sibling threads : 2
+# sibling threads : 3
+# node0 meminfo  : total = 8092504 kB, free = 2825148 kB
+# node0 cpu list : 0-3
+# pmu mappings: cpu = 4, software = 1, tracepoint = 2, uncore_cbox_0 = 6, uncore_cbox_1 = 7, uncore_cbox_2 = 8, uncore_cbox_3 = 9, breakpoint = 5
+# ========
+#
+# Samples: 698  of event 'cpu-clock:u'
+# Event count (approx.): 174500000
+#
+# Overhead       Samples     Command  Shared Object                                                                      Symbol
+# ........  ............  ..........  .............  ..........................................................................
+#
+    17.05%           119  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_UpsampleV(Jpeg::Decoder::Component*)                  
+            |
+            --- Jpeg::Decoder::_UpsampleV(Jpeg::Decoder::Component*)
+                Jpeg::Decoder::_Convert()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+    12.61%            88  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_Clip(int)                                             
+            |
+            --- Jpeg::Decoder::_Clip(int)
+               |          
+               |--39.77%-- Jpeg::Decoder::CF(int)
+               |          |          
+               |          |--51.43%-- Jpeg::Decoder::_UpsampleV(Jpeg::Decoder::Component*)
+               |          |          Jpeg::Decoder::_Convert()
+               |          |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          |          main
+               |          |          __libc_start_main
+               |          |          
+               |           --48.57%-- Jpeg::Decoder::_UpsampleH(Jpeg::Decoder::Component*)
+               |                     Jpeg::Decoder::_Convert()
+               |                     Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |                     Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |                     main
+               |                     __libc_start_main
+               |          
+               |--29.55%-- Jpeg::Decoder::_Convert()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+               |--15.91%-- Jpeg::Decoder::_ColIDCT(int const*, unsigned char*, int)
+               |          Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeScan()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+               |--5.68%-- Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+               |--5.68%-- Jpeg::Decoder::_UpsampleV(Jpeg::Decoder::Component*)
+               |          Jpeg::Decoder::_Convert()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+                --3.41%-- Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+                          Jpeg::Decoder::_DecodeScan()
+                          Jpeg::Decoder::_Decode(unsigned char const*, int)
+                          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                          main
+                          __libc_start_main
+
+     9.17%            64  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_Convert()                                             
+            |
+            --- Jpeg::Decoder::_Convert()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     8.31%            58  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::CF(int)                                                
+            |
+            --- Jpeg::Decoder::CF(int)
+               |          
+               |--55.17%-- Jpeg::Decoder::_UpsampleV(Jpeg::Decoder::Component*)
+               |          Jpeg::Decoder::_Convert()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+               |--37.93%-- Jpeg::Decoder::_UpsampleH(Jpeg::Decoder::Component*)
+               |          Jpeg::Decoder::_Convert()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+                --6.90%-- Jpeg::Decoder::_Convert()
+                          Jpeg::Decoder::_Decode(unsigned char const*, int)
+                          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                          main
+                          __libc_start_main
+
+     7.88%            55  jpgdecoder  jpgdecoder     [.] WriteBMP24(char const*, int, int, unsigned char*)                     
+            |
+            --- WriteBMP24(char const*, int, int, unsigned char*)
+                main
+                __libc_start_main
+
+     7.74%            54  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_ColIDCT(int const*, unsigned char*, int)              
+            |
+            --- Jpeg::Decoder::_ColIDCT(int const*, unsigned char*, int)
+                Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+                Jpeg::Decoder::_DecodeScan()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     6.02%            42  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_GetVLC(Jpeg::Decoder::VlcCode*, unsigned char*)       
+            |
+            --- Jpeg::Decoder::_GetVLC(Jpeg::Decoder::VlcCode*, unsigned char*)
+               |          
+               |--97.62%-- Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeScan()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+                --2.38%-- Jpeg::Decoder::_DecodeScan()
+                          Jpeg::Decoder::_Decode(unsigned char const*, int)
+                          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                          main
+                          __libc_start_main
+
+     5.87%            41  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_UpsampleH(Jpeg::Decoder::Component*)                  
+            |
+            --- Jpeg::Decoder::_UpsampleH(Jpeg::Decoder::Component*)
+                Jpeg::Decoder::_Convert()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     4.58%            32  jpgdecoder  libc-2.19.so   [.] _IO_file_xsputn@@GLIBC_2.2.5                                          
+            |
+            --- _IO_file_xsputn@@GLIBC_2.2.5
+               |          
+               |--53.12%-- 0x2ba13c6c3000
+                --46.88%-- [...]
+
+     4.44%            31  jpgdecoder  libc-2.19.so   [.] _IO_fwrite                                                            
+            |
+            --- _IO_fwrite
+               |          
+               |--12.90%-- main
+               |          __libc_start_main
+                --87.10%-- [...]
+
+     3.87%            27  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+            |
+            --- Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+                Jpeg::Decoder::_DecodeScan()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     3.30%            23  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_RowIDCT(int*)                                         
+            |
+            --- Jpeg::Decoder::_RowIDCT(int*)
+                Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+                Jpeg::Decoder::_DecodeScan()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     3.15%            22  jpgdecoder  libc-2.19.so   [.] __GI___mempcpy                                                        
+            |
+            --- __GI___mempcpy
+                0x2ba13c6c3000
+
+     3.15%            22  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_ShowBits(int)                                         
+            |
+            --- Jpeg::Decoder::_ShowBits(int)
+               |          
+               |--54.55%-- Jpeg::Decoder::_GetVLC(Jpeg::Decoder::VlcCode*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeScan()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+               |--40.91%-- Jpeg::Decoder::_GetBits(int)
+               |          Jpeg::Decoder::_GetVLC(Jpeg::Decoder::VlcCode*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeScan()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+                --4.55%-- Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+                          Jpeg::Decoder::_DecodeScan()
+                          Jpeg::Decoder::_Decode(unsigned char const*, int)
+                          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                          main
+                          __libc_start_main
+
+     0.86%             6  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_SkipBits(int)                                         
+            |
+            --- Jpeg::Decoder::_SkipBits(int)
+               |          
+               |--50.00%-- Jpeg::Decoder::_GetVLC(Jpeg::Decoder::VlcCode*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+               |          Jpeg::Decoder::_DecodeScan()
+               |          Jpeg::Decoder::_Decode(unsigned char const*, int)
+               |          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+               |          main
+               |          __libc_start_main
+               |          
+                --50.00%-- Jpeg::Decoder::_GetBits(int)
+                          Jpeg::Decoder::_GetVLC(Jpeg::Decoder::VlcCode*, unsigned char*)
+                          Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+                          Jpeg::Decoder::_DecodeScan()
+                          Jpeg::Decoder::_Decode(unsigned char const*, int)
+                          Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                          main
+                          __libc_start_main
+
+     0.57%             4  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_GetBits(int)                                          
+            |
+            --- Jpeg::Decoder::_GetBits(int)
+                Jpeg::Decoder::_GetVLC(Jpeg::Decoder::VlcCode*, unsigned char*)
+                Jpeg::Decoder::_DecodeBlock(Jpeg::Decoder::Component*, unsigned char*)
+                Jpeg::Decoder::_DecodeScan()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     0.57%             4  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_DecodeScan()                                          
+            |
+            --- Jpeg::Decoder::_DecodeScan()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     0.43%             3  jpgdecoder  jpgdecoder     [.] Jpeg::Decoder::_DecodeDHT()                                           
+            |
+            --- Jpeg::Decoder::_DecodeDHT()
+                Jpeg::Decoder::_Decode(unsigned char const*, int)
+                Jpeg::Decoder::Decoder(unsigned char const*, unsigned long, void* (*)(unsigned long), void (*)(void*))
+                main
+                __libc_start_main
+
+     0.29%             2  jpgdecoder  jpgdecoder     [.] fwrite@plt                                                            
+            |
+            --- fwrite@plt
+                main
+                __libc_start_main
+
+     0.14%             1  jpgdecoder  ld-2.19.so     [.] _dl_lookup_symbol_x                                                   
+            |
+            --- _dl_lookup_symbol_x
+                _dl_relocate_object
+                dl_main
+                _dl_sysdep_start
+
+
+
+#
+# (For a higher level overview, try: perf report --sort comm,dso)
+#

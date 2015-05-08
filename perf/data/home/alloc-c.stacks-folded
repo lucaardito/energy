@@ -1,0 +1,13 @@
+c-alloc;[unknown];[unknown];__default_morecore 121
+c-alloc;[unknown];[unknown];__sbrk 117
+c-alloc;[unknown];[unknown];systrim.isra.1 172
+c-alloc;__libc_start_main;_int_free 52
+c-alloc;__libc_start_main;free 81
+c-alloc;__libc_start_main;main 306
+c-alloc;__libc_start_main;malloc 16
+c-alloc;__libc_start_main;malloc@plt 11
+c-alloc;__sbrk 80
+c-alloc;_int_free 375
+c-alloc;_int_malloc 431
+c-alloc;malloc 257
+c-alloc;systrim.isra.1 50

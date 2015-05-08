@@ -1,0 +1,89 @@
+# ========
+# captured on: Fri May  8 16:34:32 2015
+# hostname : Crucyal
+# os release : 3.13.0-52-generic
+# perf version : 3.13.11-ckt18
+# arch : x86_64
+# nrcpus online : 4
+# nrcpus avail : 4
+# cpudesc : Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz
+# cpuid : GenuineIntel,6,58,9
+# total memory : 8092504 kB
+# cmdline : /usr/lib/linux-tools-3.13.0-52/perf record -e cpu-clock:u -g -o ./data/home/alloc-c.data ./bin/c-alloc 
+# event : name = cpu-clock:u, type = 1, config = 0x0, config1 = 0x0, config2 = 0x0, excl_usr = 0, excl_kern = 1, excl_host = 0, excl_guest = 0, precise_ip = 0, attr_mmap2 = 0, attr_mmap  = 1, attr_mmap_data = 0
+# sibling cores   : 0-3
+# sibling threads : 0
+# sibling threads : 1
+# sibling threads : 2
+# sibling threads : 3
+# node0 meminfo  : total = 8092504 kB, free = 2796352 kB
+# node0 cpu list : 0-3
+# pmu mappings: cpu = 4, software = 1, tracepoint = 2, uncore_cbox_0 = 6, uncore_cbox_1 = 7, uncore_cbox_2 = 8, uncore_cbox_3 = 9, breakpoint = 5
+# ========
+#
+# Samples: 2K of event 'cpu-clock:u'
+# Event count (approx.): 517250000
+#
+# Overhead       Samples  Command  Shared Object                  Symbol
+# ........  ............  .......  .............  ......................
+#
+    20.83%           431  c-alloc  libc-2.19.so   [.] _int_malloc       
+            |
+            --- _int_malloc
+
+    20.64%           427  c-alloc  libc-2.19.so   [.] _int_free         
+            |
+            --- _int_free
+               |          
+               |--12.18%-- __libc_start_main
+                --87.82%-- [...]
+
+    14.79%           306  c-alloc  c-alloc        [.] main              
+            |
+            --- main
+                __libc_start_main
+
+    13.19%           273  c-alloc  libc-2.19.so   [.] malloc            
+            |
+            --- malloc
+               |          
+               |--5.86%-- __libc_start_main
+                --94.14%-- [...]
+
+    10.73%           222  c-alloc  libc-2.19.so   [.] systrim.isra.1    
+            |
+            --- systrim.isra.1
+               |          
+               |--77.48%-- 0x0
+               |          0x21001
+                --22.52%-- [...]
+
+     9.52%           197  c-alloc  libc-2.19.so   [.] __sbrk            
+            |
+            --- __sbrk
+               |          
+               |--59.39%-- 0x0
+               |          0x21001
+                --40.61%-- [...]
+
+     5.85%           121  c-alloc  libc-2.19.so   [.] __default_morecore
+            |
+            --- __default_morecore
+                (nil)
+                0x21001
+
+     3.91%            81  c-alloc  libc-2.19.so   [.] free              
+            |
+            --- free
+                __libc_start_main
+
+     0.53%            11  c-alloc  c-alloc        [.] malloc@plt        
+            |
+            --- malloc@plt
+                __libc_start_main
+
+
+
+#
+# (For a higher level overview, try: perf report --sort comm,dso)
+#

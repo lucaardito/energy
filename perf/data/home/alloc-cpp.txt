@@ -1,0 +1,129 @@
+# ========
+# captured on: Fri May  8 16:34:32 2015
+# hostname : Crucyal
+# os release : 3.13.0-52-generic
+# perf version : 3.13.11-ckt18
+# arch : x86_64
+# nrcpus online : 4
+# nrcpus avail : 4
+# cpudesc : Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz
+# cpuid : GenuineIntel,6,58,9
+# total memory : 8092504 kB
+# cmdline : /usr/lib/linux-tools-3.13.0-52/perf record -e cpu-clock:u -g -o ./data/home/alloc-cpp.data ./bin/cpp-alloc 
+# event : name = cpu-clock:u, type = 1, config = 0x0, config1 = 0x0, config2 = 0x0, excl_usr = 0, excl_kern = 1, excl_host = 0, excl_guest = 0, precise_ip = 0, attr_mmap2 = 0, attr_mmap  = 1, attr_mmap_data = 0
+# sibling cores   : 0-3
+# sibling threads : 0
+# sibling threads : 1
+# sibling threads : 2
+# sibling threads : 3
+# node0 meminfo  : total = 8092504 kB, free = 2794472 kB
+# node0 cpu list : 0-3
+# pmu mappings: cpu = 4, software = 1, tracepoint = 2, uncore_cbox_0 = 6, uncore_cbox_1 = 7, uncore_cbox_2 = 8, uncore_cbox_3 = 9, breakpoint = 5
+# ========
+#
+# Samples: 2K of event 'cpu-clock:u'
+# Event count (approx.): 514750000
+#
+# Overhead       Samples    Command        Shared Object                             Symbol
+# ........  ............  .........  ...................  .................................
+#
+    20.98%           432  cpp-alloc  libc-2.19.so         [.] _int_malloc                  
+            |
+            --- _int_malloc
+
+    19.86%           409  cpp-alloc  libc-2.19.so         [.] _int_free                    
+            |
+            --- _int_free
+               |          
+               |--10.27%-- __libc_start_main
+                --89.73%-- [...]
+
+    13.70%           282  cpp-alloc  libc-2.19.so         [.] systrim.isra.1               
+            |
+            --- systrim.isra.1
+               |          
+               |--82.98%-- 0x0
+               |          0x21001
+                --17.02%-- [...]
+
+    12.24%           252  cpp-alloc  cpp-alloc            [.] main                         
+            |
+            --- main
+                __libc_start_main
+
+    10.64%           219  cpp-alloc  libc-2.19.so         [.] malloc                       
+            |
+            --- malloc
+               |          
+               |--5.94%-- __libc_start_main
+                --94.06%-- [...]
+
+     8.60%           177  cpp-alloc  libc-2.19.so         [.] __sbrk                       
+            |
+            --- __sbrk
+               |          
+               |--55.37%-- 0x0
+               |          0x21001
+                --44.63%-- [...]
+
+     4.37%            90  cpp-alloc  libc-2.19.so         [.] __default_morecore           
+            |
+            --- __default_morecore
+                (nil)
+                0x21001
+
+     2.87%            59  cpp-alloc  libstdc++.so.6.0.19  [.] operator new(unsigned long)  
+            |
+            --- operator new(unsigned long)
+                __libc_start_main
+
+     1.94%            40  cpp-alloc  libc-2.19.so         [.] free                         
+            |
+            --- free
+                __libc_start_main
+
+     1.07%            22  cpp-alloc  libstdc++.so.6.0.19  [.] operator delete[](void*)     
+            |
+            --- operator delete[](void*)
+                __libc_start_main
+
+     0.78%            16  cpp-alloc  libstdc++.so.6.0.19  [.] operator delete(void*)       
+            |
+            --- operator delete(void*)
+                __libc_start_main
+
+     0.68%            14  cpp-alloc  libstdc++.so.6.0.19  [.] _Znwm@plt                    
+            |
+            --- _Znwm@plt
+                __libc_start_main
+
+     0.58%            12  cpp-alloc  cpp-alloc            [.] _Znam@plt                    
+            |
+            --- _Znam@plt
+                __libc_start_main
+
+     0.53%            11  cpp-alloc  libstdc++.so.6.0.19  [.] malloc@plt                   
+            |
+            --- malloc@plt
+                __libc_start_main
+
+     0.44%             9  cpp-alloc  libstdc++.so.6.0.19  [.] _ZdlPv@plt                   
+            |
+            --- _ZdlPv@plt
+                __libc_start_main
+
+     0.39%             8  cpp-alloc  libstdc++.so.6.0.19  [.] operator new[](unsigned long)
+            |
+            --- operator new[](unsigned long)
+                __libc_start_main
+
+     0.34%             7  cpp-alloc  libstdc++.so.6.0.19  [.] free@plt                     
+            |
+            --- free@plt
+                __libc_start_main
+
+
+
+#
+# (For a higher level overview, try: perf report --sort comm,dso)
+#

@@ -1,0 +1,16 @@
+jpgencoder;[unknown];_dl_addr 1
+jpgencoder;__GI___mempcpy 2
+jpgencoder;__GI___munmap 1
+jpgencoder;__libc_start_main;main;SaveJpgFile;__memcpy_sse2_unaligned 3
+jpgencoder;__libc_start_main;main;SaveJpgFile;fputc@plt 1
+jpgencoder;__libc_start_main;main;SaveJpgFile;init_all;set_numbers_category_and_bitcode 2
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;load_data_units_from_RGB_buffer 89
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU 138
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU;fdct_and_quantization 250
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU;fputc 14
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU;fputc@plt 1
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;process_DU;writebits 88
+jpgencoder;__libc_start_main;main;SaveJpgFile;main_encoder;writebits 1
+jpgencoder;__libc_start_main;main;SaveJpgFile;process_DU 1
+jpgencoder;__memcpy_sse2 1
+jpgencoder;do_lookup_x 1

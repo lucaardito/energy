@@ -1,6 +1,9 @@
 *
 **
+!home/
 !.gitignore
 !*.svg
+!*.data
+*.old
 !*.stacks-folded
 !*.txt
