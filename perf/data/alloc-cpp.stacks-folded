@@ -1,0 +1,26 @@
+cpp-alloc;[unknown];[unknown] 157
+cpp-alloc;[unknown];_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE8_M_pbumpEPcS4_x@plt 11
+cpp-alloc;[unknown];_ZNSt9basic_iosIwSt11char_traitsIwEE5imbueERKSt6locale@plt 11
+cpp-alloc;[unknown];__aeabi_read_tp 6
+cpp-alloc;[unknown];_dl_lookup_symbol_x 1
+cpp-alloc;[unknown];_dl_relocate_object 2
+cpp-alloc;[unknown];_int_free 590
+cpp-alloc;[unknown];_int_malloc 241
+cpp-alloc;[unknown];do_lookup_x 1
+cpp-alloc;[unknown];free 626
+cpp-alloc;[unknown];main 348
+cpp-alloc;[unknown];malloc 566
+cpp-alloc;[unknown];match_symbol 1
+cpp-alloc;[unknown];memmove@plt 5
+cpp-alloc;[unknown];operator delete 15
+cpp-alloc;[unknown];operator delete[] 22
+cpp-alloc;[unknown];operator new 57
+cpp-alloc;[unknown];operator new[] 70
+cpp-alloc;[unknown];sYSTRIm 124
+cpp-alloc;__aeabi_uidivmod 1
+cpp-alloc;_dl_addr 1
+cpp-alloc;_dl_new_object 1
+cpp-alloc;_int_malloc 305
+cpp-alloc;check_match.8400 2
+cpp-alloc;do_lookup_x 3
+cpp-alloc;strcmp 1

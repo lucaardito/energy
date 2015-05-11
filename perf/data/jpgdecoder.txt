@@ -1,0 +1,389 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# Samples: 10K of event 'cpu-clock:u'
+# Event count (approx.): 2733750000
+#
+# Children      Self       Samples  Command     Shared Object        Symbol                          
+# ........  ........  ............  ..........  ...................  ................................
+#
+    34.22%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e8b32ac                  
+            |
+            --- 0x7e8b32ac
+               |          
+               |--11.57%-- 0x7e8b32ac
+                --88.43%-- [...]
+
+    22.77%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e9336a4                  
+            |
+            --- 0x7e9336a4
+
+    17.49%    17.49%          1912  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_UpsampleV   
+            |
+            --- Jpeg::Decoder::_UpsampleV
+                0x7e8b32ac
+
+    15.21%    15.21%          1663  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_Clip        
+            |
+            --- Jpeg::Decoder::_Clip
+               |          
+               |--36.98%-- 0x7e8b32ac
+               |          
+               |--35.84%-- 0x88f0
+               |          
+               |--11.67%-- 0x1
+               |          
+               |--6.01%-- 0x7e8b32c4
+               |          0x3f3e372f
+               |          
+               |--5.53%-- 0x7e8b325c
+               |          
+               |--2.16%-- 0x7e8b327c
+               |          
+               |--1.50%-- 0x2
+                --0.30%-- [...]
+
+    14.43%     0.00%             0  jpgdecoder  [unknown]            [.] 0x3f3e372f                  
+            |
+            --- 0x3f3e372f
+
+    11.72%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e8b32c4                  
+            |
+            --- 0x7e8b32c4
+               |          
+               |--95.01%-- 0x3f3e372f
+                --4.99%-- [...]
+
+    11.16%    11.16%          1220  jpgdecoder  libc-2.13.so         [.] _IO_fwrite                  
+            |
+            --- _IO_fwrite
+                0x7e9336a4
+
+    10.22%    10.22%          1118  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_Convert     
+            |
+            --- Jpeg::Decoder::_Convert
+                0x7e8b32c4
+                0x3f3e372f
+
+    10.00%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e8b327c                  
+            |
+            --- 0x7e8b327c
+               |          
+               |--0.09%-- 0x3f3e372f
+                --99.91%-- [...]
+
+     7.65%     7.65%           836  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_UpsampleH   
+            |
+            --- Jpeg::Decoder::_UpsampleH
+                0x7e8b32ac
+               |          
+               |--50.24%-- 0x7e8b32ac
+                --49.76%-- [...]
+
+     6.67%     6.67%           729  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_ColIDCT     
+            |
+            --- Jpeg::Decoder::_ColIDCT
+               |          
+               |--99.73%-- 0x7e8b327c
+               |          |          
+               |           --100.00%-- 0x3f3e372f
+                --0.27%-- [...]
+
+     6.08%     6.08%           665  jpgdecoder  jpgdecoder           [.] WriteBMP24                  
+            |
+            --- WriteBMP24
+                0x7e9336a4
+
+     5.51%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e8b325c                  
+            |
+            --- 0x7e8b325c
+
+     5.45%     0.00%             0  jpgdecoder  jpgdecoder           [.] 0x000008f0                  
+            |
+            --- 0x88f0
+
+     5.25%     5.25%           574  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::CF           
+            |
+            --- Jpeg::Decoder::CF
+               |          
+               |--89.02%-- 0x7e8b325c
+               |          
+                --10.98%-- 0x7e8b32ac
+                          |          
+                           --100.00%-- 0x7e8b32ac
+
+     3.68%     3.68%           402  jpgdecoder  libc-2.13.so         [.] _IO_file_xsputn@@GLIBC_2.4  
+            |
+            --- _IO_file_xsputn@@GLIBC_2.4
+                0x7e9336a4
+
+     3.39%     3.39%           371  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_ShowBits    
+            |
+            --- Jpeg::Decoder::_ShowBits
+               |          
+               |--64.96%-- 0x7e8b3254
+               |          
+               |--25.88%-- 0x7e8b3234
+               |          
+               |--2.96%-- 0x780
+               |          
+               |--2.70%-- 0x7e8b327c
+               |          
+               |--0.81%-- 0x0
+               |          
+               |--0.54%-- 0x3c0
+                --2.16%-- [...]
+
+     3.33%     3.33%           364  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_RowIDCT     
+            |
+            --- Jpeg::Decoder::_RowIDCT
+               |          
+               |--98.63%-- 0x7e8b3318
+               |          0x3f3e372f
+               |          
+                --1.37%-- 0x7e8b32ac
+
+     3.28%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e8b3318                  
+            |
+            --- 0x7e8b3318
+                0x3f3e372f
+
+     3.11%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e8b3254                  
+            |
+            --- 0x7e8b3254
+
+     2.83%     2.83%           310  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_GetVLC      
+            |
+            --- Jpeg::Decoder::_GetVLC
+               |          
+               |--99.35%-- 0x7e8b327c
+               |          
+                --0.65%-- 0x7e8b32ac
+
+     2.61%     2.61%           285  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_DecodeBlock 
+            |
+            --- Jpeg::Decoder::_DecodeBlock
+               |          
+               |--99.65%-- 0x7e8b32ac
+                --0.35%-- [...]
+
+     1.77%     0.00%             0  jpgdecoder  [unknown]            [.] 0x00000001                  
+            |
+            --- 0x1
+
+     1.55%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e8b3234                  
+            |
+            --- 0x7e8b3234
+
+     1.38%     1.38%           151  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_SkipBits    
+            |
+            --- Jpeg::Decoder::_SkipBits
+               |          
+               |--48.34%-- 0x7e8b3234
+               |          
+               |--47.68%-- 0x7e8b3254
+               |          
+                --3.97%-- 0x7e8b327c
+
+     0.70%     0.70%            77  jpgdecoder  [unknown]            [.] 0xffff0fe0                  
+            |
+            --- 0xffff0fe0
+                0x7e9336a4
+
+     0.30%     0.30%            33  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_GetBits     
+            |
+            --- Jpeg::Decoder::_GetBits
+               |          
+               |--81.82%-- 0x7e8b3254
+               |          
+                --18.18%-- 0x7e8b327c
+
+     0.29%     0.29%            32  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_DecodeScan  
+            |
+            --- Jpeg::Decoder::_DecodeScan
+                0x7e8b32c4
+
+     0.28%     0.28%            31  jpgdecoder  jpgdecoder           [.] Jpeg::Decoder::_DecodeDHT   
+            |
+            --- Jpeg::Decoder::_DecodeDHT
+                0x7e8b32c4
+
+     0.26%     0.26%            28  jpgdecoder  jpgdecoder           [.] 0x000008e0                  
+            |
+            --- 0x88e0
+                0x7e9336a4
+
+     0.23%     0.00%             0  jpgdecoder  [unknown]            [.] 0x00000002                  
+            |
+            --- 0x2
+
+     0.22%     0.22%            24  jpgdecoder  libcofi_rpi.so       [.] memset                      
+            |
+            --- memset
+               |          
+               |--91.67%-- 0x7e8b32ac
+               |          
+                --8.33%-- 0x7e9336a4
+
+     0.15%     0.15%            16  jpgdecoder  libc-2.13.so         [.] __aeabi_read_tp             
+            |
+            --- __aeabi_read_tp
+                0x7e9336a4
+
+     0.14%     0.14%            15  jpgdecoder  jpgdecoder           [.] 0x000008dc                  
+            |
+            --- 0x88dc
+                0x7e9336a4
+
+     0.13%     0.13%            14  jpgdecoder  libc-2.13.so         [.] new_do_write                
+            |
+            --- new_do_write
+                0x7e9336a4
+
+     0.10%     0.00%             0  jpgdecoder  [unknown]            [.] 0x00000780                  
+            |
+            --- 0x780
+
+     0.10%     0.10%            11  jpgdecoder  libc-2.13.so         [.] __GI___libc_write           
+            |
+            --- __GI___libc_write
+                0x7e9336a4
+
+     0.09%     0.09%            10  jpgdecoder  jpgdecoder           [.] 0x000008d8                  
+            |
+            --- 0x88d8
+                0x7e9336a4
+
+     0.09%     0.09%            10  jpgdecoder  [unknown]            [.] 0xffff0fe4                  
+            |
+            --- 0xffff0fe4
+                0x7e9336a4
+
+     0.05%     0.00%             0  jpgdecoder  [unknown]            [.] 0x00000003                  
+            |
+            --- 0x3
+
+     0.05%     0.05%             5  jpgdecoder  libc-2.13.so         [.] _IO_default_xsputn          
+            |
+            --- _IO_default_xsputn
+                0x7e9336a4
+
+     0.05%     0.05%             5  jpgdecoder  libc-2.13.so         [.] _IO_file_overflow@@GLIBC_2.4
+            |
+            --- _IO_file_overflow@@GLIBC_2.4
+                0x7e9336a4
+
+     0.04%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e93343c                  
+            |
+            --- 0x7e93343c
+
+     0.04%     0.00%             0  jpgdecoder  [unknown]            [.] 0x7e933504                  
+            |
+            --- 0x7e933504
+
+     0.04%     0.04%             4  jpgdecoder  ld-2.13.so           [.] _dl_lookup_symbol_x         
+            |
+            --- _dl_lookup_symbol_x
+                0x7e93343c
+
+     0.04%     0.04%             4  jpgdecoder  ld-2.13.so           [.] _dl_relocate_object         
+            |
+            --- _dl_relocate_object
+                0x7e933504
+
+     0.03%     0.00%             0  jpgdecoder  [unknown]            [.] 00000000                    
+            |
+            --- (nil)
+
+     0.03%     0.03%             3  jpgdecoder  libc-2.13.so         [.] __aeabi_uidivmod            
+            |
+            --- __aeabi_uidivmod
+                0x7e9336a4
+
+     0.03%     0.03%             3  jpgdecoder  libc-2.13.so         [.] __udivsi3                   
+            |
+            --- __udivsi3
+                0x7e9336a4
+
+     0.02%     0.00%             0  jpgdecoder  [unknown]            [.] 0x000003c0                  
+            |
+            --- 0x3c0
+
+     0.02%     0.02%             2  jpgdecoder  libc-2.13.so         [.] _IO_do_write@@GLIBC_2.4     
+            |
+            --- _IO_do_write@@GLIBC_2.4
+                0x7e9336a4
+
+     0.02%     0.02%             2  jpgdecoder  libc-2.13.so         [.] _IO_file_write@@GLIBC_2.4   
+            |
+            --- _IO_file_write@@GLIBC_2.4
+                0x7e9336a4
+
+     0.01%     0.01%             1  jpgdecoder  ld-2.13.so           [.] __aeabi_uidivmod            
+            |
+            --- __aeabi_uidivmod
+
+     0.01%     0.01%             1  jpgdecoder  libc-2.13.so         [.] _dl_addr                    
+            |
+            --- _dl_addr
+
+     0.01%     0.01%             1  jpgdecoder  libc-2.13.so         [.] _int_malloc                 
+            |
+            --- _int_malloc
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0x00000004                  
+            |
+            --- 0x4
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0x00001000                  
+            |
+            --- 0x1000
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0x00038e63                  
+            |
+            --- 0x38e63
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0x000573a0                  
+            |
+            --- 0x573a0
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0x000bef60                  
+            |
+            --- 0xbef60
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0xfff012c0                  
+            |
+            --- 0xfff012c0
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0xfff5b3b6                  
+            |
+            --- 0xfff5b3b6
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0xfff923a9                  
+            |
+            --- 0xfff923a9
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0xfffcafe4                  
+            |
+            --- 0xfffcafe4
+
+     0.01%     0.00%             0  jpgdecoder  [unknown]            [.] 0xffff2b00                  
+            |
+            --- 0xffff2b00
+
+     0.01%     0.01%             1  jpgdecoder  jpgdecoder           [.] 0x00000874                  
+            |
+            --- 0x8874
+                0x7e8b32ac
+
+     0.01%     0.01%             1  jpgdecoder  ld-2.13.so           [.] init_tls.part.6             
+            |
+            --- init_tls.part.6
+                0x1000
+
+     0.01%     0.01%             1  jpgdecoder  libstdc++.so.6.0.19  [.] std::locale::_Impl::_Impl   
+            |
+            --- std::locale::_Impl::_Impl
+                0x4
+
+
+

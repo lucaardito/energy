@@ -1,0 +1,12 @@
+c-alloc;[unknown];[unknown] 91
+c-alloc;[unknown];__aeabi_read_tp 8
+c-alloc;[unknown];_dl_check_map_versions 1
+c-alloc;[unknown];_dl_lookup_symbol_x 1
+c-alloc;[unknown];_dl_map_object_from_fd 1
+c-alloc;[unknown];_int_free 538
+c-alloc;[unknown];_int_malloc 219
+c-alloc;[unknown];free 494
+c-alloc;[unknown];main 282
+c-alloc;[unknown];malloc 538
+c-alloc;[unknown];sYSTRIm 98
+c-alloc;_int_malloc 292

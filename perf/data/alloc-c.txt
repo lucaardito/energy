@@ -1,0 +1,113 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# Samples: 2K of event 'cpu-clock:u'
+# Event count (approx.): 640750000
+#
+# Children      Self       Samples  Command  Shared Object  Symbol                    
+# ........  ........  ............  .......  .............  ..........................
+#
+    88.49%     0.00%             0  c-alloc  [unknown]      [.] 00000000              
+            |
+            --- (nil)
+
+    20.99%    20.99%           538  c-alloc  libc-2.13.so   [.] _int_free             
+            |
+            --- _int_free
+                (nil)
+
+    20.99%    20.99%           538  c-alloc  libc-2.13.so   [.] malloc                
+            |
+            --- malloc
+                (nil)
+
+    19.94%    19.94%           511  c-alloc  libc-2.13.so   [.] _int_malloc           
+            |
+            --- _int_malloc
+               |          
+               |--42.86%-- 0x0
+                --57.14%-- [...]
+
+    19.27%    19.27%           494  c-alloc  libc-2.13.so   [.] free                  
+            |
+            --- free
+                (nil)
+
+    11.00%    11.00%           282  c-alloc  c-alloc        [.] main                  
+            |
+            --- main
+                (nil)
+
+     3.82%     3.82%            98  c-alloc  libc-2.13.so   [.] sYSTRIm               
+            |
+            --- sYSTRIm
+                (nil)
+
+     1.09%     1.09%            28  c-alloc  [unknown]      [.] 0xffff0fe0            
+            |
+            --- 0xffff0fe0
+                (nil)
+
+     0.86%     0.86%            22  c-alloc  c-alloc        [.] 0x00000328            
+            |
+            --- 0x8328
+                (nil)
+
+     0.43%     0.43%            11  c-alloc  c-alloc        [.] 0x0000031c            
+            |
+            --- 0x831c
+                (nil)
+
+     0.39%     0.39%            10  c-alloc  c-alloc        [.] 0x00000318            
+            |
+            --- 0x8318
+                (nil)
+
+     0.35%     0.35%             9  c-alloc  [unknown]      [.] 0xffff0fe4            
+            |
+            --- 0xffff0fe4
+                (nil)
+
+     0.31%     0.31%             8  c-alloc  c-alloc        [.] 0x00000320            
+            |
+            --- 0x8320
+                (nil)
+
+     0.31%     0.31%             8  c-alloc  libc-2.13.so   [.] __aeabi_read_tp       
+            |
+            --- __aeabi_read_tp
+                (nil)
+
+     0.12%     0.12%             3  c-alloc  c-alloc        [.] 0x00000324            
+            |
+            --- 0x8324
+                (nil)
+
+     0.04%     0.00%             0  c-alloc  ld-2.13.so     [.] 0x0001b4b0            
+            |
+            --- 0x76f144b0
+
+     0.04%     0.00%             0  c-alloc  [unknown]      [.] 0x7ec4246c            
+            |
+            --- 0x7ec4246c
+
+     0.04%     0.00%             0  c-alloc  [unknown]      [.] 0x7ec42534            
+            |
+            --- 0x7ec42534
+
+     0.04%     0.04%             1  c-alloc  ld-2.13.so     [.] _dl_check_map_versions
+            |
+            --- _dl_check_map_versions
+                0x7ec42534
+
+     0.04%     0.04%             1  c-alloc  ld-2.13.so     [.] _dl_lookup_symbol_x   
+            |
+            --- _dl_lookup_symbol_x
+                0x7ec4246c
+
+     0.04%     0.04%             1  c-alloc  ld-2.13.so     [.] _dl_map_object_from_fd
+            |
+            --- _dl_map_object_from_fd
+                0x76f144b0
+
+
+

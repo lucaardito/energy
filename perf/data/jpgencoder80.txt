@@ -1,0 +1,187 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# Samples: 9K of event 'cpu-clock:u'
+# Event count (approx.): 2392500000
+#
+# Children      Self       Samples  Command     Shared Object   Symbol                              
+# ........  ........  ............  ..........  ..............  ....................................
+#
+    65.32%     0.00%             0  jpgencoder  [unknown]       [.] 0x7e89d5bc                      
+            |
+            --- 0x7e89d5bc
+
+    51.94%    51.94%          4971  jpgencoder  jpgencoder      [.] fdct_and_quantization           
+            |
+            --- fdct_and_quantization
+               |          
+               |--99.96%-- 0x7e89d5bc
+                --0.04%-- [...]
+
+    33.75%     0.00%             0  jpgencoder  [unknown]       [.] 0x7e89d5dc                      
+            |
+            --- 0x7e89d5dc
+
+    17.62%    17.62%          1686  jpgencoder  jpgencoder      [.] process_DU                      
+            |
+            --- process_DU
+               |          
+               |--99.88%-- 0x7e89d5dc
+                --0.12%-- [...]
+
+    15.92%    15.92%          1524  jpgencoder  jpgencoder      [.] load_data_units_from_RGB_buffer 
+            |
+            --- load_data_units_from_RGB_buffer
+               |          
+               |--99.93%-- 0x7e89d5dc
+                --0.07%-- [...]
+
+    10.93%    10.93%          1046  jpgencoder  jpgencoder      [.] writebits                       
+            |
+            --- writebits
+               |          
+               |--99.43%-- 0x7e89d5bc
+               |          
+                --0.57%-- 0x7e89d5dc
+
+     2.12%     2.12%           203  jpgencoder  libc-2.13.so    [.] fputc                           
+            |
+            --- fputc
+               |          
+               |--99.51%-- 0x7e89d5bc
+                --0.49%-- [...]
+
+     0.48%     0.00%             0  jpgencoder  [unknown]       [.] 0x7e89d674                      
+            |
+            --- 0x7e89d674
+
+     0.36%     0.36%            34  jpgencoder  libcofi_rpi.so  [.] memcpy                          
+            |
+            --- memcpy
+                0x7e89d674
+
+     0.22%     0.22%            21  jpgencoder  [unknown]       [.] 0xffff0fe0                      
+            |
+            --- 0xffff0fe0
+                0x7e89d5bc
+
+     0.18%     0.18%            17  jpgencoder  libc-2.13.so    [.] memcpy                          
+            |
+            --- memcpy
+
+     0.15%     0.15%            14  jpgencoder  jpgencoder      [.] set_numbers_category_and_bitcode
+            |
+            --- set_numbers_category_and_bitcode
+                0x7e89d5dc
+
+     0.09%     0.09%             9  jpgencoder  libc-2.13.so    [.] _wordcopy_fwd_dest_aligned      
+            |
+            --- _wordcopy_fwd_dest_aligned
+
+     0.07%     0.00%             0  jpgencoder  [unknown]       [.] 0x7e89d4f4                      
+            |
+            --- 0x7e89d4f4
+
+     0.07%     0.07%             7  jpgencoder  jpgencoder      [.] 0x00000a30                      
+            |
+            --- 0x8a30
+                0x7e89d5bc
+
+     0.07%     0.07%             7  jpgencoder  ld-2.13.so      [.] _dl_relocate_object             
+            |
+            --- _dl_relocate_object
+                0x7e89d4f4
+
+     0.05%     0.05%             5  jpgencoder  jpgencoder      [.] 0x00000a28                      
+            |
+            --- 0x8a28
+                0x7e89d5bc
+
+     0.04%     0.04%             4  jpgencoder  jpgencoder      [.] main_encoder                    
+            |
+            --- main_encoder
+                0x7e89d674
+
+     0.03%     0.03%             3  jpgencoder  libc-2.13.so    [.] __GI___libc_read                
+            |
+            --- __GI___libc_read
+
+     0.03%     0.03%             3  jpgencoder  libc-2.13.so    [.] __aeabi_read_tp                 
+            |
+            --- __aeabi_read_tp
+                0x7e89d5bc
+
+     0.03%     0.03%             3  jpgencoder  [unknown]       [.] 0xffff0fe4                      
+            |
+            --- 0xffff0fe4
+                0x7e89d5bc
+
+     0.02%     0.02%             2  jpgencoder  ld-2.13.so      [.] do_lookup_x                     
+            |
+            --- do_lookup_x
+
+     0.02%     0.02%             2  jpgencoder  jpgencoder      [.] load_bitmap                     
+            |
+            --- load_bitmap
+                0x7e89d674
+
+     0.02%     0.02%             2  jpgencoder  ld-2.13.so      [.] _dl_lookup_symbol_x             
+            |
+            --- _dl_lookup_symbol_x
+               |          
+               |--50.00%-- 0x7e89d5dc
+               |          
+                --50.00%-- 0x7e89d42c
+
+     0.01%     0.01%             1  jpgencoder  libc-2.13.so    [.] _IO_file_xsgetn_internal        
+            |
+            --- _IO_file_xsgetn_internal
+
+     0.01%     0.01%             1  jpgencoder  libcofi_rpi.so  [.] call_gmon_start                 
+            |
+            --- call_gmon_start
+
+     0.01%     0.00%             0  jpgencoder  ld-2.13.so      [.] 0x0001b4b0                      
+            |
+            --- 0x76fb94b0
+
+     0.01%     0.00%             0  jpgencoder  [unknown]       [.] 0x00303800                      
+            |
+            --- 0x303800
+
+     0.01%     0.00%             0  jpgencoder  [unknown]       [.] 0x7e89d42c                      
+            |
+            --- 0x7e89d42c
+
+     0.01%     0.01%             1  jpgencoder  jpgencoder      [.] 0x000009dc                      
+            |
+            --- 0x89dc
+                0x7e89d674
+
+     0.01%     0.01%             1  jpgencoder  jpgencoder      [.] 0x00000a2c                      
+            |
+            --- 0x8a2c
+                0x7e89d5bc
+
+     0.01%     0.01%             1  jpgencoder  ld-2.13.so      [.] _dl_new_object                  
+            |
+            --- _dl_new_object
+                0x76fb94b0
+
+     0.01%     0.01%             1  jpgencoder  libc-2.13.so    [.] _IO_fread                       
+            |
+            --- _IO_fread
+                0x7e89d674
+
+     0.01%     0.00%             0  jpgencoder  [unknown]       [.] 00000000                        
+            |
+            --- (nil)
+                0x303800
+
+     0.01%     0.01%             1  jpgencoder  libc-2.13.so    [.] __GI___libc_write               
+            |
+            --- __GI___libc_write
+                (nil)
+                0x303800
+
+
+

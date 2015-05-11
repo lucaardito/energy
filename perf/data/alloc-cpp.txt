@@ -1,0 +1,215 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+# Samples: 3K of event 'cpu-clock:u'
+# Event count (approx.): 792000000
+#
+# Children      Self       Samples  Command    Shared Object        Symbol                                                                  
+# ........  ........  ............  .........  ...................  ........................................................................
+#
+    89.93%     0.00%             0  cpp-alloc  [unknown]            [.] 00000000                                                            
+            |
+            --- (nil)
+
+    19.76%    19.76%           626  cpp-alloc  libc-2.13.so         [.] free                                                                
+            |
+            --- free
+                (nil)
+
+    18.62%    18.62%           590  cpp-alloc  libc-2.13.so         [.] _int_free                                                           
+            |
+            --- _int_free
+                (nil)
+
+    17.87%    17.87%           566  cpp-alloc  libc-2.13.so         [.] malloc                                                              
+            |
+            --- malloc
+                (nil)
+
+    17.23%    17.23%           546  cpp-alloc  libc-2.13.so         [.] _int_malloc                                                         
+            |
+            --- _int_malloc
+               |          
+               |--44.14%-- 0x0
+                --55.86%-- [...]
+
+    10.98%    10.98%           348  cpp-alloc  cpp-alloc            [.] main                                                                
+            |
+            --- main
+                (nil)
+
+     3.91%     3.91%           124  cpp-alloc  libc-2.13.so         [.] sYSTRIm                                                             
+            |
+            --- sYSTRIm
+                (nil)
+
+     2.21%     2.21%            70  cpp-alloc  libstdc++.so.6.0.19  [.] operator new[]                                                      
+            |
+            --- operator new[]
+                (nil)
+
+     1.80%     1.80%            57  cpp-alloc  libstdc++.so.6.0.19  [.] operator new                                                        
+            |
+            --- operator new
+                (nil)
+
+     1.23%     1.23%            39  cpp-alloc  [unknown]            [.] 0xffff0fe0                                                          
+            |
+            --- 0xffff0fe0
+                (nil)
+
+     1.01%     1.01%            32  cpp-alloc  libstdc++.so.6.0.19  [.] 0x00049ea0                                                          
+            |
+            --- 0x76e6eea0
+                (nil)
+
+     0.69%     0.69%            22  cpp-alloc  libstdc++.so.6.0.19  [.] operator delete[]                                                   
+            |
+            --- operator delete[]
+                (nil)
+
+     0.47%     0.47%            15  cpp-alloc  libstdc++.so.6.0.19  [.] operator delete                                                     
+            |
+            --- operator delete
+                (nil)
+
+     0.38%     0.38%            12  cpp-alloc  cpp-alloc            [.] 0x000004b8                                                          
+            |
+            --- 0x84b8
+                (nil)
+
+     0.38%     0.38%            12  cpp-alloc  libstdc++.so.6.0.19  [.] 0x0004aff8                                                          
+            |
+            --- 0x76e6fff8
+                (nil)
+
+     0.35%     0.35%            11  cpp-alloc  cpp-alloc            [.] 0x000004c0                                                          
+            |
+            --- 0x84c0
+                (nil)
+
+     0.35%     0.35%            11  cpp-alloc  libstdc++.so.6.0.19  [.] _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE8_M_pbumpEPcS4_x@plt
+            |
+            --- _ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE8_M_pbumpEPcS4_x@plt
+                (nil)
+
+     0.35%     0.35%            11  cpp-alloc  libstdc++.so.6.0.19  [.] _ZNSt9basic_iosIwSt11char_traitsIwEE5imbueERKSt6locale@plt          
+            |
+            --- _ZNSt9basic_iosIwSt11char_traitsIwEE5imbueERKSt6locale@plt
+                (nil)
+
+     0.32%     0.32%            10  cpp-alloc  cpp-alloc            [.] 0x000004b4                                                          
+            |
+            --- 0x84b4
+                (nil)
+
+     0.32%     0.32%            10  cpp-alloc  libstdc++.so.6.0.19  [.] 0x0004a890                                                          
+            |
+            --- 0x76e6f890
+                (nil)
+
+     0.25%     0.25%             8  cpp-alloc  libstdc++.so.6.0.19  [.] 0x0004a888                                                          
+            |
+            --- 0x76e6f888
+                (nil)
+
+     0.19%     0.19%             6  cpp-alloc  cpp-alloc            [.] 0x000004c4                                                          
+            |
+            --- 0x84c4
+                (nil)
+
+     0.19%     0.19%             6  cpp-alloc  libc-2.13.so         [.] __aeabi_read_tp                                                     
+            |
+            --- __aeabi_read_tp
+                (nil)
+
+     0.16%     0.16%             5  cpp-alloc  libstdc++.so.6.0.19  [.] memmove@plt                                                         
+            |
+            --- memmove@plt
+                (nil)
+
+     0.13%     0.13%             4  cpp-alloc  ld-2.13.so           [.] do_lookup_x                                                         
+            |
+            --- do_lookup_x
+               |          
+               |--25.00%-- 0x7efb145c
+                --75.00%-- [...]
+
+     0.13%     0.13%             4  cpp-alloc  libstdc++.so.6.0.19  [.] 0x00049e98                                                          
+            |
+            --- 0x76e6ee98
+                (nil)
+
+     0.13%     0.13%             4  cpp-alloc  libstdc++.so.6.0.19  [.] 0x0004aff4                                                          
+            |
+            --- 0x76e6fff4
+                (nil)
+
+     0.09%     0.09%             3  cpp-alloc  [unknown]            [.] 0xffff0fe4                                                          
+            |
+            --- 0xffff0fe4
+                (nil)
+
+     0.06%     0.06%             2  cpp-alloc  ld-2.13.so           [.] check_match.8400                                                    
+            |
+            --- check_match.8400
+
+     0.06%     0.00%             0  cpp-alloc  [unknown]            [.] 0x7efb145c                                                          
+            |
+            --- 0x7efb145c
+
+     0.06%     0.00%             0  cpp-alloc  [unknown]            [.] 0x7efb1524                                                          
+            |
+            --- 0x7efb1524
+
+     0.06%     0.06%             2  cpp-alloc  ld-2.13.so           [.] _dl_relocate_object                                                 
+            |
+            --- _dl_relocate_object
+                0x7efb1524
+
+     0.06%     0.06%             2  cpp-alloc  libstdc++.so.6.0.19  [.] 0x00049e9c                                                          
+            |
+            --- 0x76e6ee9c
+                (nil)
+
+     0.06%     0.06%             2  cpp-alloc  libstdc++.so.6.0.19  [.] 0x0004a88c                                                          
+            |
+            --- 0x76e6f88c
+                (nil)
+
+     0.06%     0.06%             2  cpp-alloc  libstdc++.so.6.0.19  [.] 0x0004aff0                                                          
+            |
+            --- 0x76e6fff0
+                (nil)
+
+     0.03%     0.03%             1  cpp-alloc  ld-2.13.so           [.] __aeabi_uidivmod                                                    
+            |
+            --- __aeabi_uidivmod
+
+     0.03%     0.03%             1  cpp-alloc  ld-2.13.so           [.] _dl_new_object                                                      
+            |
+            --- _dl_new_object
+
+     0.03%     0.03%             1  cpp-alloc  ld-2.13.so           [.] strcmp                                                              
+            |
+            --- strcmp
+
+     0.03%     0.03%             1  cpp-alloc  libc-2.13.so         [.] _dl_addr                                                            
+            |
+            --- _dl_addr
+
+     0.03%     0.00%             0  cpp-alloc  [unknown]            [.] 0x7efb141c                                                          
+            |
+            --- 0x7efb141c
+
+     0.03%     0.03%             1  cpp-alloc  ld-2.13.so           [.] _dl_lookup_symbol_x                                                 
+            |
+            --- _dl_lookup_symbol_x
+                0x7efb145c
+
+     0.03%     0.03%             1  cpp-alloc  ld-2.13.so           [.] match_symbol                                                        
+            |
+            --- match_symbol
+                0x7efb141c
+
+
+
