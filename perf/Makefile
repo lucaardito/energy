@@ -2,7 +2,7 @@ CC=g++
 RM=rm -f
 BIN=./bin
 SRC=./src
-FLAGS=-g -fno-omit-frame-pointer -shared-libgcc
+FLAGS=-g -fno-inline -fno-omit-frame-pointer -marm -shared-libgcc
 
 all: jpgencoder jpgdecoder mem
 
