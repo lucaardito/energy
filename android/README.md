@@ -4,7 +4,7 @@
 <table>
   <tr>
     <td>Device</td>
-    <td>[LG Nexus 5](https://en.wikipedia.org/wiki/Nexus_5)</td>
+    <td>[LG Nexus 5][1]</td>
   </tr>
   <tr>
     <td>Android version</td>
@@ -12,17 +12,21 @@
   </tr>
   <tr>
     <td>Recovery</td>
-    <td>[TWRP 2.8.7.1](https://twrp.me/devices/lgnexus5.html)</td>
+    <td>[TWRP 2.8.7.1][2]</td>
   </tr>
   <tr>
     <td>Kernel</td>
-    <td>[StephanMC](http://forum.xda-developers.com/google-nexus-5/development/rom-android-m-preview-2-flashable-zip-t3157299)</td>
+    <td>[StephanMC][3]</td>
   </tr>
   <tr>
     <td>Root</td>
-    <td>[SuperSU v2.49 beta](https://download.chainfire.eu/740/SuperSU/BETA-SuperSU-v2.49.zip)</td>
+    <td>[SuperSU v2.49 beta][4]</td>
   </tr>
 </table>
+[1]: https://en.wikipedia.org/wiki/Nexus_5
+[2]: https://twrp.me/devices/lgnexus5.html
+[3]: http://forum.xda-developers.com/google-nexus-5/development/rom-android-m-preview-2-flashable-zip-t3157299
+[4]: https://download.chainfire.eu/740/SuperSU/BETA-SuperSU-v2.49.zip
 
 ## Generate binary
 Read [instruction](./setup_toolchain.md) to generate the toolchain and create an executable
