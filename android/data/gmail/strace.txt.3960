@@ -1,0 +1,61 @@
+10:36:45.065608 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xa9428000 <0.000347>
+10:36:45.066320 mprotect(0xa9428000, 4096, PROT_NONE) = 0 <0.000105>
+10:36:45.066617 sigaltstack({ss_sp=0xa9429000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000181>
+10:36:45.067190 prctl(0x53564d41 /* PR_??? */, 0, 0xa9429000, 0x2000, 0xb6d55ed3) = 0 <0.000194>
+10:36:45.067755 mprotect(0x9efc1000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000246>
+10:36:45.068733 mprotect(0x9efc1000, 4096, PROT_NONE) = 0 <0.000173>
+10:36:45.069269 madvise(0x9efc1000, 1056768, MADV_DONTNEED) = 0 <0.000456>
+10:36:45.070087 prctl(PR_SET_NAME, 0x9f0c4844, 0x636e65, 0x9f0c4978, 0x98621da0) = 0 <0.000179>
+10:36:45.070639 getpriority(PRIO_PROCESS, 3960) = 20 <0.000174>
+10:36:45.071169 setpriority(PRIO_PROCESS, 3960, 0) = 0 <0.000199>
+10:36:45.072495 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/Folder-lab1polito@gmail.com-^sq_ig_i_personal.xml.bak", F_OK) = -1 ENOENT (No such file or directory) <0.000173>
+10:36:45.073129 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/Folder-lab1polito@gmail.com-^sq_ig_i_personal.xml", F_OK) = 0 <0.000178>
+10:36:45.073690 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/Folder-lab1polito@gmail.com-^sq_ig_i_personal.xml", R_OK) = 0 <0.000162>
+10:36:45.074153 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/Folder-lab1polito@gmail.com-^sq_ig_i_personal.xml", {st_mode=S_IFREG|0660, st_size=402, ...}, 0) = 0 <0.000125>
+10:36:45.074534 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/Folder-lab1polito@gmail.com-^sq_ig_i_personal.xml", R_OK) = 0 <0.000114>
+10:36:45.074900 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/Folder-lab1polito@gmail.com-^sq_ig_i_personal.xml", O_RDONLY|O_LARGEFILE) = 71 <0.000135>
+10:36:45.075319 fstat64(71, {st_mode=S_IFREG|0660, st_size=402, ...}) = 0 <0.000084>
+10:36:45.075676 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 72 <0.000096>
+10:36:45.076042 ioctl(72, 0x41007701, 0x9f0c4234) = 0 <0.000096>
+10:36:45.076310 ioctl(72, 0x40047703, 0x5000) = 0 <0.000029>
+10:36:45.076607 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 72, 0) = 0xa9423000 <0.000137>
+10:36:45.077197 close(72)               = 0 <0.000087>
+10:36:45.077550 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 72 <0.000086>
+10:36:45.077906 ioctl(72, 0x41007701, 0x9f0c41c4) = 0 <0.000238>
+10:36:45.078412 ioctl(72, 0x40047703, 0x5000) = 0 <0.000033>
+10:36:45.078744 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 72, 0) = 0xa941e000 <0.000131>
+10:36:45.079144 close(72)               = 0 <0.000196>
+10:36:45.079671 ioctl(71, FIONREAD, [402]) = 0 <0.000116>
+10:36:45.080102 read(71, "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <boolean name=\"notification-notify-every-message\" value=\"false\" />\n    <string name=\"notification-ringtone\">content://settings/system/notification_sound</string>\n    <int name=\"prefs-version-number\" value=\"4\" />\n    <boolean name=\"notifications-enabled\" value=\"true\" />\n    <boolean name=\"notification-vibrate\" value=\"false\" />\n</map>\n", 16384) = 402 <0.000093>
+10:36:45.080491 ioctl(71, FIONREAD, [0]) = 0 <0.000094>
+10:36:45.080875 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x9eee9000 <0.000242>
+10:36:45.081420 prctl(0x53564d41 /* PR_??? */, 0, 0x9eee9000, 0x40000, 0xb6d56be1) = 0 <0.000108>
+10:36:45.081829 munmap(0x9eee9000, 262144) = 0 <0.000092>
+10:36:45.082180 mmap2(NULL, 520192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x9eeaa000 <0.000147>
+10:36:45.082607 prctl(0x53564d41 /* PR_??? */, 0, 0x9eeaa000, 0x7f000, 0xb6d56be1) = 0 <0.000092>
+10:36:45.082953 munmap(0x9eeaa000, 90112) = 0 <0.000209>
+10:36:45.083430 munmap(0x9ef00000, 167936) = 0 <0.000126>
+10:36:45.083792 ioctl(71, FIONREAD, [0]) = 0 <0.000167>
+10:36:45.084391 getsockopt(71, SOL_SOCKET, SO_DEBUG, 0x9f0c4470, 0x9f0c4474) = -1 ENOTSOCK (Socket operation on non-socket) <0.000045>
+10:36:45.084682 close(71)               = 0 <0.000054>
+10:36:45.085085 futex(0xb4d0c2e8, FUTEX_WAKE, 1) = 1 <0.000194>
+10:36:45.085533 futex(0xb4d09200, FUTEX_WAKE, 1) = 0 <0.000043>
+10:36:45.085906 munmap(0xb4e0c000, 8192) = 0 <0.000079>
+10:36:45.086325 madvise(0x9eec2000, 8192, MADV_DONTNEED) = 0 <0.000046>
+10:36:45.086635 madvise(0x952be000, 8192, MADV_DONTNEED) = 0 <0.000041>
+10:36:45.086926 madvise(0x952bc000, 8192, MADV_DONTNEED) = 0 <0.000041>
+10:36:45.087214 madvise(0x952ba000, 8192, MADV_DONTNEED) = 0 <0.000040>
+10:36:45.087502 madvise(0x952b8000, 8192, MADV_DONTNEED) = 0 <0.000041>
+10:36:45.087790 madvise(0x952b6000, 8192, MADV_DONTNEED) = 0 <0.000041>
+10:36:45.088175 madvise(0x952b4000, 8192, MADV_DONTNEED) = 0 <0.000041>
+10:36:45.088487 madvise(0x952b2000, 8192, MADV_DONTNEED) = 0 <0.000041>
+10:36:45.088779 madvise(0x952b0000, 8192, MADV_DONTNEED) = 0 <0.000040>
+10:36:45.089066 madvise(0x952ae000, 8192, MADV_DONTNEED) = 0 <0.000044>
+10:36:45.089368 madvise(0x9757f000, 4096, MADV_DONTNEED) = 0 <0.000043>
+10:36:45.089681 sigaltstack({ss_sp=0, ss_flags=SS_DISABLE, ss_size=3069946756}, NULL) = 0 <0.000035>
+10:36:45.089985 munmap(0xa9428000, 12288) = 0 <0.000045>
+10:36:45.090273 set_tid_address(0)      = 3960 <0.000034>
+10:36:45.090554 rt_sigprocmask(SIG_SETMASK, ~[RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], [QUIT USR1 PIPE], 8) = 0 <0.000035>
+10:36:45.090894 munmap(0x9efc0000, 1069056) = 0 <0.000057>
+10:36:45.091197 exit(0)                 = ?
+10:36:45.091381 +++ exited with 0 +++

@@ -1,0 +1,1526 @@
+10:36:42.298923 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb3692000 <0.000191>
+10:36:42.299437 mprotect(0xb3692000, 4096, PROT_NONE) = 0 <0.000306>
+10:36:42.300218 sigaltstack({ss_sp=0xb3693000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000554>
+10:36:42.301064 prctl(0x53564d41 /* PR_??? */, 0, 0xb3693000, 0x2000, 0xb6d55ed3) = 0 <0.000138>
+10:36:42.301724 mprotect(0x9f9fc000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000148>
+10:36:42.302354 mprotect(0x9f9fc000, 4096, PROT_NONE) = 0 <0.000138>
+10:36:42.302779 madvise(0x9f9fc000, 1056768, MADV_DONTNEED) = 0 <0.000150>
+10:36:42.303213 prctl(PR_SET_NAME, 0x9faff844, 0, 0x9faff978, 0xa88a1580) = 0 <0.000311>
+10:36:42.303777 getpriority(PRIO_PROCESS, 3889) = 20 <0.000132>
+10:36:42.304178 setpriority(PRIO_PROCESS, 3889, 0) = 0 <0.000140>
+10:36:42.304651 write(11, "3889", 4)    = 4 <0.000154>
+10:36:42.305067 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0) = 0 <0.000127>
+10:36:42.305429 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000134>
+10:36:42.306036 clock_gettime(CLOCK_MONOTONIC, {302, 828212804}) = 0 <0.000154>
+10:36:42.306509 clock_gettime(CLOCK_MONOTONIC, {302, 828661866}) = 0 <0.000283>
+10:36:42.307149 getuid32()              = 10071 <0.001382>
+10:36:42.309258 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff108) = 0 <0.001594>
+10:36:42.311552 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff108) = 0 <0.000260>
+10:36:42.312378 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff0e8) = 0 <0.000543>
+10:36:42.313761 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff108) = 0 <0.000949>
+10:36:42.315308 getuid32()              = 10071 <0.000082>
+10:36:42.315899 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff088) = 0 <0.000525>
+10:36:42.316819 getuid32()              = 10071 <0.000082>
+10:36:42.317173 getuid32()              = 10071 <0.000081>
+10:36:42.317531 newfstatat(AT_FDCWD, "/system/framework/framework-res.apk", {st_mode=S_IFREG|0644, st_size=12883679, ...}, 0) = 0 <0.000087>
+10:36:42.317997 newfstatat(AT_FDCWD, "/system/framework/framework-res.apk", {st_mode=S_IFREG|0644, st_size=12883679, ...}, 0) = 0 <0.005618>
+10:36:42.323972 pread(5, "PK\3\4\24\0\10\10\10\0\256l\247D\1\\\331\34-I\0\0\234\320\1\0\23\0\4\0", 30, 0) = 30 <0.000153>
+10:36:42.328092 pread(5, "AndroidManifest.xml", 19, 30) = 19 <0.000119>
+10:36:42.328577 mmap2(NULL, 18786, PROT_READ, MAP_SHARED, 5, 0) = 0xb3687000 <0.000113>
+10:36:42.328967 munmap(0xb3687000, 18786) = 0 <0.000130>
+10:36:42.329384 newfstatat(AT_FDCWD, "/system/framework/framework-res.apk", {st_mode=S_IFREG|0644, st_size=12883679, ...}, 0) = 0 <0.000167>
+10:36:42.329860 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, 0) = 0 <0.000170>
+10:36:42.330323 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, 0) = 0 <0.000117>
+10:36:42.330843 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE) = 27 <0.000105>
+10:36:42.331232 _llseek(27, 0, [43183583], SEEK_END) = 0 <0.000122>
+10:36:42.331757 _llseek(27, 43118026, [43118026], SEEK_SET) = 0 <0.000098>
+10:36:42.332122 read(27, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000335>
+10:36:42.332713 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 27, 0x28f9000) = 0xa9402000 <0.000247>
+10:36:42.333231 madvise(0x9fb1d000, 81920, MADV_DONTNEED) = 0 <0.000149>
+10:36:42.335468 pread(27, "PK\3\4\24\0\10\10\10\0\261\211\0259v\253\4+2\343\0\0\204u\6\0\23\0\4\0", 30, 0) = 30 <0.000093>
+10:36:42.335834 pread(27, "AndroidManifest.xml", 19, 30) = 19 <0.000095>
+10:36:42.336237 mmap2(NULL, 58215, PROT_READ, MAP_SHARED, 27, 0) = 0xaef8c000 <0.000094>
+10:36:42.336595 munmap(0xaef8c000, 58215) = 0 <0.000094>
+10:36:42.336944 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, 0) = 0 <0.000095>
+10:36:42.337322 pread(27, "PK\3\4\n\0\0\10\0\0\261\211\0259\312\241\177\371L\244L\1L\244L\1\16\0\2\0", 30, 21009446) = 30 <0.000094>
+10:36:42.337686 pread(27, "resources.arsc", 14, 21009476) = 14 <0.000093>
+10:36:42.338071 mmap2(NULL, 21801120, PROT_READ, MAP_SHARED, 27, 0x1409000) = 0x9e31b000 <0.000100>
+10:36:42.341766 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee08) = 0 <0.000381>
+10:36:42.342589 clock_gettime(CLOCK_MONOTONIC, {302, 864754523}) = 0 <0.000150>
+10:36:42.343075 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff138) = 0 <0.003410>
+10:36:42.347135 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff138) = 0 <0.001160>
+10:36:42.348758 newfstatat(AT_FDCWD, "/system/framework/com.android.location.provider.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, 0) = 0 <0.000095>
+10:36:42.349144 newfstatat(AT_FDCWD, "/system/framework/com.android.location.provider.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, 0) = 0 <0.000122>
+10:36:42.349613 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000095>
+10:36:42.349995 newfstatat(AT_FDCWD, "/data/dalvik-cache/", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000127>
+10:36:42.350431 openat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.location.provider.jar@classes.dex.flock", O_RDWR|O_CREAT|O_LARGEFILE, 0666) = -1 EACCES (Permission denied) <0.000129>
+10:36:42.350855 unlinkat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.location.provider.jar@classes.dex.flock", 0) = -1 ENOENT (No such file or directory) <0.000093>
+10:36:42.351223 openat(AT_FDCWD, "/system/framework/com.android.location.provider.jar", O_RDONLY|O_LARGEFILE) = 32 <0.000092>
+10:36:42.351579 read(32, "PK\3\4", 4)   = 4 <0.000106>
+10:36:42.351984 lseek(32, 0, SEEK_SET)  = 0 <0.000098>
+10:36:42.352366 _llseek(32, 0, [309], SEEK_END) = 0 <0.000095>
+10:36:42.352735 _llseek(32, 0, [0], SEEK_SET) = 0 <0.000093>
+10:36:42.353098 read(32, "PK\3\4\24\0\0\10\10\0b\205\21G\0\0\0\0\2\0\0\0\0\0\0\0\t\0\4\0META-INF/\376\312\0\0\3\0PK\3\4\24\0\0\10\10\0b\205\21G\267\214q\211C\0\0\0D\0\0\0\24\0\0\0META-INF/MANIFEST.MF\363M\314\313LK-.\321\rK-*\316\314\317\263R0\3243\340\345r.JM,IM\321u\252\4\t\230\353\31\304\233[*h\370\27%&\347\244*8\347\27\25\344\27%\226\0\225k\362r\361r\1\0PK\1\2\24\0\24\0\0\10\10\0b\205\21G\0\0\0\0\2\0\0\0\0\0\0\0\t\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0META-INF/\376\312\0\0PK\1\2\24\0\24\0\0\10\10\0b\205\21G\267\214q\211C\0\0\0D\0\0\0\24\0\0\0\0\0\0\0\0\0\0\0\0\0-\0\0\0META-INF/MANIFEST.MFPK\5\6\0\0\0\0\2\0\2\0}\0\0\0\242\0\0\0\0\0", 309) = 309 <0.000118>
+10:36:42.353492 mmap2(NULL, 287, PROT_READ, MAP_SHARED, 32, 0) = 0xb5ae0000 <0.000097>
+10:36:42.353843 fcntl64(32, F_GETFD)    = 0 <0.000117>
+10:36:42.354240 fcntl64(32, F_SETFD, FD_CLOEXEC) = 0 <0.000096>
+10:36:42.354666 close(32)               = 0 <0.000095>
+10:36:42.355018 munmap(0xb5ae0000, 287) = 0 <0.000183>
+10:36:42.355661 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000137>
+10:36:42.356254 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000136>
+10:36:42.356830 newfstatat(AT_FDCWD, "/system/framework/oat", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000137>
+10:36:42.357417 newfstatat(AT_FDCWD, "/system/framework/oat/arm", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000138>
+10:36:42.357995 newfstatat(AT_FDCWD, "/system/framework/oat/arm/com.android.location.provider.odex", {st_mode=S_IFREG|0644, st_size=61932, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000168>
+10:36:42.358722 futex(0xb6fb9110, FUTEX_WAIT_PRIVATE, 250298370, NULL) = 0 <0.026586>
+10:36:42.385623 mprotect(0xb5b52000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000095>
+10:36:42.386005 mprotect(0xb5be1000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000107>
+10:36:42.386443 mprotect(0xb5c7a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000095>
+10:36:42.387893 mprotect(0xb5e8d000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000140>
+10:36:42.388358 mprotect(0xb62c8000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000118>
+10:36:42.388737 mprotect(0xb6335000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000093>
+10:36:42.389083 mprotect(0xb6377000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000135>
+10:36:42.389502 mprotect(0xb6f08000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000117>
+10:36:42.389951 mprotect(0xb6f09000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000041>
+10:36:42.390166 mprotect(0xb6f0a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:42.390376 mprotect(0xb6f0b000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000098>
+10:36:42.390647 mprotect(0xb6f71000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000042>
+10:36:42.390861 mprotect(0xb6f76000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:42.391071 mprotect(0xb5dd3000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000039>
+10:36:42.391380 mprotect(0xb597a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000405>
+10:36:42.392024 mprotect(0xb62e6000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000122>
+10:36:42.392663 mprotect(0xb6f72000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000094>
+10:36:42.393044 openat(AT_FDCWD, "/system/framework/oat/arm/com.android.location.provider.odex", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 29 <0.000421>
+10:36:42.393718 fstat64(29, {st_mode=S_IFREG|0644, st_size=61932, ...}) = 0 <0.000122>
+10:36:42.394375 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb368a000 <0.000190>
+10:36:42.394835 prctl(0x53564d41 /* PR_??? */, 0, 0xb368a000, 0x2000, 0xb6fb44b1) = 0 <0.000536>
+10:36:42.395637 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb3688000 <0.000124>
+10:36:42.395993 prctl(0x53564d41 /* PR_??? */, 0, 0xb3688000, 0x2000, 0xb6fb44b1) = 0 <0.000140>
+10:36:42.396748 readlinkat(AT_FDCWD, "/proc/self/fd/29", 0xb368a00c, 4096) = -1 EACCES (Permission denied) <0.000108>
+10:36:42.397133 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 30 <0.000464>
+10:36:42.397873 fcntl64(30, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000385>
+10:36:42.398656 connect(30, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000169>
+10:36:42.399238 clock_gettime(CLOCK_REALTIME, {1444041402, 399403003}) = 0 <0.000121>
+10:36:42.399815 writev(30, [{"\0", 1}, {"1\17", 2}, {"\272R\22V\373g\316\27", 8}, {"\6", 1}, {"linker\0", 7}, {"readlink('/proc/self/fd/29') failed: Permission denied [fd=29]\0", 63}], 6) = 82 <0.000156>
+10:36:42.401720 close(30)               = 0 <0.000140>
+10:36:42.402274 munmap(0xb3688000, 8192) = 0 <0.000137>
+10:36:42.402845 munmap(0xb368a000, 8192) = 0 <0.000158>
+10:36:42.403424 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 30 <0.000646>
+10:36:42.404442 fcntl64(30, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000179>
+10:36:42.405090 connect(30, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.001099>
+10:36:42.407301 clock_gettime(CLOCK_REALTIME, {1444041402, 407552689}) = 0 <0.000194>
+10:36:42.407871 writev(30, [{"\0", 1}, {"1\17", 2}, {"\272R\22V\261\302J\30", 8}, {"\6", 1}, {"linker\0", 7}, {"warning: unable to get realpath for the library \"/system/framework/oat/arm/com.android.location.provider.odex\". Will use given name.\0", 133}], 6) = 152 <0.000199>
+10:36:42.408883 close(30)               = 0 <0.000137>
+10:36:42.409528 pread(29, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0\0\0\0004\0\0\0\204\360\0\0\0\0\0\0054\0 \0\5\0(\0\t\0\10\0", 52, 0) = 52 <0.000142>
+10:36:42.410253 mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 29, 0) = 0xb5ad8000 <0.000424>
+10:36:42.411188 mmap2(NULL, 65536, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xa97d9000 <0.000628>
+10:36:42.412184 mmap2(0xa97d9000, 40960, PROT_READ, MAP_PRIVATE|MAP_FIXED, 29, 0) = 0xa97d9000 <0.000186>
+10:36:42.412767 mmap2(0xa97e3000, 17832, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 29, 0xa000) = 0xa97e3000 <0.000180>
+10:36:42.413315 mmap2(0xa97e8000, 56, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 29, 0xf000) = 0xa97e8000 <0.000193>
+10:36:42.414121 munmap(0xb5ad8000, 4096) = 0 <0.000155>
+10:36:42.414687 close(29)               = 0 <0.000152>
+10:36:42.415731 mprotect(0xb5b52000, 4096, PROT_READ) = 0 <0.000160>
+10:36:42.416341 mprotect(0xb5be1000, 4096, PROT_READ) = 0 <0.000153>
+10:36:42.417106 mprotect(0xb5c7a000, 4096, PROT_READ) = 0 <0.000155>
+10:36:42.417660 mprotect(0xb5e8d000, 4096, PROT_READ) = 0 <0.000153>
+10:36:42.418279 mprotect(0xb62c8000, 4096, PROT_READ) = 0 <0.000141>
+10:36:42.418879 mprotect(0xb6335000, 4096, PROT_READ) = 0 <0.000157>
+10:36:42.419874 mprotect(0xb6377000, 4096, PROT_READ) = 0 <0.000136>
+10:36:42.420420 mprotect(0xb6f08000, 4096, PROT_READ) = 0 <0.000136>
+10:36:42.420952 mprotect(0xb6f09000, 4096, PROT_READ) = 0 <0.000134>
+10:36:42.421482 mprotect(0xb6f0a000, 4096, PROT_READ) = 0 <0.000135>
+10:36:42.422032 mprotect(0xb6f0b000, 4096, PROT_READ) = 0 <0.000154>
+10:36:42.422575 mprotect(0xb6f71000, 4096, PROT_READ) = 0 <0.000136>
+10:36:42.423114 mprotect(0xb6f76000, 4096, PROT_READ) = 0 <0.000135>
+10:36:42.423638 mprotect(0xb5dd3000, 4096, PROT_READ) = 0 <0.000136>
+10:36:42.424171 mprotect(0xb597a000, 4096, PROT_READ) = 0 <0.000161>
+10:36:42.424753 mprotect(0xb62e6000, 4096, PROT_READ) = 0 <0.001873>
+10:36:42.427088 mprotect(0xb6f72000, 4096, PROT_READ) = 0 <0.000144>
+10:36:42.427626 futex(0xb6fb9110, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000155>
+10:36:42.428400 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000139>
+10:36:42.428992 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000155>
+10:36:42.429616 newfstatat(AT_FDCWD, "/system/framework/com.android.location.provider.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000135>
+10:36:42.430182 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000130>
+10:36:42.430733 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000157>
+10:36:42.431349 newfstatat(AT_FDCWD, "/system/framework/com.android.location.provider.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000131>
+10:36:42.431903 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000155>
+10:36:42.432511 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000131>
+10:36:42.433078 newfstatat(AT_FDCWD, "/system/framework/com.android.location.provider.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000131>
+10:36:42.433635 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000131>
+10:36:42.434184 newfstatat(AT_FDCWD, "/data/dalvik-cache", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000165>
+10:36:42.434841 newfstatat(AT_FDCWD, "/data/dalvik-cache/arm", {st_mode=S_IFDIR|0711, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000182>
+10:36:42.435475 newfstatat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.location.provider.jar@classes.dex", 0x9fafbcc0, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory) <0.000159>
+10:36:42.436070 openat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.location.provider.jar@classes.dex", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory) <0.000345>
+10:36:42.436862 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000232>
+10:36:42.437572 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000139>
+10:36:42.438302 newfstatat(AT_FDCWD, "/system/framework/com.android.location.provider.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000127>
+10:36:42.438902 newfstatat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, 0) = 0 <0.000125>
+10:36:42.439459 newfstatat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, 0) = 0 <0.000127>
+10:36:42.440061 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000125>
+10:36:42.440606 newfstatat(AT_FDCWD, "/data/dalvik-cache/", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000140>
+10:36:42.441168 openat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.media.remotedisplay.jar@classes.dex.flock", O_RDWR|O_CREAT|O_LARGEFILE, 0666) = -1 EACCES (Permission denied) <0.000122>
+10:36:42.441715 unlinkat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.media.remotedisplay.jar@classes.dex.flock", 0) = -1 ENOENT (No such file or directory) <0.000124>
+10:36:42.442237 openat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", O_RDONLY|O_LARGEFILE) = 29 <0.000124>
+10:36:42.442800 read(29, "PK\3\4", 4)   = 4 <0.000168>
+10:36:42.443400 lseek(29, 0, SEEK_SET)  = 0 <0.000177>
+10:36:42.443981 _llseek(29, 0, [309], SEEK_END) = 0 <0.000163>
+10:36:42.444563 _llseek(29, 0, [0], SEEK_SET) = 0 <0.000158>
+10:36:42.445141 read(29, "PK\3\4\24\0\0\10\10\0b\205\21G\0\0\0\0\2\0\0\0\0\0\0\0\t\0\4\0META-INF/\376\312\0\0\3\0PK\3\4\24\0\0\10\10\0b\205\21G\267\214q\211C\0\0\0D\0\0\0\24\0\0\0META-INF/MANIFEST.MF\363M\314\313LK-.\321\rK-*\316\314\317\263R0\3243\340\345r.JM,IM\321u\252\4\t\230\353\31\304\233[*h\370\27%&\347\244*8\347\27\25\344\27%\226\0\225k\362r\361r\1\0PK\1\2\24\0\24\0\0\10\10\0b\205\21G\0\0\0\0\2\0\0\0\0\0\0\0\t\0\4\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0META-INF/\376\312\0\0PK\1\2\24\0\24\0\0\10\10\0b\205\21G\267\214q\211C\0\0\0D\0\0\0\24\0\0\0\0\0\0\0\0\0\0\0\0\0-\0\0\0META-INF/MANIFEST.MFPK\5\6\0\0\0\0\2\0\2\0}\0\0\0\242\0\0\0\0\0", 309) = 309 <0.000186>
+10:36:42.445761 mmap2(NULL, 287, PROT_READ, MAP_SHARED, 29, 0) = 0xb5ad8000 <0.000176>
+10:36:42.446390 fcntl64(29, F_GETFD)    = 0 <0.000177>
+10:36:42.447003 fcntl64(29, F_SETFD, FD_CLOEXEC) = 0 <0.000825>
+10:36:42.448386 close(29)               = 0 <0.000181>
+10:36:42.448988 munmap(0xb5ad8000, 287) = 0 <0.000198>
+10:36:42.449596 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000169>
+10:36:42.450216 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000173>
+10:36:42.450829 newfstatat(AT_FDCWD, "/system/framework/oat", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000173>
+10:36:42.451439 newfstatat(AT_FDCWD, "/system/framework/oat/arm", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000475>
+10:36:42.452393 newfstatat(AT_FDCWD, "/system/framework/oat/arm/com.android.media.remotedisplay.odex", {st_mode=S_IFREG|0644, st_size=25068, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000484>
+10:36:42.453340 mprotect(0xb5b52000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000292>
+10:36:42.455204 mprotect(0xb5be1000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000153>
+10:36:42.455790 mprotect(0xb5c7a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000135>
+10:36:42.456378 mprotect(0xb5e8d000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000136>
+10:36:42.456913 mprotect(0xb62c8000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000133>
+10:36:42.457434 mprotect(0xb6335000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000134>
+10:36:42.458069 mprotect(0xb6377000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000226>
+10:36:42.458804 mprotect(0xb6f08000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000187>
+10:36:42.459458 mprotect(0xb6f09000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000172>
+10:36:42.460084 mprotect(0xb6f0a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000161>
+10:36:42.460682 mprotect(0xb6f0b000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000166>
+10:36:42.461407 mprotect(0xb6f71000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000230>
+10:36:42.462486 mprotect(0xb6f76000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000319>
+10:36:42.463613 mprotect(0xb5dd3000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000214>
+10:36:42.464517 mprotect(0xb597a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000220>
+10:36:42.465553 mprotect(0xb62e6000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000254>
+10:36:42.466604 mprotect(0xb6f72000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000249>
+10:36:42.467904 openat(AT_FDCWD, "/system/framework/oat/arm/com.android.media.remotedisplay.odex", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 29 <0.000193>
+10:36:42.469745 fstat64(29, {st_mode=S_IFREG|0644, st_size=25068, ...}) = 0 <0.000146>
+10:36:42.470356 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb368a000 <0.000148>
+10:36:42.470948 prctl(0x53564d41 /* PR_??? */, 0, 0xb368a000, 0x2000, 0xb6fb44b1) = 0 <0.000145>
+10:36:42.471527 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb3688000 <0.000200>
+10:36:42.472178 prctl(0x53564d41 /* PR_??? */, 0, 0xb3688000, 0x2000, 0xb6fb44b1) = 0 <0.000175>
+10:36:42.472798 readlinkat(AT_FDCWD, "/proc/self/fd/29", 0xb368a00c, 4096) = -1 EACCES (Permission denied) <0.000169>
+10:36:42.473433 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 30 <0.000205>
+10:36:42.474080 fcntl64(30, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000178>
+10:36:42.474733 connect(30, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000188>
+10:36:42.475422 clock_gettime(CLOCK_REALTIME, {1444041402, 475568731}) = 0 <0.000291>
+10:36:42.476183 writev(30, [{"\0", 1}, {"1\17", 2}, {"\272R\22V[\232X\34", 8}, {"\6", 1}, {"linker\0", 7}, {"readlink('/proc/self/fd/29') failed: Permission denied [fd=29]\0", 63}], 6) = 82 <0.000275>
+10:36:42.477055 close(30)               = 0 <0.000228>
+10:36:42.477723 munmap(0xb3688000, 8192) = 0 <0.000175>
+10:36:42.478457 munmap(0xb368a000, 8192) = 0 <0.000315>
+10:36:42.479290 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 34 <0.000220>
+10:36:42.479981 fcntl64(34, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000176>
+10:36:42.480614 connect(34, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000195>
+10:36:42.481403 clock_gettime(CLOCK_REALTIME, {1444041402, 481661752}) = 0 <0.000195>
+10:36:42.482091 writev(34, [{"\0", 1}, {"1\17", 2}, {"\272R\22V8\223\265\34", 8}, {"\6", 1}, {"linker\0", 7}, {"warning: unable to get realpath for the library \"/system/framework/oat/arm/com.android.media.remotedisplay.odex\". Will use given name.\0", 135}], 6) = 154 <0.000203>
+10:36:42.482955 close(34)               = 0 <0.000190>
+10:36:42.485475 pread(29, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0\0\0\0004\0\0\0\204`\0\0\0\0\0\0054\0 \0\5\0(\0\t\0\10\0", 52, 0) = 52 <0.000325>
+10:36:42.486267 mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 29, 0) = 0xb5ad8000 <0.000266>
+10:36:42.486913 mmap2(NULL, 28672, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xaeeb7000 <0.000188>
+10:36:42.487496 mmap2(0xaeeb7000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED, 29, 0) = 0xaeeb7000 <0.000181>
+10:36:42.488094 mmap2(0xaeebb000, 5726, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 29, 0x4000) = 0xaeebb000 <0.000204>
+10:36:42.488692 mmap2(0xaeebd000, 56, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 29, 0x6000) = 0xaeebd000 <0.000180>
+10:36:42.489259 munmap(0xb5ad8000, 4096) = 0 <0.000191>
+10:36:42.490203 close(29)               = 0 <0.000217>
+10:36:42.491733 mprotect(0xb5b52000, 4096, PROT_READ) = 0 <0.000181>
+10:36:42.492304 mprotect(0xb5be1000, 4096, PROT_READ) = 0 <0.000188>
+10:36:42.493284 mprotect(0xb5c7a000, 4096, PROT_READ) = 0 <0.000184>
+10:36:42.493855 mprotect(0xb5e8d000, 4096, PROT_READ) = 0 <0.000175>
+10:36:42.494410 mprotect(0xb62c8000, 4096, PROT_READ) = 0 <0.000195>
+10:36:42.495086 mprotect(0xb6335000, 4096, PROT_READ) = 0 <0.000179>
+10:36:42.495648 mprotect(0xb6377000, 4096, PROT_READ) = 0 <0.000198>
+10:36:42.496230 mprotect(0xb6f08000, 4096, PROT_READ) = 0 <0.000179>
+10:36:42.496791 mprotect(0xb6f09000, 4096, PROT_READ) = 0 <0.000177>
+10:36:42.497348 mprotect(0xb6f0a000, 4096, PROT_READ) = 0 <0.000176>
+10:36:42.497903 mprotect(0xb6f0b000, 4096, PROT_READ) = 0 <0.000181>
+10:36:42.498505 mprotect(0xb6f71000, 4096, PROT_READ) = 0 <0.000176>
+10:36:42.499091 mprotect(0xb6f76000, 4096, PROT_READ) = 0 <0.000179>
+10:36:42.499686 mprotect(0xb5dd3000, 4096, PROT_READ) = 0 <0.000179>
+10:36:42.500246 mprotect(0xb597a000, 4096, PROT_READ) = 0 <0.000176>
+10:36:42.500801 mprotect(0xb62e6000, 4096, PROT_READ) = 0 <0.000176>
+10:36:42.501357 mprotect(0xb6f72000, 4096, PROT_READ) = 0 <0.000176>
+10:36:42.502233 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000137>
+10:36:42.502838 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000135>
+10:36:42.503431 newfstatat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000136>
+10:36:42.504024 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000135>
+10:36:42.504649 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000138>
+10:36:42.505246 newfstatat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000136>
+10:36:42.505837 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000138>
+10:36:42.506427 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000137>
+10:36:42.507015 newfstatat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000138>
+10:36:42.507606 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000149>
+10:36:42.508652 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000204>
+10:36:42.509327 newfstatat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000211>
+10:36:42.510263 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000202>
+10:36:42.510933 newfstatat(AT_FDCWD, "/data/dalvik-cache", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000202>
+10:36:42.511585 newfstatat(AT_FDCWD, "/data/dalvik-cache/arm", {st_mode=S_IFDIR|0711, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000200>
+10:36:42.512242 newfstatat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.media.remotedisplay.jar@classes.dex", 0x9fafbcc0, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory) <0.000202>
+10:36:42.512899 openat(AT_FDCWD, "/data/dalvik-cache/arm/system@framework@com.android.media.remotedisplay.jar@classes.dex", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory) <0.000219>
+10:36:42.513579 newfstatat(AT_FDCWD, "/system", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000181>
+10:36:42.514196 newfstatat(AT_FDCWD, "/system/framework", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000183>
+10:36:42.514807 newfstatat(AT_FDCWD, "/system/framework/com.android.media.remotedisplay.jar", {st_mode=S_IFREG|0644, st_size=309, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000181>
+10:36:42.515414 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, 0) = 0 <0.000183>
+10:36:42.516023 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, 0) = 0 <0.000186>
+10:36:42.516634 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000181>
+10:36:42.517245 newfstatat(AT_FDCWD, "/data/dalvik-cache/", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000181>
+10:36:42.517844 openat(AT_FDCWD, "/data/dalvik-cache/arm/data@app@com.google.android.gms-2@base.apk@classes.dex.flock", O_RDWR|O_CREAT|O_LARGEFILE, 0666) = -1 EACCES (Permission denied) <0.013941>
+10:36:42.532269 unlinkat(AT_FDCWD, "/data/dalvik-cache/arm/data@app@com.google.android.gms-2@base.apk@classes.dex.flock", 0) = -1 ENOENT (No such file or directory) <0.000540>
+10:36:42.533228 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE) = 34 <0.006438>
+10:36:42.540100 read(34, "PK\3\4", 4)   = 4 <0.000210>
+10:36:42.540720 lseek(34, 0, SEEK_SET)  = 0 <0.000219>
+10:36:42.541333 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000208>
+10:36:42.541949 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000204>
+10:36:42.542557 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000372>
+10:36:42.543423 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0xa8ef8000 <0.000159>
+10:36:42.544056 madvise(0x9fb2c000, 81920, MADV_DONTNEED) = 0 <0.000154>
+10:36:42.545966 fcntl64(34, F_GETFD)    = 0 <0.000184>
+10:36:42.546618 fcntl64(34, F_SETFD, FD_CLOEXEC) = 0 <0.000176>
+10:36:42.547255 pread(34, "PK\3\4\24\0\10\10\10\0\261\211\0259\351\6:\0313\3465\0\324\232\212\0\v\0\0\0", 30, 1920336) = 30 <0.000215>
+10:36:42.547946 pread(34, "classes.dex", 11, 1920366) = 11 <0.000193>
+10:36:42.548687 close(34)               = 0 <0.000176>
+10:36:42.549316 munmap(0xa8ef8000, 220617) = 0 <0.000249>
+10:36:42.549991 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000192>
+10:36:42.550762 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000218>
+10:36:42.554004 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.001579>
+10:36:42.556142 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000157>
+10:36:42.556791 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000171>
+10:36:42.557462 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000147>
+10:36:42.558153 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000227>
+10:36:42.560034 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000066>
+10:36:42.560434 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000045>
+10:36:42.560695 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000044>
+10:36:42.560952 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000046>
+10:36:42.563098 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000134>
+10:36:42.563571 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000338>
+10:36:42.564374 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000062>
+10:36:42.564828 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000181>
+10:36:42.565389 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000178>
+10:36:42.565927 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000370>
+10:36:42.566681 newfstatat(AT_FDCWD, "/data/dalvik-cache", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000182>
+10:36:42.567331 newfstatat(AT_FDCWD, "/data/dalvik-cache/arm", {st_mode=S_IFDIR|0711, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000177>
+10:36:42.567877 newfstatat(AT_FDCWD, "/data/dalvik-cache/arm/data@app@com.google.android.gms-2@base.apk@classes.dex", 0x9fafbcc0, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory) <0.000243>
+10:36:42.568629 openat(AT_FDCWD, "/data/dalvik-cache/arm/data@app@com.google.android.gms-2@base.apk@classes.dex", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory) <0.000177>
+10:36:42.569167 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000171>
+10:36:42.569887 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000173>
+10:36:42.570426 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000171>
+10:36:42.571031 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/oat", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000171>
+10:36:42.571564 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/oat/arm", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000175>
+10:36:42.572093 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/oat/arm/base.odex", {st_mode=S_IFREG|0644, st_size=76079536, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000172>
+10:36:42.572669 mprotect(0xb5b52000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000174>
+10:36:42.573170 mprotect(0xb5be1000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000173>
+10:36:42.573664 mprotect(0xb5c7a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000173>
+10:36:42.574219 mprotect(0xb5e8d000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000244>
+10:36:42.574846 mprotect(0xb62c8000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000191>
+10:36:42.575492 mprotect(0xb6335000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000210>
+10:36:42.576045 mprotect(0xb6377000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000198>
+10:36:42.576598 mprotect(0xb6f08000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000187>
+10:36:42.577120 mprotect(0xb6f09000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000186>
+10:36:42.577636 mprotect(0xb6f0a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000186>
+10:36:42.578296 mprotect(0xb6f0b000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000221>
+10:36:42.579546 mprotect(0xb6f71000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000226>
+10:36:42.580219 mprotect(0xb6f76000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000203>
+10:36:42.581112 mprotect(0xb5dd3000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000307>
+10:36:42.581931 mprotect(0xb597a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000303>
+10:36:42.583269 mprotect(0xb62e6000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000210>
+10:36:42.583912 mprotect(0xb6f72000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000205>
+10:36:42.584576 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/oat/arm/base.odex", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000226>
+10:36:42.585244 fstat64(34, {st_mode=S_IFREG|0644, st_size=76079536, ...}) = 0 <0.000201>
+10:36:42.585850 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb07c0000 <0.000289>
+10:36:42.588228 prctl(0x53564d41 /* PR_??? */, 0, 0xb07c0000, 0x2000, 0xb6fb44b1) = 0 <0.000208>
+10:36:42.588875 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xaf128000 <0.000183>
+10:36:42.589465 prctl(0x53564d41 /* PR_??? */, 0, 0xaf128000, 0x2000, 0xb6fb44b1) = 0 <0.000182>
+10:36:42.590138 readlinkat(AT_FDCWD, "/proc/self/fd/34", 0xb07c000c, 4096) = -1 EACCES (Permission denied) <0.000170>
+10:36:42.590725 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 36 <0.000160>
+10:36:42.591317 fcntl64(36, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000153>
+10:36:42.591865 connect(36, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000172>
+10:36:42.592456 clock_gettime(CLOCK_REALTIME, {1444041402, 592591284}) = 0 <0.000586>
+10:36:42.593477 writev(36, [{"\0", 1}, {"1\17", 2}, {"\272R\22V\2649R#", 8}, {"\6", 1}, {"linker\0", 7}, {"readlink('/proc/self/fd/34') failed: Permission denied [fd=34]\0", 63}], 6) = 82 <0.000167>
+10:36:42.594168 close(36)               = 0 <0.000176>
+10:36:42.594832 munmap(0xaf128000, 8192) = 0 <0.000561>
+10:36:42.595813 munmap(0xb07c0000, 8192) = 0 <0.000435>
+10:36:42.596663 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 36 <0.000858>
+10:36:42.597978 fcntl64(36, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000626>
+10:36:42.599109 connect(36, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000727>
+10:36:42.600304 clock_gettime(CLOCK_REALTIME, {1444041402, 600542169}) = 0 <0.000172>
+10:36:42.600894 writev(36, [{"\0", 1}, {"1\17", 2}, {"\272R\22V\331\213\313#", 8}, {"\6", 1}, {"linker\0", 7}, {"warning: unable to get realpath for the library \"/data/app/com.google.android.gms-2/oat/arm/base.odex\". Will use given name.\0", 125}], 6) = 144 <0.000806>
+10:36:42.602255 close(36)               = 0 <0.000189>
+10:36:42.602850 pread(34, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0\0\0\0004\0\0\0p\340\210\4\0\0\0\0054\0 \0\5\0(\0\10\0\7\0", 52, 0) = 52 <0.000199>
+10:36:42.603474 mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 34, 0) = 0xb5ad8000 <0.000465>
+10:36:42.604413 mmap2(NULL, 76083200, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x98a87000 <0.000217>
+10:36:42.605110 mmap2(0x98a87000, 37793792, PROT_READ, MAP_PRIVATE|MAP_FIXED, 34, 0) = 0x98a87000 <0.000703>
+10:36:42.607671 mmap2(0x9ae92000, 38285210, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 34, 0x240b000) = 0x9ae92000 <0.000681>
+10:36:42.609879 mmap2(0x9d315000, 56, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 34, 0x488e000) = 0x9d315000 <0.000246>
+10:36:42.610515 munmap(0xb5ad8000, 4096) = 0 <0.000225>
+10:36:42.611127 close(34)               = 0 <0.000190>
+10:36:42.611819 mprotect(0xb5b52000, 4096, PROT_READ) = 0 <0.000218>
+10:36:42.612398 mprotect(0xb5be1000, 4096, PROT_READ) = 0 <0.000185>
+10:36:42.612935 mprotect(0xb5c7a000, 4096, PROT_READ) = 0 <0.000205>
+10:36:42.613475 mprotect(0xb5e8d000, 4096, PROT_READ) = 0 <0.000184>
+10:36:42.614006 mprotect(0xb62c8000, 4096, PROT_READ) = 0 <0.000212>
+10:36:42.614638 mprotect(0xb6335000, 4096, PROT_READ) = 0 <0.000184>
+10:36:42.615165 mprotect(0xb6377000, 4096, PROT_READ) = 0 <0.000183>
+10:36:42.615700 mprotect(0xb6f08000, 4096, PROT_READ) = 0 <0.000210>
+10:36:42.616265 mprotect(0xb6f09000, 4096, PROT_READ) = 0 <0.000194>
+10:36:42.616822 mprotect(0xb6f0a000, 4096, PROT_READ) = 0 <0.000219>
+10:36:42.617382 mprotect(0xb6f0b000, 4096, PROT_READ) = 0 <0.000212>
+10:36:42.617947 mprotect(0xb6f71000, 4096, PROT_READ) = 0 <0.000212>
+10:36:42.618543 mprotect(0xb6f76000, 4096, PROT_READ) = 0 <0.000186>
+10:36:42.619071 mprotect(0xb5dd3000, 4096, PROT_READ) = 0 <0.000188>
+10:36:42.619699 mprotect(0xb597a000, 4096, PROT_READ) = 0 <0.000216>
+10:36:42.620339 mprotect(0xb62e6000, 4096, PROT_READ) = 0 <0.000143>
+10:36:42.620912 mprotect(0xb6f72000, 4096, PROT_READ) = 0 <0.000200>
+10:36:42.621636 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.004429>
+10:36:42.627489 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000148>
+10:36:42.628531 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000182>
+10:36:42.629078 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000167>
+10:36:42.629705 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000165>
+10:36:42.630210 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000162>
+10:36:42.630748 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000162>
+10:36:42.631244 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000159>
+10:36:42.631737 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000156>
+10:36:42.632227 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000157>
+10:36:42.632715 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000158>
+10:36:42.633206 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000156>
+10:36:42.633695 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE) = 36 <0.000159>
+10:36:42.634169 read(36, "PK\3\4", 4)   = 4 <0.000155>
+10:36:42.634714 lseek(36, 0, SEEK_SET)  = 0 <0.000155>
+10:36:42.635175 _llseek(36, 0, [43183583], SEEK_END) = 0 <0.000156>
+10:36:42.635646 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xa8ece000 <0.000259>
+10:36:42.638162 prctl(0x53564d41 /* PR_??? */, 0, 0xa8ece000, 0x40000, 0xb6d56be1) = 0 <0.000210>
+10:36:42.639012 munmap(0xa8ece000, 262144) = 0 <0.000127>
+10:36:42.639372 mmap2(NULL, 520192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x98903000 <0.000289>
+10:36:42.639943 prctl(0x53564d41 /* PR_??? */, 0, 0x98903000, 0x7f000, 0xb6d56be1) = 0 <0.000153>
+10:36:42.640399 munmap(0x98903000, 249856) = 0 <0.000154>
+10:36:42.640849 munmap(0x98980000, 8192) = 0 <0.000153>
+10:36:42.641295 _llseek(36, 43118026, [43118026], SEEK_SET) = 0 <0.000154>
+10:36:42.641766 read(36, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000863>
+10:36:42.642972 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 36, 0x28f9000) = 0xa8ed8000 <0.000363>
+10:36:42.643646 madvise(0x98942000, 81920, MADV_DONTNEED) = 0 <0.000661>
+10:36:42.647217 fcntl64(36, F_GETFD)    = 0 <0.000088>
+10:36:42.647560 fcntl64(36, F_SETFD, FD_CLOEXEC) = 0 <0.000082>
+10:36:42.647892 pread(36, "PK\3\4\24\0\10\10\10\0\261\211\0259$\317R\200\217\362:\0\230\346\216\0\f\0\0\0", 30, 5452732) = 30 <0.000121>
+10:36:42.648294 pread(36, "classes2.dex", 12, 5452762) = 12 <0.000077>
+10:36:42.648961 close(36)               = 0 <0.000077>
+10:36:42.649274 munmap(0xa8ed8000, 220617) = 0 <0.000078>
+10:36:42.649661 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE) = 34 <0.000079>
+10:36:42.649994 read(34, "PK\3\4", 4)   = 4 <0.000076>
+10:36:42.650322 lseek(34, 0, SEEK_SET)  = 0 <0.000082>
+10:36:42.650642 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000076>
+10:36:42.650962 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000076>
+10:36:42.651361 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000292>
+10:36:42.651903 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0xa8ed8000 <0.000121>
+10:36:42.652237 madvise(0x98942000, 81920, MADV_DONTNEED) = 0 <0.000107>
+10:36:42.654128 fcntl64(34, F_GETFD)    = 0 <0.000107>
+10:36:42.654448 fcntl64(34, F_SETFD, FD_CLOEXEC) = 0 <0.000134>
+10:36:42.654824 pread(34, "PK\3\4\24\0\10\10\10\0\261\211\0259\345\v\217\31\312\320(\0l\215f\0\f\0\0\0", 30, 9315973) = 30 <0.000105>
+10:36:42.655151 pread(34, "classes3.dex", 12, 9316003) = 12 <0.000104>
+10:36:42.655482 close(34)               = 0 <0.000106>
+10:36:42.655806 munmap(0xa8ed8000, 220617) = 0 <0.000241>
+10:36:42.656325 newfstatat(AT_FDCWD, "/data", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000156>
+10:36:42.656821 newfstatat(AT_FDCWD, "/data/app", {st_mode=S_IFDIR|0771, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000155>
+10:36:42.657304 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000155>
+10:36:42.657785 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", {st_mode=S_IFREG|0644, st_size=43183583, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000198>
+10:36:42.668133 newfstatat(AT_FDCWD, "/vendor/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.010058>
+10:36:42.678696 newfstatat(AT_FDCWD, "/system/lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}, 0) = 0 <0.000428>
+10:36:42.679658 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000124>
+10:36:42.680484 newfstatat(AT_FDCWD, "/vendor/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000165>
+10:36:42.681037 newfstatat(AT_FDCWD, "/system/lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}, 0) = 0 <0.000165>
+10:36:42.681890 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 34 <0.000128>
+10:36:42.682779 ioctl(34, 0x41007701, 0x9fafee0c) = 0 <0.000138>
+10:36:42.683654 ioctl(34, 0x40047703, 0x2b000) = 0 <0.000124>
+10:36:42.684350 mmap2(NULL, 176128, PROT_READ|PROT_WRITE, MAP_PRIVATE, 34, 0) = 0xa8ee3000 <0.000639>
+10:36:42.685387 close(34)               = 0 <0.000187>
+10:36:42.686214 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 34 <0.000183>
+10:36:42.687236 ioctl(34, 0x41007701, 0x9fafee0c) = 0 <0.000182>
+10:36:42.687794 ioctl(34, 0x40047703, 0x1b000) = 0 <0.000223>
+10:36:42.688399 mmap2(NULL, 110592, PROT_READ|PROT_WRITE, MAP_PRIVATE, 34, 0) = 0xa8ae0000 <0.001137>
+10:36:42.689929 close(34)               = 0 <0.000181>
+10:36:42.693443 clock_gettime(CLOCK_MONOTONIC, {303, 215647127}) = 0 <0.000183>
+10:36:42.694032 clock_gettime(CLOCK_MONOTONIC, {303, 216754106}) = 0 <0.000201>
+10:36:42.695447 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafeea8) = 0 <0.000696>
+10:36:42.699158 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 34 <0.000162>
+10:36:42.699906 ioctl(34, 0x41007701, 0x9fafe914) = 0 <0.000147>
+10:36:42.700483 ioctl(34, 0x40047703, 0x40000) = 0 <0.000145>
+10:36:42.701052 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE, 34, 0) = 0x988c0000 <0.000429>
+10:36:42.701922 close(34)               = 0 <0.000144>
+10:36:42.702494 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 34 <0.000144>
+10:36:42.703086 ioctl(34, 0x41007701, 0x9fafe914) = 0 <0.000143>
+10:36:42.703652 ioctl(34, 0x40047703, 0x25000) = 0 <0.000144>
+10:36:42.704217 mmap2(NULL, 151552, PROT_READ|PROT_WRITE, MAP_PRIVATE, 34, 0) = 0x9889b000 <0.000144>
+10:36:42.704886 close(34)               = 0 <0.000144>
+10:36:42.725290 clock_gettime(CLOCK_MONOTONIC, {303, 247423898}) = 0 <0.000159>
+10:36:42.726054 clock_gettime(CLOCK_MONOTONIC, {303, 248171293}) = 0 <0.000132>
+10:36:42.726760 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000125>
+10:36:42.727276 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000148>
+10:36:42.727818 openat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", O_RDONLY|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 34 <0.000227>
+10:36:42.728456 getdents64(34, /* 2 entries */, 4200) = 48 <0.000132>
+10:36:42.728985 getdents64(34, /* 0 entries */, 4200) = 0 <0.000147>
+10:36:42.729513 close(34)               = 0 <0.000131>
+10:36:42.730113 faccessat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", F_OK) = 0 <0.000146>
+10:36:42.731538 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 34 <0.000165>
+10:36:42.732063 ioctl(34, 0x41007701, 0x9fafe864) = 0 <0.000171>
+10:36:42.732565 ioctl(34, 0x40047703, 0x40000) = 0 <0.000165>
+10:36:42.733058 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE, 34, 0) = 0x9885b000 <0.000336>
+10:36:42.733748 close(34)               = 0 <0.000164>
+10:36:42.734253 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 34 <0.000267>
+10:36:42.734880 ioctl(34, 0x41007701, 0x9fafe864) = 0 <0.000182>
+10:36:42.735421 ioctl(34, 0x40047703, 0x24000) = 0 <0.000064>
+10:36:42.735767 mmap2(NULL, 147456, PROT_READ|PROT_WRITE, MAP_PRIVATE, 34, 0) = 0x98837000 <0.000289>
+10:36:42.736365 close(34)               = 0 <0.000066>
+10:36:42.737645 clock_gettime(CLOCK_MONOTONIC, {303, 259800095}) = 0 <0.000067>
+10:36:42.738561 clock_gettime(CLOCK_MONOTONIC, {303, 260864523}) = 0 <0.000229>
+10:36:42.739573 clock_gettime(CLOCK_MONOTONIC, {303, 261749940}) = 0 <0.000155>
+10:36:42.740365 clock_gettime(CLOCK_MONOTONIC, {303, 262487856}) = 0 <0.000167>
+10:36:42.742755 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000166>
+10:36:42.743597 newfstatat(AT_FDCWD, "/vendor/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000197>
+10:36:42.744220 newfstatat(AT_FDCWD, "/system/lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}, 0) = 0 <0.000235>
+10:36:42.745328 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000180>
+10:36:42.745987 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000178>
+10:36:42.746634 openat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", O_RDONLY|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 34 <0.000209>
+10:36:42.747318 getdents64(34, /* 2 entries */, 4200) = 48 <0.000440>
+10:36:42.748287 getdents64(34, /* 0 entries */, 4200) = 0 <0.000283>
+10:36:42.749049 close(34)               = 0 <0.000182>
+10:36:42.749744 faccessat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", F_OK) = 0 <0.000191>
+10:36:42.750674 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000226>
+10:36:42.751608 newfstatat(AT_FDCWD, "/vendor/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000199>
+10:36:42.752299 newfstatat(AT_FDCWD, "/system/lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}, 0) = 0 <0.000200>
+10:36:42.753009 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libgmscore.so", O_RDONLY|O_LARGEFILE) = 38 <0.000158>
+10:36:42.753633 getsockopt(38, SOL_SOCKET, SO_DEBUG, 0x9fafee70, 0x9fafee74) = -1 ENOTSOCK (Socket operation on non-socket) <0.000164>
+10:36:42.754247 close(38)               = 0 <0.000211>
+10:36:42.755121 munmap(0xb5e4a000, 4096) = 0 <0.000179>
+10:36:42.755762 mprotect(0xb5b52000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000211>
+10:36:42.756435 mprotect(0xb5be1000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000425>
+10:36:42.757332 mprotect(0xb5c7a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000209>
+10:36:42.757992 mprotect(0xb5e8d000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000602>
+10:36:42.759469 mprotect(0xb62c8000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000182>
+10:36:42.760174 mprotect(0xb6335000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000706>
+10:36:42.761308 mprotect(0xb6377000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000174>
+10:36:42.761879 mprotect(0xb6f08000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000166>
+10:36:42.762438 mprotect(0xb6f09000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000175>
+10:36:42.763009 mprotect(0xb6f0a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000324>
+10:36:42.763737 mprotect(0xb6f0b000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000200>
+10:36:42.764330 mprotect(0xb6f71000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000570>
+10:36:42.765319 mprotect(0xb6f76000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000169>
+10:36:42.765881 mprotect(0xb5dd3000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000378>
+10:36:42.766677 mprotect(0xb597a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000178>
+10:36:42.767260 mprotect(0xb62e6000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000377>
+10:36:42.768101 mprotect(0xb6f72000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000163>
+10:36:42.768712 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libgmscore.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000160>
+10:36:42.769295 fstat64(34, {st_mode=S_IFREG|0755, st_size=785860, ...}) = 0 <0.000226>
+10:36:42.769962 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xaf128000 <0.000226>
+10:36:42.770596 prctl(0x53564d41 /* PR_??? */, 0, 0xaf128000, 0x2000, 0xb6fb44b1) = 0 <0.000146>
+10:36:42.771192 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xaf101000 <0.000206>
+10:36:42.774809 prctl(0x53564d41 /* PR_??? */, 0, 0xaf101000, 0x2000, 0xb6fb44b1) = 0 <0.000221>
+10:36:42.775780 readlinkat(AT_FDCWD, "/proc/self/fd/34", 0xaf12800c, 4096) = -1 EACCES (Permission denied) <0.003099>
+10:36:42.779352 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 39 <0.000245>
+10:36:42.780000 fcntl64(39, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000150>
+10:36:42.780516 connect(39, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000197>
+10:36:42.781082 clock_gettime(CLOCK_REALTIME, {1444041402, 781218419}) = 0 <0.000180>
+10:36:42.781610 writev(39, [{"\0", 1}, {"1\17", 2}, {"\272R\22Vsr\220.", 8}, {"\6", 1}, {"linker\0", 7}, {"readlink('/proc/self/fd/34') failed: Permission denied [fd=34]\0", 63}], 6) = 82 <0.000182>
+10:36:42.782250 close(39)               = 0 <0.000184>
+10:36:42.782863 munmap(0xaf101000, 8192) = 0 <0.000137>
+10:36:42.783376 munmap(0xaf128000, 8192) = 0 <0.000131>
+10:36:42.783889 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 39 <0.000129>
+10:36:42.784470 fcntl64(39, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000136>
+10:36:42.785100 connect(39, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000130>
+10:36:42.785637 clock_gettime(CLOCK_REALTIME, {1444041402, 785774773}) = 0 <0.001409>
+10:36:42.787595 writev(39, [{"\0", 1}, {"1\17", 2}, {"\272R\22V\265\370\325.", 8}, {"\6", 1}, {"linker\0", 7}, {"warning: unable to get realpath for the library \"/data/app/com.google.android.gms-2/lib/arm/libgmscore.so\". Will use given name.\0", 129}], 6) = 148 <0.000056>
+10:36:42.788194 close(39)               = 0 <0.000178>
+10:36:42.788712 pread(34, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0\0\0\0004\0\0\0\264\371\v\0\0\0\0\0054\0 \0\t\0(\0\32\0\31\0", 52, 0) = 52 <0.000177>
+10:36:42.789349 mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 34, 0) = 0xb5e4a000 <0.000274>
+10:36:42.790009 mmap2(NULL, 798720, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x9866f000 <0.000193>
+10:36:42.790580 mmap2(0x9866f000, 697468, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 34, 0) = 0x9866f000 <0.000185>
+10:36:42.791346 mmap2(0x9871b000, 83956, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 34, 0xab000) = 0x9871b000 <0.000184>
+10:36:42.791909 mmap2(0x98730000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x98730000 <0.000146>
+10:36:42.792817 munmap(0xb5e4a000, 4096) = 0 <0.000158>
+10:36:42.793384 close(34)               = 0 <0.000153>
+10:36:42.794117 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000142>
+10:36:42.794835 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000135>
+10:36:42.795406 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000135>
+10:36:42.795979 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c8000 <0.000449>
+10:36:42.796775 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c8000, 0x11000, 0xb6fb44b1) = 0 <0.000189>
+10:36:42.797298 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000167>
+10:36:42.797808 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000238>
+10:36:42.798407 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0x9fb40000 <0.000273>
+10:36:42.799050 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5e4a000 <0.000175>
+10:36:42.799667 prctl(0x53564d41 /* PR_??? */, 0, 0xb5e4a000, 0x1000, 0xb6fb4550) = 0 <0.000201>
+10:36:42.800244 munmap(0xa97c8000, 69632) = 0 <0.000183>
+10:36:42.800791 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97d0000 <0.000554>
+10:36:42.801782 prctl(0x53564d41 /* PR_??? */, 0, 0xa97d0000, 0x9000, 0xb6fb44b1) = 0 <0.000133>
+10:36:42.806833 close(34)               = 0 <0.000161>
+10:36:42.807727 munmap(0xa97d0000, 36864) = 0 <0.000274>
+10:36:42.808819 munmap(0xb5e4a000, 4096) = 0 <0.000185>
+10:36:42.809370 munmap(0x9fb40000, 220617) = 0 <0.000279>
+10:36:42.810021 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000185>
+10:36:42.810613 openat(AT_FDCWD, "/vendor/lib/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000504>
+10:36:42.811508 openat(AT_FDCWD, "/system/lib/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000181>
+10:36:42.812070 fstat64(34, {st_mode=S_IFREG|0644, st_size=674184, ...}) = 0 <0.000180>
+10:36:42.812641 close(34)               = 0 <0.000178>
+10:36:42.813332 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000181>
+10:36:42.813904 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000178>
+10:36:42.814463 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000187>
+10:36:42.815108 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c8000 <0.000430>
+10:36:42.815916 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c8000, 0x11000, 0xb6fb44b1) = 0 <0.000175>
+10:36:42.816619 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000183>
+10:36:42.817187 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000861>
+10:36:42.818500 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0x9fb40000 <0.000335>
+10:36:42.819808 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5e4a000 <0.000138>
+10:36:42.820379 prctl(0x53564d41 /* PR_??? */, 0, 0xb5e4a000, 0x1000, 0xb6fb4550) = 0 <0.000135>
+10:36:42.820930 munmap(0xa97c8000, 69632) = 0 <0.000139>
+10:36:42.821479 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97d0000 <0.000413>
+10:36:42.822314 prctl(0x53564d41 /* PR_??? */, 0, 0xa97d0000, 0x9000, 0xb6fb44b1) = 0 <0.000135>
+10:36:42.827284 close(34)               = 0 <0.000137>
+10:36:42.827836 munmap(0xa97d0000, 36864) = 0 <0.000226>
+10:36:42.828483 munmap(0xb5e4a000, 4096) = 0 <0.000138>
+10:36:42.829027 munmap(0x9fb40000, 220617) = 0 <0.000136>
+10:36:42.829657 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000137>
+10:36:42.830238 openat(AT_FDCWD, "/vendor/lib/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000136>
+10:36:42.830802 openat(AT_FDCWD, "/system/lib/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000136>
+10:36:42.831358 fstat64(34, {st_mode=S_IFREG|0644, st_size=132824, ...}) = 0 <0.000134>
+10:36:42.831924 close(34)               = 0 <0.000137>
+10:36:42.832622 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000137>
+10:36:42.833201 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000136>
+10:36:42.833760 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000134>
+10:36:42.834317 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c8000 <0.000464>
+10:36:42.835203 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c8000, 0x11000, 0xb6fb44b1) = 0 <0.000135>
+10:36:42.835900 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000191>
+10:36:42.836520 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000493>
+10:36:42.837412 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0x9fb40000 <0.000355>
+10:36:42.838193 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5e4a000 <0.000176>
+10:36:42.838756 prctl(0x53564d41 /* PR_??? */, 0, 0xb5e4a000, 0x1000, 0xb6fb4550) = 0 <0.000179>
+10:36:42.839305 munmap(0xa97c8000, 69632) = 0 <0.000255>
+10:36:42.839930 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97d0000 <0.000427>
+10:36:42.840741 prctl(0x53564d41 /* PR_??? */, 0, 0xa97d0000, 0x9000, 0xb6fb44b1) = 0 <0.000178>
+10:36:42.845855 close(34)               = 0 <0.000142>
+10:36:42.846443 munmap(0xa97d0000, 36864) = 0 <0.000137>
+10:36:42.846991 munmap(0xb5e4a000, 4096) = 0 <0.000136>
+10:36:42.847534 munmap(0x9fb40000, 220617) = 0 <0.000136>
+10:36:42.848153 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000167>
+10:36:42.848837 openat(AT_FDCWD, "/vendor/lib/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000140>
+10:36:42.849424 openat(AT_FDCWD, "/system/lib/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000227>
+10:36:42.850105 fstat64(34, {st_mode=S_IFREG|0644, st_size=21972, ...}) = 0 <0.000205>
+10:36:42.850725 close(34)               = 0 <0.000209>
+10:36:42.851468 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/liblog.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000214>
+10:36:42.852093 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000208>
+10:36:42.852714 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000195>
+10:36:42.853325 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c8000 <0.000442>
+10:36:42.854186 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c8000, 0x11000, 0xb6fb44b1) = 0 <0.000288>
+10:36:42.855023 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000215>
+10:36:42.855640 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000524>
+10:36:42.856633 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0x9fb40000 <0.000275>
+10:36:42.857347 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5e4a000 <0.000169>
+10:36:42.857952 prctl(0x53564d41 /* PR_??? */, 0, 0xb5e4a000, 0x1000, 0xb6fb4550) = 0 <0.000174>
+10:36:42.858972 munmap(0xa97c8000, 69632) = 0 <0.000245>
+10:36:42.859700 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97d0000 <0.000325>
+10:36:42.860402 prctl(0x53564d41 /* PR_??? */, 0, 0xa97d0000, 0x9000, 0xb6fb44b1) = 0 <0.000136>
+10:36:42.862341 close(34)               = 0 <0.000042>
+10:36:42.862643 munmap(0xa97d0000, 36864) = 0 <0.000076>
+10:36:42.863125 munmap(0xb5e4a000, 4096) = 0 <0.000184>
+10:36:42.863564 munmap(0x9fb40000, 220617) = 0 <0.000222>
+10:36:42.864040 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/liblog.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000064>
+10:36:42.864794 openat(AT_FDCWD, "/vendor/lib/liblog.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000064>
+10:36:42.865310 openat(AT_FDCWD, "/system/lib/liblog.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000195>
+10:36:42.866128 fstat64(34, {st_mode=S_IFREG|0644, st_size=34408, ...}) = 0 <0.000183>
+10:36:42.866732 close(34)               = 0 <0.000190>
+10:36:42.867467 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libz.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000184>
+10:36:42.868103 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000176>
+10:36:42.869023 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000145>
+10:36:42.869673 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c8000 <0.000276>
+10:36:42.870373 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c8000, 0x11000, 0xb6fb44b1) = 0 <0.000197>
+10:36:42.871208 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000139>
+10:36:42.871761 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000195>
+10:36:42.872392 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0x9fb40000 <0.000263>
+10:36:42.873031 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5e4a000 <0.000237>
+10:36:42.873647 prctl(0x53564d41 /* PR_??? */, 0, 0xb5e4a000, 0x1000, 0xb6fb4550) = 0 <0.000188>
+10:36:42.874211 munmap(0xa97c8000, 69632) = 0 <0.000305>
+10:36:42.874897 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97d0000 <0.000309>
+10:36:42.875592 prctl(0x53564d41 /* PR_??? */, 0, 0xa97d0000, 0x9000, 0xb6fb44b1) = 0 <0.000183>
+10:36:42.877621 close(34)               = 0 <0.000147>
+10:36:42.878256 munmap(0xa97d0000, 36864) = 0 <0.000262>
+10:36:42.879009 munmap(0xb5e4a000, 4096) = 0 <0.000189>
+10:36:42.879667 munmap(0x9fb40000, 220617) = 0 <0.000165>
+10:36:42.880265 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libz.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000158>
+10:36:42.880871 openat(AT_FDCWD, "/vendor/lib/libz.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000155>
+10:36:42.881473 openat(AT_FDCWD, "/system/lib/libz.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000187>
+10:36:42.882062 fstat64(34, {st_mode=S_IFREG|0644, st_size=112224, ...}) = 0 <0.000168>
+10:36:42.882798 close(34)               = 0 <0.000159>
+10:36:42.884913 mprotect(0x9871b000, 49152, PROT_READ) = 0 <0.000142>
+10:36:42.885486 rt_sigprocmask(SIG_SETMASK, ~[ILL TRAP BUS FPE SEGV RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], [QUIT USR1 PIPE], 8) = 0 <0.000141>
+10:36:42.886094 sigaction(SIGILL, {0x986cf1e1, ~[ILL TRAP BUS FPE SEGV], 0x4000000 /* SA_??? */}, {0xb6f9c661, [], SA_STACK|SA_RESTART|SA_SIGINFO|0x4000000}, 0xb6fabbc4) = 0 <0.000141>
+10:36:42.886699 rt_sigprocmask(SIG_SETMASK, ~[ILL TRAP BUS FPE SEGV RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], ~[ILL TRAP BUS FPE KILL SEGV STOP RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], 8) = 0 <0.000140>
+10:36:42.887316 rt_sigprocmask(SIG_BLOCK, [], ~[ILL TRAP BUS FPE KILL SEGV STOP RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], 8) = 0 <0.000162>
+10:36:42.887913 --- SIGILL {si_signo=SIGILL, si_code=ILL_ILLOPC, si_addr=0x986a27c8} ---
+10:36:42.888250 rt_sigprocmask(SIG_SETMASK, ~[ILL TRAP BUS FPE KILL SEGV STOP RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], ~[TRAP BUS FPE KILL SEGV STOP RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], 8) = 0 <0.000183>
+10:36:42.888909 sigaction(SIGILL, {0xb6f9c661, [], SA_STACK|SA_RESTART|SA_SIGINFO|0x4000000}, NULL, 0x2a765) = 0 <0.000198>
+10:36:42.889500 rt_sigprocmask(SIG_SETMASK, [QUIT USR1 PIPE], ~[ILL TRAP BUS FPE KILL SEGV STOP RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], 8) = 0 <0.000208>
+10:36:42.890192 mprotect(0xb5b52000, 4096, PROT_READ) = 0 <0.000187>
+10:36:42.890758 mprotect(0xb5be1000, 4096, PROT_READ) = 0 <0.000185>
+10:36:42.891298 mprotect(0xb5c7a000, 4096, PROT_READ) = 0 <0.000183>
+10:36:42.891855 mprotect(0xb5e8d000, 4096, PROT_READ) = 0 <0.000187>
+10:36:42.892413 mprotect(0xb62c8000, 4096, PROT_READ) = 0 <0.000186>
+10:36:42.892953 mprotect(0xb6335000, 4096, PROT_READ) = 0 <0.000187>
+10:36:42.893509 mprotect(0xb6377000, 4096, PROT_READ) = 0 <0.000187>
+10:36:42.894067 mprotect(0xb6f08000, 4096, PROT_READ) = 0 <0.000182>
+10:36:42.894701 mprotect(0xb6f09000, 4096, PROT_READ) = 0 <0.000202>
+10:36:42.895269 mprotect(0xb6f0a000, 4096, PROT_READ) = 0 <0.000191>
+10:36:42.895832 mprotect(0xb6f0b000, 4096, PROT_READ) = 0 <0.000202>
+10:36:42.896396 mprotect(0xb6f71000, 4096, PROT_READ) = 0 <0.000179>
+10:36:42.896951 mprotect(0xb6f76000, 4096, PROT_READ) = 0 <0.000184>
+10:36:42.897504 mprotect(0xb5dd3000, 4096, PROT_READ) = 0 <0.000284>
+10:36:42.898291 mprotect(0xb597a000, 4096, PROT_READ) = 0 <0.000143>
+10:36:42.898863 mprotect(0xb62e6000, 4096, PROT_READ) = 0 <0.000141>
+10:36:42.899421 mprotect(0xb6f72000, 4096, PROT_READ) = 0 <0.000060>
+10:36:42.900291 clock_gettime(CLOCK_MONOTONIC, {303, 422415617}) = 0 <0.000204>
+10:36:42.902055 clock_gettime(CLOCK_MONOTONIC, {303, 424190773}) = 0 <0.000172>
+10:36:42.902668 clock_gettime(CLOCK_MONOTONIC, {303, 424783690}) = 0 <0.000158>
+10:36:42.903424 clock_gettime(CLOCK_MONOTONIC, {303, 425539262}) = 0 <0.000160>
+10:36:42.904020 clock_gettime(CLOCK_MONOTONIC, {303, 426128221}) = 0 <0.000152>
+10:36:42.904674 clock_gettime(CLOCK_MONOTONIC, {303, 426786762}) = 0 <0.000134>
+10:36:42.905208 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee58) = 0 <0.001315>
+10:36:42.907274 clock_gettime(CLOCK_MONOTONIC, {303, 429402752}) = 0 <0.000176>
+10:36:42.907846 clock_gettime(CLOCK_MONOTONIC, {303, 429967491}) = 0 <0.000617>
+10:36:42.909032 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000182>
+10:36:42.910921 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000177>
+10:36:42.911495 openat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", O_RDONLY|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 34 <0.000176>
+10:36:42.912063 getdents64(34, /* 2 entries */, 4200) = 48 <0.000189>
+10:36:42.912658 getdents64(34, /* 0 entries */, 4200) = 0 <0.000173>
+10:36:42.913216 close(34)               = 0 <0.000181>
+10:36:42.913830 faccessat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", F_OK) = 0 <0.000200>
+10:36:42.914755 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000205>
+10:36:42.916283 newfstatat(AT_FDCWD, "/vendor/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000176>
+10:36:42.916904 newfstatat(AT_FDCWD, "/system/lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}, 0) = 0 <0.000145>
+10:36:42.917511 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000197>
+10:36:42.918253 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", F_OK) = 0 <0.000170>
+10:36:42.918843 openat(AT_FDCWD, "/data/user/0/com.google.android.gms/app_extracted_libs", O_RDONLY|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 34 <0.000434>
+10:36:42.919580 getdents64(34, /* 2 entries */, 4200) = 48 <0.000144>
+10:36:42.920251 getdents64(34, /* 0 entries */, 4200) = 0 <0.000170>
+10:36:42.920816 close(34)               = 0 <0.000362>
+10:36:42.921587 faccessat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", F_OK) = 0 <0.000205>
+10:36:42.922602 newfstatat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000185>
+10:36:42.923353 newfstatat(AT_FDCWD, "/vendor/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000165>
+10:36:42.923950 newfstatat(AT_FDCWD, "/system/lib", {st_mode=S_IFDIR|0755, st_size=8192, ...}, 0) = 0 <0.000369>
+10:36:42.924845 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libconscrypt_gmscore_jni.so", O_RDONLY|O_LARGEFILE) = 34 <0.000170>
+10:36:42.925428 getsockopt(34, SOL_SOCKET, SO_DEBUG, 0x9fafee70, 0x9fafee74) = -1 ENOTSOCK (Socket operation on non-socket) <0.000165>
+10:36:42.925998 close(34)               = 0 <0.000170>
+10:36:42.926531 mprotect(0xb5b52000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000291>
+10:36:42.927241 mprotect(0xb5be1000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000453>
+10:36:42.928521 mprotect(0xb5c7a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000114>
+10:36:42.928903 mprotect(0xb5e8d000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000408>
+10:36:42.929635 mprotect(0xb62c8000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000109>
+10:36:42.930003 mprotect(0xb6335000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000247>
+10:36:42.930513 mprotect(0xb6377000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000204>
+10:36:42.930976 mprotect(0xb6f08000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000388>
+10:36:42.931593 mprotect(0xb6f09000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000126>
+10:36:42.931963 mprotect(0xb6f0a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000134>
+10:36:42.932348 mprotect(0xb6f0b000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000106>
+10:36:42.932708 mprotect(0xb6f71000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000191>
+10:36:42.933172 mprotect(0xb6f76000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000083>
+10:36:42.933542 mprotect(0xb5dd3000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000193>
+10:36:42.934009 mprotect(0xb597a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000083>
+10:36:42.934351 mprotect(0xb62e6000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000210>
+10:36:42.934856 mprotect(0xb6f72000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000083>
+10:36:42.935278 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libconscrypt_gmscore_jni.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000128>
+10:36:42.935660 fstat64(34, {st_mode=S_IFREG|0755, st_size=13588, ...}) = 0 <0.000119>
+10:36:42.936137 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5e4a000 <0.000198>
+10:36:42.936599 prctl(0x53564d41 /* PR_??? */, 0, 0xb5e4a000, 0x1000, 0xb6fb4580) = 0 <0.000137>
+10:36:42.936981 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xaf128000 <0.000191>
+10:36:42.937400 prctl(0x53564d41 /* PR_??? */, 0, 0xaf128000, 0x2000, 0xb6fb44b1) = 0 <0.000124>
+10:36:42.937929 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xaef80000 <0.000171>
+10:36:42.938370 prctl(0x53564d41 /* PR_??? */, 0, 0xaef80000, 0x2000, 0xb6fb44b1) = 0 <0.000116>
+10:36:42.938715 readlinkat(AT_FDCWD, "/proc/self/fd/34", 0xaf12800c, 4096) = -1 EACCES (Permission denied) <0.000137>
+10:36:42.939148 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 42 <0.000651>
+10:36:42.940055 fcntl64(42, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000126>
+10:36:42.940999 connect(42, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000489>
+10:36:42.941813 clock_gettime(CLOCK_REALTIME, {1444041402, 941906440}) = 0 <0.000129>
+10:36:42.942165 writev(42, [{"\0", 1}, {"1\17", 2}, {"\272R\22V\10Z$8", 8}, {"\6", 1}, {"linker\0", 7}, {"readlink('/proc/self/fd/34') failed: Permission denied [fd=34]\0", 63}], 6) = 82 <0.000137>
+10:36:42.942794 close(42)               = 0 <0.000144>
+10:36:42.943118 munmap(0xaef80000, 8192) = 0 <0.000143>
+10:36:42.943425 munmap(0xaf128000, 8192) = 0 <0.000141>
+10:36:42.943733 socket(PF_LOCAL, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 42 <0.000081>
+10:36:42.943982 fcntl64(42, F_SETFL, O_RDONLY|O_NONBLOCK) = 0 <0.000110>
+10:36:42.944265 connect(42, {sa_family=AF_LOCAL, sun_path="/dev/socket/logdw"}, 110) = 0 <0.000093>
+10:36:42.944554 clock_gettime(CLOCK_REALTIME, {1444041402, 944676440}) = 0 <0.000040>
+10:36:42.944878 writev(42, [{"\0", 1}, {"1\17", 2}, {"\272R\22VX\236N8", 8}, {"\6", 1}, {"linker\0", 7}, {"warning: unable to get realpath for the library \"/data/app/com.google.android.gms-2/lib/arm/libconscrypt_gmscore_jni.so\". Will use given name.\0", 143}], 6) = 162 <0.000046>
+10:36:42.945246 close(42)               = 0 <0.000041>
+10:36:42.945528 pread(34, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0\0\0\0004\0\0\0\2441\0\0\0\0\0\0054\0 \0\t\0(\0\26\0\25\0", 52, 0) = 52 <0.000044>
+10:36:42.945792 mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 34, 0) = 0xb5ad8000 <0.000500>
+10:36:42.946585 mmap2(NULL, 20480, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xa97d4000 <0.000286>
+10:36:42.947128 mmap2(0xa97d4000, 9264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 34, 0) = 0xa97d4000 <0.000153>
+10:36:42.947510 mmap2(0xa97d7000, 4100, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 34, 0x2000) = 0xa97d7000 <0.000367>
+10:36:42.948173 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5a32000 <0.000181>
+10:36:42.948692 prctl(0x53564d41 /* PR_??? */, 0, 0xb5a32000, 0x1000, 0xb6fb45c5) = 0 <0.000136>
+10:36:42.949716 munmap(0xb5ad8000, 4096) = 0 <0.000125>
+10:36:42.950195 close(34)               = 0 <0.000137>
+10:36:42.951325 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000133>
+10:36:42.951939 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 34 <0.000158>
+10:36:42.952436 _llseek(34, 0, [43183583], SEEK_END) = 0 <0.000168>
+10:36:42.952958 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c3000 <0.000469>
+10:36:42.953779 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c3000, 0x11000, 0xb6fb44b1) = 0 <0.000130>
+10:36:42.955400 _llseek(34, 43118026, [43118026], SEEK_SET) = 0 <0.000134>
+10:36:42.955896 read(34, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000359>
+10:36:42.956584 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 34, 0x28f9000) = 0x9fb40000 <0.000177>
+10:36:42.957009 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5ad8000 <0.000153>
+10:36:42.957408 prctl(0x53564d41 /* PR_??? */, 0, 0xb5ad8000, 0x1000, 0xb6fb4550) = 0 <0.000098>
+10:36:42.957762 munmap(0xa97c3000, 69632) = 0 <0.000135>
+10:36:42.967181 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97cb000 <0.000752>
+10:36:42.973402 prctl(0x53564d41 /* PR_??? */, 0, 0xa97cb000, 0x9000, 0xb6fb44b1) = 0 <0.000133>
+10:36:42.977015 close(34)               = 0 <0.000099>
+10:36:42.977428 munmap(0xa97cb000, 36864) = 0 <0.000095>
+10:36:42.977781 munmap(0xb5ad8000, 4096) = 0 <0.000138>
+10:36:42.978232 munmap(0x9fb40000, 220617) = 0 <0.000124>
+10:36:42.978637 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000112>
+10:36:42.979719 openat(AT_FDCWD, "/vendor/lib/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000196>
+10:36:42.981156 openat(AT_FDCWD, "/system/lib/libc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 43 <0.000302>
+10:36:42.982232 fstat64(43, {st_mode=S_IFREG|0644, st_size=674184, ...}) = 0 <0.002175>
+10:36:42.984837 close(43)               = 0 <0.000647>
+10:36:42.985757 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000142>
+10:36:42.986138 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 43 <0.000124>
+10:36:42.986491 _llseek(43, 0, [43183583], SEEK_END) = 0 <0.000111>
+10:36:42.986838 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0x9865e000 <0.000212>
+10:36:42.987269 prctl(0x53564d41 /* PR_??? */, 0, 0x9865e000, 0x11000, 0xb6fb44b1) = 0 <0.000118>
+10:36:42.987618 _llseek(43, 43118026, [43118026], SEEK_SET) = 0 <0.000128>
+10:36:42.987973 read(43, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000220>
+10:36:42.989267 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 43, 0x28f9000) = 0x9fb40000 <0.000630>
+10:36:42.991987 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5ad8000 <0.003153>
+10:36:42.997880 prctl(0x53564d41 /* PR_??? */, 0, 0xb5ad8000, 0x1000, 0xb6fb4550) = 0 <0.000173>
+10:36:42.998332 munmap(0x9865e000, 69632) = 0 <0.000193>
+10:36:42.998852 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c3000 <0.000426>
+10:36:42.999719 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c3000, 0x9000, 0xb6fb44b1) = 0 <0.000147>
+10:36:43.006028 close(43)               = 0 <0.000198>
+10:36:43.008546 munmap(0xa97c3000, 36864) = 0 <0.000206>
+10:36:43.009086 munmap(0xb5ad8000, 4096) = 0 <0.000139>
+10:36:43.009573 munmap(0x9fb40000, 220617) = 0 <0.000142>
+10:36:43.010063 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000142>
+10:36:43.010558 openat(AT_FDCWD, "/vendor/lib/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000141>
+10:36:43.011026 openat(AT_FDCWD, "/system/lib/libm.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 43 <0.000140>
+10:36:43.011495 fstat64(43, {st_mode=S_IFREG|0644, st_size=132824, ...}) = 0 <0.000139>
+10:36:43.011986 close(43)               = 0 <0.000142>
+10:36:43.012544 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000146>
+10:36:43.013095 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 43 <0.000138>
+10:36:43.013556 _llseek(43, 0, [43183583], SEEK_END) = 0 <0.000138>
+10:36:43.014041 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa8ec4000 <0.000344>
+10:36:43.015967 prctl(0x53564d41 /* PR_??? */, 0, 0xa8ec4000, 0x11000, 0xb6fb44b1) = 0 <0.000160>
+10:36:43.016788 _llseek(43, 43118026, [43118026], SEEK_SET) = 0 <0.000143>
+10:36:43.017290 read(43, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000301>
+10:36:43.017960 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 43, 0x28f9000) = 0x9fb40000 <0.000145>
+10:36:43.018609 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5ad8000 <0.009633>
+10:36:43.028675 prctl(0x53564d41 /* PR_??? */, 0, 0xb5ad8000, 0x1000, 0xb6fb4550) = 0 <0.000153>
+10:36:43.029193 munmap(0xa8ec4000, 69632) = 0 <0.000186>
+10:36:43.029824 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa97c3000 <0.000273>
+10:36:43.030476 prctl(0x53564d41 /* PR_??? */, 0, 0xa97c3000, 0x9000, 0xb6fb44b1) = 0 <0.000152>
+10:36:43.031818 close(43)               = 0 <0.000157>
+10:36:43.032337 munmap(0xa97c3000, 36864) = 0 <0.000155>
+10:36:43.032851 munmap(0xb5ad8000, 4096) = 0 <0.000179>
+10:36:43.033409 munmap(0x9fb40000, 220617) = 0 <0.000126>
+10:36:43.033913 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000125>
+10:36:43.034439 openat(AT_FDCWD, "/vendor/lib/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000129>
+10:36:43.035025 openat(AT_FDCWD, "/system/lib/libstdc++.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 43 <0.000192>
+10:36:43.035606 fstat64(43, {st_mode=S_IFREG|0644, st_size=21972, ...}) = 0 <0.000155>
+10:36:43.036604 close(43)               = 0 <0.000365>
+10:36:43.037595 mprotect(0xa97d7000, 4096, PROT_READ) = 0 <0.002031>
+10:36:43.040113 mprotect(0xb5a32000, 4096, PROT_READ) = 0 <0.000175>
+10:36:43.041766 mprotect(0xb5b52000, 4096, PROT_READ) = 0 <0.000876>
+10:36:43.042979 mprotect(0xb5be1000, 4096, PROT_READ) = 0 <0.000101>
+10:36:43.043943 mprotect(0xb5c7a000, 4096, PROT_READ) = 0 <0.000140>
+10:36:43.044321 mprotect(0xb5e8d000, 4096, PROT_READ) = 0 <0.000071>
+10:36:43.045936 mprotect(0xb62c8000, 4096, PROT_READ) = 0 <0.000165>
+10:36:43.046672 mprotect(0xb6335000, 4096, PROT_READ) = 0 <0.000333>
+10:36:43.047541 mprotect(0xb6377000, 4096, PROT_READ) = 0 <0.000325>
+10:36:43.048428 mprotect(0xb6f08000, 4096, PROT_READ) = 0 <0.000324>
+10:36:43.049281 mprotect(0xb6f09000, 4096, PROT_READ) = 0 <0.000403>
+10:36:43.051232 mprotect(0xb6f0a000, 4096, PROT_READ) = 0 <0.000293>
+10:36:43.051954 mprotect(0xb6f0b000, 4096, PROT_READ) = 0 <0.000065>
+10:36:43.052281 mprotect(0xb6f71000, 4096, PROT_READ) = 0 <0.000064>
+10:36:43.052702 mprotect(0xb6f76000, 4096, PROT_READ) = 0 <0.000061>
+10:36:43.053148 mprotect(0xb5dd3000, 4096, PROT_READ) = 0 <0.000332>
+10:36:43.054353 mprotect(0xb597a000, 4096, PROT_READ) = 0 <0.000136>
+10:36:43.054756 mprotect(0xb62e6000, 4096, PROT_READ) = 0 <0.000058>
+10:36:43.055069 mprotect(0xb6f72000, 4096, PROT_READ) = 0 <0.000060>
+10:36:43.055385 futex(0xb6fb9110, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000163>
+10:36:43.185349 futex(0xb6fb9110, FUTEX_WAIT_PRIVATE, 255213570, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000138>
+10:36:43.185733 futex(0xb6fb9110, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000116>
+10:36:43.186535 clock_gettime(CLOCK_REALTIME, {1444041403, 187789929}) = 0 <0.005976>
+10:36:43.193872 writev(3, [{"\0001\17\273R\22Vir1\v", 11}, {"\2", 1}, {"JNIHelp\0", 8}, {"Registering com/google/android/gms/org/conscrypt/NativeCrypto's 240 native methods...\0", 86}], 4) = 106 <0.000111>
+10:36:43.197004 clock_gettime(CLOCK_MONOTONIC, {303, 728496450}) = 0 <0.009438>
+10:36:43.206885 clock_gettime(CLOCK_MONOTONIC, {303, 728959418}) = 0 <0.000038>
+10:36:43.207181 clock_gettime(CLOCK_MONOTONIC, {303, 729390929}) = 0 <0.000169>
+10:36:43.207546 clock_gettime(CLOCK_MONOTONIC, {303, 730138950}) = 0 <0.000557>
+10:36:43.208342 mprotect(0xb5a32000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000045>
+10:36:43.208579 mprotect(0xb5b52000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000041>
+10:36:43.208822 mprotect(0xb5be1000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:43.209046 mprotect(0xb5c7a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:43.209268 mprotect(0xb5e8d000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:43.209489 mprotect(0xb62c8000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000042>
+10:36:43.209780 mprotect(0xb6335000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000039>
+10:36:43.210005 mprotect(0xb6377000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:43.210227 mprotect(0xb6f08000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000044>
+10:36:43.210462 mprotect(0xb6f09000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000043>
+10:36:43.210703 mprotect(0xb6f0a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000043>
+10:36:43.210942 mprotect(0xb6f0b000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000045>
+10:36:43.211169 mprotect(0xb6f71000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000045>
+10:36:43.211396 mprotect(0xb6f76000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:43.211617 mprotect(0xb5dd3000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:43.211839 mprotect(0xb597a000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000040>
+10:36:43.212063 mprotect(0xb62e6000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000039>
+10:36:43.212285 mprotect(0xb6f72000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000042>
+10:36:43.212576 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libjavacore.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000049>
+10:36:43.216958 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 48 <0.001001>
+10:36:43.218459 _llseek(48, 0, [43183583], SEEK_END) = 0 <0.000497>
+10:36:43.219686 mmap2(NULL, 69632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0x98129000 <0.000191>
+10:36:43.220507 prctl(0x53564d41 /* PR_??? */, 0, 0x98129000, 0x11000, 0xb6fb44b1) = 0 <0.000239>
+10:36:43.221220 _llseek(48, 43118026, [43118026], SEEK_SET) = 0 <0.000187>
+10:36:43.222020 read(48, "D\0207\1res/layout/auth_d2d_target_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\303\241\0333k\4\0\0\334\r\0\0\"\0\0\0\0\0\0\0\0\0\0\0\0\0Y\0227\1res/layout/auth_login_activity.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\243\365\203>4\2\0\0\24\5\0\0(\0\0\0\0\0\0\0\0\0\0\0\0\0\24\0277\1res/layout/auth_name_nfc_device_view.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\344[(\307\f\3\0\0\210\10\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\236\0317\1res/layout/auth_name_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\2204\313$)\3\0\0\264\10\0\0,\0\0\0\0\0\0\0\0\0\0\0\0\0\375\0347\1res/layout/auth_on_body_detection_prompt.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259hT\3435,\2\0\0 \5\0\0%\0\0\0\0\0\0\0\0\0\0\0\0\0\200 7\1res/layout/auth_pair_nfc_fragment.xmlPK\1\2\24\0\24\0\10\10\10\0\261\211\0259\342\246>\261e\1\0\0\254\2\0\0,\0\0\0\0\0\0"..., 65557) = 65557 <0.000350>
+10:36:43.223071 mmap2(NULL, 220617, PROT_READ, MAP_SHARED, 48, 0x28f9000) = 0x9fb40000 <0.000307>
+10:36:43.223768 mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xb5ad8000 <0.000235>
+10:36:43.224405 prctl(0x53564d41 /* PR_??? */, 0, 0xb5ad8000, 0x1000, 0xb6fb4550) = 0 <0.000253>
+10:36:43.225108 munmap(0x98129000, 69632) = 0 <0.000219>
+10:36:43.225723 mmap2(NULL, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, 0, 0) = 0xa8ac6000 <0.000321>
+10:36:43.226450 prctl(0x53564d41 /* PR_??? */, 0, 0xa8ac6000, 0x9000, 0xb6fb44b1) = 0 <0.000199>
+10:36:43.229792 close(48)               = 0 <0.000570>
+10:36:43.230975 munmap(0xa8ac6000, 36864) = 0 <0.000176>
+10:36:43.231767 munmap(0xb5ad8000, 4096) = 0 <0.000193>
+10:36:43.240575 munmap(0x9fb40000, 220617) = 0 <0.000195>
+10:36:43.241454 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/base.apk!/lib/armeabi-v7a/libjavacore.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000172>
+10:36:43.242094 openat(AT_FDCWD, "/vendor/lib/libjavacore.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000163>
+10:36:43.242710 openat(AT_FDCWD, "/system/lib/libjavacore.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 48 <0.000166>
+10:36:43.243361 fstat64(48, {st_mode=S_IFREG|0644, st_size=215952, ...}) = 0 <0.000164>
+10:36:43.244007 close(48)               = 0 <0.000144>
+10:36:43.244690 mprotect(0xb5a32000, 4096, PROT_READ) = 0 <0.000149>
+10:36:43.245274 mprotect(0xb5b52000, 4096, PROT_READ) = 0 <0.000165>
+10:36:43.245865 mprotect(0xb5be1000, 4096, PROT_READ) = 0 <0.000166>
+10:36:43.246543 mprotect(0xb5c7a000, 4096, PROT_READ) = 0 <0.000147>
+10:36:43.247122 mprotect(0xb5e8d000, 4096, PROT_READ) = 0 <0.000185>
+10:36:43.247756 mprotect(0xb62c8000, 4096, PROT_READ) = 0 <0.000177>
+10:36:43.248377 mprotect(0xb6335000, 4096, PROT_READ) = 0 <0.000164>
+10:36:43.248967 mprotect(0xb6377000, 4096, PROT_READ) = 0 <0.000164>
+10:36:43.249667 mprotect(0xb6f08000, 4096, PROT_READ) = 0 <0.000149>
+10:36:43.250272 mprotect(0xb6f09000, 4096, PROT_READ) = 0 <0.000148>
+10:36:43.250844 mprotect(0xb6f0a000, 4096, PROT_READ) = 0 <0.000164>
+10:36:43.251420 mprotect(0xb6f0b000, 4096, PROT_READ) = 0 <0.000209>
+10:36:43.252035 mprotect(0xb6f71000, 4096, PROT_READ) = 0 <0.000199>
+10:36:43.252624 mprotect(0xb6f76000, 4096, PROT_READ) = 0 <0.000204>
+10:36:43.253221 mprotect(0xb5dd3000, 4096, PROT_READ) = 0 <0.000198>
+10:36:43.253806 mprotect(0xb597a000, 4096, PROT_READ) = 0 <0.000201>
+10:36:43.254403 mprotect(0xb62e6000, 4096, PROT_READ) = 0 <0.001701>
+10:36:43.257177 mprotect(0xb6f72000, 4096, PROT_READ) = 0 <0.003405>
+10:36:43.262508 clock_gettime(CLOCK_MONOTONIC, {303, 784686606}) = 0 <0.000074>
+10:36:43.263134 clock_gettime(CLOCK_MONOTONIC, {303, 789268637}) = 0 <0.004289>
+10:36:43.269320 futex(0xab272f30, FUTEX_WAKE, 1) = 0 <0.000840>
+10:36:43.272961 clock_gettime(CLOCK_MONOTONIC, {303, 795572596}) = 0 <0.000629>
+10:36:43.274315 clock_gettime(CLOCK_MONOTONIC, {303, 796430096}) = 0 <0.000263>
+10:36:43.285553 clock_gettime(CLOCK_MONOTONIC, {303, 807677075}) = 0 <0.000046>
+10:36:43.285896 clock_gettime(CLOCK_MONOTONIC, {303, 808027439}) = 0 <0.000043>
+10:36:43.286191 clock_gettime(CLOCK_MONOTONIC, {303, 808271085}) = 0 <0.000039>
+10:36:43.286433 clock_gettime(CLOCK_MONOTONIC, {303, 808513064}) = 0 <0.000039>
+10:36:43.287039 clock_gettime(CLOCK_MONOTONIC, {303, 809130200}) = 0 <0.000042>
+10:36:43.287301 clock_gettime(CLOCK_MONOTONIC, {303, 809378325}) = 0 <0.000039>
+10:36:43.287539 clock_gettime(CLOCK_MONOTONIC, {303, 809614418}) = 0 <0.000038>
+10:36:43.287776 clock_gettime(CLOCK_MONOTONIC, {303, 809853793}) = 0 <0.000039>
+10:36:43.288137 clock_gettime(CLOCK_MONOTONIC, {303, 810692180}) = 0 <0.000506>
+10:36:43.289026 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libgmscore.so", O_RDONLY|O_LARGEFILE) = 48 <0.000525>
+10:36:43.289978 getsockopt(48, SOL_SOCKET, SO_DEBUG, 0x9fafdfb0, 0x9fafdfb4) = -1 ENOTSOCK (Socket operation on non-socket) <0.000040>
+10:36:43.290217 close(48)               = 0 <0.000041>
+10:36:43.290514 openat(AT_FDCWD, "/data/app/com.google.android.gms-2/lib/arm/libconscrypt_gmscore_jni.so", O_RDONLY|O_LARGEFILE) = 48 <0.000474>
+10:36:43.291208 getsockopt(48, SOL_SOCKET, SO_DEBUG, 0x9fafdfb0, 0x9fafdfb4) = -1 ENOTSOCK (Socket operation on non-socket) <0.000038>
+10:36:43.291446 close(48)               = 0 <0.000042>
+10:36:43.302549 futex(0xb4d07250, FUTEX_WAKE, 1) = 0 <0.000134>
+10:36:43.303605 gettid()                = 3889 <0.000161>
+10:36:43.306402 openat(AT_FDCWD, "/dev/urandom", O_RDONLY|O_NOCTTY|O_NONBLOCK|O_LARGEFILE) = 48 <0.000080>
+10:36:43.306919 fstat64(48, {st_mode=S_IFCHR|0666, st_rdev=makedev(1, 9), ...}) = 0 <0.000133>
+10:36:43.307344 ppoll([{fd=48, events=POLLIN}], 1, {0, 10000000}, NULL, 0) = 1 ([{fd=48, revents=POLLIN}], left {0, 9997135}) <0.000125>
+10:36:43.307766 read(48, "\233\312H\251\360\325MH\224\352\346\221\r\372v@\332\265\7NUhp\337\257;A\240\22197\342", 32) = 32 <0.000126>
+10:36:43.315626 close(48)               = 0 <0.000139>
+10:36:43.316065 gettid()                = 3889 <0.000039>
+10:36:43.316366 gettid()                = 3889 <0.000038>
+10:36:43.316685 getuid32()              = 10071 <0.000105>
+10:36:43.316979 gettid()                = 3889 <0.000039>
+10:36:43.317234 gettimeofday({1444041403, 317342}, NULL) = 0 <0.000039>
+10:36:43.317474 gettid()                = 3889 <0.000038>
+10:36:43.317703 gettid()                = 3889 <0.000138>
+10:36:43.318140 gettid()                = 3889 <0.000135>
+10:36:43.318545 gettid()                = 3889 <0.000134>
+10:36:43.318939 gettid()                = 3889 <0.000146>
+10:36:43.319387 gettid()                = 3889 <0.000186>
+10:36:43.319834 gettid()                = 3889 <0.000039>
+10:36:43.320160 gettid()                = 3889 <0.000108>
+10:36:43.320465 gettid()                = 3889 <0.000038>
+10:36:43.320703 gettid()                = 3889 <0.000130>
+10:36:43.321089 gettid()                = 3889 <0.000125>
+10:36:43.321474 gettid()                = 3889 <0.000120>
+10:36:43.321850 gettid()                = 3889 <0.000126>
+10:36:43.322224 gettid()                = 3889 <0.000126>
+10:36:43.322691 gettid()                = 3889 <0.000129>
+10:36:43.323071 gettid()                = 3889 <0.000038>
+10:36:43.323305 gettid()                = 3889 <0.000039>
+10:36:43.323543 gettid()                = 3889 <0.000038>
+10:36:43.323776 gettid()                = 3889 <0.000038>
+10:36:43.324008 gettid()                = 3889 <0.000037>
+10:36:43.324232 gettid()                = 3889 <0.000036>
+10:36:43.324456 gettid()                = 3889 <0.000037>
+10:36:43.324685 gettid()                = 3889 <0.000038>
+10:36:43.325012 gettid()                = 3889 <0.000109>
+10:36:43.325395 gettid()                = 3889 <0.000095>
+10:36:43.325762 gettid()                = 3889 <0.000120>
+10:36:43.326158 gettid()                = 3889 <0.000107>
+10:36:43.326543 gettid()                = 3889 <0.000110>
+10:36:43.326932 gettid()                = 3889 <0.000101>
+10:36:43.327304 gettid()                = 3889 <0.000107>
+10:36:43.327679 gettid()                = 3889 <0.000103>
+10:36:43.328113 gettid()                = 3889 <0.000113>
+10:36:43.328524 gettid()                = 3889 <0.000101>
+10:36:43.328907 gettid()                = 3889 <0.000099>
+10:36:43.329280 gettid()                = 3889 <0.000106>
+10:36:43.329669 gettid()                = 3889 <0.000102>
+10:36:43.330059 gettid()                = 3889 <0.000130>
+10:36:43.330460 gettid()                = 3889 <0.000125>
+10:36:43.330847 gettid()                = 3889 <0.000101>
+10:36:43.331225 gettid()                = 3889 <0.000128>
+10:36:43.331623 gettid()                = 3889 <0.000126>
+10:36:43.332014 gettid()                = 3889 <0.000125>
+10:36:43.332405 gettid()                = 3889 <0.000111>
+10:36:43.332804 gettid()                = 3889 <0.000106>
+10:36:43.333191 gettid()                = 3889 <0.000100>
+10:36:43.333585 gettid()                = 3889 <0.000117>
+10:36:43.334003 gettid()                = 3889 <0.000112>
+10:36:43.334437 gettid()                = 3889 <0.000106>
+10:36:43.334828 gettid()                = 3889 <0.000104>
+10:36:43.335217 gettid()                = 3889 <0.000104>
+10:36:43.335605 gettid()                = 3889 <0.000122>
+10:36:43.335992 gettid()                = 3889 <0.000108>
+10:36:43.336385 gettid()                = 3889 <0.000107>
+10:36:43.336775 gettid()                = 3889 <0.000107>
+10:36:43.337155 gettid()                = 3889 <0.000126>
+10:36:43.338891 clock_gettime(CLOCK_MONOTONIC, {303, 860990461}) = 0 <0.000115>
+10:36:43.339579 gettid()                = 3889 <0.000099>
+10:36:43.339992 gettid()                = 3889 <0.000117>
+10:36:43.340382 gettid()                = 3889 <0.003196>
+10:36:43.344582 clock_gettime(CLOCK_MONOTONIC, {303, 866665929}) = 0 <0.000040>
+10:36:43.345942 clock_gettime(CLOCK_MONOTONIC, {303, 868097700}) = 0 <0.000284>
+10:36:43.346590 clock_gettime(CLOCK_MONOTONIC, {303, 868664106}) = 0 <0.000118>
+10:36:43.346946 clock_gettime(CLOCK_MONOTONIC, {303, 869012075}) = 0 <0.000112>
+10:36:43.347403 gettid()                = 3889 <0.000081>
+10:36:43.347856 gettid()                = 3889 <0.000147>
+10:36:43.348273 gettid()                = 3889 <0.000142>
+10:36:43.349448 clock_gettime(CLOCK_MONOTONIC, {303, 871527544}) = 0 <0.000120>
+10:36:43.349823 clock_gettime(CLOCK_MONOTONIC, {303, 871919315}) = 0 <0.000120>
+10:36:43.352062 clock_gettime(CLOCK_MONOTONIC, {303, 874144054}) = 0 <0.000112>
+10:36:43.353797 clock_gettime(CLOCK_MONOTONIC, {303, 875919835}) = 0 <0.000133>
+10:36:43.359349 futex(0xab272f30, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.004403>
+10:36:43.364625 clock_gettime(CLOCK_MONOTONIC, {303, 886689991}) = 0 <0.000128>
+10:36:43.364988 clock_gettime(CLOCK_MONOTONIC, {303, 887054002}) = 0 <0.000115>
+10:36:43.365556 clock_gettime(CLOCK_MONOTONIC, {303, 887620981}) = 0 <0.000083>
+10:36:43.368316 clock_gettime(CLOCK_MONOTONIC, {303, 894815877}) = 0 <0.006962>
+10:36:43.375549 clock_gettime(CLOCK_MONOTONIC, {303, 897617856}) = 0 <0.000096>
+10:36:43.375902 clock_gettime(CLOCK_MONOTONIC, {303, 897978793}) = 0 <0.000115>
+10:36:43.376486 clock_gettime(CLOCK_MONOTONIC, {303, 898551762}) = 0 <0.000093>
+10:36:43.376870 clock_gettime(CLOCK_MONOTONIC, {303, 898939991}) = 0 <0.000113>
+10:36:43.377882 clock_gettime(CLOCK_MONOTONIC, {303, 899957387}) = 0 <0.000196>
+10:36:43.381257 clock_gettime(CLOCK_MONOTONIC, {303, 904382179}) = 0 <0.001108>
+10:36:43.385182 clock_gettime(CLOCK_MONOTONIC, {303, 907360356}) = 0 <0.000124>
+10:36:43.385670 clock_gettime(CLOCK_MONOTONIC, {303, 907734835}) = 0 <0.000126>
+10:36:43.386271 clock_gettime(CLOCK_MONOTONIC, {303, 908353533}) = 0 <0.000104>
+10:36:43.386871 clock_gettime(CLOCK_MONOTONIC, {303, 908930564}) = 0 <0.000098>
+10:36:43.387340 clock_gettime(CLOCK_REALTIME, {1444041403, 387432273}) = 0 <0.000094>
+10:36:43.387689 writev(3, [{"\0001\17\273R\22VQ\277\27\27", 11}, {"\4", 1}, {"ProviderInstaller\0", 18}, {"Installed default security provider GmsCore_OpenSSL\0", 52}], 4) = 82 <0.000097>
+10:36:43.388252 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff490) = 0 <0.000098>
+10:36:43.388745 clock_gettime(CLOCK_MONOTONIC, {303, 910808429}) = 0 <0.000115>
+10:36:43.389095 write(11, "3889", 4)    = 4 <0.000112>
+10:36:43.389442 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0x6fa3e898) = 0 <0.000110>
+10:36:43.389778 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000114>
+10:36:43.390121 clock_gettime(CLOCK_MONOTONIC, {303, 912312544}) = 0 <0.000177>
+10:36:43.390784 futex(0xa8c2ec50, FUTEX_WAKE, 1) = 0 <0.000097>
+10:36:43.391141 futex(0xa8c2ec50, FUTEX_WAKE, 1) = 0 <0.000092>
+10:36:43.391475 futex(0xa8c2ec78, FUTEX_WAIT, 0, NULL) = 0 <0.504635>
+10:36:43.896533 sched_yield()           = 0 <0.000117>
+10:36:43.897021 sched_yield()           = 0 <0.000104>
+10:36:43.898825 gettimeofday({1444041403, 898962}, NULL) = 0 <0.000143>
+10:36:43.899942 gettimeofday({1444041403, 900064}, NULL) = 0 <0.000111>
+10:36:43.900399 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 60 <0.000109>
+10:36:43.901040 ioctl(60, 0x41007701, 0x9fafeef4) = 0 <0.000262>
+10:36:43.901606 ioctl(60, 0x40047703, 0x200000) = 0 <0.000147>
+10:36:43.902045 ioctl(60, 0x40047705, 0x3) = 0 <0.000144>
+10:36:43.902481 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 60, 0) = 0x95ac0000 <0.000133>
+10:36:43.902930 ioctl(60, 0x40047705, 0x1) = 0 <0.000139>
+10:36:43.903372 gettimeofday({1444041403, 903531}, NULL) = 0 <0.000134>
+10:36:43.904068 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000105>
+10:36:43.904512 pread(49, "\n\17A\0A\fB\35\r\20\f\260\f\340\r\6\f\276\f\315\f}\f`\fB\17\257\17\3\17\303\17\250\16S\16u\0177\17}\r\273\17\331\17M\f\375\16|\17l\16H\f\361\16h\17#\16\207\r\35\16\245\16\345\16^\17\223\17*\17\211\17\314\rA\r\257\16\363\17u\17F\rP\16\33\r$\r\331\rs\r\224\r\301\16\216\0161\f\247\16\273\r\375\16\321\f\236\17e\17\31\rh\16\260\r\362\17V\r\211\16\20\16\372\17\16\17\16\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 139264) = 4096 <0.000107>
+10:36:43.904992 pread(56, "\r\4\267\0A\4\2\10\4\2\4>\4y\4\350\5\24\5A\5r\5\241\16\352\5\337\17\324\6\322\10\307\fX\v\236\vh\n\257\vA\17>\v\361\f6\4\307\7/\rO\n\324\n\210\ng\t\10\r\317\r\206\r\255\10\347\16\307\t\220\16\242\n\376\fw\7\322\r-\10o\16\177\16:\r\370\16\33\f\311\t\312\n\4\7\235\6\t\7\\\6R\tS\7\367\17b\6\360\f\356\0102\v#\10\224\f\234\t0\n<\f\21\v\303\6\215\6\207\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 210176) = 4096 <0.000119>
+10:36:43.905465 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000105>
+10:36:43.905918 gettimeofday({1444041403, 906063}, NULL) = 0 <0.000123>
+10:36:43.906588 gettimeofday({1444041403, 906901}, NULL) = 0 <0.000369>
+10:36:43.907269 gettimeofday({1444041403, 907430}, NULL) = 0 <0.000136>
+10:36:43.908214 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 59 <0.000142>
+10:36:43.908688 ioctl(59, 0x41007701, 0x9fafed84) = 0 <0.000140>
+10:36:43.909141 ioctl(59, 0x40047703, 0x200000) = 0 <0.000142>
+10:36:43.909593 ioctl(59, 0x40047705, 0x3) = 0 <0.000136>
+10:36:43.910028 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 59, 0) = 0x95cc0000 <0.000145>
+10:36:43.910855 ioctl(59, 0x40047705, 0x1) = 0 <0.000141>
+10:36:43.911532 gettimeofday({1444041403, 911667}, NULL) = 0 <0.000112>
+10:36:43.911997 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000110>
+10:36:43.912592 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000118>
+10:36:43.913054 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000115>
+10:36:43.913535 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000109>
+10:36:43.913984 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000111>
+10:36:43.914448 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000108>
+10:36:43.914891 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000107>
+10:36:43.915342 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.001131>
+10:36:43.916823 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 62 <0.000109>
+10:36:43.917272 fstat64(62, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000117>
+10:36:43.917750 geteuid32()             = 10071 <0.000108>
+10:36:43.918231 fstat64(62, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000113>
+10:36:43.918706 pread(62, "\0", 1, 0)   = 1 <0.000123>
+10:36:43.919191 close(62)               = 0 <0.000115>
+10:36:43.919648 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000107>
+10:36:43.920219 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000123>
+10:36:43.920700 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000252>
+10:36:43.921299 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000170>
+10:36:43.921833 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000147>
+10:36:43.922613 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000113>
+10:36:43.923079 gettimeofday({1444041403, 923218}, NULL) = 0 <0.000113>
+10:36:43.923669 munmap(0x95cc0000, 2097152) = 0 <0.000114>
+10:36:43.924135 close(59)               = 0 <0.000115>
+10:36:43.924963 getuid32()              = 10071 <0.000144>
+10:36:43.925682 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.001104>
+10:36:43.927101 clock_gettime(CLOCK_MONOTONIC, {304, 449256761}) = 0 <0.000155>
+10:36:43.929333 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.000146>
+10:36:43.929810 clock_gettime(CLOCK_MONOTONIC, {304, 451944054}) = 0 <0.000136>
+10:36:43.930262 write(11, "3889", 4)    = 4 <0.000140>
+10:36:43.930724 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0x6fa3e898) = 0 <0.000154>
+10:36:43.934127 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000140>
+10:36:43.934581 clock_gettime(CLOCK_MONOTONIC, {304, 456769001}) = 0 <0.000191>
+10:36:43.936757 gettimeofday({1444041403, 936900}, NULL) = 0 <0.000120>
+10:36:43.937213 gettimeofday({1444041403, 937352}, NULL) = 0 <0.000117>
+10:36:43.937775 clock_gettime(CLOCK_MONOTONIC, {304, 459893428}) = 0 <0.000120>
+10:36:43.938268 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000120>
+10:36:43.938721 futex(0x9fda3a68, FUTEX_WAIT, 0, {30, 0}) = 0 <0.046356>
+10:36:43.985390 futex(0xa880afe0, FUTEX_WAIT, 1, NULL) = 0 <0.000635>
+10:36:43.986392 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = 0 <0.004998>
+10:36:43.991736 futex(0xaee45c80, FUTEX_WAKE, 1) = 0 <0.000252>
+10:36:43.992292 futex(0xaee45ca8, FUTEX_WAIT, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000144>
+10:36:43.992741 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = 0 <0.001090>
+10:36:43.994137 sched_yield()           = 0 <0.000150>
+10:36:43.994591 sched_yield()           = 0 <0.000145>
+10:36:43.995037 sched_yield()           = 0 <0.000150>
+10:36:43.995485 sched_yield()           = 0 <0.000149>
+10:36:43.995934 sched_yield()           = 0 <0.000146>
+10:36:43.996381 sched_yield()           = 0 <0.000144>
+10:36:43.996825 sched_yield()           = 0 <0.000149>
+10:36:43.997278 sched_yield()           = 0 <0.000153>
+10:36:43.997742 sched_yield()           = 0 <0.000148>
+10:36:43.998315 sched_yield()           = 0 <0.000126>
+10:36:43.998785 gettimeofday({1444041403, 998909}, NULL) = 0 <0.000128>
+10:36:43.999278 gettimeofday({1444041403, 999397}, NULL) = 0 <0.000120>
+10:36:43.999751 futex(0x9fda3928, FUTEX_WAKE, 1) = 1 <0.000154>
+10:36:44.000218 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000141>
+10:36:44.000673 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 1 <0.000147>
+10:36:44.001118 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 0 <0.000138>
+10:36:44.001677 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 62 <0.000144>
+10:36:44.002135 ioctl(62, 0x41007701, 0x9fafed84) = 0 <0.000152>
+10:36:44.002619 ioctl(62, 0x40047703, 0x200000) = 0 <0.000116>
+10:36:44.003179 ioctl(62, 0x40047705, 0x3) = 0 <0.000105>
+10:36:44.003613 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 62, 0) = 0x958c0000 <0.000254>
+10:36:44.004203 ioctl(62, 0x40047705, 0x1) = 0 <0.000104>
+10:36:44.004815 gettimeofday({1444041404, 4946}, NULL) = 0 <0.000144>
+10:36:44.005278 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000141>
+10:36:44.005723 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000151>
+10:36:44.006271 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000119>
+10:36:44.006745 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000206>
+10:36:44.007314 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000140>
+10:36:44.007779 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000202>
+10:36:44.008344 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000152>
+10:36:44.008822 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000128>
+10:36:44.009316 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 64 <0.000206>
+10:36:44.009826 fstat64(64, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000146>
+10:36:44.010349 geteuid32()             = 10071 <0.000112>
+10:36:44.010802 fstat64(64, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000189>
+10:36:44.011305 pread(64, "\0", 1, 0)   = 1 <0.000147>
+10:36:44.011830 close(64)               = 0 <0.000132>
+10:36:44.012309 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000119>
+10:36:44.012770 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000116>
+10:36:44.013223 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000113>
+10:36:44.013676 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000223>
+10:36:44.014203 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000144>
+10:36:44.014903 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000108>
+10:36:44.015361 gettimeofday({1444041404, 15480}, NULL) = 0 <0.000116>
+10:36:44.015825 futex(0x9fda3928, FUTEX_WAKE, 1) = 1 <0.000111>
+10:36:44.016243 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000139>
+10:36:44.016707 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 1 <0.000119>
+10:36:44.017115 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 0 <0.000135>
+10:36:44.017718 munmap(0x958c0000, 2097152) = 0 <0.000132>
+10:36:44.018239 close(62)               = 0 <0.000179>
+10:36:44.019320 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 62 <0.000156>
+10:36:44.019779 ioctl(62, 0x41007701, 0x9fafeed4) = 0 <0.000154>
+10:36:44.020264 ioctl(62, 0x40047703, 0x200000) = 0 <0.000111>
+10:36:44.020710 ioctl(62, 0x40047705, 0x3) = 0 <0.000123>
+10:36:44.021155 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 62, 0) = 0x958c0000 <0.000122>
+10:36:44.021609 ioctl(62, 0x40047705, 0x1) = 0 <0.000124>
+10:36:44.022173 gettimeofday({1444041404, 22324}, NULL) = 0 <0.000133>
+10:36:44.022801 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000115>
+10:36:44.023974 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000112>
+10:36:44.024432 gettimeofday({1444041404, 24578}, NULL) = 0 <0.000122>
+10:36:44.024891 getuid32()              = 10071 <0.000120>
+10:36:44.025334 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.000211>
+10:36:44.025889 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.000126>
+10:36:44.026353 clock_gettime(CLOCK_MONOTONIC, {304, 548470512}) = 0 <0.000123>
+10:36:44.029380 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000086>
+10:36:44.029731 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000086>
+10:36:44.030074 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.030524 mprotect(0x13207000, 2097152, PROT_READ|PROT_WRITE) = 0 <0.000312>
+10:36:44.031064 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.031486 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.031826 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.032170 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000113>
+10:36:44.032506 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.032842 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.033180 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.033518 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.033858 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.034199 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.034539 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.034877 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.035216 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.035580 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000112>
+10:36:44.035917 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.036255 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000118>
+10:36:44.036643 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000490>
+10:36:44.037378 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.037726 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.038104 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.001533>
+10:36:44.040199 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000467>
+10:36:44.040894 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.041238 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.041582 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000113>
+10:36:44.041924 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.042263 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.042625 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.042968 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.043389 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.043728 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.044177 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.044514 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.044856 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.045198 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000113>
+10:36:44.045536 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.045873 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.046214 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.046553 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.046892 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.047231 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.047572 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.047914 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000168>
+10:36:44.048315 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.048657 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.048997 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000113>
+10:36:44.049334 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.049675 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.050021 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000110>
+10:36:44.050356 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000122>
+10:36:44.050692 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000115>
+10:36:44.051020 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000110>
+10:36:44.051360 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000110>
+10:36:44.051721 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:44.052131 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000081>
+10:36:44.052461 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000105>
+10:36:44.052819 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.053154 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000128>
+10:36:44.053688 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000309>
+10:36:44.058727 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.001017>
+10:36:44.061293 clock_gettime(CLOCK_MONOTONIC, {304, 583584835}) = 0 <0.000314>
+10:36:44.062057 write(11, "3889", 4)    = 4 <0.000320>
+10:36:44.062820 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0x6fa3e898) = 0 <0.005295>
+10:36:44.068362 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000115>
+10:36:44.068698 clock_gettime(CLOCK_MONOTONIC, {304, 590766033}) = 0 <0.000120>
+10:36:44.069208 clock_gettime(CLOCK_REALTIME, {1444041404, 69324043}) = 0 <0.000131>
+10:36:44.069609 writev(3, [{"\0001\17\274R\22V\v\315!\4", 11}, {"\4", 1}, {"Gmail\0", 6}, {"getAccountsCursor\0", 18}], 4) = 36 <0.000128>
+10:36:44.070173 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafeeb8) = 0 <0.000135>
+10:36:44.071935 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafeeb8) = 0 <0.000106>
+10:36:44.073192 clock_gettime(CLOCK_MONOTONIC, {304, 595710147}) = 0 <0.000330>
+10:36:44.074286 clock_gettime(CLOCK_MONOTONIC, {304, 596438376}) = 0 <0.000171>
+10:36:44.078506 futex(0xb4d9fd60, FUTEX_CMP_REQUEUE, 0, 2147483647, 0xb4d9fd38, 4) = 0 <0.000320>
+10:36:44.079447 futex(0xb4d9fd38, FUTEX_WAKE, 1) = 0 <0.000093>
+10:36:44.079887 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee08) = 0 <0.000332>
+10:36:44.081278 clock_gettime(CLOCK_MONOTONIC, {304, 603357231}) = 0 <0.000122>
+10:36:44.081774 clock_gettime(CLOCK_MONOTONIC, {304, 603853220}) = 0 <0.000121>
+10:36:44.082318 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec98) = 0 <0.001139>
+10:36:44.083820 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec78) = 0 <0.000276>
+10:36:44.084360 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec98) = 0 <0.000092>
+10:36:44.084723 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec98) = 0 <0.000267>
+10:36:44.085568 clock_gettime(CLOCK_MONOTONIC, {304, 607644522}) = 0 <0.000122>
+10:36:44.085936 clock_gettime(CLOCK_MONOTONIC, {304, 608007543}) = 0 <0.000119>
+10:36:44.086502 clock_gettime(CLOCK_MONOTONIC, {304, 608572855}) = 0 <0.000090>
+10:36:44.086864 clock_gettime(CLOCK_MONOTONIC, {304, 609214730}) = 0 <0.000327>
+10:36:44.087435 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec08) = 0 <0.000400>
+10:36:44.088635 getuid32()              = 10071 <0.002179>
+10:36:44.093209 getuid32()              = 10071 <0.000115>
+10:36:44.093918 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafeb98) = 0 <0.004317>
+10:36:44.102455 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000183>
+10:36:44.102999 futex(0x9fda3a68, FUTEX_WAIT, 1, NULL) = 0 <1.058787>
+10:36:45.164503 clock_gettime(CLOCK_MONOTONIC, {305, 686585303}) = 0 <0.000131>
+10:36:45.165046 clock_gettime(CLOCK_MONOTONIC, {305, 687251188}) = 0 <0.000185>
+10:36:45.166977 clock_gettime(CLOCK_MONOTONIC, {305, 689175980}) = 0 <0.000182>
+10:36:45.167527 clock_gettime(CLOCK_MONOTONIC, {305, 689648324}) = 0 <0.001225>
+10:36:45.170103 clock_gettime(CLOCK_MONOTONIC, {305, 692182856}) = 0 <0.000123>
+10:36:45.170819 clock_gettime(CLOCK_MONOTONIC, {305, 692898741}) = 0 <0.000117>
+10:36:45.171193 clock_gettime(CLOCK_MONOTONIC, {305, 693696710}) = 0 <0.000610>
+10:36:45.172045 clock_gettime(CLOCK_MONOTONIC, {305, 694117647}) = 0 <0.000116>
+10:36:45.172495 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafedd8) = 0 <0.004537>
+10:36:45.177259 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafedd8) = 0 <0.015693>
+10:36:45.193783 clock_gettime(CLOCK_MONOTONIC, {305, 715907907}) = 0 <0.000151>
+10:36:45.194395 clock_gettime(CLOCK_MONOTONIC, {305, 716522022}) = 0 <0.000147>
+10:36:45.195002 clock_gettime(CLOCK_MONOTONIC, {305, 717269730}) = 0 <0.000313>
+10:36:45.195770 clock_gettime(CLOCK_MONOTONIC, {305, 717896553}) = 0 <0.000147>
+10:36:45.196368 clock_gettime(CLOCK_MONOTONIC, {305, 718497126}) = 0 <0.000145>
+10:36:45.196977 clock_gettime(CLOCK_MONOTONIC, {305, 719103636}) = 0 <0.000145>
+10:36:45.197576 clock_gettime(CLOCK_MONOTONIC, {305, 719700355}) = 0 <0.000144>
+10:36:45.198260 clock_gettime(CLOCK_MONOTONIC, {305, 720395356}) = 0 <0.000144>
+10:36:45.199216 clock_gettime(CLOCK_MONOTONIC, {305, 721343637}) = 0 <0.000199>
+10:36:45.200206 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec98) = 0 <0.000921>
+10:36:45.201624 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec78) = 0 <0.000426>
+10:36:45.202511 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafec98) = 0 <0.000404>
+10:36:45.203538 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafedd8) = 0 <0.004915>
+10:36:45.208945 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafedd8) = 0 <0.002706>
+10:36:45.212130 clock_gettime(CLOCK_MONOTONIC, {305, 734275251}) = 0 <0.000210>
+10:36:45.212680 sched_yield()           = 0 <0.000053>
+10:36:45.213022 sched_yield()           = 0 <0.000052>
+10:36:45.213359 sched_yield()           = 0 <0.000052>
+10:36:45.213696 sched_yield()           = 0 <0.000053>
+10:36:45.214033 sched_yield()           = 0 <0.000052>
+10:36:45.214369 sched_yield()           = 0 <0.000176>
+10:36:45.215017 sched_yield()           = 0 <0.000176>
+10:36:45.215654 sched_yield()           = 0 <0.000175>
+10:36:45.216285 sched_yield()           = 0 <0.000175>
+10:36:45.216915 sched_yield()           = 0 <0.000177>
+10:36:45.217549 sched_yield()           = 0 <0.000176>
+10:36:45.218526 sched_yield()           = 0 <0.000164>
+10:36:45.219306 clock_gettime(CLOCK_MONOTONIC, {305, 741810251}) = 0 <0.000559>
+10:36:45.220325 clock_gettime(CLOCK_MONOTONIC, {305, 742443116}) = 0 <0.000156>
+10:36:45.222315 clock_gettime(CLOCK_MONOTONIC, {305, 744537074}) = 0 <0.000601>
+10:36:45.223319 clock_gettime(CLOCK_MONOTONIC, {305, 745607803}) = 0 <0.000199>
+10:36:45.235306 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafedd8) = 0 <0.002939>
+10:36:45.248637 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000724>
+10:36:45.249878 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000204>
+10:36:45.252155 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000609>
+10:36:45.253400 getuid32()              = 10071 <0.000164>
+10:36:45.255909 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed48) = 0 <0.000385>
+10:36:45.257206 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000515>
+10:36:45.259922 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.007509>
+10:36:45.267921 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafedd8) = 0 <0.000520>
+10:36:45.268921 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000545>
+10:36:45.269855 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000992>
+10:36:45.271262 getuid32()              = 10071 <0.000180>
+10:36:45.271846 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed48) = 0 <0.000808>
+10:36:45.273076 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000458>
+10:36:45.273933 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000184>
+10:36:45.274533 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafed88) = 0 <0.000201>
+10:36:45.276180 clock_gettime(CLOCK_REALTIME, {1444041405, 276371438}) = 0 <0.000154>
+10:36:45.276788 writev(3, [{"\0001\17\275R\22V\356\27y\20", 11}, {"\4", 1}, {"Gmail\0", 6}, {"master sync=true, engine sync=false\0", 36}], 4) = 54 <0.000138>
+10:36:45.278675 clock_gettime(CLOCK_MONOTONIC, {305, 802156970}) = 0 <0.001533>
+10:36:45.280689 clock_gettime(CLOCK_MONOTONIC, {305, 802813220}) = 0 <0.000402>
+10:36:45.281805 clock_gettime(CLOCK_MONOTONIC, {305, 803931293}) = 0 <0.000056>
+10:36:45.282162 clock_gettime(CLOCK_MONOTONIC, {305, 804364470}) = 0 <0.000221>
+10:36:45.283078 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee68) = 0 <0.001474>
+10:36:45.285004 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee68) = 0 <0.000479>
+10:36:45.286525 getuid32()              = 10071 <0.000240>
+10:36:45.287962 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafef18) = 0 <0.000372>
+10:36:45.289255 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafef18) = 0 <0.001027>
+10:36:45.290976 clock_gettime(CLOCK_MONOTONIC, {305, 813118689}) = 0 <0.000157>
+10:36:45.291634 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.000161>
+10:36:45.292269 clock_gettime(CLOCK_MONOTONIC, {305, 814404887}) = 0 <0.000177>
+10:36:45.292939 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000156>
+10:36:45.293585 futex(0x9fda3a68, FUTEX_WAIT, 2, NULL) = 0 <0.263132>
+10:36:45.557199 futex(0xa880afe0, FUTEX_WAIT, 1, NULL) = 0 <0.001155>
+10:36:45.558855 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = 0 <0.000773>
+10:36:45.561882 futex(0xaee45c80, FUTEX_WAKE, 1) = 0 <0.000261>
+10:36:45.562635 futex(0xaee45ca8, FUTEX_WAIT, 1, NULL) = 0 <0.000856>
+10:36:45.564036 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000474>
+10:36:45.564999 write(11, "3889", 4)    = 4 <0.000286>
+10:36:45.565786 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0) = 0 <0.000253>
+10:36:45.566521 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000252>
+10:36:45.567249 clock_gettime(CLOCK_MONOTONIC, {306, 89408324}) = 0 <0.000248>
+10:36:45.569707 gettimeofday({1444041405, 569906}, NULL) = 0 <0.000275>
+10:36:45.571017 gettimeofday({1444041405, 571272}, NULL) = 0 <0.000200>
+10:36:45.575616 getuid32()              = 10071 <0.000275>
+10:36:45.576397 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.000764>
+10:36:45.577692 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 71 <0.000537>
+10:36:45.578804 ioctl(71, 0x41007701, 0x9faff024) = 0 <0.000252>
+10:36:45.579677 ioctl(71, 0x40047703, 0x200000) = 0 <0.000282>
+10:36:45.580452 ioctl(71, 0x40047705, 0x3) = 0 <0.000262>
+10:36:45.581080 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 71, 0) = 0x95f1b000 <0.000209>
+10:36:45.581589 ioctl(71, 0x40047705, 0x1) = 0 <0.001160>
+10:36:45.583145 gettimeofday({1444041405, 583250}, NULL) = 0 <0.000138>
+10:36:45.584178 futex(0xb68f5f18, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000301>
+10:36:45.585216 gettimeofday({1444041405, 585359}, NULL) = 0 <0.000134>
+10:36:45.585797 clock_gettime(CLOCK_MONOTONIC, {306, 107987386}) = 0 <0.000133>
+10:36:45.586424 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.000148>
+10:36:45.586989 clock_gettime(CLOCK_MONOTONIC, {306, 109100563}) = 0 <0.000149>
+10:36:45.587549 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000149>
+10:36:45.588148 futex(0x9fda3a68, FUTEX_WAIT, 3, NULL) = 0 <0.282339>
+10:36:45.870804 futex(0xa880afe0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000144>
+10:36:45.871202 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000144>
+10:36:45.871597 futex(0xaee45c80, FUTEX_WAKE, 1) = 0 <0.000141>
+10:36:45.871982 futex(0xaee45ca8, FUTEX_WAIT, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000167>
+10:36:45.872419 write(11, "3889", 4)    = 4 <0.000145>
+10:36:45.872829 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0) = 0 <0.000142>
+10:36:45.873225 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000136>
+10:36:45.873703 clock_gettime(CLOCK_MONOTONIC, {306, 395870407}) = 0 <0.000142>
+10:36:45.874153 clock_gettime(CLOCK_MONOTONIC, {306, 396314886}) = 0 <0.000142>
+10:36:45.874797 clock_gettime(CLOCK_MONOTONIC, {306, 397265042}) = 0 <0.000455>
+10:36:45.876268 clock_gettime(CLOCK_MONOTONIC, {306, 399468219}) = 0 <0.001221>
+10:36:45.879258 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000094>
+10:36:45.879647 futex(0x9fda3a68, FUTEX_WAIT, 4, NULL) = 0 <0.208351>
+10:36:46.088260 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = 0 <0.006318>
+10:36:46.095291 write(11, "3889", 4)    = 4 <0.003020>
+10:36:46.098549 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0) = 0 <0.000108>
+10:36:46.099029 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000098>
+10:36:46.099376 clock_gettime(CLOCK_MONOTONIC, {306, 621446501}) = 0 <0.000091>
+10:36:46.101367 gettimeofday({1444041406, 101468}, NULL) = 0 <0.000091>
+10:36:46.101728 gettimeofday({1444041406, 101826}, NULL) = 0 <0.000092>
+10:36:46.102091 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 69 <0.000092>
+10:36:46.102453 ioctl(69, 0x41007701, 0x9fafeef4) = 0 <0.000092>
+10:36:46.102806 ioctl(69, 0x40047703, 0x200000) = 0 <0.000089>
+10:36:46.103154 ioctl(69, 0x40047705, 0x3) = 0 <0.000628>
+10:36:46.104137 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 69, 0) = 0x9e440000 <0.000292>
+10:36:46.104682 ioctl(69, 0x40047705, 0x1) = 0 <0.000093>
+10:36:46.105218 gettimeofday({1444041406, 105311}, NULL) = 0 <0.000109>
+10:36:46.105812 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000083>
+10:36:46.106152 madvise(0x98942000, 20480, MADV_DONTNEED) = 0 <0.000080>
+10:36:46.106583 madvise(0x9fb37000, 20480, MADV_DONTNEED) = 0 <0.000382>
+10:36:46.107287 pread(56, "SQLite format 3\0\20\0\2\2\0@  \0\0\0\16\0\0\0A\0\0\0\0\0\0\0\0\0\0\1\24\0\0\0\4\0\0\0\0\0\0\0=\0\0\0\1\0\0\0\265\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\16\0-\346\n\5\0\0\0\3\17\361\0\0\0\0A\17\373\17\366\17\361\t\232\r\361\6\317\tc\t,\6b\4k\3\347\2\310\3\252\2.\1\231\17\243\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\201\22\21\7\27C)\1\201Eindexmessage_labels_conversationmessage_labels\23CREATE INDEX message_labels_conver"..., 4096, 160736) = 4096 <0.000094>
+10:36:46.107755 pread(49, "\n\17A\0A\fB\35\r\20\f\260\f\340\r\6\f\276\f\315\f}\f`\fB\17\257\17\3\17\303\17\250\16S\16u\0177\17}\r\273\17\331\17M\f\375\16|\17l\16H\f\361\16h\17#\16\207\r\35\16\245\16\345\16^\17\223\17*\17\211\17\314\rA\r\257\16\363\17u\17F\rP\16\33\r$\r\331\rs\r\224\r\301\16\216\0161\f\247\16\273\r\375\16\321\f\236\17e\17\31\rh\16\260\r\362\17V\r\211\16\20\16\372\17\16\17\16\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 139264) = 4096 <0.000093>
+10:36:46.108249 pread(56, "\r\4\267\0A\4\2\10\4\2\4>\4y\4\350\5\24\5A\5r\5\241\16\352\5\337\17\324\6\322\10\307\fX\v\236\vh\n\257\vA\17>\v\361\f6\4\307\7/\rO\n\324\n\210\ng\t\10\r\317\r\206\r\255\10\347\16\307\t\220\16\242\n\376\fw\7\322\r-\10o\16\177\16:\r\370\16\33\f\311\t\312\n\4\7\235\6\t\7\\\6R\tS\7\367\17b\6\360\f\356\0102\v#\10\224\f\234\t0\n<\f\21\v\303\6\215\6\207\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 210176) = 4096 <0.000084>
+10:36:46.108613 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000082>
+10:36:46.109043 gettimeofday({1444041406, 109572}, NULL) = 0 <0.000595>
+10:36:46.110060 gettimeofday({1444041406, 110221}, NULL) = 0 <0.000244>
+10:36:46.110554 gettimeofday({1444041406, 110717}, NULL) = 0 <0.000196>
+10:36:46.110993 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 71 <0.000114>
+10:36:46.111349 ioctl(71, 0x41007701, 0x9fafed84) = 0 <0.000300>
+10:36:46.111879 ioctl(71, 0x40047703, 0x200000) = 0 <0.000223>
+10:36:46.112332 ioctl(71, 0x40047705, 0x3) = 0 <0.000196>
+10:36:46.112758 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 71, 0) = 0x95f1b000 <0.001020>
+10:36:46.114235 ioctl(71, 0x40047705, 0x1) = 0 <0.000124>
+10:36:46.114775 gettimeofday({1444041406, 114870}, NULL) = 0 <0.000091>
+10:36:46.115119 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000096>
+10:36:46.115473 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000090>
+10:36:46.116017 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000171>
+10:36:46.116470 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000082>
+10:36:46.116814 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000099>
+10:36:46.117193 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000079>
+10:36:46.117530 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000184>
+10:36:46.117960 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000138>
+10:36:46.118413 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 75 <0.000119>
+10:36:46.118768 fstat64(75, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000114>
+10:36:46.119116 geteuid32()             = 10071 <0.000101>
+10:36:46.119526 fstat64(75, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000098>
+10:36:46.119939 pread(75, "\0", 1, 0)   = 1 <0.000081>
+10:36:46.120276 close(75)               = 0 <0.000081>
+10:36:46.120607 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000080>
+10:36:46.120946 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000394>
+10:36:46.121598 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000079>
+10:36:46.121950 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000082>
+10:36:46.122326 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000079>
+10:36:46.123459 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000316>
+10:36:46.124062 gettimeofday({1444041406, 124156}, NULL) = 0 <0.000247>
+10:36:46.125521 munmap(0x95f1b000, 2097152) = 0 <0.000175>
+10:36:46.125935 close(71)               = 0 <0.000169>
+10:36:46.127005 getuid32()              = 10071 <0.000092>
+10:36:46.128677 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.000131>
+10:36:46.129055 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.000204>
+10:36:46.129564 clock_gettime(CLOCK_MONOTONIC, {306, 651640303}) = 0 <0.000116>
+10:36:46.130525 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.000097>
+10:36:46.130895 clock_gettime(CLOCK_MONOTONIC, {306, 652963012}) = 0 <0.000087>
+10:36:46.131249 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000088>
+10:36:46.131590 futex(0x9fda3a68, FUTEX_WAIT, 5, NULL) = 0 <0.089354>
+10:36:46.221189 futex(0xa880afe0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.001415>
+10:36:46.222883 write(11, "3889", 4)    = 4 <0.000101>
+10:36:46.223390 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0) = 0 <0.000119>
+10:36:46.223760 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000346>
+10:36:46.224384 clock_gettime(CLOCK_MONOTONIC, {306, 746457178}) = 0 <0.000091>
+10:36:46.225010 getuid32()              = 10071 <0.000079>
+10:36:46.225494 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafef08) = 0 <0.003654>
+10:36:46.229626 clock_gettime(CLOCK_MONOTONIC, {306, 751701085}) = 0 <0.000109>
+10:36:46.230099 futex(0xa8c320d0, FUTEX_WAKE, 1) = 0 <0.000329>
+10:36:46.230710 futex(0xa8c320f8, FUTEX_WAIT, 12, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000089>
+10:36:46.231286 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.000125>
+10:36:46.231921 clock_gettime(CLOCK_MONOTONIC, {306, 754002803}) = 0 <0.000124>
+10:36:46.232303 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000140>
+10:36:46.232687 futex(0x9fda3a68, FUTEX_WAIT, 6, NULL) = 0 <0.124476>
+10:36:46.357438 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = 0 <0.000739>
+10:36:46.358405 futex(0xaee45c80, FUTEX_WAKE, 1) = 0 <0.000128>
+10:36:46.358771 futex(0xaee45ca8, FUTEX_WAIT, 3, NULL) = 0 <0.000518>
+10:36:46.359524 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000108>
+10:36:46.359916 write(11, "3889", 4)    = 4 <0.000088>
+10:36:46.360274 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0x12f70ca0) = 0 <0.000113>
+10:36:46.360645 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000131>
+10:36:46.361382 clock_gettime(CLOCK_MONOTONIC, {306, 883458167}) = 0 <0.000091>
+10:36:46.361746 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000097>
+10:36:46.362096 futex(0x9fda3a68, FUTEX_WAIT, 7, NULL) = 0 <2.033706>
+10:36:48.396075 futex(0xb3869b68, FUTEX_WAKE, 1) = 1 <0.000112>
+10:36:48.397430 futex(0xa880a560, FUTEX_WAKE, 1) = 0 <0.000130>
+10:36:48.397812 write(11, "3889", 4)    = 4 <0.000158>
+10:36:48.408205 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0x6fa3e6e0) = 0 <0.006354>
+10:36:48.414829 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000102>
+10:36:48.415158 clock_gettime(CLOCK_MONOTONIC, {308, 937225666}) = 0 <0.000118>
+10:36:48.416270 gettimeofday({1444041408, 416363}, NULL) = 0 <0.000177>
+10:36:48.416689 gettimeofday({1444041408, 416784}, NULL) = 0 <0.000125>
+10:36:48.417134 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 63 <0.000118>
+10:36:48.418228 ioctl(63, 0x41007701, 0x9fafeef4) = 0 <0.000123>
+10:36:48.418606 ioctl(63, 0x40047703, 0x200000) = 0 <0.000129>
+10:36:48.419005 ioctl(63, 0x40047705, 0x3) = 0 <0.000135>
+10:36:48.419381 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 63, 0) = 0x952c0000 <0.000244>
+10:36:48.419880 ioctl(63, 0x40047705, 0x1) = 0 <0.000116>
+10:36:48.420294 gettimeofday({1444041408, 420396}, NULL) = 0 <0.000096>
+10:36:48.421739 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000112>
+10:36:48.422770 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000099>
+10:36:48.423144 gettimeofday({1444041408, 423237}, NULL) = 0 <0.000199>
+10:36:48.423723 gettimeofday({1444041408, 423824}, NULL) = 0 <0.000124>
+10:36:48.424089 gettimeofday({1444041408, 424183}, NULL) = 0 <0.000138>
+10:36:48.424459 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 78 <0.000129>
+10:36:48.424826 ioctl(78, 0x41007701, 0x9fafed84) = 0 <0.000128>
+10:36:48.425188 ioctl(78, 0x40047703, 0x200000) = 0 <0.008550>
+10:36:48.434019 ioctl(78, 0x40047705, 0x3) = 0 <0.000095>
+10:36:48.434375 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 78, 0) = 0x956c0000 <0.000096>
+10:36:48.434743 ioctl(78, 0x40047705, 0x1) = 0 <0.000119>
+10:36:48.435168 gettimeofday({1444041408, 435267}, NULL) = 0 <0.000124>
+10:36:48.435532 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000119>
+10:36:48.435892 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000121>
+10:36:48.436251 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000117>
+10:36:48.436598 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000123>
+10:36:48.436957 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000122>
+10:36:48.437326 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000124>
+10:36:48.439486 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000098>
+10:36:48.439866 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000097>
+10:36:48.440244 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 57 <0.000092>
+10:36:48.440611 fstat64(57, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000092>
+10:36:48.440968 geteuid32()             = 10071 <0.000088>
+10:36:48.441314 fstat64(57, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000091>
+10:36:48.441675 pread(57, "\0", 1, 0)   = 1 <0.000088>
+10:36:48.442026 close(57)               = 0 <0.000293>
+10:36:48.442546 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000117>
+10:36:48.442901 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000117>
+10:36:48.443254 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000117>
+10:36:48.443610 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000120>
+10:36:48.443970 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000119>
+10:36:48.444437 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000183>
+10:36:48.444950 gettimeofday({1444041408, 445051}, NULL) = 0 <0.000126>
+10:36:48.445395 munmap(0x956c0000, 2097152) = 0 <0.000257>
+10:36:48.446009 close(78)               = 0 <0.001323>
+10:36:48.448327 getuid32()              = 10071 <0.000187>
+10:36:48.449225 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.000438>
+10:36:48.450093 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafee98) = 0 <0.000151>
+10:36:48.450654 clock_gettime(CLOCK_MONOTONIC, {308, 972813948}) = 0 <0.000145>
+10:36:48.453634 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.000189>
+10:36:48.454242 clock_gettime(CLOCK_MONOTONIC, {308, 976419625}) = 0 <0.000165>
+10:36:48.454832 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000171>
+10:36:48.455435 futex(0x9fda3a68, FUTEX_WAIT, 8, NULL) = 0 <0.168557>
+10:36:48.624323 futex(0xaee45c80, FUTEX_WAIT, 1, NULL) = 0 <0.000337>
+10:36:48.624942 write(11, "3889", 4)    = 4 <0.000109>
+10:36:48.625330 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf31, 0x2, 0) = 0 <0.000106>
+10:36:48.625695 setpriority(PRIO_PROCESS, 3889, 10) = 0 <0.000105>
+10:36:48.626060 clock_gettime(CLOCK_MONOTONIC, {309, 148125562}) = 0 <0.000126>
+10:36:48.626870 getuid32()              = 10071 <0.000087>
+10:36:48.627411 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafef08) = 0 <0.000214>
+10:36:48.628000 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fafef08) = 0 <0.000158>
+10:36:48.628499 clock_gettime(CLOCK_MONOTONIC, {309, 150613375}) = 0 <0.000087>
+10:36:48.628961 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9faff4c0) = 0 <0.001657>
+10:36:48.631477 clock_gettime(CLOCK_MONOTONIC, {309, 153546604}) = 0 <0.000110>
+10:36:48.631818 futex(0xa880afe0, FUTEX_WAKE, 1) = 0 <0.000109>
+10:36:48.632246 futex(0x9fda3a68, FUTEX_WAIT, 9, NULL <detached ...>

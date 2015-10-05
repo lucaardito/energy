@@ -1,0 +1,57 @@
+10:36:40.565314 futex(0xb3a00970, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000729>
+10:36:40.566460 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb38f9000 <0.000180>
+10:36:40.566941 mprotect(0xb38f9000, 4096, PROT_NONE) = 0 <0.000110>
+10:36:40.567366 sigaltstack({ss_sp=0xb38fa000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000073>
+10:36:40.567756 prctl(0x53564d41 /* PR_??? */, 0, 0xb38fa000, 0x2000, 0xb6d55ed3) = 0 <0.000079>
+10:36:40.568160 mprotect(0xb38fd000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000078>
+10:36:40.568888 mprotect(0xb38fd000, 4096, PROT_NONE) = 0 <0.000074>
+10:36:40.569236 madvise(0xb38fd000, 1056768, MADV_DONTNEED) = 0 <0.000077>
+10:36:40.569717 prctl(PR_SET_NAME, 0xb3a00844, 0x636e65, 0xb3a00978, 0xa88a05c0) = 0 <0.000092>
+10:36:40.570083 getpriority(PRIO_PROCESS, 3840) = 20 <0.000088>
+10:36:40.570429 setpriority(PRIO_PROCESS, 3840, 0) = 0 <0.000081>
+10:36:40.570784 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml.bak", F_OK) = -1 ENOENT (No such file or directory) <0.000075>
+10:36:40.571243 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", F_OK) = 0 <0.000075>
+10:36:40.571559 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", R_OK) = 0 <0.000075>
+10:36:40.571901 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", {st_mode=S_IFREG|0660, st_size=4475, ...}, 0) = 0 <0.000075>
+10:36:40.572241 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", R_OK) = 0 <0.000074>
+10:36:40.572567 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", O_RDONLY|O_LARGEFILE) = 16 <0.000074>
+10:36:40.572898 fstat64(16, {st_mode=S_IFREG|0660, st_size=4475, ...}) = 0 <0.000073>
+10:36:40.573292 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 17 <0.000083>
+10:36:40.573889 ioctl(17, 0x41007701, 0xb3a00234) = 0 <0.000104>
+10:36:40.574260 ioctl(17, 0x40047703, 0x5000) = 0 <0.000074>
+10:36:40.574662 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 17, 0) = 0xb4e10000 <0.000141>
+10:36:40.575140 close(17)               = 0 <0.000074>
+10:36:40.575483 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 15 <0.000087>
+10:36:40.575821 ioctl(15, 0x41007701, 0xb3a001c4) = 0 <0.000086>
+10:36:40.576149 ioctl(15, 0x40047703, 0x5000) = 0 <0.000087>
+10:36:40.576483 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 15, 0) = 0xb4e0b000 <0.000086>
+10:36:40.576813 close(15)               = 0 <0.000085>
+10:36:40.577216 ioctl(16, FIONREAD, [4475]) = 0 <0.000112>
+10:36:40.577552 read(16, "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\"accountList\">[{&quot;acct&quot;:&quot;{\\&quot;name\\&quot;:\\&quot;lab1polito@gmail.com\\&quot;,\\&quot;type\\&quot;:\\&quot;com.google\\&quot;,\\&quot;accountManagerName\\&quot;:\\&quot;lab1polito@gmail.com\\&quot;,\\&quot;accountId\\&quot;:\\&quot;lab1polito@gmail.com\\&quot;,\\&quot;providerVersion\\&quot;:0,\\&quot;accountUri\\&quot;:\\&quot;content:\\\\\\/\\\\\\/com.android.gmail.ui\\\\\\/lab1polito@gmail.com\\\\\\/account\\&quot;,\\&quot;capab"..., 16384) = 4475 <0.000114>
+10:36:40.577893 ioctl(16, FIONREAD, [0]) = 0 <0.000168>
+10:36:40.578314 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb3840000 <0.000137>
+10:36:40.578678 prctl(0x53564d41 /* PR_??? */, 0, 0xb3840000, 0x40000, 0xb6d56be1) = 0 <0.000126>
+10:36:40.579082 ioctl(16, FIONREAD, [0]) = 0 <0.000122>
+10:36:40.579960 getsockopt(16, SOL_SOCKET, SO_DEBUG, 0xb3a00470, 0xb3a00474) = -1 ENOTSOCK (Socket operation on non-socket) <0.000135>
+10:36:40.580354 close(16)               = 0 <0.000129>
+10:36:40.580710 futex(0xb4d0c2e8, FUTEX_WAKE, 1) = 1 <0.000139>
+10:36:40.581075 futex(0xb4d09200, FUTEX_WAKE, 1) = 0 <0.000125>
+10:36:40.581474 munmap(0xb3a01000, 8192) = 0 <0.000174>
+10:36:40.581998 madvise(0xb3852000, 8192, MADV_DONTNEED) = 0 <0.000153>
+10:36:40.582408 madvise(0xb3850000, 8192, MADV_DONTNEED) = 0 <0.000345>
+10:36:40.583202 madvise(0xb384e000, 8192, MADV_DONTNEED) = 0 <0.000715>
+10:36:40.584276 madvise(0xb384c000, 8192, MADV_DONTNEED) = 0 <0.000102>
+10:36:40.584623 madvise(0xb384a000, 8192, MADV_DONTNEED) = 0 <0.000335>
+10:36:40.585216 madvise(0xb3848000, 8192, MADV_DONTNEED) = 0 <0.000197>
+10:36:40.585656 madvise(0xb3846000, 8192, MADV_DONTNEED) = 0 <0.000094>
+10:36:40.585988 madvise(0xb3844000, 8192, MADV_DONTNEED) = 0 <0.000205>
+10:36:40.586439 madvise(0xb3842000, 8192, MADV_DONTNEED) = 0 <0.000094>
+10:36:40.586773 madvise(0xa883e000, 8192, MADV_DONTNEED) = 0 <0.000103>
+10:36:40.587116 madvise(0xa883d000, 4096, MADV_DONTNEED) = 0 <0.000559>
+10:36:40.587927 sigaltstack({ss_sp=0, ss_flags=SS_DISABLE, ss_size=3069946756}, NULL) = 0 <0.000177>
+10:36:40.588362 munmap(0xb38f9000, 12288) = 0 <0.000389>
+10:36:40.589001 set_tid_address(0)      = 3840 <0.000206>
+10:36:40.589450 rt_sigprocmask(SIG_SETMASK, ~[RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], [QUIT USR1 PIPE], 8) = 0 <0.000099>
+10:36:40.589818 munmap(0xb38fc000, 1069056) = 0 <0.000182>
+10:36:40.590239 exit(0)                 = ?
+10:36:40.590709 +++ exited with 0 +++

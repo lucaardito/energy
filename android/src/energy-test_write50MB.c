@@ -6,6 +6,10 @@
 #include <unistd.h>
 #include <time.h>
 
+#define BUSY_LEN 5
+#define SLEEP_LEN 8
+#define DEBUG
+
 void busy(int dur){
 	int end = time(NULL) + dur;
 	while(end > time(NULL));
@@ -20,24 +24,24 @@ int main(){
 	printf("Please be patient. We have some sleep() in order to better profile system calls\n");
 
 	// Open file (see tail behavior)
-	busy(5);
-	sleep(5);
+	busy(BUSY_LEN);
+	sleep(SLEEP_LEN);
 	printf("Opening file\n");
 	fd = open(fn, O_CREAT|O_RDWR, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH);
 
 	if(fd >= 0){
 		// Write file (different size can lead to different power states?)
-		sleep(5);
-		busy(5);
-		sleep(5);
+		sleep(SLEEP_LEN);
+		busy(BUSY_LEN);
+		sleep(SLEEP_LEN);
 		printf("Writing file\n");
 		for(i=0; i<12800; i++)	// 50MB file size
 			err = write(fd, content, strlen(content));
 		printf("Write completed\n");
 		// Close file
-		sleep(5);
-		busy(5);
-		sleep(5);
+		sleep(SLEEP_LEN);
+		busy(BUSY_LEN);
+		sleep(SLEEP_LEN);
 		close(fd);
 		printf("Test finished\n");
 	}else{

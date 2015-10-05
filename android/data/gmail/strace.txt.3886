@@ -1,0 +1,754 @@
+10:36:42.230355 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb36bf000 <0.000195>
+10:36:42.230873 mprotect(0xb36bf000, 4096, PROT_NONE) = 0 <0.000129>
+10:36:42.231257 sigaltstack({ss_sp=0xb36c0000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000119>
+10:36:42.231721 prctl(0x53564d41 /* PR_??? */, 0, 0xb36c0000, 0x2000, 0xb6d55ed3) = 0 <0.000158>
+10:36:42.232118 mprotect(0xa8afc000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000124>
+10:36:42.232796 mprotect(0xa8afc000, 4096, PROT_NONE) = 0 <0.000104>
+10:36:42.233157 madvise(0xa8afc000, 1056768, MADV_DONTNEED) = 0 <0.000169>
+10:36:42.233585 prctl(PR_SET_NAME, 0xa8bff844, 0, 0xa8bff978, 0xa88a1460) = 0 <0.000105>
+10:36:42.233939 getpriority(PRIO_PROCESS, 3886) = 20 <0.000226>
+10:36:42.235591 setpriority(PRIO_PROCESS, 3886, 0) = 0 <0.000119>
+10:36:42.235956 write(11, "3886", 4)    = 4 <0.000057>
+10:36:42.236285 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.000103>
+10:36:42.236638 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000106>
+10:36:42.236995 clock_gettime(CLOCK_MONOTONIC, {302, 759060877}) = 0 <0.000157>
+10:36:42.237446 getuid32()              = 10071 <0.000093>
+10:36:42.238106 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xaeec0000 <0.000221>
+10:36:42.238621 prctl(0x53564d41 /* PR_??? */, 0, 0xaeec0000, 0x40000, 0xb6d56be1) = 0 <0.000939>
+10:36:42.239913 clock_gettime(CLOCK_MONOTONIC, {302, 762102180}) = 0 <0.000169>
+10:36:42.240449 clock_gettime(CLOCK_MONOTONIC, {302, 762616607}) = 0 <0.000160>
+10:36:42.241624 getuid32()              = 10071 <0.000204>
+10:36:42.242323 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfef08) = 0 <0.000627>
+10:36:42.251739 clock_gettime(CLOCK_MONOTONIC, {302, 777661398}) = 0 <0.013650>
+10:36:42.266187 clock_gettime(CLOCK_MONOTONIC, {302, 788412544}) = 0 <0.001168>
+10:36:42.267764 clock_gettime(CLOCK_MONOTONIC, {302, 789959262}) = 0 <0.003366>
+10:36:42.271713 clock_gettime(CLOCK_MONOTONIC, {302, 796570877}) = 0 <0.002860>
+10:36:42.274962 clock_gettime(CLOCK_MONOTONIC, {302, 797055617}) = 0 <0.000132>
+10:36:42.275460 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.000173>
+10:36:42.275993 clock_gettime(CLOCK_MONOTONIC, {302, 799005460}) = 0 <0.001044>
+10:36:42.277407 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000118>
+10:36:42.277866 futex(0x9fda3928, FUTEX_WAIT, 0, NULL) = 0 <0.505034>
+10:36:42.783228 futex(0xa880af20, FUTEX_WAIT, 1, NULL) = 0 <0.010941>
+10:36:42.796258 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.006777>
+10:36:42.803455 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 0 <0.000132>
+10:36:42.803988 futex(0xa8c2ec08, FUTEX_WAIT, 0, NULL) = 0 <0.001348>
+10:36:42.805738 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.001731>
+10:36:42.807897 write(11, "3886", 4)    = 4 <0.000562>
+10:36:42.808979 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.000136>
+10:36:42.809530 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000141>
+10:36:42.810201 clock_gettime(CLOCK_MONOTONIC, {303, 332355669}) = 0 <0.000142>
+10:36:42.811110 sched_yield()           = 0 <0.000142>
+10:36:42.811684 sched_yield()           = 0 <0.000136>
+10:36:42.812233 sched_yield()           = 0 <0.000157>
+10:36:42.812803 sched_yield()           = 0 <0.000135>
+10:36:42.813511 sched_yield()           = 0 <0.000140>
+10:36:42.814078 sched_yield()           = 0 <0.000135>
+10:36:42.814701 sched_yield()           = 0 <0.000150>
+10:36:42.815278 sched_yield()           = 0 <0.000389>
+10:36:42.816093 sched_yield()           = 0 <0.000137>
+10:36:42.816786 sched_yield()           = 0 <0.000152>
+10:36:42.817348 sched_yield()           = 0 <0.000891>
+10:36:42.818677 sched_yield()           = 0 <0.000295>
+10:36:42.819352 sched_yield()           = 0 <0.000492>
+10:36:42.820215 sched_yield()           = 0 <0.000187>
+10:36:42.820771 sched_yield()           = 0 <0.000183>
+10:36:42.821321 sched_yield()           = 0 <0.000187>
+10:36:42.822153 sched_yield()           = 0 <0.000186>
+10:36:42.822706 sched_yield()           = 0 <0.000638>
+10:36:42.823711 sched_yield()           = 0 <0.001000>
+10:36:42.826167 sched_yield()           = 0 <0.000504>
+10:36:42.827093 sched_yield()           = 0 <0.000187>
+10:36:42.827676 sched_yield()           = 0 <0.000181>
+10:36:42.828322 sched_yield()           = 0 <0.000179>
+10:36:42.828870 sched_yield()           = 0 <0.000177>
+10:36:42.829414 sched_yield()           = 0 <0.000203>
+10:36:42.830078 sched_yield()           = 0 <0.000194>
+10:36:42.830643 sched_yield()           = 0 <0.000192>
+10:36:42.831201 sched_yield()           = 0 <0.000179>
+10:36:42.831763 sched_yield()           = 0 <0.000180>
+10:36:42.832311 sched_yield()           = 0 <0.000364>
+10:36:42.833042 sched_yield()           = 0 <0.000194>
+10:36:42.833602 sched_yield()           = 0 <0.000181>
+10:36:42.834158 sched_yield()           = 0 <0.000188>
+10:36:42.835044 sched_yield()           = 0 <0.000185>
+10:36:42.835594 sched_yield()           = 0 <0.000381>
+10:36:42.836360 sched_yield()           = 0 <0.000180>
+10:36:42.836991 sched_yield()           = 0 <0.000167>
+10:36:42.837578 sched_yield()           = 0 <0.000360>
+10:36:42.838373 sched_yield()           = 0 <0.000135>
+10:36:42.838920 sched_yield()           = 0 <0.000134>
+10:36:42.839464 sched_yield()           = 0 <0.000141>
+10:36:42.840102 sched_yield()           = 0 <0.000393>
+10:36:42.840905 sched_yield()           = 0 <0.000134>
+10:36:42.841426 sched_yield()           = 0 <0.000622>
+10:36:42.842463 sched_yield()           = 0 <0.000734>
+10:36:42.843572 sched_yield()           = 0 <0.000765>
+10:36:42.844794 sched_yield()           = 0 <0.001113>
+10:36:42.846281 sched_yield()           = 0 <0.000181>
+10:36:42.846832 sched_yield()           = 0 <0.000180>
+10:36:42.847376 sched_yield()           = 0 <0.000180>
+10:36:42.847920 clock_gettime(CLOCK_MONOTONIC, {303, 370224575}) = 0 <0.000301>
+10:36:42.848663 futex(0xa8c2ec50, FUTEX_WAKE, 1) = 0 <0.000202>
+10:36:42.849259 futex(0xa8c2ec78, FUTEX_WAIT, 0, NULL) = 0 <0.945496>
+10:36:43.795150 futex(0xa8c2ec50, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000089>
+10:36:43.795503 futex(0xa8c2ec50, FUTEX_WAKE, 1) = 0 <0.000079>
+10:36:43.795828 futex(0xa8c2ec50, FUTEX_WAKE, 1) = 0 <0.000080>
+10:36:43.796148 futex(0xa8c2ec78, FUTEX_WAKE, 1) = 1 <0.000080>
+10:36:43.796467 futex(0xa8c2ec50, FUTEX_WAKE, 1) = 0 <0.000079>
+10:36:43.797181 clock_gettime(CLOCK_MONOTONIC, {304, 319294574}) = 0 <0.000182>
+10:36:43.797724 clock_gettime(CLOCK_MONOTONIC, {304, 319831449}) = 0 <0.000143>
+10:36:43.799087 clock_gettime(CLOCK_MONOTONIC, {304, 321314575}) = 0 <0.000187>
+10:36:43.799694 clock_gettime(CLOCK_MONOTONIC, {304, 321901658}) = 0 <0.000200>
+10:36:43.806335 gettimeofday({1444041403, 806506}, NULL) = 0 <0.000129>
+10:36:43.811148 gettimeofday({1444041403, 811354}, NULL) = 0 <0.000153>
+10:36:43.811746 sched_yield()           = 0 <0.000136>
+10:36:43.812273 sched_yield()           = 0 <0.000148>
+10:36:43.812797 sched_yield()           = 0 <0.000147>
+10:36:43.813336 sched_yield()           = 0 <0.000149>
+10:36:43.813871 sched_yield()           = 0 <0.000149>
+10:36:43.814564 sched_yield()           = 0 <0.000144>
+10:36:43.815087 sched_yield()           = 0 <0.000144>
+10:36:43.815603 sched_yield()           = 0 <0.000141>
+10:36:43.816120 sched_yield()           = 0 <0.000141>
+10:36:43.816636 sched_yield()           = 0 <0.000141>
+10:36:43.817172 sched_yield()           = 0 <0.000134>
+10:36:43.817685 sched_yield()           = 0 <0.000173>
+10:36:43.818319 sched_yield()           = 0 <0.000128>
+10:36:43.818862 sched_yield()           = 0 <0.000152>
+10:36:43.819418 sched_yield()           = 0 <0.000150>
+10:36:43.819973 sched_yield()           = 0 <0.000130>
+10:36:43.820489 sched_yield()           = 0 <0.000147>
+10:36:43.821020 sched_yield()           = 0 <0.000130>
+10:36:43.821533 sched_yield()           = 0 <0.000149>
+10:36:43.822092 sched_yield()           = 0 <0.000130>
+10:36:43.822611 sched_yield()           = 0 <0.000167>
+10:36:43.823176 sched_yield()           = 0 <0.000167>
+10:36:43.823693 sched_yield()           = 0 <0.000184>
+10:36:43.824228 sched_yield()           = 0 <0.000180>
+10:36:43.824783 sched_yield()           = 0 <0.000179>
+10:36:43.825311 sched_yield()           = 0 <0.000334>
+10:36:43.826054 sched_yield()           = 0 <0.000135>
+10:36:43.826584 sched_yield()           = 0 <0.000181>
+10:36:43.827140 sched_yield()           = 0 <0.000152>
+10:36:43.827686 sched_yield()           = 0 <0.000133>
+10:36:43.828505 sched_yield()           = 0 <0.000131>
+10:36:43.829036 sched_yield()           = 0 <0.000147>
+10:36:43.829579 sched_yield()           = 0 <0.000146>
+10:36:43.830112 sched_yield()           = 0 <0.000144>
+10:36:43.830644 sched_yield()           = 0 <0.000145>
+10:36:43.831176 sched_yield()           = 0 <0.000145>
+10:36:43.831709 sched_yield()           = 0 <0.000145>
+10:36:43.832241 sched_yield()           = 0 <0.000144>
+10:36:43.832769 sched_yield()           = 0 <0.000144>
+10:36:43.833298 sched_yield()           = 0 <0.000147>
+10:36:43.833891 sched_yield()           = 0 <0.000150>
+10:36:43.834454 sched_yield()           = 0 <0.000145>
+10:36:43.835172 sched_yield()           = 0 <0.000155>
+10:36:43.835771 sched_yield()           = 0 <0.000141>
+10:36:43.836332 sched_yield()           = 0 <0.000136>
+10:36:43.836872 sched_yield()           = 0 <0.000161>
+10:36:43.837426 sched_yield()           = 0 <0.000145>
+10:36:43.838185 sched_yield()           = 0 <0.000134>
+10:36:43.838718 sched_yield()           = 0 <0.000167>
+10:36:43.839299 sched_yield()           = 0 <0.000131>
+10:36:43.839814 clock_gettime(CLOCK_MONOTONIC, {304, 361974470}) = 0 <0.000145>
+10:36:43.840365 clock_gettime(CLOCK_MONOTONIC, {304, 362544158}) = 0 <0.000160>
+10:36:43.840969 futex(0xb4d073d0, FUTEX_WAKE, 1) = 0 <0.000149>
+10:36:43.841575 sched_yield()           = 0 <0.000140>
+10:36:43.842164 futex(0xb4d073d0, FUTEX_WAKE, 1) = 0 <0.000143>
+10:36:43.842705 futex(0xb4d073d0, FUTEX_WAKE, 1) = 0 <0.000133>
+10:36:43.843231 futex(0xb4d0c2d8, FUTEX_CMP_REQUEUE, 0, 2147483647, 0xb4d073d0, 16) = 1 <0.000138>
+10:36:43.843760 futex(0xb4d073d0, FUTEX_WAKE, 1) = 1 <0.000240>
+10:36:43.846870 clock_gettime(CLOCK_MONOTONIC, {304, 369063689}) = 0 <0.000180>
+10:36:43.847681 clock_gettime(CLOCK_MONOTONIC, {304, 369840459}) = 0 <0.000146>
+10:36:43.848343 clock_gettime(CLOCK_MONOTONIC, {304, 370517700}) = 0 <0.000146>
+10:36:43.849455 clock_gettime(CLOCK_MONOTONIC, {304, 371601814}) = 0 <0.000134>
+10:36:43.850773 gettimeofday({1444041403, 850998}, NULL) = 0 <0.000189>
+10:36:43.853000 gettimeofday({1444041403, 853235}, NULL) = 0 <0.000198>
+10:36:43.854393 clock_gettime(CLOCK_MONOTONIC, {304, 376553064}) = 0 <0.000140>
+10:36:43.854956 clock_gettime(CLOCK_MONOTONIC, {304, 377101501}) = 0 <0.000132>
+10:36:43.855779 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 48 <0.000188>
+10:36:43.856367 ioctl(48, 0x41007701, 0xa8bfed84) = 0 <0.000199>
+10:36:43.856915 ioctl(48, 0x40047703, 0x200000) = 0 <0.000180>
+10:36:43.857467 ioctl(48, 0x40047705, 0x3) = 0 <0.000186>
+10:36:43.858007 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 48, 0) = 0x95f1b000 <0.000191>
+10:36:43.858613 ioctl(48, 0x40047705, 0x1) = 0 <0.000193>
+10:36:43.859468 gettimeofday({1444041403, 859640}, NULL) = 0 <0.000133>
+10:36:43.860007 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000147>
+10:36:43.860577 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000181>
+10:36:43.861120 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000179>
+10:36:43.861659 futex(0xb68f5f08, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000285>
+10:36:43.862338 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000408>
+10:36:43.863101 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000196>
+10:36:43.863685 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000174>
+10:36:43.864237 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000179>
+10:36:43.864793 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000182>
+10:36:43.865378 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 57 <0.000179>
+10:36:43.865935 fstat64(57, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000183>
+10:36:43.866499 geteuid32()             = 10071 <0.000192>
+10:36:43.867053 fstat64(57, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000176>
+10:36:43.867606 pread(57, "\0", 1, 0)   = 1 <0.000201>
+10:36:43.868237 close(57)               = 0 <0.000185>
+10:36:43.868783 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000179>
+10:36:43.869325 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000180>
+10:36:43.869866 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000185>
+10:36:43.870448 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000180>
+10:36:43.870996 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000179>
+10:36:43.871897 pread(41, "\n\17\357\0\4\17\234\0\17\256\17\306\17\234\17\331\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 16384) = 4096 <0.000132>
+10:36:43.872993 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000149>
+10:36:43.873679 gettimeofday({1444041403, 873853}, NULL) = 0 <0.000131>
+10:36:43.875249 munmap(0x95f1b000, 2097152) = 0 <0.000132>
+10:36:43.875772 close(48)               = 0 <0.000144>
+10:36:43.877132 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 57 <0.000174>
+10:36:43.877692 ioctl(57, 0x41007701, 0xa8bfeed4) = 0 <0.000180>
+10:36:43.878211 ioctl(57, 0x40047703, 0x200000) = 0 <0.000119>
+10:36:43.878582 ioctl(57, 0x40047705, 0x3) = 0 <0.000118>
+10:36:43.878957 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 57, 0) = 0x95f1b000 <0.000140>
+10:36:43.879339 ioctl(57, 0x40047705, 0x1) = 0 <0.000113>
+10:36:43.879751 gettimeofday({1444041403, 880326}, NULL) = 0 <0.000381>
+10:36:43.880758 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000114>
+10:36:43.881110 pread(47, "\r\4\267\0A\4\2\10\4\2\4>\4y\4\350\5\24\5A\5r\5\241\16\352\5\337\17\324\6\322\10\307\fX\v\236\vh\n\257\vA\17>\v\361\f6\4\307\7/\rO\n\324\n\210\ng\t\10\r\317\r\206\r\255\10\347\16\307\t\220\16\242\n\376\fw\7\322\r-\10o\16\177\16:\r\370\16\33\f\311\t\312\n\4\7\235\6\t\7\\\6R\tS\7\367\17b\6\360\f\356\0102\v#\10\224\f\234\t0\n<\f\21\v\303\6\215\6\207\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 210176) = 4096 <0.000112>
+10:36:43.881737 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000227>
+10:36:43.882210 gettimeofday({1444041403, 882304}, NULL) = 0 <0.000124>
+10:36:43.882734 getuid32()              = 10071 <0.000081>
+10:36:43.883067 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfee98) = 0 <0.000552>
+10:36:43.883958 clock_gettime(CLOCK_MONOTONIC, {304, 406102960}) = 0 <0.000120>
+10:36:43.884461 sched_yield()           = 0 <0.000111>
+10:36:43.885145 sched_yield()           = 0 <0.000127>
+10:36:43.885724 sched_yield()           = 0 <0.000112>
+10:36:43.886167 sched_yield()           = 0 <0.000139>
+10:36:43.886654 sched_yield()           = 0 <0.000110>
+10:36:43.887095 sched_yield()           = 0 <0.000124>
+10:36:43.887553 sched_yield()           = 0 <0.000110>
+10:36:43.887999 sched_yield()           = 0 <0.005665>
+10:36:43.895965 clock_gettime(CLOCK_MONOTONIC, {304, 418230564}) = 0 <0.000220>
+10:36:43.897445 clock_gettime(CLOCK_MONOTONIC, {304, 419565459}) = 0 <0.000122>
+10:36:43.903810 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.002452>
+10:36:43.906713 clock_gettime(CLOCK_MONOTONIC, {304, 428952074}) = 0 <0.000809>
+10:36:43.910385 write(11, "3886", 4)    = 4 <0.000673>
+10:36:43.912332 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0x6fa3e898) = 0 <0.007529>
+10:36:43.920565 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000152>
+10:36:43.922307 sched_yield()           = 0 <0.001085>
+10:36:43.924462 sched_yield()           = 0 <0.000165>
+10:36:43.925453 sched_yield()           = 0 <0.000370>
+10:36:43.926308 sched_yield()           = 0 <0.000580>
+10:36:43.927573 clock_gettime(CLOCK_MONOTONIC, {304, 449670772}) = 0 <0.000141>
+10:36:43.935093 gettimeofday({1444041403, 935230}, NULL) = 0 <0.000143>
+10:36:43.935566 gettimeofday({1444041403, 935691}, NULL) = 0 <0.000157>
+10:36:43.936034 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 61 <0.000150>
+10:36:43.936500 ioctl(61, 0x41007701, 0xa8bfeef4) = 0 <0.000928>
+10:36:43.938970 ioctl(61, 0x40047703, 0x200000) = 0 <0.000138>
+10:36:43.939422 ioctl(61, 0x40047705, 0x3) = 0 <0.000137>
+10:36:43.939868 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 61, 0) = 0x95cc0000 <0.000187>
+10:36:43.940362 ioctl(61, 0x40047705, 0x1) = 0 <0.000147>
+10:36:43.974217 gettimeofday({1444041403, 974352}, NULL) = 0 <0.000124>
+10:36:43.974904 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000167>
+10:36:43.975658 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000111>
+10:36:43.976112 gettimeofday({1444041403, 976234}, NULL) = 0 <0.000109>
+10:36:43.976779 clock_gettime(CLOCK_MONOTONIC, {304, 498882178}) = 0 <0.000138>
+10:36:43.977235 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000193>
+10:36:43.977736 futex(0x9fda3928, FUTEX_WAIT, 1, {30, 0}) = 0 <0.022255>
+10:36:44.000353 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.000562>
+10:36:44.001245 sched_yield()           = 0 <0.000104>
+10:36:44.001817 gettimeofday({1444041404, 1935}, NULL) = 0 <0.000109>
+10:36:44.002492 gettimeofday({1444041404, 2621}, NULL) = 0 <0.000147>
+10:36:44.003037 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 63 <0.000145>
+10:36:44.003489 ioctl(63, 0x41007701, 0xa8bfed84) = 0 <0.000144>
+10:36:44.004078 ioctl(63, 0x40047703, 0x200000) = 0 <0.000139>
+10:36:44.004503 ioctl(63, 0x40047705, 0x3) = 0 <0.000113>
+10:36:44.004946 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 63, 0) = 0x956c0000 <0.000125>
+10:36:44.005417 ioctl(63, 0x40047705, 0x1) = 0 <0.000107>
+10:36:44.006090 clock_gettime(CLOCK_MONOTONIC, {304, 528243324}) = 0 <0.000161>
+10:36:44.006614 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000151>
+10:36:44.007176 futex(0x9fda3928, FUTEX_WAIT, 2, {30, 0}) = 0 <0.008841>
+10:36:44.016371 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.000547>
+10:36:44.017240 sched_yield()           = 0 <0.000101>
+10:36:44.017843 gettimeofday({1444041404, 17958}, NULL) = 0 <0.000158>
+10:36:44.018383 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000105>
+10:36:44.018840 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000160>
+10:36:44.019457 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000105>
+10:36:44.019906 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000361>
+10:36:44.020572 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000136>
+10:36:44.021027 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000143>
+10:36:44.021481 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000137>
+10:36:44.021930 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000253>
+10:36:44.022526 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 64 <0.000292>
+10:36:44.023134 fstat64(64, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000172>
+10:36:44.023714 geteuid32()             = 10071 <0.000291>
+10:36:44.024301 fstat64(64, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000141>
+10:36:44.024766 pread(64, "\0", 1, 0)   = 1 <0.000143>
+10:36:44.025209 close(64)               = 0 <0.000144>
+10:36:44.025756 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000146>
+10:36:44.026222 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000140>
+10:36:44.026686 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000149>
+10:36:44.027172 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000149>
+10:36:44.027668 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000148>
+10:36:44.028362 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000126>
+10:36:44.028747 gettimeofday({1444041404, 28840}, NULL) = 0 <0.000134>
+10:36:44.029159 futex(0xb4d3f828, FUTEX_WAKE, 1) = 1 <0.000241>
+10:36:44.029627 futex(0xa8809150, FUTEX_WAKE, 1) = 0 <0.000117>
+10:36:44.029974 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000114>
+10:36:44.030313 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000229>
+10:36:44.030819 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.031168 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000083>
+10:36:44.031589 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.031925 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.032269 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000083>
+10:36:44.032605 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.032944 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.033279 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.033617 munmap(0x956c0000, 2097152) = 0 <0.000088>
+10:36:44.033958 close(63)               = 0 <0.000087>
+10:36:44.034299 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.034639 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.034979 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.035317 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000107>
+10:36:44.035681 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.036018 getuid32()              = 10071 <0.000085>
+10:36:44.036358 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfee98) = 0 <0.000420>
+10:36:44.037035 clock_gettime(CLOCK_MONOTONIC, {304, 559116449}) = 0 <0.000167>
+10:36:44.037485 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.037828 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.039241 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.001491>
+10:36:44.040997 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.041342 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.041684 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000086>
+10:36:44.042026 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.042365 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.042727 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.043071 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.043492 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.043832 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.044279 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.044617 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.044958 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.045298 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.045635 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.045975 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.046314 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.046653 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.046993 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.047332 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.047674 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.048018 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000092>
+10:36:44.048418 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.048759 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.049097 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000084>
+10:36:44.049435 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000085>
+10:36:44.049777 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.000087>
+10:36:44.050119 clock_gettime(CLOCK_MONOTONIC, {304, 572187804}) = 0 <0.000082>
+10:36:44.050455 write(11, "3886", 4)    = 4 <0.000081>
+10:36:44.050788 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0x6fa3e898) = 0 <0.000082>
+10:36:44.051126 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000087>
+10:36:44.051477 clock_gettime(CLOCK_MONOTONIC, {304, 573585356}) = 0 <0.000086>
+10:36:44.051876 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000269>
+10:36:44.052720 futex(0xb4d070d0, FUTEX_WAKE, 1) = 0 <0.000635>
+10:36:44.055052 gettimeofday({1444041404, 55156}, NULL) = 0 <0.000141>
+10:36:44.055456 futex(0xb4d09020, FUTEX_WAIT, 1, NULL) = 0 <0.002246>
+10:36:44.057966 futex(0xb4d09020, FUTEX_WAKE, 1) = 1 <0.000135>
+10:36:44.059717 futex(0xb4d09020, FUTEX_WAKE, 1) = 0 <0.003231>
+10:36:44.063205 gettimeofday({1444041404, 63299}, NULL) = 0 <0.000123>
+10:36:44.064243 clock_gettime(CLOCK_MONOTONIC, {304, 586308012}) = 0 <0.000089>
+10:36:44.064593 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000094>
+10:36:44.064938 futex(0x9fda3928, FUTEX_WAIT, 3, {30, 0}) = 0 <0.017833>
+10:36:44.083366 futex(0xa880af20, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000170>
+10:36:44.083923 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.008087>
+10:36:44.092287 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 0 <0.000083>
+10:36:44.093026 futex(0xa8c2ec08, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000433>
+10:36:44.094121 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.011953>
+10:36:44.106683 sched_yield()           = 0 <0.000140>
+10:36:44.107087 gettimeofday({1444041404, 107179}, NULL) = 0 <0.000087>
+10:36:44.107437 gettimeofday({1444041404, 107529}, NULL) = 0 <0.000095>
+10:36:44.107807 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 65 <0.000087>
+10:36:44.109896 ioctl(65, 0x41007701, 0xa8bfed84) = 0 <0.000143>
+10:36:44.110406 ioctl(65, 0x40047703, 0x200000) = 0 <0.000117>
+10:36:44.110747 ioctl(65, 0x40047705, 0x3) = 0 <0.000123>
+10:36:44.111124 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 65, 0) = 0x954c0000 <0.000242>
+10:36:44.111639 ioctl(65, 0x40047705, 0x1) = 0 <0.000087>
+10:36:44.112095 gettimeofday({1444041404, 112187}, NULL) = 0 <0.000087>
+10:36:44.112443 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000096>
+10:36:44.112814 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000085>
+10:36:44.113161 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000086>
+10:36:44.113517 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000089>
+10:36:44.113865 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000099>
+10:36:44.114569 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000087>
+10:36:44.114928 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000132>
+10:36:44.115511 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000258>
+10:36:44.116019 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 66 <0.000119>
+10:36:44.116384 fstat64(66, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000094>
+10:36:44.116751 geteuid32()             = 10071 <0.000088>
+10:36:44.117088 fstat64(66, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000097>
+10:36:44.117457 pread(66, "\0", 1, 0)   = 1 <0.000085>
+10:36:44.117805 close(66)               = 0 <0.000085>
+10:36:44.118192 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000087>
+10:36:44.118556 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000089>
+10:36:44.118915 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.001539>
+10:36:44.120732 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000089>
+10:36:44.121103 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000086>
+10:36:44.121564 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000088>
+10:36:44.121918 gettimeofday({1444041404, 122011}, NULL) = 0 <0.000086>
+10:36:44.122345 munmap(0x954c0000, 2097152) = 0 <0.000100>
+10:36:44.122700 close(65)               = 0 <0.000089>
+10:36:44.124156 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 65 <0.000092>
+10:36:44.124524 ioctl(65, 0x41007701, 0xa8bfeed4) = 0 <0.000087>
+10:36:44.124877 ioctl(65, 0x40047703, 0x200000) = 0 <0.000086>
+10:36:44.125214 ioctl(65, 0x40047705, 0x3) = 0 <0.000085>
+10:36:44.125552 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 65, 0) = 0x954c0000 <0.000091>
+10:36:44.125900 ioctl(65, 0x40047705, 0x1) = 0 <0.000087>
+10:36:44.126247 gettimeofday({1444041404, 126342}, NULL) = 0 <0.000087>
+10:36:44.126708 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000087>
+10:36:44.127716 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000131>
+10:36:44.128139 gettimeofday({1444041404, 128246}, NULL) = 0 <0.000137>
+10:36:44.128531 getuid32()              = 10071 <0.000140>
+10:36:44.128921 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfee98) = 0 <0.000134>
+10:36:44.129293 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfee98) = 0 <0.000135>
+10:36:44.129666 clock_gettime(CLOCK_MONOTONIC, {304, 651734783}) = 0 <0.000124>
+10:36:44.132983 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.001276>
+10:36:44.134991 clock_gettime(CLOCK_MONOTONIC, {304, 657475460}) = 0 <0.000501>
+10:36:44.136992 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000227>
+10:36:44.137488 futex(0x9fda3928, FUTEX_WAIT, 4, NULL) = 0 <0.434699>
+10:36:44.572509 write(11, "3886", 4)    = 4 <0.000146>
+10:36:44.572943 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.000288>
+10:36:44.573527 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000122>
+10:36:44.573953 clock_gettime(CLOCK_MONOTONIC, {305, 96088897}) = 0 <0.000242>
+10:36:44.575277 gettimeofday({1444041404, 583125}, NULL) = 0 <0.007773>
+10:36:44.583422 gettimeofday({1444041404, 584011}, NULL) = 0 <0.000907>
+10:36:44.594276 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 66 <0.009824>
+10:36:44.607747 ioctl(66, 0x41007701, 0xa8bfeef4) = 0 <0.000409>
+10:36:44.617999 ioctl(66, 0x40047703, 0x200000) = 0 <0.002565>
+10:36:44.621926 ioctl(66, 0x40047705, 0x3) = 0 <0.000108>
+10:36:44.622302 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 66, 0) = 0x9f4de000 <0.000277>
+10:36:44.622833 ioctl(66, 0x40047705, 0x1) = 0 <0.000127>
+10:36:44.623263 gettimeofday({1444041404, 623367}, NULL) = 0 <0.000125>
+10:36:44.623915 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000095>
+10:36:44.624875 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000107>
+10:36:44.625279 gettimeofday({1444041404, 625383}, NULL) = 0 <0.000105>
+10:36:44.625710 gettimeofday({1444041404, 625810}, NULL) = 0 <0.000092>
+10:36:44.626140 gettimeofday({1444041404, 626256}, NULL) = 0 <0.000092>
+10:36:44.628559 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 71 <0.009244>
+10:36:44.638800 ioctl(71, 0x41007701, 0xa8bfed84) = 0 <0.001201>
+10:36:44.643372 ioctl(71, 0x40047703, 0x200000) = 0 <0.001589>
+10:36:44.646488 ioctl(71, 0x40047705, 0x3) = 0 <0.000161>
+10:36:44.646980 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 71, 0) = 0x9f2de000 <0.000192>
+10:36:44.647499 ioctl(71, 0x40047705, 0x1) = 0 <0.000155>
+10:36:44.648718 gettimeofday({1444041404, 648983}, NULL) = 0 <0.000277>
+10:36:44.649386 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000136>
+10:36:44.649897 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000122>
+10:36:44.650398 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000176>
+10:36:44.651082 futex(0xb68f5f08, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000263>
+10:36:44.651732 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000369>
+10:36:44.652432 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000146>
+10:36:44.652940 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000153>
+10:36:44.653579 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000156>
+10:36:44.654185 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000145>
+10:36:44.654682 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 70 <0.000142>
+10:36:44.655146 fstat64(70, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000145>
+10:36:44.655625 geteuid32()             = 10071 <0.000144>
+10:36:44.656211 fstat64(70, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000138>
+10:36:44.656789 pread(70, "\0", 1, 0)   = 1 <0.000194>
+10:36:44.657319 close(70)               = 0 <0.000145>
+10:36:44.657798 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000212>
+10:36:44.668169 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.018001>
+10:36:44.690332 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.007926>
+10:36:44.708282 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.032932>
+10:36:44.741519 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000156>
+10:36:44.742153 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000097>
+10:36:44.742547 gettimeofday({1444041404, 742664}, NULL) = 0 <0.000094>
+10:36:44.743210 munmap(0x9f2de000, 2097152) = 0 <0.000129>
+10:36:44.743586 close(71)               = 0 <0.000152>
+10:36:44.744374 getuid32()              = 10071 <0.000127>
+10:36:44.744972 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfee98) = 0 <0.000714>
+10:36:44.745983 clock_gettime(CLOCK_MONOTONIC, {305, 268078688}) = 0 <0.000095>
+10:36:44.746375 sched_yield()           = 0 <0.000093>
+10:36:44.746744 sched_yield()           = 0 <0.000095>
+10:36:44.747126 sched_yield()           = 0 <0.000092>
+10:36:44.747493 sched_yield()           = 0 <0.000095>
+10:36:44.747865 sched_yield()           = 0 <0.000120>
+10:36:44.748488 sched_yield()           = 0 <0.000095>
+10:36:44.748865 sched_yield()           = 0 <0.000096>
+10:36:44.749378 sched_yield()           = 0 <0.000094>
+10:36:44.749724 sched_yield()           = 0 <0.000123>
+10:36:44.750133 sched_yield()           = 0 <0.000121>
+10:36:44.750526 sched_yield()           = 0 <0.000244>
+10:36:44.751033 sched_yield()           = 0 <0.000210>
+10:36:44.751507 sched_yield()           = 0 <0.000125>
+10:36:44.751886 sched_yield()           = 0 <0.000122>
+10:36:44.752276 sched_yield()           = 0 <0.000121>
+10:36:44.752659 sched_yield()           = 0 <0.000119>
+10:36:44.753046 sched_yield()           = 0 <0.000122>
+10:36:44.753420 sched_yield()           = 0 <0.000121>
+10:36:44.753810 sched_yield()           = 0 <0.000122>
+10:36:44.754194 sched_yield()           = 0 <0.000121>
+10:36:44.754583 sched_yield()           = 0 <0.000122>
+10:36:44.754960 sched_yield()           = 0 <0.000130>
+10:36:44.755372 sched_yield()           = 0 <0.000102>
+10:36:44.755854 sched_yield()           = 0 <0.000093>
+10:36:44.756241 sched_yield()           = 0 <0.000093>
+10:36:44.756622 sched_yield()           = 0 <0.000094>
+10:36:44.757031 sched_yield()           = 0 <0.000097>
+10:36:44.757418 sched_yield()           = 0 <0.000109>
+10:36:44.757817 sched_yield()           = 0 <0.000104>
+10:36:44.759111 sched_yield()           = 0 <0.001933>
+10:36:44.761371 sched_yield()           = 0 <0.000100>
+10:36:44.761736 sched_yield()           = 0 <0.000087>
+10:36:44.762086 sched_yield()           = 0 <0.000100>
+10:36:44.762452 sched_yield()           = 0 <0.000096>
+10:36:44.762812 sched_yield()           = 0 <0.000087>
+10:36:44.763160 sched_yield()           = 0 <0.000100>
+10:36:44.763523 sched_yield()           = 0 <0.000097>
+10:36:44.763884 sched_yield()           = 0 <0.000098>
+10:36:44.764260 sched_yield()           = 0 <0.000094>
+10:36:44.764618 sched_yield()           = 0 <0.000098>
+10:36:44.764993 sched_yield()           = 0 <0.000088>
+10:36:44.765344 sched_yield()           = 0 <0.000098>
+10:36:44.765705 sched_yield()           = 0 <0.000095>
+10:36:44.766306 sched_yield()           = 0 <0.000088>
+10:36:44.766671 sched_yield()           = 0 <0.000087>
+10:36:44.767033 sched_yield()           = 0 <0.000087>
+10:36:44.767393 sched_yield()           = 0 <0.000087>
+10:36:44.767757 sched_yield()           = 0 <0.000101>
+10:36:44.768169 sched_yield()           = 0 <0.000110>
+10:36:44.768567 sched_yield()           = 0 <0.000100>
+10:36:44.768957 clock_gettime(CLOCK_MONOTONIC, {305, 291033272}) = 0 <0.000099>
+10:36:44.769323 futex(0xa8c320d0, FUTEX_WAKE, 1) = 0 <0.000136>
+10:36:44.769711 futex(0xa8c320f8, FUTEX_WAIT, 0, NULL) = 0 <0.017776>
+10:36:44.787718 futex(0xa8c320d0, FUTEX_WAIT, 1, NULL) = 0 <0.000507>
+10:36:44.789118 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.000092>
+10:36:44.789461 clock_gettime(CLOCK_MONOTONIC, {305, 311529158}) = 0 <0.000087>
+10:36:44.789819 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000080>
+10:36:44.790162 futex(0x9fda3928, FUTEX_WAIT, 5, NULL) = 0 <0.288076>
+10:36:45.078627 futex(0xb3869b68, FUTEX_WAKE, 1) = 1 <0.000866>
+10:36:45.079986 futex(0xa880a560, FUTEX_WAKE, 1) = 0 <0.000125>
+10:36:45.080380 futex(0xab4af600, FUTEX_WAKE, 1) = 0 <0.000124>
+10:36:45.080764 futex(0xab4af600, FUTEX_WAKE, 1) = 0 <0.000128>
+10:36:45.081290 write(11, "3886", 4)    = 4 <0.000545>
+10:36:45.082499 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0x6fa3e6e0) = 0 <0.000131>
+10:36:45.083539 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.008102>
+10:36:45.092194 clock_gettime(CLOCK_MONOTONIC, {305, 614306397}) = 0 <0.000156>
+10:36:45.092913 gettimeofday({1444041405, 93203}, NULL) = 0 <0.000209>
+10:36:45.093942 gettimeofday({1444041405, 94169}, NULL) = 0 <0.000147>
+10:36:45.095053 gettimeofday({1444041405, 95206}, NULL) = 0 <0.000221>
+10:36:45.095652 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 70 <0.000186>
+10:36:45.096218 ioctl(70, 0x41007701, 0xa8bff094) = 0 <0.000189>
+10:36:45.096758 ioctl(70, 0x40047703, 0x200000) = 0 <0.000183>
+10:36:45.097477 ioctl(70, 0x40047705, 0x3) = 0 <0.000181>
+10:36:45.098015 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 70, 0) = 0x9ec40000 <0.000263>
+10:36:45.098714 ioctl(70, 0x40047705, 0x1) = 0 <0.000182>
+10:36:45.099632 gettimeofday({1444041405, 99782}, NULL) = 0 <0.000185>
+10:36:45.100218 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000185>
+10:36:45.100773 pread(49, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 208896) = 4096 <0.000875>
+10:36:45.102035 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000183>
+10:36:45.102576 gettimeofday({1444041405, 102715}, NULL) = 0 <0.000183>
+10:36:45.103135 clock_gettime(CLOCK_MONOTONIC, {305, 625246709}) = 0 <0.000183>
+10:36:45.103672 futex(0xa8c320d0, FUTEX_WAKE, 1) = 0 <0.000182>
+10:36:45.104501 futex(0xa8c320f8, FUTEX_WAKE, 1) = 0 <0.000180>
+10:36:45.105029 futex(0xa8c320d0, FUTEX_WAKE, 1) = 0 <0.000182>
+10:36:45.105554 futex(0xa8c320d0, FUTEX_WAKE, 1) = 0 <0.000183>
+10:36:45.108238 futex(0xa8c320d0, FUTEX_WAKE, 1) = 0 <0.003151>
+10:36:45.111684 futex(0xa8c320f8, FUTEX_WAIT, 4, NULL) = 0 <0.000485>
+10:36:45.112434 clock_gettime(CLOCK_MONOTONIC, {305, 634508064}) = 0 <0.000087>
+10:36:45.113261 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000104>
+10:36:45.113633 futex(0x9fda3928, FUTEX_WAIT, 6, NULL) = 0 <0.377715>
+10:36:45.491790 futex(0xa880af20, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000264>
+10:36:45.492572 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000261>
+10:36:45.493339 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 0 <0.000256>
+10:36:45.494093 futex(0xa8c2ec08, FUTEX_WAIT, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000257>
+10:36:45.494849 write(11, "3886", 4)    = 4 <0.000273>
+10:36:45.495706 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0x12f708e0) = 0 <0.000222>
+10:36:45.496427 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000259>
+10:36:45.498102 clock_gettime(CLOCK_MONOTONIC, {306, 20319887}) = 0 <0.000288>
+10:36:45.498977 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000279>
+10:36:45.499841 futex(0x9fda3928, FUTEX_WAIT, 7, NULL) = 0 <0.075379>
+10:36:45.575847 write(11, "3886", 4)    = 4 <0.000185>
+10:36:45.576625 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.001825>
+10:36:45.579033 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000188>
+10:36:45.579902 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 72 <0.000187>
+10:36:45.580971 ioctl(72, 0x41007701, 0xa8bff054) = 0 <0.001866>
+10:36:45.583254 ioctl(72, 0x40047703, 0x5000) = 0 <0.000115>
+10:36:45.584437 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 72, 0) = 0xa9408000 <0.000795>
+10:36:45.585637 close(72)               = 0 <0.000261>
+10:36:45.586262 read(48, "\377\330\377\340", 4) = 4 <0.000188>
+10:36:45.586810 rt_sigprocmask(SIG_BLOCK, [], [QUIT USR1 PIPE], 8) = 0 <0.000187>
+10:36:45.587390 read(48, "\0\20JFIF\0\1\1\0\0\1\0\1\0\0\377\341\0`Exif\0\0II*\0\10\0\0\0\2\0001\1\2\0\7\0\0\0&\0\0\0i\207\4\0\1\0\0\0.\0\0\0", 60) = 60 <0.000183>
+10:36:45.587934 read(48, "\0\0\0\0Google\0\0\3\0\0\220\7\0\4\0\0\0000220\2\240\4\0\1\0\0\0\0\2\0\0\3\240\4\0\1\0\0\0 \1\0\0\0\0\0\0\377\342\fXICC_PROFILE\0\1\1\0\0\fHLino\2\20\0\0mntrRGB XYZ \7\316\0\2\0\t\0\6\0001\0\0acspMSFT\0\0\0\0IEC sRGB\0\0\0\0\0\0\0\0\0\0\0\0\0\0\366\326\0\1\0\0\0\0\323-HP  \0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\21cprt\0\0\1P\0\0\0003desc\0\0\1\204\0\0\0lwtpt\0\0\1\360\0\0\0\24bkpt\0\0\2\4\0\0\0\24rXYZ\0\0\2\30\0\0\0\24gXYZ\0\0\2,\0\0\0\24bXYZ\0\0\2@\0\0\0\24dmnd\0\0\2T\0\0\0pdmdd\0\0\2\304\0\0\0\210vued\0\0\3L\0\0\0\206view\0\0\3\324\0\0\0$lumi\0\0\3\370\0\0\0\24meas\0\0\4\f\0\0\0$tech\0\0\0040\0\0\0\frTRC\0\0\4<\0\0\10\fgTRC\0\0\4<\0\0\10\fbTRC\0\0\4<\0\0\10\ftext\0\0\0\0Copyright (c) 1998 Hewlett-Packard Company\0\0desc\0\0\0\0\0\0\0\22sRGB IEC61966-2.1\0\0\0\0\0\0\0\0\0\0\0"..., 960) = 960 <0.000211>
+10:36:45.588625 _llseek(48, 2256, [3280], SEEK_CUR) = 0 <0.000193>
+10:36:45.589181 read(48, "\377\333\0\204\0\3\2\2\10\n\n\10\10\10\n\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\10\n\10\10\10\10\t\n\n\10\10\r\f\n\10\f\10\10\t\10\1\3\4\4\6\5\6\n\6\6\n\r\f\f\f\r\r\r\r\r\f\r\f\r\r\r\f\r\r\f\r\f\r\f\f\f\f\f\f\f\f\f\f\r\f\f\f\f\r\f\f\f\f\f\f\f\f\r\r\f\f\f\f\f\f\377\300\0\21\10\1 \2\0\3\1\21\0\2\21\1\3\21\1\377\304\0\35\0\0\2\2\3\1\1\1\0\0\0\0\0\0\0\0\0\3\4\2\5\0\1\6\7\t\10\377\304\0?\20\0\1\3\3\2\3\6\4\4\6\0\4\7\1\0\0\1\0\2\3\4\21!\0221\5AQ\6\23aq\201\221\7\"\241\3602\261\301\321\10\24BR\341\361#3r\262\t\25%\202\222\242\302b\377\304\0\35\1\0\2\3\1\1\1\1\1\0\0\0\0\0\0\0\0\1\3\0\2\4\5\6\7\10\t\377\304\0008\21\0\2\2\1\2\4\4\4\6\2\2\2\1\5\0\0\0\1\2\21\3!1\4\22AQaq\221\360\5\23\201\261\"2\241\301\321\341\6\361brBR#\24\222\242\262\322\377\332\0\f\3\1\0\2\21\3\21\0?\0\351\243\247_\212\\\217\243P\324p$\271\6\203\210U9\312\321\276\351Nr\4\215\212\256o\270(n&\240\246\373\2604\30-P\233\356U\240\361\202\266FO\270\266\206aj\322\245E(e\256O\216@Pf-\nl\1X\25\371\230(e\215W\347%\6cST\231Z\t\24190Q\260\304\325 Q\256\355]I\202\210\272\5e&U\241\32\256\36\232\235\231\347\216\312*\376\23uI*\324\301<g\33\306\3737\272\nm\34\314\330,\363\216?\331\263\225\267\36fp"..., 1024) = 1024 <0.000256>
+10:36:45.589901 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 72 <0.000143>
+10:36:45.590464 ioctl(72, 0x41007701, 0xa8bfdcc4) = 0 <0.000158>
+10:36:45.591026 ioctl(72, 0x40047703, 0x91000) = 0 <0.000160>
+10:36:45.591590 mmap2(NULL, 593920, PROT_READ|PROT_WRITE, MAP_PRIVATE, 72, 0) = 0x9efce000 <0.000148>
+10:36:45.592145 close(72)               = 0 <0.000159>
+10:36:45.592876 read(48, "GWC&\313Z\32]\322\2750\210\265\201\22\345\204-R\301C\221\261B\324\23B%X9#WL[BU\20&&&H\245\256\247O\2131\344\211MQ\32z2I\25\363\246#<\266(\270\223\276\302\321\4s8\207\241\316\324\261i9[2\276X\325Y\242,\26\265J\31V/;\222\330\330\252\23\232\33\245\263LeEs\333d\246lN\321\27\2450\2417\244\263J\4\347\245\262\351\20pKh\272\0`Jhj\220\304\21\25\236f\3347a%\267E\230\350Z\22k\362\243Ec-C\265\301!\233#L\230rS\36\200\312\344\2666\305\235\"\241\24\2116EV\206&/R\305P\262\272P\241Q)\233\267\230P\244\225l}\0354\353\371\351%\253?IY&\300\224\374\10\24@\230\322H\251\276\351#VX\223i\23\24\n\331\206\235\27\242%\23\211\212\330\345\250\30c\32\321eI2$\330\244\200\24\2613\230\204C\20L\2241\33\26\230J\212\2643\33V\2252\2242\305\2463*\320VH\234\246\n\16\307\246s\2\202510\4hZ#\"\246\313S\23\1\235\332beZ!%-\323\24\2124UWp\245f\254\315<vr|g\263\200\337\v3\213L\346\345\302y\227i\373\31\276\23a6\216\26~\32\317\"\355/d\310\276\27S\17\20y\256#\205<\337\212\360\222\t^\243\205\342,\362\334G\vN\321L\370\254\275w\r\222\3659r\213[\215\320\f\257[\303\345\320\254#\315*;^\t&\313\320\341\311c\326:\320\356\270T\273.\306)\2Q\243\253\240\225tb(\276\244zhK\232R\211t\\S\204,\270\363\32\205\204\236\224J\262\16\n\350\243\1+U\320\266VV\302\233\23<\321\316\327\266\313\\N~M\ny\332\234\214r)x\214)\321f\34\321Os"..., 1024) = 1024 <0.000145>
+10:36:45.593691 read(48, "\345A\202\345\250\21*ac\n\214tu$\346\4\266:\205'b\241\32\354WJ\201DV\324\335B\256\300\260\376h0\255O\250\306%\370\26q?I\"B$\244\210D\323\245\3126\22=\302\316\327+,\23\270L\255\n\233\24\350\322\0002\324\237\231L\265\30bE\240\32\21\251U`$\306\224b\331\t\220\230\333\0f5=\24%\335\255\t\322\1\25U=ICP\255p\221F\206X\264s\366*\21\262&,\200\242bEu\220\24\0209hReh\223\25\343\"1\206\205\256,\243\10\32\264&,\211\2155H\24\2z0Q\334\243E\7\23\3407\344\227(\0312bR<\367\264\335\211\16\276\22\243q8\331\370c\305\273a\360\377\0|}\27\241\340\370\227\26y\256#\204<\233\214\366y\314;\25\364>\7\211R\243\201\227\5\3\341\353\332\360\32338hv\34&u\351pH\3038\235g\17\233e\334\306\316fDt\334=\353Z\24_\321\275\\(\270\200\250X\261\205B\303Q\265\0\232\226\22\256\231V\205\335L\230\244%\304Rx\202b\23$!S\32\272bd\212\16#\32\323\26b\310\216j\270\223\200\265F\221\312\312\344\364G7Z\302\16G\257\344\265\305\246\2648yc$\365A!\206\343\222\317\221\323:\30!\315\22\206\267r\232\214\275J\367\240\307!:\200\222\3150\21{U\31\2511j\247Y&C\340\254E\360\23\233$\263J\232Z\32\2162\22\330[L\307\214\245\262#V\347\356\224\320\350\260\23\277)c\233ab\177\357\346\262\314\350b\330u\222^\313$\225\0358\273\3UO\203d\261\224VkQ\225\213\n\303eG\250\345\241\217*\215\27\275@\275-\227\26\222%P\321[U\22\205$W\363\36a\21I\321\365LB\277\4\362\237\245\2\10\25yPl\221\201%\304$"..., 1024) = 1024 <0.000235>
+10:36:45.594751 read(48, "Q\263\32\273Z\200\337x\257\34\251h\210\320F\22\264\306M\356Q\240\361\25\242%\30\303\23\343\"\241Bz\235\2\210\253\251\330(\233Z\235\27EB\2624\344\230\0030-\21\223+D\300ZT\312Q\276\3515H\253B\325<<\25\241!2G-\306\373(\34\16\26\274S\345g?6\5#\311\273]\360\342\367 /[\300q\274\254\363|W\7g\217q\336\3059\204\220,\276\233\360\3765I#\313g\341\332*\251\311i\261\302\366\334<\323<\356xQ\323\360\252\225\323\2139\255\35o\16\23190\"\376\226er\345\2654\212\4\262\211\310\0041z$dU\212\n\3260+\304T\352\212Y\10\350\264\230\231Q\304\251/\262t$f\313\v(\353i}\323\342\314S\211\315q\10\0\6\353T_c\221\226)+\221C%(;\24\356j0\362^\251\221\226\231\266\261\301\361T\346lj\202\212\247\271I[Ny\"\313\343\222OR\255\365\17\34\322\2327EE\354\36(\\\344\251hU+u\22\272\242#\233%\263D\32\352\3P8;\245\261\264\343\252\25\226\16I,|dh\321\362\335%\261\351;\0274\366 \24\246;g\251b\330\310\27\265\307\202\311$\233:pn*\314\204\202\r\222f\250\325\212|\310\33\t\272L\264\37\r^\243\5\330I\243J` \250\311\n\262A\204\211\317c\224\223E\246W=\350\202\350\331u\325\31d!U\32\252$\265\25xDY]6\341\2Y\365b\313\360sg\351\32\v\24j\251\1\222\322\251&J&\330\320H\214\237t\231@\6\370\26i+\n0S\243\311D\263f$\34u!\247\304\2514\221\21\26D\251\33a$\350U$\233\"\"\350\325Z\350\20:o\204\33oD\0\206\224\253(\265\260\10\26!mnB\f\201[\34m\331\30\310\v_\314\27F"..., 1024) = 1024 <0.000230>
+10:36:45.595630 read(48, "aH\214p\252\242\fD\305\247\f\251hRA]*\177\317\324\257(F9iYJ\362\204b|e\324\255\4\211\301j\216JtQ\304.\23\371\242\366\5\22\357l\231\363i\3\224,I\330\346\236\205Z&\310\226\230G]\n6\25\314Z\271\205\321\261N\265@T\201\311B2O%\262\22\324\315(\331\371\267\370\202\355\335<\0\264\270j8\0o\177%\357\276\n\346\344\250\342q\\?;\320\374\363\303\373M\336\33\365_b\341%H\362<g\vZ\35\257\t\255\30]\310J\317?\223\5\35w\16\237e\241\30\245\214\350\350\246V\24\342\\R\275B\264Y1\252\"Q\261\30D\257*\23\252`L\211\236i\24\365\24yZ\224\2640\312\26\312\272\270\315\305\266LOA\22N\364\24\255\214\34\36AZ:\v\2357L\3468\235+\200%\253TZn\231\312\313\31E\\Nv\256\235\340j6\275\361\323>y8O\213M\321\316\234'\10\251\275\354\254\226\241\316:\\\320\10\347\373\2538\250\253Ey\345\225\362\264\254JX\\\1#\323\357\256>\2109Gf\10c\234U\373\367\376\212\276\"\342\341s\316\341R\253A\334\355\276fVE\5\256\16\352\2646S\275P9\243w!\213e.Hd\32\352F\n\233\374\216\300;\36\231Ik\251\243\245{CP\351i\322\3621\214\355c\277\232\3157j\321\267\22Q\225K\247\246\242\334B\205\241\301\230-~\307\247\346\221\314\352\373\32\2365\31\250\356\237\350W\324p\3474}\375\370\365C\2316Ib\224P\304<H\200\32E\276\362>\360\221(^\246\310g\345J,}\222\207`\373\333\357nac\224h\352Bjz0U\3248\317\272\250\306\257FV\301LA\301\302\254\350\2568\264\374\7f\207P\362Y\354\327V\200i6\262\243.\266\22\212\23\317e\30\25"..., 1024) = 1024 <0.000214>
+10:36:45.596440 read(48, "\344}}\225,z\206\232t\6^FA7\36\305W}\10\264`\234\302o`6\351\367\237\24\272\241\336B\3460\377\0\306ma\207t\266\300\370rI\222\243N=\367\365\375\2\264\335\241\266\317\364\236`m\177%\236Q\326\321\246\23\374<\262^L\260\246\245p\3g\337\236\376\373\375\373,s\364:\330SI\177\344\36J&\274i\r\263\307$\206\3326rBn\253QX(\\\35b\323\320\216\236>\312\255\332-\30\362\313\356\\\276\213\32H\362\344\2635\324\336\266\242\212~\32\346\237\17\277\257%\32M\vI\305\204u\31\305\271\2458\217N\230\241\247\261\262\255\5\272tn\262\213\247\237\232[\30\n:Cm\225\31t#SF\201\n\331#A\200U\321m\346\250\303G\324(\327\340\344\317\322\fj7#\314V\206X\21\260\22\215U$\0064\324\344\350\2510\24{\0\306\265U&@\255j\262\1=(\354B\32R\235\260\222\356\356\243\\\304\330\331\205]-\n\230\330\325*\200E\321*\362.\245\254T0\233\254\232\2712\304\37N\252\342\357@\331\247S\250\341\245=\301b\322Q\254\337-5\312\313Y\32z^]\20\305\203\377\0\25\262\373\222R\30-\3\34\374\23\3458\307B\224\331\246\204c]\310\301\367b\344\347\313\301D\324\246\355\352\277D\36\203\17h\31[[\252\26\220X\345\376\321d\370\346\327DW\224\311\36|?T\367\221\367+H\310d\34\312n<\211+n\320\32\37\215\242\330]\10J=\4\260\221\215\263\364N\214\253\256\340e\255\0355\362\n\351b\\\317Fg\226\207\316/\374B~5:z\241\302\241}\342\246\263\2524\234:O\351\214\333\373G\314G\213W\264\370\37\vm\361\23\362\217\323w\373z\233\270x$\271\231\370\376%\364~\37D\34\332\242\373\205V\221e\331\204\216"..., 1024) = 1024 <0.000164>
+10:36:45.597179 read(48, "\0\244)\5\261w\366Q\235~\212hTJ^\3077|}T\244FB^\313\17\5G\0043\231\212\313\331\277\5G\214\262\310SV\366s\242_\313\17\314)\253;8l\226\361\214Y\n\211xC\201\36\211O\33.\262&}#\216U\370\23\230\375.\320\324r)\315\251V\207#)\245\0031\252\305Z\31b\271P\315M\321\"\246\243jR\266\3020\25\233K`\4\2124\334q\322\331Vi\354K\232\275PQ\214\35U\23]w#\v\335'\322e54cKp\356Z\310\232{\252|\256mQ,\211\247Jq\322\313\20\356\220Q\255@C\371n\252\277&\367'5\1\250\217 l\0223F\\\321KE\327\370-\35\210\367==\325\235\247Q\365\7\231\2\306\215\355s\372\245^<T\245\327\353\270u{\3x\27\00398\364U\250\306IJ\365\277\323\337Rjm\220ns\320\5!\2119\271\273\327E\344\276\237\251\33\322\202\210:\255\21\307J\255\365e[\4\37\323?@\25c;W\277}4\vD\330@\27q\31\353o\274\373\246\254\261K\3615\365\367\375\225\247\320,q\347\227\245\363\376\276\354\266\343t\372~\242\330\334O\34\216}\367\333k\225\2569\"\366\225\371S\337\325\224\247\330b(\315\361s\367\342\26\250\312J[6\273\257\2754-\354s\377\0\30\373~\316\33\303\253+^\322]\24G\273h\4w\223<\350\205\227\305\213\244sE\311\26\335v\270|o+\216*\326n\223\247K\273o\301[\372h*1\346\226\214\370\315\305j\344\226If\224\227K,\217\222G\33\334\275\356.q\316w>\313\353X#\34q\2168m\24\222\362GJ\304\273\245\35003<\306\351\227^\f\345eGG\302'\265\226\354r8\371\241g\245\366_\211\332\313\267\202g\232\342q\236\257\331\376/\262\355\343"..., 1024) = 1024 <0.000176>
+10:36:45.597964 read(48, "\200\6\342\240@\274\250\0N*\20\23\312\204\4\345\0\5\354\7u\10+%\vO%\2WT\3600l\253A\263\366\203\n\376x\263\3650\304NT[\221\226\0219kKK\22\3035\312 \rD\254\236\205F\30\25\326\245hb8\323\243\2\244\204in\32\220a\251\355\332\242\246\364\243(\366!\266@9\240\261&\255\201\310\210jZi-\2L1Z\233@5\241-\337@\222kz\241\377\0e\241<\214\356\207$\304\243\177\204\256\244^\324\266\255U\5\1}/3\373%d\304\322m\277\331\0212=\306z*\250\376'\240z\20}\16?#\372\245\276\32\322\357\337\367\334<\300\205 \276op-\317\257<sI\206\30\302_\212\336\211z_Z\353\271\33l\333\307\270\276\17?\34&NI-5\257\255\221 \21\36\266\276-\3529m\237\331'\33M[\257\266\375\253\373\320\263\3\335\371x\340o|\23{\213\363\266\370>\225\213\212u\377\0\363\277K\277Z\360\361#A\31K\261\3\327\247\355\365\337\335\353\36\274\325\263\377\0]4\257&V\364\243\4N8\31\316q\364\337\333\322\335U\242\245\\\261\372\371z\371%\372w\3\255\330xi\317\237 \333[\226m\310\354\7\202\331\213\33\352\357]\27\365\267o\246\342\344\313\256\35\26s\250\33\f\213\\x\21\355\261\347\205\327\202w\255\375*\376\272}\36\246v~\26\377\0\304\203\342{\344\232\223\2044\221\34-\376np\34l\367\276\354\2009\244\r:\0\221\340\33\337[\35|\v{O\361\330\274\262\311\304M5\312\376\\n\373')$\366n\322\357W\253\263N8(\306\373\237\212;\245\356\341-H\330'\304\273\234<\204\310$,]\2503\16B\322\210\255\220g3\";\16\tUk.\256\31\34\36\"6zog\270\206\313\275\206G\227\342`z"..., 1024) = 1024 <0.000274>
+10:36:45.598907 read(48, "\5\215\304\364\330\355eXv\2713\233\261Z\r\31VOMJ\260\304\5f\322@D\342\n\311\266\200\303\306\324\330\242\206\26\252\322D'\335\205w\4\2\17+<\3352\351h\23GT\347\25_\210\245\366\"\370:sJx\334]\245\357\310\265\336\346\330\316\277\222\274b\257W\346U\202k-\343~EfI'\347\334\263\"\350\276\271\1-\305FW\275\354\276\337\333n\203v\4\203\277-\271\373\34\37\2775\235\363\245\314\322\255\267~U\263/\241\31\3169mpz\342\370$`\177\233!7)E\264\222\245w\337K\335\252[\364\266\325\320\22\324\23\0321`ny\377\0\273\233m\213_6\353c\4\326\221O_\266\272S\277F\256\364\332\352?\22/>\237~`y\203\345\340\204\245\312\373-\375\354\275|\267\5\33\r\363 \373Xd\23|\233\364\361\331YK\302\323\361\364\276\377\0\336\304\243;\241\216\267\34\272\370t\261\336\376\273\336(E\356\237\325u\367\344\vd\34-\213\37]\267\344n,=-\266\301\7qU\333{\252\335\365\321\376\313}\2N&s\333\333\245\257\217\317\303\3)\320\233\321\327\243]\177g\373lU\242\333\206I`I\"\315\4\233\364\353\253\220\267\240\266\313\253\303\344j-\336\332\265_\276\373z\10\234u\243\343\237\305^\334;\210W\327\327\270\352\02552\2763\322\0\355\24\355\34\200l\r\214c\230'7$\375{\202\300\370~\37\36&\251\250\256o\373\275g\377\0\344\331\273$y_*\351\247\241\311\2725\320\2133I\1\2225\332\341\344)\231\23\27\177\33\320\307\220~\225m\2139\271\16\203\206\275tq3\217\2326w\235\236\253]\314\f\363|LOF\340S\335v\241#\315e\205\263\274\340u\0-+S\231$\242v\\=\243\337o\24,].\245\203\301\37\204_\221"..., 1024) = 1024 <0.000179>
+10:36:45.600386 read(48, "n\237\277U\235\271^\272\255\264\255\277\336\365\367\242\324\201J\317,`xz_\235\322\346\233\235\272\265\242]\277mo\301\364\"\330\234\264\377\0\236v\30\271\333 \f\375\355fd\305\265>\272\354\264\327E{k\257\245\335 &\f\305lm\312\337\226o\267\323\352\220\327-E\266\274=\275\275\357e\274Ed\2477?\344\332\366\362\330XZ\337\235\322~[\266\327O\255h\276\232m_\315\226\262F?\261\213\343\3\364\363\350\227(\277\374_\246\227\364]:\21>\340\3561\342o\364\316-\237]\267\270F9S\245\337\365\372u\337\257\2319@\270\33\333\227@-\223\2771\2223\347\236\211K\231I\336\335\22\351\277\355A\3502\332o?\247\372Z\276N\273\277\323~\375\212s\36\177\374Lv\353\377\0/\340\365\365#2:.\342&\344^J\227\10[\221g|\241\372\216\233\20\33{\342\353\321|7\205\371\331q\360\355\376ij\372\362\253\224\267\357\25^t\0341\347\311}\265\364\376\317\222\324m\305\206\0\333\300r_`\233\267l|\367\v#\25\0233\311\3s\27S\207\220\226\r\255^\233\v\320\305\220r\230.\204Nl\313\232\"\267\3429y\221\331pGl\273x\31\347\270\210\236\203\331\312\213n\273x\365<\336eGg\303\253\316,\2720H\340\346\223\350z/\2\251m\206v\334\235\275\322\246\231X\311\27\301\327\32\271\233\343\372\261\271h\346,\252\264t\7\252\277zv\24w\10\16i\r\324\353\352\320t\7\2H$\272\307\27\377\0\252\355\277\261z\233O];\352c\226.h\264\255\357ZZ\363\257\347@\21\3217\16\324\367\264\201\254=\205\2408X\213\235M-w\364\226\20\v\264\376\21\202X\344\366\244\273k\356\374\372\10Q[\333}\323^\332\355Oz\333\250:\212f\2069\357sY\33."..., 1024) = 1024 <0.000223>
+10:36:45.601880 read(48, "\310\256\356\306`\2079\271\317\336V\234Q\\\337\211u(\336\232\37\220\277\361(\355\231l\34>\201\216#\275\225\363\312\320mvF\335-\7\250\324\360}\27\273\377\0\35\207\314\342\3476\264\307\5_\366\233\376\"\375M|,*\22\227z_\273\375\217\301\324\355_B\223\f\220\303\332\226\2044\4\205\273\207\226\246y zW\251\341\344b\312\206\251\232\272\2619\231\v\252\26-\270\316fS\246\341@\342\313\267\205\234\36!\35\357\0\272\356cz\36c:\324\35788h\265\363}\300[\342\337C\211\221w:\250\343c\200cN\202r\r\357\245\334\211\36}p\n|[Z\275L\31b\232\345Z~\317\247\275\254\275\216\251\314c\243}\373\320\333\263\347%\33771\310\330gS.\33\202KwVQR|\313n\276\377\0\235\314\362\223\214\\%\275Z\325\336\275\273\327uu\276\233\226\324\16.\327\241\344\0358\17\263C>S\310\6\227\0\1\0009\316%\240\333\30\v\226\225\314\275:\206\26\356\237\257M>\232y\275\266%\305\270\274q\265\205\342G\271\340\350\200it\317.\310k\vK[\362\330\27\312\3731\242\377\0003l\nW\345\267i%\327\247\363\344\226\243\377\0005*m\276\236\376\376\2053`.,|\201\201\314\314q0\227E\1--:\34Z\327=\326$\31\\\326\233\22\32\330\232\342\303\314\315\235\316\322\272\375_\237\361\367z\235\34X#\4\235+\373y\6s\326cH\27\224P\1\271\310\242\2z \4\342\240\1\271@\2r\260\1\24H\t\305B\2z\204\0\365\0/!D\250\264\210\200^B\240\0=\312\4\3\234\241PNr\201\6\\\241\10\27\250\22\5\312\0\213\334\241\1jP'\351\346\277+\371\226\327\342\372\237\255\272\17\305=\226\310\344Q\320\243C\321\310\265s\vhe\217V\253"..., 1024) = 1024 <0.000660>
+10:36:45.603505 read(48, "\275/\303N\226\357\245\343\21\300\33f\31gpww\1\322u\330X\272Wh!\220F\357\353sI\263Z\3065\316\320\305\207,\351j\364\357\374x\377\0\267\334\350a\307\177\337\276\236?dV5\204\270\313)\17\231\315\rs\303C@h\310\2166\201fD\322p\334\223\273\213\334K\217+&G?.\213\367\363\367\266\206\370AG^\244\237\"P\320E\310\225d\34QD\6J \6\342\211\0018\250\0n*\0\21V*\t\312\6\2018\242@O(\20\3\334\210\5\236T\0\264\205Y\25\26{\224 \273\334\241\0009\312\0\33\234\241\0019\312\20\33\234\241\10\227\250@o\221B\2\327\372(C\364\354\23/\346s\321\331\372\341\241\226\312\225-]\222\213\32y\227K\34\256\"\232\f*\22\336F\230hz\31\226\265:B\332\34\206T\330\313\230\243T?\2\331\24\220\2260\311U\\\211CQH\230\233KB\255\r\262k\331j\214\355\tq\240\342^J\356W\242+C,%1ZeF\203\254\257\254J\204\271\300\331Y\246\322\217B\272 \355VI\246\364\7@\326\276\326OQo]\31RQ\333\336\326\337\352\242\344z=\364\367\375\366#\262]\337\"9\337\235\275\372\252\274of\226\366\257\371\356\272{\241aX\313r\317\200\365\277\337\344\235\10\362*\255U\355^}*\275\364*\3650\323\35\310\375\374s{}\347\252\17\v\325\277\32\357\343\341\357^\340\346[\0214\375w\307\206=\16\330A\343q^:z\177\1\346\263\4}<\317\227\335\275\224\247\262\372\203\314\306\263\350ON\251*\22\226\241m#n\214\343\30\346\255S\275\264&\206\214{\252\265V\310D\323\362*\277/\233F\311t\21\266k^\355\200\4\373\4\330\305b\204\245\340\312\267m#\343?\306\3568g\342\\Bk\337UT\200\37\6"..., 1024) = 1024 <0.000314>
+10:36:45.606248 read(48, "\355\366\25\343\221\356\226\236\376\336\321\34z3\30y[\323\7k\357\357\267\232\242\226\361\257\267@>\344\235\372\214\342\376\10x\371k\241\rw\177\2474\36\232\262\33h\347\371aV\243?\304\237\240v\320\233.\235\31R(BF\254\363.\211G\26\312\360\202*\331M\361\7\210\10\250\352\2448\323\v\317\377\0R\253\306>\\\0165\275%\365t3\207\217>h\257\23\342\177\22\251/|\222\35\336\367\274\371\271\305\337\252\372\346((B0\354\222\364Tz\34\216\333\0\320\230\314\262A\230R\330\206\215H\21B\03226\256\347\t-\214sZ\16S1z\254oC\215\225jt4\f],g+!\321p\370Wg\1\306\316t\374\36}V\4d\35\371\25\337\300\250\363\34K\263\266\341\361\334\260\v\200p1c\336\v]\267=v\0375\310\275\201\331t\361\355\267\372<\356}ZW\372u\355\257\177\265\321\327\304\361\16\200\326\t$\221\255\21\261\232X^\366\260\27\3526:!a%\322H\1\r:@\17qcM\347\225Srt\227\177\322\274_E\347\261\221c\247\242\337\262\367\247_\351\27</\207\26k|\216\357'\226\306Yr\1\265\364\307\33I:!\216\3441\227\346\3478\271\357{\235\301\313\225\344}\222\331{\352\372\277\331#\247\217\37\"\327W\325\215>D\221\240\213\321\1\22\344J\220.P\204\34\345\20\0109\312\310\204\v\221\00079B\1s\324 '\310\210\0\271\350\220\23\344P\0\214\210\220\4\217@\202\262H\211QY\36\254\210+$\212\0VI\24*\1\362(@\17\225\20\0|\310\4\31\231B\3t\312\20^J\205\0,\352\225\10~\227\212\241\1777\334O\330\0247\24\311.$\36\202\241g\224J\264?\f\351;\24\241\346U\3315eq+\312?I\304\26\274|U\272)(\26"..., 1024) = 1024 <0.000195>
+10:36:45.607180 read(48, "l\3757\24\353\371\320\342~\305\37\202u\236Q\0\354s,\356 \33\202\241&Q*\320\303\247KQ\nCtS\245\275\35\201\242\346\232\261l\305\236\330\207\21\3612\335:\225\vZ\f\307\"*5\252*?\4\311\366\350\243C\361H\23 \2121\310%Zc\246\242\332\30\214\205~dP<n\262)\245\242\5Xji|Q\304\367\326\374>\324VHj9<=\376\366Zb\325\350\275\377\0\5\32\32\217\327oD\364\253E}?O\343\320XxO\227\250\37w\267\202\264\35o\372\326\237\335}m\25cMw\257\227\246\370\351\367\225\245K\255\337\273\26\320X\345\266\306\376G>\273\224\325%\35W\357\374\373\362(\343a\231/_\241LY/\363\24q\354L7c\364\346\255\265QK\334!*\355\252\262\250\333@U\217+\3\264h\245\3114\264\16\346\330\324`\271\267\3tx'\361\307_\243\204T\201\375M\323\356@V\321\361\334<?\345~\212\316\257\302\327\342\223\360g\312W5}5\35f\16\312\342\2326\n\2Y+\240%\243#Z\360:\221\226h\264\244r\366\\+\264q8\215\16\203\206\265wqhp\362\235o\n\215\326\277N]M\354\27w\207\243\201\304\235\247\17\247s[\252B\30\326]\316\277\364\307o\235\304\344m\363\23\247k\35\201\277{\n\213\321{g\230\342\33J\337M\374\216\367\262\274\0000\367\316\276\2476\3210\343\272\215\326&\340\344K!\1\317\277\341\32X?\v\213\321\304g\347\374+e\372\277\341t\3659\260\202\276oO\3\243t\253\30\320N\221@\21\326\241SE\350\220\201z\204\"dD\250'\310\241\0303\"\200\2\351\225\311`\2352\204\2\351T\0'J\240\0\276U`\213\3112\200\27\222d@-$\352\20ZI\321\0\254\223\242TVY\324%\212\276u\0"..., 1024) = 1024 <0.000136>
+10:36:45.608001 read(48, "\200\27|\352\0VZ\205\10\304\245\251D[\320B\242\251AreS\352\262<\302\261\233\252g\353\30*\327\363\356p?j\217\307R\2638\200r\n\224\211D#\320\316\221(\200~*\205\231\304\0247\f\311.$\32\202{$\270\201\242\326:\213\205I7\313B\353P\374=\331W\341\242\234\365$\366.\"\250]^e\320E\f\261\351H\203\220H\264\307k(\307`\251V\216M\3128\207eW5G7%\314\36Z\320r\235\303\237\337\202~8\252\251\n\227\200\334\177O\276KR\202z\277Am\217A/\331Z\243>\266-\304`T[\354~\336[\251,\334\236\326\357\177\177R\234\226\0269F\344gk\372\371_\0366\363(\306qN\332\326\264\177_\243\323M\353\315\201\306\364\36\247\251\276/r\r\271\217m\257\347l\255\270\346\244\352\355\371W\247\323\257_\320D\243A\333'\257[e]7\320\24\31\262g\300\215\223T\352^b\334t\n\37\224\313\324]h\31\216M\213\320[A\30U\343}J0\355ZV\242\231\371\207\370\374\37\372c\374\333\377\0pX\260\305/\211\340\177\366\373\36\203\341O\360\317\310\371\214\340\276\232t\330'\5t)\203V\24\314\272\202\231\260TFy\242\342\213\222\365\374\3\264q8\245\241\326\360j=\274H^\257\21\346s#\271\341\220\233\202\326\207>\354\320\307\33\7J\343\241\267\346\32\34\357\231\3266kI- \5\351\270uH\362\274d\324So\247\277\350\365\276\21D#cc\31\323r\347Z\332\336\342\\\367\221\310\275\345\316 `^\303\1\31;vy\233{\261\263*\251\1:D@\314l\212\1\33\357\24!\7J\210\10\31\24\0007J\211\0:U\0\1\363\"\0/\231X\200\0372\200\0gP\200$\250V\0\274\223(@\22N\210\5\244\235\2\nKP"..., 1024) = 1024 <0.000201>
+10:36:45.609438 read(48, "\2X\254\225\n\25l]\363\240\v\23\236tP\247\242+\346\252V\241nB\22\312\211D\204\345\231Q\261\361\211\353|\23\266\215;\20W\344.'\200\224wG\356\374\234;[\243\267\341}\243\7\232\363\371\270V\214\22\304t\364\\P\25\311\311\206\214\322\306\\\323\326\2542\306%\306\213\10j\26iD\250\374\25\v4\242\1\310\352R\34\0107\25RK\201\7\242\250Y\334@;\25qJq`\241\352z\204\256Z\2601\372:\204\356\35\264\365)$Y\262\263e\321\226D\232\25\312XEQu\245>d)\240\314\256\365IY\\]U\207\222\307\351\352\266\350\266E\354\3054=\35P\334\377\0\245~u\\\315\377\0B\371z\16EQp-\313\323\221\367\t\252N\223Z}\366\177\240\266\2500\223\250\317\250\363\260'\356\334\256\251Kv\277m\367\336\3756\322\266a\17\rW[\355\367\236\267L\216KV\327N\272~\272\353\320\16=\206\333>/\200w\26\275\371\1\367d\307\223\2226\367\354\256\373{\321\v\345\275\7)\352\17\347\205\257\24\245\263b\245\24\34Kt\316ku\267\356R\253Q\226\314\264|\316\342yB\307*\274%z\213q\17\33\323\342\332b\332<?\370\307\242\327\303*<#q\366\v&Ir\361\274<\277\346\277S\257\360\275\332\360>T\275}a\35 /WE\30\27\253\241l\201VB\331\33\242&E\267\5vB\357\374/\363\34n-hz\17\0h\0373\260\306\215N\352,F@\261&\333\333\300/\241p\210\361\34\\\252\357c\331{9Fc\211\2158y\371\244\315\376w\235N\27\346\32N\206\237\355kWx\371\326I\363\311\311\365~\327\246\205\267|\251@fw\310\2250J\211\rw\312\20\211\231@\20t\252\1\203t\250\200\3\345D\0\37*\204\0\371\24 \t&D\224"..., 1024) = 1024 <0.000135>
+10:36:45.611656 read(48, "\221\1\261*\2004eP\4\f\252\0\211\231B\3t\350\200\v\346D\200_*\200\0\371\224\10\244\263\242\1Y'D\2\223N\210\5]P\240\0IR\211\5d\250D\26,\371\321\5\213I2\205\5\237*\200\334]\363\"Q\213K*\205X\254\323\"Q\261Y*\21*\330\234\225(\320\256a9j\24\5\212I2\26YDVI\225[\36\242-$\252\2269DY\362*\216Q\v->O\232\370_1\373\337\224\200\214\251e\223h==S\232n\t\7\301.PRT\315\21\310\236\214\3538'n\236\313j\310\3527\366\331qx\217\206\302\177\227AS\341\241\223\362\350z?g\373z\327Z\316\364\346\27\224\342\276\33(n\216V^\26Q\335\35\357\v\355@6\312\363y\270F\272\34\351a:z.(\n\344\344\302\321\222X\213\210*\226)@\316\342\320\364S\254\356%\6\342\250Iq \334s\244\270\220r\n\204\211D#\354\235!\304\3q\316,\220\342V\213\32*\245\253\v\247\251I!\247T\233\364C,\246\345KD\4\220\365-E\367\317U\243\34VEM\337r\222U\260\355-FM\261\3769\246b\336U\246\277\242)%\241cO6\333ym~\271Z\261\273i\351\256\375.\367\22\320\360\224\355~Y\323\353\327\247$\351]R~\237]w\364\365\262\210f\232\256\333\2=\305\366\360?~\245H\315\305~\30\372i\333\317\370\277\253\3\215\356XEZ}m\327>\331\267\336\26\205\225\364\337\317\366\326\2058\7\206A`\204\\c\4\6\235\217\3050\302\327\th\230\226\206c\231hS\345\26\343c-rz\324KG?\361\16\214>\226q`N\207X\37%\314\370\202O\0177T\323\364f\216\25\270\345G\310N\331Pwu\25\21\332\332&\220[\247\314l\276\277\300\344\371\234>9\367\212"..., 1024) = 1024 <0.000136>
+10:36:45.612620 read(48, "\361\345\227;\213T\225}H\342\252\320\353*\16\353[\233\273\25\312\206\2311MS\222v\305\270\242u\206\340\215\305\216\25\362\276h5\340R\n\231\362\337\370\245\354\330\203\211\324i\26l\332e\3\304\374\256\372\266\376\253\337\177\213q\37;\200\214z\301\312?D\364\373\235y\255\231\343\317^\305\t\1\"j*\305\336\230\2050WW\24\316\213\262\314\312\364\237\6W&y\337\210\277\302{wf\r\231\346\347\0371\250\206\237V\6\257\255B<\270a\345\367\324\370g\25\227\346qy_\374\253\377\0\267\360\376\305\340\221!\262%\2416H\240('|\211Vo\276D\204\f\310\225\"fP\204\f\312\0\33\247D\214\v\346P\202\362N\211QY*\24 \224\365(\201\242\272j\225b\254VJ\204J\nIP\211K\27uR\200\260N\250P\27`_2\204\260\17\250D\245\213I:%.\205d\250V\242\215\212>\245\32\23\315\320\3\247D\2\362J\241\22\27\222eV\306\250\211\313\"Y\2421\26|\252\266=DZG\241c\242\200\271\352\203R\4^\201t\216\321\361d\371\225\360\203\367\252 bU\r\0210\250Y n\201\33\r\1}2)\201\304\31\205\33\5Q8\247 \334\\\36\241VQRT\307)\364gQ\301{u#-\253\346\36\307\366+\215\304|7\36M\264\25>\33\36M\264\373\36\225\331\277\210\255u\276l\3648>\313\310\361\177\n\224:\34\254\334\24\241\320\364>\23\332\260m\225\3463pm\34\271\341:\232.(\0175\311\236\26\214R\304[AR\261J4eqhq\223$8\224\31\212t\247\20\320\324S$\270\221\226PT_\n\215^\214\240\3655E\267W\305%\r\312\265e\244\25#p\266\306x\336\261\334SL\333kM\360\271\222\312\334\256/q\234\272\26\24u:w#+"..., 1024) = 1024 <0.000132>
+10:36:45.614758 read(48, "y\256<\360\264a\226\32-\"\250Y%\0033\213C\261N\263\270\224cQ\324\2458\202\207\351+:\252Un\6\213\6W\1\262\234\312:@\255^\343\364\325^\vN;N\334QF\206\333+m\342\246E\211\247{\240+D)^\341m\355~F\313\16(\3165\277/\203\376|u\30\351\226\302\242\366\311\266\366\306l-\271\315\327Fu.U\315\322\353\276\225\346\"\253\240X\252o{\235\255\200.l3\347\216|\222R\346\326oU\321x[\353\256\227\257N\372\26j\266\36e`;[k\337\177\233\363\36\311\262\224\\_\"\256\266\273\370\366\364\364\330\247+\352;O\304G\373\337\307\315HfN7\367\337\307\336\305\34\30X+\3063\216J\213,cQ\275\366#\203\36\217\210+\274\315[B\376Y\343\237\305od\177\232\240\224\264]\354i{q\315\2770\374\254\272\177\n\343>G\35\213+\332_\206_Q\330\226\360>n\275}\341\31\330\273\323P\266/!MEX\7\24\301l\352\373/\r\332\377\0\6Io=&\337U\353\376\1\33\222]\344\276\347\215\370\346O\227\212S\355\31?D\317]\246\233+\353\22\326-\37\0\304\352K\320\260\23\256c\334\357-\211\211P\1\235\362\261Z\"gD\2503: \4\372\204@\5\325J\0\v\352Q \t*\24\0\244\325(\224b\222\324\250\1Ij\24*\304\344\235\22\202\222N\254-\212\3112\270\246\1\323\".\355\2|\350\201\261wT+\v\346\240\17\250P\253m\200t\250\221 \16\231V\306(\201\222d,j\210\7\314\2521D\v\345U\261\212\"\357\221\1\312 ]\"\fj@\\\365K\30\220'9\2\351\3%A\210\213T\v=-\315\337\315|&\217\335\t\230\32\252\320\324\311\206*\320\344\315\350U.\215\30\220\30\210w*Yth\302\201"..., 1024) = 1024 <0.000178>
+10:36:45.616674 read(48, "\205\214Q\4\351\220\261\212 \37*\255\214Q\4\351\20\261\212 _\"\250\305\20N\221A\212 \\\345Q\211\2s\225F$\f\271\2\364@\250Y\31e\10cZ\241\33=0\267u\360\243\367*\221\260\325V52mj\3c\"A\252\203\2237\245A\211\231\241Tbfwj\254j0\306\200\324\r\320\250\\\23\240P4\2Je\1\312.\372Tl\34\240\214D(YZ\330\270\341=\255\232;X\222:\37\320\357\371\256~~\7\26]\325?\1S\303\217&\352\237tz7f\276+7\1\304\264\370\376\207e\3458\277\202\311k\35|\216No\207Ik\35OR\340}\267k\255\220\274\177\21\360\371G\241\302\311\3035\272;\n\0162\327s\\L\230\34N|\360Qk\34\253\33\215\31\\(b)\22\332(4\311\22Z \324R\244\264A\312z\202\0167T\267\35P\32Oq\350+\34\t\333\257\237\202\v+\213\346]\375\257\"\256)\241\327LFo\222>_\\[d\347\317\27rz\265\247\327\351\367*\222a\243\234[q|\330\21s\317\4\3753\323\27\3311K\360~&\257]+^\273\267\373\336\325\271+]\211\311O\235\361li8\275\256Im\215\275l-\314\252d\304\257\355U\332\366\375^\336\253S\31{\376\315<X\355bm\267\322\337\357\331srC_\177\247\277A\211\350\24\3278n-eid\222aQL\374\337\374`v\7\274\212>!\30\273\242\371e\260\376\207s>G>W_J\377\0\16\343\376\\\337\17'\244\365^\22]>\246>\"\32y}\217\310O_bG0ZP\232\212\0)\210\243/;9TCf\3s\f\237\366\37\333e\351~\5\221G?\325?\324\363\37\32\303\3630\312=\323^\251\243\277\243\256\5}\231\350~i\214\324\221i\35V\336K\227\221T"..., 1024) = 1024 <0.000140>
+10:36:45.618673 read(48, "\356\243+\26pLEX\377\0g\247\2F\337c\203\344pWK\201\311\362\363E\367\320\346q\270\371\261\263\243\341\265\204\0\16\340\0\177\352\30?U\367\270IN*]\325\237\224\270\234R\301\226x\377\0\365\223^\215\243\246\245\252\270\\\354\352\246z\16\16|\330\227\325\17\303R\263\233\203\1770\210\33\4\371T*\300>eb\240_2\204\27|\312\24\6\351\224 \7\314\210(]\363\253\3\304VI\321\26\330\224\325\n\350C}\204g\250VFi;\23|\352\326UD\21\231B\352&\214\312XyA=\352\27H\23\236\200\304\201\271\350\27H\23\244@\272@\234\365\6\244\f\275V\313\321\2\364\3DI@\265\21%\0\220P\261\205@\30\2\204&\2\200a\0306D\243=\37\252\370Y\373}2A\n\32\231\260\25210\254B\206\246\22\312\26493`*\215L\220j\253\34\2310\305V93z\20\32\231\235\332\3\223\"cU\30\2307F\240\300n\211T\272\6\350\24\262\350\f\224\352\7\224ZJTl\34\242\222S\253\246S\226\266\rA\305\345\210\335\216#\303\227\267\355d\234\2701\345U5eg\30\315T\325\375\316\377\0\263_\30\34\333\t.<FG\356>\362\274\317\27\360%-q\372\34\254\277\rR\327\33\3723\330{5\361-\217\2\316\4x\25\341\270\257\205N\17c\317\346\340\334]4w\274;\217\261\334\327\234\313\303J=\16VN\35\242\342*\225\211\300\306\361\2645\f\251.%\v*i6\331!\252vQ\226-\250\266B2|\262\346\207\273)W\270\3045\r>\330\345\236\207\250J\215_\323\351k\243\360\350Jf\242\250v\3370$\340\2\10\361\371]\237m\357\262n9\336\213~\225\267\247\275\331f\275\377\0f\265_9&\331\26\4c\251\305\207\205\256:\356\22\337\342\327\373"..., 1024) = 1024 <0.000172>
+10:36:45.620956 read(48, "q\tkOQ\201`\16\306\307\227\221\350\203j5^~?G\330S]\307\3w\260 \23qn\270\267+\203\3112\325iz\267_\357{\351\246\375\312\20\237;}@\266F2m\313\353\314_(p\322\327\276\277o?\327VE\320\263\3363\370\266\337\247\256\6\374\212]X\323\312~4|\26\207\2103SH\212\2621\377\0\16R\5\2367\356\345\323{\264\235\2342\323\352\17\255\370\17\307\262|6|\262\\\330\345\371\243\333\376Q\276\275\327Q\34G\16\262\257\23\361/h\373?5<\217\202\241\216\212Vn\327t\344\346\235\234\323\311\303\5}\353\205\342qq8\326\\2R\213\352\276\317\263\356\217;\222\16\17\226H\250r\332%\204\212\246\326\7\304\17K\270\17mG\320/\241\177\213\361\177\237\206\177\366\217\332_\263\365>]\376g\300sF\34TV\337\206^O\362\277\243\265\365/xMZ\367\2715\211\362\234?\206u\334\275\326VC\246\22\32\265VY1\246\316\201rfE\10\10\310\210\1>D@\305%\224\"/N\2423T\242-\312\212\311\353S\02229\330\233\347V\27V@\275\33%\2\221\310\fH^I\24\35\24\vZ\203(\330z \242Z\324+@\336\365\6$\5\316U\261\211\3s\220.\221\2P,E@\222\1@\22\1@\21\262\2010(C,\240M\264(\0\215\10\321F\25\201Y\vg\240:3\2375\360\323\366\302a\30\322\25290\241\252\26452A\245\2\351\223\0\370\252\320\325 \215i\350\205\rR\10\32UG)\23k\17\212\255\16R&\30Uhr\221!\31\361\366U\241\252Fwg\305V\206\251\31\335\371\252\320\325#F4(r\221\23\22\255\rR4\350OD(r\220'C\340P\241\226\5\360\36\205\2\351\201|\7\241\366@\275\212\313K\340}\221\10\254"..., 1024) = 1024 <0.000178>
+10:36:45.623816 read(48, "\221%\232\320\211,\315\n\22\315h@6\21\261\243E\33\10\30\211K&\306l\210\33?\377\331", 1024) = 30 <0.003192>
+10:36:45.627920 read(48, "", 994)       = 0 <0.001780>
+10:36:45.631012 getsockopt(48, SOL_SOCKET, SO_DEBUG, 0xa8bff330, 0xa8bff334) = -1 ENOTSOCK (Socket operation on non-socket) <0.001411>
+10:36:45.633682 close(48)               = 0 <0.000185>
+10:36:45.634708 clock_gettime(CLOCK_MONOTONIC, {306, 156845563}) = 0 <0.000191>
+10:36:45.635402 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000190>
+10:36:45.636072 futex(0x9fda3928, FUTEX_WAIT, 8, NULL) = 0 <0.311105>
+10:36:45.948316 write(11, "3886", 4)    = 4 <0.000083>
+10:36:45.948657 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.000096>
+10:36:45.949001 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000080>
+10:36:45.949323 clock_gettime(CLOCK_MONOTONIC, {306, 471387751}) = 0 <0.000094>
+10:36:45.949868 clock_gettime(CLOCK_REALTIME, {1444041405, 949961543}) = 0 <0.000118>
+10:36:45.950217 writev(3, [{"\0.\17\275R\22VGC\2378", 11}, {"\4", 1}, {"Gmail\0", 6}, {"getAccountsCursor\0", 18}], 4) = 36 <0.000114>
+10:36:45.950932 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfeeb8) = 0 <0.003353>
+10:36:45.955267 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfedd8) = 0 <0.000309>
+10:36:45.957240 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfedd8) = 0 <0.003756>
+10:36:45.961306 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000434>
+10:36:45.961995 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000351>
+10:36:45.962593 getuid32()              = 10071 <0.000130>
+10:36:45.963026 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed48) = 0 <0.000132>
+10:36:45.963427 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed48) = 0 <0.000132>
+10:36:45.963801 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000233>
+10:36:45.964273 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000133>
+10:36:45.964800 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000372>
+10:36:45.965458 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfedd8) = 0 <0.000358>
+10:36:45.966108 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000107>
+10:36:45.966487 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000102>
+10:36:45.966871 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000100>
+10:36:45.967244 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000103>
+10:36:45.967628 getuid32()              = 10071 <0.000099>
+10:36:45.967992 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed48) = 0 <0.000453>
+10:36:45.968724 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000429>
+10:36:45.969418 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfed88) = 0 <0.000326>
+10:36:45.970013 clock_gettime(CLOCK_REALTIME, {1444041405, 970110397}) = 0 <0.000096>
+10:36:45.970384 writev(3, [{"\0.\17\275R\22V\275\265\3229", 11}, {"\4", 1}, {"Gmail\0", 6}, {"master sync=true, engine sync=false\0", 36}], 4) = 54 <0.000188>
+10:36:45.971813 getuid32()              = 10071 <0.000568>
+10:36:45.972660 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfef18) = 0 <0.000583>
+10:36:45.973480 clock_gettime(CLOCK_MONOTONIC, {306, 495549470}) = 0 <0.000125>
+10:36:45.973844 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.000123>
+10:36:45.974235 clock_gettime(CLOCK_MONOTONIC, {306, 496303115}) = 0 <0.000170>
+10:36:45.974671 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000096>
+10:36:45.975025 futex(0x9fda3928, FUTEX_WAIT, 9, NULL) = 0 <0.240889>
+10:36:46.216208 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.002675>
+10:36:46.219191 write(11, "3886", 4)    = 4 <0.000120>
+10:36:46.219605 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.000117>
+10:36:46.220021 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000116>
+10:36:46.220448 gettimeofday({1444041406, 220548}, NULL) = 0 <0.000159>
+10:36:46.220918 clock_gettime(CLOCK_MONOTONIC, {306, 742994053}) = 0 <0.000098>
+10:36:46.222775 gettimeofday({1444041406, 222880}, NULL) = 0 <0.000134>
+10:36:46.223499 gettimeofday({1444041406, 223598}, NULL) = 0 <0.000095>
+10:36:46.224275 getuid32()              = 10071 <0.000123>
+10:36:46.224771 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfef08) = 0 <0.003543>
+10:36:46.229408 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfef08) = 0 <0.000408>
+10:36:46.230210 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 72 <0.003719>
+10:36:46.266497 ioctl(72, 0x41007701, 0xa8bff094) = 0 <0.000094>
+10:36:46.266864 ioctl(72, 0x40047703, 0x200000) = 0 <0.000082>
+10:36:46.267191 ioctl(72, 0x40047705, 0x3) = 0 <0.000083>
+10:36:46.267520 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 72, 0) = 0x95cc0000 <0.000209>
+10:36:46.267988 ioctl(72, 0x40047705, 0x1) = 0 <0.000103>
+10:36:46.268502 gettimeofday({1444041406, 268645}, NULL) = 0 <0.000089>
+10:36:46.268973 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000100>
+10:36:46.269483 pread(49, "\n\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 110592) = 4096 <0.000652>
+10:36:46.270544 madvise(0x9f23b000, 20480, MADV_DONTNEED) = 0 <0.000177>
+10:36:46.271170 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000123>
+10:36:46.271570 gettimeofday({1444041406, 271843}, NULL) = 0 <0.000232>
+10:36:46.272342 clock_gettime(CLOCK_MONOTONIC, {306, 795565459}) = 0 <0.001187>
+10:36:46.273822 clock_gettime(CLOCK_MONOTONIC, {306, 795895095}) = 0 <0.000104>
+10:36:46.274172 clock_gettime(CLOCK_MONOTONIC, {306, 796849417}) = 0 <0.000656>
+10:36:46.275115 clock_gettime(CLOCK_REALTIME, {1444041406, 275307636}) = 0 <0.000158>
+10:36:46.275529 writev(3, [{"\0.\17\276R\22Vt\334h\20", 11}, {"\4", 1}, {"ConversationCursor\0", 19}, {"ConversationCursor pre-loading took 1ms n=0\0", 44}], 4) = 75 <0.000164>
+10:36:46.276655 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.002841>
+10:36:46.279774 clock_gettime(CLOCK_MONOTONIC, {306, 801840199}) = 0 <0.000093>
+10:36:46.280142 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000091>
+10:36:46.280531 futex(0x9fda3928, FUTEX_WAIT, 10, NULL) = 0 <0.133676>
+10:36:46.414494 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.000258>
+10:36:46.415013 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 0 <0.000052>
+10:36:46.415327 futex(0xa8c2ec08, FUTEX_WAIT, 3, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000145>
+10:36:46.415730 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = 0 <0.001733>
+10:36:46.417739 write(11, "3886", 4)    = 4 <0.000140>
+10:36:46.418291 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.000138>
+10:36:46.418685 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000133>
+10:36:46.419096 clock_gettime(CLOCK_MONOTONIC, {306, 941244678}) = 0 <0.000134>
+10:36:46.419709 getuid32()              = 10071 <0.000137>
+10:36:46.420160 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfef08) = 0 <0.000183>
+10:36:46.420621 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfef08) = 0 <0.000147>
+10:36:46.421047 clock_gettime(CLOCK_MONOTONIC, {306, 943194470}) = 0 <0.000133>
+10:36:46.421541 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.001026>
+10:36:46.422849 clock_gettime(CLOCK_MONOTONIC, {306, 944914261}) = 0 <0.000116>
+10:36:46.423234 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000110>
+10:36:46.423607 futex(0x9fda3928, FUTEX_WAIT, 11, NULL) = 0 <2.036491>
+10:36:48.460345 futex(0xa880af20, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000134>
+10:36:48.460725 futex(0xa8c2ebe0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000135>
+10:36:48.461105 futex(0xa8c2ebe0, FUTEX_WAKE, 1) = 0 <0.000133>
+10:36:48.461478 futex(0xa8c2ec08, FUTEX_WAIT, 4, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000132>
+10:36:48.461856 write(11, "3886", 4)    = 4 <0.000128>
+10:36:48.462241 prctl(0x29 /* PR_??? */, 0x2625a00, 0xf2e, 0x2, 0) = 0 <0.000130>
+10:36:48.462615 setpriority(PRIO_PROCESS, 3886, 10) = 0 <0.000128>
+10:36:48.463012 clock_gettime(CLOCK_MONOTONIC, {308, 985077594}) = 0 <0.000139>
+10:36:48.464118 gettimeofday({1444041408, 464258}, NULL) = 0 <0.000141>
+10:36:48.464538 gettimeofday({1444041408, 464633}, NULL) = 0 <0.000127>
+10:36:48.464914 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 57 <0.000143>
+10:36:48.465307 ioctl(57, 0x41007701, 0xa8bfeef4) = 0 <0.000124>
+10:36:48.465678 ioctl(57, 0x40047703, 0x200000) = 0 <0.000374>
+10:36:48.466324 ioctl(57, 0x40047705, 0x3) = 0 <0.000145>
+10:36:48.466716 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 57, 0) = 0x956c0000 <0.000292>
+10:36:48.468189 ioctl(57, 0x40047705, 0x1) = 0 <0.000103>
+10:36:48.468599 gettimeofday({1444041408, 468690}, NULL) = 0 <0.000093>
+10:36:48.468962 fcntl64(44, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000089>
+10:36:48.469320 fcntl64(44, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000088>
+10:36:48.469668 gettimeofday({1444041408, 469753}, NULL) = 0 <0.000098>
+10:36:48.470678 gettimeofday({1444041408, 470776}, NULL) = 0 <0.000105>
+10:36:48.471381 gettimeofday({1444041408, 471476}, NULL) = 0 <0.000120>
+10:36:48.471745 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 78 <0.000163>
+10:36:48.472152 ioctl(78, 0x41007701, 0xa8bfed84) = 0 <0.000130>
+10:36:48.472510 ioctl(78, 0x40047703, 0x200000) = 0 <0.000124>
+10:36:48.472859 ioctl(78, 0x40047705, 0x3) = 0 <0.000126>
+10:36:48.473210 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 78, 0) = 0x941a0000 <0.000189>
+10:36:48.475539 ioctl(78, 0x40047705, 0x1) = 0 <0.002661>
+10:36:48.478513 gettimeofday({1444041408, 478606}, NULL) = 0 <0.000089>
+10:36:48.478881 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000129>
+10:36:48.479239 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000117>
+10:36:48.479595 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000094>
+10:36:48.479959 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000099>
+10:36:48.480323 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000087>
+10:36:48.480696 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000122>
+10:36:48.481251 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000089>
+10:36:48.481608 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000117>
+10:36:48.482016 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 80 <0.000113>
+10:36:48.482398 fstat64(80, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000094>
+10:36:48.482762 geteuid32()             = 10071 <0.000097>
+10:36:48.483125 fstat64(80, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000213>
+10:36:48.483808 pread(80, "\0", 1, 0)   = 1 <0.000470>
+10:36:48.484854 close(80)               = 0 <0.000291>
+10:36:48.485668 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000306>
+10:36:48.486514 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000389>
+10:36:48.487409 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000400>
+10:36:48.488225 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000265>
+10:36:48.489846 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000312>
+10:36:48.490695 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.001734>
+10:36:48.492694 gettimeofday({1444041408, 492787}, NULL) = 0 <0.000128>
+10:36:48.493088 futex(0xb3869b68, FUTEX_WAKE, 1) = 1 <0.000129>
+10:36:48.493445 futex(0xa880a560, FUTEX_WAKE, 1) = 0 <0.000118>
+10:36:48.493804 futex(0xab4af600, FUTEX_WAKE, 1) = 1 <0.000127>
+10:36:48.494148 futex(0xab4af600, FUTEX_WAKE, 1) = 0 <0.000116>
+10:36:48.494604 munmap(0x941a0000, 2097152) = 0 <0.000197>
+10:36:48.495091 close(78)               = 0 <0.000153>
+10:36:48.495951 getuid32()              = 10071 <0.000119>
+10:36:48.496537 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bfee98) = 0 <0.000740>
+10:36:48.497574 clock_gettime(CLOCK_MONOTONIC, {309, 19728166}) = 0 <0.000152>
+10:36:48.498724 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8bff4c0) = 0 <0.000119>
+10:36:48.499186 clock_gettime(CLOCK_MONOTONIC, {309, 21277594}) = 0 <0.000117>
+10:36:48.499660 futex(0xa880af20, FUTEX_WAKE, 1) = 0 <0.000127>
+10:36:48.500134 futex(0x9fda3928, FUTEX_WAIT, 12, NULL <detached ...>
