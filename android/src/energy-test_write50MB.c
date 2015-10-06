@@ -4,15 +4,26 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <time.h>
+//#include <time.h>
+#include <sys/time.h>
 
 #define BUSY_LEN 5
 #define SLEEP_LEN 8
 #define DEBUG
 
-void busy(int dur){
+/*void busy(int dur){
 	int end = time(NULL) + dur;
 	while(end > time(NULL));
+}*/
+
+void busy(int dur){
+	struct timeval end, now;
+
+	gettimeofday(&end,NULL);
+	end.tv_sec += BUSY_LEN;
+	do{
+		gettimeofday(&now,NULL);
+	}while(timercmp(&now, &end, <));
 }
 
 int main(){
