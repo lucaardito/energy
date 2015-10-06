@@ -44,6 +44,17 @@
   </tr>
 </table>
 
+## Scenario
+App: Gmail
+No mails present on the device (maybe no mails on account)
+Synchronization disabled
+Airplane mode activated
+Wifi active?
+Screen active?
+Wakelocks?
+
+[Running APK](./run_APK.md)
+
 ## Tracing
 [Trace binary execution](./trace_BIN.md)
 

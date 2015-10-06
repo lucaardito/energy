@@ -1,4 +1,4 @@
-# Trace binary
+# Trace system calls for binary
 ## Generate binary
 Read [instruction](./setup_toolchain.md) to generate the toolchain and create an executable
 

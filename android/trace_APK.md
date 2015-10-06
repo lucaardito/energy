@@ -1,5 +1,5 @@
 
-# Tracing APKs
+# Tracing system calls for APKs
 Android apps are actually started by forking the zygote process, so it is possible to trace the application initialization by tracing the zygote process and following child processes ('-f'):
 
 ```shell
@@ -13,7 +13,7 @@ set `ps | grep zygote` ; strace -p $2 -ff -tt -T -s 500 -o /sdcard/test/strace.t
 `adb pull /sdcard/test .`
 
 ## Performing statistic
-What are relevant data?
+We need to trace most frequent or longest system calls
 
 ## Notes
 - tracing overhead (tracing + writing on files)
