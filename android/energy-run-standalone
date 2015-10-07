@@ -1,6 +1,7 @@
 #!/system/bin/sh
 
 # energy-run-standalone
+# Run on device
 # Utility to run the energy-test after a sleep. In this way it is possible to run this script with
 # `nohup` and collect data with less overhead (it is possible to close the shell and disable wifi)
 

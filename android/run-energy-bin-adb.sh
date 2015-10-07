@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# runAdbScript.sh
+# run-energy-bin-adb.sh
+# Run on host
 # Run energy test collecting strace data trough adb.
 # Wakelock is used in order to perform test with screen off
 

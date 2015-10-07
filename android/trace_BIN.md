@@ -8,7 +8,7 @@ Use the [energy-install.sh](./energy-install.sh) script.
 By default the script pushes the binary in `/system/bin/energy-test`
 
 ## Run tests
-Use the [runAdbScript.sh](./runAdbScript.sh) script on a PC or use the [energy-run-standalone](./energy-run-standalone) script on the device.
+Use the [run-energy-bin-adb.sh](./run-energy-bin-adb.sh) script on a PC or use the [energy-run-standalone](./energy-run-standalone) script on the device.
 
 This scripts use a *wakelock* in order to wake up the the CPU and keep it awake to complete the test. Without the wakelock the program stops the execution until the device is woken up. At the end, the strace trace is written to a text file and optionally pulled.
 

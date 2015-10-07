@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # energy-install.sh
+# Run on host
 # Push binary and install it on /system/bin
 
 NRG_NAME=energy-test
