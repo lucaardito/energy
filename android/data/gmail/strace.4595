@@ -1,0 +1,830 @@
+15:05:48.857528 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb3963000 <0.000203>
+15:05:48.858058 mprotect(0xb3963000, 4096, PROT_NONE) = 0 <0.000108>
+15:05:48.858391 sigaltstack({ss_sp=0xb3964000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000123>
+15:05:48.858751 prctl(0x53564d41 /* PR_??? */, 0, 0xb3964000, 0x2000, 0xb6cbded3) = 0 <0.000118>
+15:05:48.859165 mprotect(0xb37fc000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000103>
+15:05:48.859694 mprotect(0xb37fc000, 4096, PROT_NONE) = 0 <0.000141>
+15:05:48.860103 madvise(0xb37fc000, 1056768, MADV_DONTNEED) = 0 <0.000149>
+15:05:48.860545 prctl(PR_SET_NAME, 0xb38ff844, 0, 0xb38ff978, 0xa8821680) = 0 <0.000135>
+15:05:48.860936 getpriority(PRIO_PROCESS, 4595) = 20 <0.000031>
+15:05:48.861148 setpriority(PRIO_PROCESS, 4595, 0) = 0 <0.000032>
+15:05:48.861640 write(11, "4595", 4)    = 4 <0.000143>
+15:05:48.862056 prctl(0x29 /* PR_??? */, 0x2625a00, 0x11f3, 0x2, 0xb38ff564) = 0 <0.000143>
+15:05:48.862450 setpriority(PRIO_PROCESS, 4595, 10) = 0 <0.000175>
+15:05:48.863203 getuid32()              = 10071 <0.000133>
+15:05:48.863764 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38ff028) = 0 <0.000740>
+15:05:48.864850 clock_gettime(CLOCK_REALTIME, {1444230348, 865378505}) = 0 <0.000448>
+15:05:48.866075 writev(3, [{"\3\363\21\3144\25V\311\240\2243", 11}, {"\3", 1}, {"ActivityThread\0", 15}, {"Loading provider com.google.android.gmail.provider;com.android.mail.notifier;com.google.android.gm.email.provider;com.google.android.gm.email.notifier: com.android.email.provider.EmailProvider\0", 193}], 4) = 220 <0.000131>
+15:05:48.867671 futex(0xa878a1e0, FUTEX_WAKE, 1) = 0 <0.001995>
+15:05:48.870034 futex(0xab1f0948, FUTEX_WAIT, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000144>
+15:05:48.870521 futex(0xaedc4160, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000169>
+15:05:48.871021 futex(0xaedc4160, FUTEX_WAKE, 1) = 0 <0.000186>
+15:05:48.871547 futex(0xaedc4188, FUTEX_WAIT, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000231>
+15:05:48.872121 futex(0xaedc4160, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000188>
+15:05:48.872853 clock_gettime(CLOCK_MONOTONIC, {226, 596631426}) = 0 <0.000155>
+15:05:48.873452 clock_gettime(CLOCK_MONOTONIC, {226, 597228874}) = 0 <0.000136>
+15:05:48.874173 clock_gettime(CLOCK_MONOTONIC, {226, 597938249}) = 0 <0.000145>
+15:05:48.874669 clock_gettime(CLOCK_MONOTONIC, {226, 598564967}) = 0 <0.000184>
+15:05:48.875201 futex(0xb4c8c2e8, FUTEX_WAKE, 1) = 0 <0.000178>
+15:05:48.875719 futex(0xb4c89200, FUTEX_WAKE, 1) = 0 <0.000188>
+15:05:48.876357 futex(0xab42e410, FUTEX_WAKE, 1) = 1 <0.000180>
+15:05:48.876924 futex(0xab42e410, FUTEX_WAKE, 1) = 0 <0.000140>
+15:05:48.877392 sched_yield()           = 0 <0.000530>
+15:05:48.878316 futex(0xa878a1e0, FUTEX_WAKE, 1) = 0 <0.000124>
+15:05:48.878794 futex(0xab1f0948, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000182>
+15:05:48.879318 futex(0xa878a1e0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000192>
+15:05:48.879855 futex(0xaedc4240, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000174>
+15:05:48.880390 futex(0xaedc4240, FUTEX_WAKE, 1) = 0 <0.000186>
+15:05:48.880911 futex(0xaedc4268, FUTEX_WAIT, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000171>
+15:05:48.881419 futex(0xaedc4240, FUTEX_WAIT, 1, NULL) = 0 <0.000746>
+15:05:48.882554 getuid32()              = 10071 <0.000142>
+15:05:48.883185 clock_gettime(CLOCK_MONOTONIC, {226, 606965072}) = 0 <0.000172>
+15:05:48.883737 clock_gettime(CLOCK_MONOTONIC, {226, 607516374}) = 0 <0.000182>
+15:05:48.884318 clock_gettime(CLOCK_MONOTONIC, {226, 608084238}) = 0 <0.000141>
+15:05:48.884812 clock_gettime(CLOCK_MONOTONIC, {226, 608583926}) = 0 <0.000170>
+15:05:48.885697 clock_gettime(CLOCK_MONOTONIC, {226, 609486478}) = 0 <0.000136>
+15:05:48.886726 clock_gettime(CLOCK_MONOTONIC, {226, 610503822}) = 0 <0.000150>
+15:05:48.887243 clock_gettime(CLOCK_MONOTONIC, {226, 611017676}) = 0 <0.000172>
+15:05:48.887791 clock_gettime(CLOCK_MONOTONIC, {226, 611740020}) = 0 <0.000187>
+15:05:48.888546 clock_gettime(CLOCK_MONOTONIC, {226, 612460489}) = 0 <0.000193>
+15:05:48.889308 clock_gettime(CLOCK_MONOTONIC, {226, 613211999}) = 0 <0.000182>
+15:05:48.889910 clock_gettime(CLOCK_MONOTONIC, {226, 613683353}) = 0 <0.000145>
+15:05:48.890544 clock_gettime(CLOCK_MONOTONIC, {226, 614327624}) = 0 <0.000180>
+15:05:48.891092 clock_gettime(CLOCK_MONOTONIC, {226, 614866322}) = 0 <0.000185>
+15:05:48.892332 clock_gettime(CLOCK_MONOTONIC, {226, 616121478}) = 0 <0.000183>
+15:05:48.892882 clock_gettime(CLOCK_MONOTONIC, {226, 616730540}) = 0 <0.000171>
+15:05:48.893415 clock_gettime(CLOCK_MONOTONIC, {226, 617273301}) = 0 <0.000182>
+15:05:48.894072 clock_gettime(CLOCK_MONOTONIC, {226, 617928092}) = 0 <0.000176>
+15:05:48.894603 clock_gettime(CLOCK_MONOTONIC, {226, 618448040}) = 0 <0.000168>
+15:05:48.896172 clock_gettime(CLOCK_MONOTONIC, {226, 619983300}) = 0 <0.000174>
+15:05:48.897457 clock_gettime(CLOCK_MONOTONIC, {226, 621254655}) = 0 <0.000122>
+15:05:48.897937 clock_gettime(CLOCK_MONOTONIC, {226, 621798978}) = 0 <0.000181>
+15:05:48.898471 clock_gettime(CLOCK_MONOTONIC, {226, 622325645}) = 0 <0.000174>
+15:05:48.899764 clock_gettime(CLOCK_MONOTONIC, {226, 623623457}) = 0 <0.000182>
+15:05:48.900824 clock_gettime(CLOCK_MONOTONIC, {226, 624673978}) = 0 <0.000170>
+15:05:48.901349 clock_gettime(CLOCK_MONOTONIC, {226, 625205228}) = 0 <0.000181>
+15:05:48.901885 clock_gettime(CLOCK_MONOTONIC, {226, 625736738}) = 0 <0.000179>
+15:05:48.903345 clock_gettime(CLOCK_MONOTONIC, {226, 627155124}) = 0 <0.000132>
+15:05:48.904975 clock_gettime(CLOCK_MONOTONIC, {226, 628834707}) = 0 <0.000175>
+15:05:48.905530 clock_gettime(CLOCK_MONOTONIC, {226, 629374655}) = 0 <0.000170>
+15:05:48.906069 clock_gettime(CLOCK_MONOTONIC, {226, 629933925}) = 0 <0.000218>
+15:05:48.907931 clock_gettime(CLOCK_MONOTONIC, {226, 631757312}) = 0 <0.000155>
+15:05:48.909700 clock_gettime(CLOCK_MONOTONIC, {226, 633519707}) = 0 <0.000142>
+15:05:48.911604 clock_gettime(CLOCK_MONOTONIC, {226, 635424030}) = 0 <0.000141>
+15:05:48.912302 clock_gettime(CLOCK_MONOTONIC, {226, 636117259}) = 0 <0.000140>
+15:05:48.913841 clock_gettime(CLOCK_MONOTONIC, {226, 637697884}) = 0 <0.000179>
+15:05:48.915688 clock_gettime(CLOCK_MONOTONIC, {226, 640128666}) = 0 <0.000333>
+15:05:48.921263 clock_gettime(CLOCK_MONOTONIC, {226, 645064968}) = 0 <0.000200>
+15:05:48.921887 clock_gettime(CLOCK_MONOTONIC, {226, 645679290}) = 0 <0.000198>
+15:05:48.922515 clock_gettime(CLOCK_MONOTONIC, {226, 646306478}) = 0 <0.000193>
+15:05:48.923133 clock_gettime(CLOCK_MONOTONIC, {226, 647094707}) = 0 <0.000211>
+15:05:48.923823 clock_gettime(CLOCK_MONOTONIC, {226, 647607936}) = 0 <0.000160>
+15:05:48.924433 clock_gettime(CLOCK_MONOTONIC, {226, 648218301}) = 0 <0.000162>
+15:05:48.926244 clock_gettime(CLOCK_MONOTONIC, {226, 650074916}) = 0 <0.000178>
+15:05:48.926932 clock_gettime(CLOCK_MONOTONIC, {226, 650716478}) = 0 <0.000158>
+15:05:48.927576 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 15 <0.000200>
+15:05:48.928184 ioctl(15, 0x41007701, 0xb38fec0c) = 0 <0.000197>
+15:05:48.931170 ioctl(15, 0x40047703, 0x2000) = 0 <0.000972>
+15:05:48.932620 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE, 15, 0) = 0xb395e000 <0.000547>
+15:05:48.951713 close(15)               = 0 <0.000063>
+15:05:48.952094 mmap2(NULL, 1069056, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xb367b000 <0.000073>
+15:05:48.952481 mprotect(0xb367b000, 4096, PROT_NONE) = 0 <0.000059>
+15:05:48.952857 clone(child_stack=0xb377f928, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0xb377f938, tls=0xb377f978, child_tidptr=0xb377f938) = 4602 <0.001321>
+15:05:48.954489 futex(0xb377f970, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000184>
+15:05:48.955184 futex(0xab42e4a8, FUTEX_WAKE, 1) = 1 <0.000139>
+15:05:48.955762 futex(0xab42e480, FUTEX_WAKE, 1) = 0 <0.000140>
+15:05:48.956366 futex(0xa878a1e0, FUTEX_WAKE, 1) = 0 <0.000148>
+15:05:48.956996 futex(0xab1f0948, FUTEX_WAIT, 2, NULL) = 0 <0.010706>
+15:05:48.968031 futex(0xaedc42b0, FUTEX_WAIT, 1, NULL) = 0 <0.000908>
+15:05:48.969235 futex(0xaedc42b0, FUTEX_WAKE, 1) = 0 <0.000086>
+15:05:48.969677 futex(0xaedc42b0, FUTEX_WAKE, 1) = 0 <0.000088>
+15:05:48.970145 futex(0xaedc42d8, FUTEX_WAKE, 1) = 0 <0.000087>
+15:05:48.970503 futex(0xaedc42b0, FUTEX_WAKE, 1) = 0 <0.000086>
+15:05:48.971398 clock_gettime(CLOCK_MONOTONIC, {226, 695178197}) = 0 <0.000117>
+15:05:48.972163 clock_gettime(CLOCK_MONOTONIC, {226, 695944499}) = 0 <0.000117>
+15:05:48.972543 clock_gettime(CLOCK_MONOTONIC, {226, 696318665}) = 0 <0.000120>
+15:05:48.973492 clock_gettime(CLOCK_MONOTONIC, {226, 697238561}) = 0 <0.000088>
+15:05:48.973865 clock_gettime(CLOCK_MONOTONIC, {226, 697612259}) = 0 <0.000087>
+15:05:48.974335 clock_gettime(CLOCK_MONOTONIC, {226, 698122728}) = 0 <0.000131>
+15:05:48.974720 clock_gettime(CLOCK_MONOTONIC, {226, 698494915}) = 0 <0.000115>
+15:05:48.975209 clock_gettime(CLOCK_MONOTONIC, {226, 698957363}) = 0 <0.000088>
+15:05:48.975603 clock_gettime(CLOCK_MONOTONIC, {226, 699360644}) = 0 <0.000098>
+15:05:48.976090 clock_gettime(CLOCK_MONOTONIC, {226, 699868092}) = 0 <0.000120>
+15:05:48.976582 clock_gettime(CLOCK_MONOTONIC, {226, 700319603}) = 0 <0.000032>
+15:05:48.976829 clock_gettime(CLOCK_MONOTONIC, {226, 700563510}) = 0 <0.000030>
+15:05:48.977062 futex(0xb4c8c2e8, FUTEX_WAKE, 1) = 1 <0.000127>
+15:05:48.977467 futex(0xb4c89200, FUTEX_WAKE, 1) = 0 <0.000095>
+15:05:48.977861 futex(0xab42e4f0, FUTEX_WAKE, 1) = 0 <0.000093>
+15:05:48.978227 futex(0xab42e518, FUTEX_WAKE, 1) = 0 <0.000092>
+15:05:48.978594 futex(0xab42e4f0, FUTEX_WAKE, 1) = 0 <0.000093>
+15:05:48.979116 sched_yield()           = 0 <0.000124>
+15:05:48.979674 sched_yield()           = 0 <0.000090>
+15:05:48.980042 sched_yield()           = 0 <0.000119>
+15:05:48.980752 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38fee28) = 0 <0.000389>
+15:05:48.982434 futex(0xb6d6422c, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000131>
+15:05:48.982817 getuid32()              = 10071 <0.000132>
+15:05:48.983184 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38fee78) = 0 <0.000230>
+15:05:48.983751 getuid32()              = 10071 <0.000116>
+15:05:48.984212 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38fee38) = 0 <0.000636>
+15:05:48.985071 sched_yield()           = 0 <0.000112>
+15:05:48.985396 sched_yield()           = 0 <0.000109>
+15:05:48.985741 sched_yield()           = 0 <0.000095>
+15:05:48.986078 futex(0xa878a1e0, FUTEX_WAKE, 1) = 0 <0.000090>
+15:05:48.986441 futex(0xab1f0948, FUTEX_WAIT, 3, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000084>
+15:05:48.986785 futex(0xaedc4320, FUTEX_WAIT, 1, NULL) = 0 <0.000320>
+15:05:48.987709 clock_gettime(CLOCK_MONOTONIC, {226, 711486530}) = 0 <0.000120>
+15:05:48.988089 clock_gettime(CLOCK_MONOTONIC, {226, 711867051}) = 0 <0.000120>
+15:05:48.988468 futex(0xb4c8c2e8, FUTEX_WAKE, 1) = 0 <0.000120>
+15:05:48.988838 futex(0xb4c89200, FUTEX_WAKE, 1) = 0 <0.000119>
+15:05:48.989145 futex(0xab42e560, FUTEX_WAKE, 1) = 1 <0.000117>
+15:05:48.989538 futex(0xab42e588, FUTEX_WAKE, 1) = 0 <0.000089>
+15:05:48.989906 futex(0xab42e560, FUTEX_WAKE, 1) = 0 <0.000094>
+15:05:48.990517 clock_gettime(CLOCK_MONOTONIC, {226, 714287520}) = 0 <0.000108>
+15:05:48.991568 clock_gettime(CLOCK_MONOTONIC, {226, 715330436}) = 0 <0.000102>
+15:05:48.991961 clock_gettime(CLOCK_MONOTONIC, {226, 715712624}) = 0 <0.000092>
+15:05:48.992901 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 15 <0.000432>
+15:05:48.993612 ioctl(15, 0x41007701, 0xb38fed2c) = 0 <0.000122>
+15:05:48.993980 ioctl(15, 0x40047703, 0x2000) = 0 <0.000245>
+15:05:48.994485 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE, 15, 0) = 0xb395e000 <0.000220>
+15:05:48.994980 close(15)               = 0 <0.000125>
+15:05:48.995375 mmap2(NULL, 1069056, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xb367b000 <0.000322>
+15:05:48.995966 mprotect(0xb367b000, 4096, PROT_NONE) = 0 <0.000197>
+15:05:48.996462 clone(child_stack=0xb377f928, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0xb377f938, tls=0xb377f978, child_tidptr=0xb377f938) = 4603 <0.001024>
+15:05:48.997807 futex(0xb377f970, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000184>
+15:05:48.998583 futex(0xa878a1e0, FUTEX_WAKE, 1) = 0 <0.000215>
+15:05:48.998984 futex(0xab1f0948, FUTEX_WAIT, 4, NULL) = 0 <0.008689>
+15:05:49.007961 futex(0xaedc4390, FUTEX_WAIT, 1, NULL) = 0 <0.000467>
+15:05:49.009084 clock_gettime(CLOCK_MONOTONIC, {226, 732830749}) = 0 <0.000091>
+15:05:49.009458 clock_gettime(CLOCK_MONOTONIC, {226, 733202832}) = 0 <0.000088>
+15:05:49.009830 clock_gettime(CLOCK_MONOTONIC, {226, 733576791}) = 0 <0.000088>
+15:05:49.010640 clock_gettime(CLOCK_MONOTONIC, {226, 734390384}) = 0 <0.000090>
+15:05:49.011020 clock_gettime(CLOCK_MONOTONIC, {226, 734767936}) = 0 <0.000089>
+15:05:49.011393 clock_gettime(CLOCK_MONOTONIC, {226, 735152624}) = 0 <0.000097>
+15:05:49.012039 futex(0xb4c87250, FUTEX_WAKE, 1) = 0 <0.000119>
+15:05:49.012409 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", F_OK) = 0 <0.000117>
+15:05:49.012793 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", F_OK) = 0 <0.000117>
+15:05:49.013165 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", F_OK) = 0 <0.000118>
+15:05:49.013541 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", F_OK) = 0 <0.000116>
+15:05:49.014917 clock_gettime(CLOCK_MONOTONIC, {226, 738697571}) = 0 <0.000117>
+15:05:49.015301 clock_gettime(CLOCK_MONOTONIC, {226, 739072988}) = 0 <0.000119>
+15:05:49.016540 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000115>
+15:05:49.018545 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000089>
+15:05:49.018942 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", O_RDWR|O_CREAT|O_LARGEFILE|O_CLOEXEC, 0600) = 17 <0.000088>
+15:05:49.019319 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000088>
+15:05:49.019696 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000087>
+15:05:49.020070 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000088>
+15:05:49.020451 pread(17, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0\0\0\0.\0\0\0\4\0\0\0\0\0\0\0\"\0\0\0\1\0\0\0\223\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0-\346\n", 100, 0) = 100 <0.000088>
+15:05:49.023813 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb363b000 <0.000303>
+15:05:49.024403 prctl(0x53564d41 /* PR_??? */, 0, 0xb363b000, 0x40000, 0xb6cbebe1) = 0 <0.000087>
+15:05:49.024764 munmap(0xb363b000, 262144) = 0 <0.000086>
+15:05:49.025144 mmap2(NULL, 520192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb35fc000 <0.000087>
+15:05:49.025510 prctl(0x53564d41 /* PR_??? */, 0, 0xb35fc000, 0x7f000, 0xb6cbebe1) = 0 <0.000087>
+15:05:49.025872 munmap(0xb35fc000, 16384) = 0 <0.000087>
+15:05:49.026226 munmap(0xb3640000, 241664) = 0 <0.000116>
+15:05:49.027293 futex(0xb6630154, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000087>
+15:05:49.028368 futex(0xb66321dc, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000116>
+15:05:49.028735 futex(0xb66321dc, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000114>
+15:05:49.029097 futex(0xb66321dc, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000117>
+15:05:49.029678 statfs64("/data", 88, {f_type="EXT2_SUPER_MAGIC", f_bsize=4096, f_blocks=7015287, f_bfree=6513334, f_bavail=6513334, f_files=1785856, f_ffree=1782958, f_fsid={-748642328, 77008235}, f_namelen=255, f_frsize=4096, f_flags=1062}) = 0 <0.000107>
+15:05:49.030383 futex(0xb6d6422c, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000089>
+15:05:49.030751 gettimeofday({1444230349, 30887}, NULL) = 0 <0.000109>
+15:05:49.031964 gettimeofday({1444230349, 32097}, NULL) = 0 <0.000104>
+15:05:49.032627 gettimeofday({1444230349, 32765}, NULL) = 0 <0.000104>
+15:05:49.033131 gettimeofday({1444230349, 33274}, NULL) = 0 <0.000118>
+15:05:49.036306 gettimeofday({1444230349, 36537}, NULL) = 0 <0.000116>
+15:05:49.037075 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000107>
+15:05:49.037577 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000107>
+15:05:49.037985 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000105>
+15:05:49.038488 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000106>
+15:05:49.038976 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000104>
+15:05:49.039394 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000105>
+15:05:49.039794 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000106>
+15:05:49.040328 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000104>
+15:05:49.040742 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 18 <0.000105>
+15:05:49.041262 fstat64(18, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000105>
+15:05:49.041664 geteuid32()             = 10071 <0.000103>
+15:05:49.042056 fstat64(18, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000104>
+15:05:49.042533 pread(18, "\0", 1, 0)   = 1 <0.000104>
+15:05:49.042933 close(18)               = 0 <0.000105>
+15:05:49.043465 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000105>
+15:05:49.043985 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000104>
+15:05:49.044392 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000103>
+15:05:49.044856 pread(17, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0\0\0\0.\0\0\0\4\0\0\0\0\0\0\0\"\0\0\0\1\0\0\0\223\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0-\346\n\5\0\0\0\2\17\366\0\0\0\0%\17\373\17\366\fL\t&\10\316\10p\10\22\7\272\7_\7\4\6\223\6.\5\226\4\306\3\366\2\325\1\306\0\373\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\201H\24\7\33E\33\10\202;triggermessage_count_message_insertMessageCREATE TRIGGER message_count_message_insert after insert on Message begin update Mailbox set messageCount=messageCount+1  where _id=NEW.mailboxKey; end\202\f\23\7\0333\33\10\203Utriggerunread_message_readMessageCRE"..., 4096, 0) = 4096 <0.000105>
+15:05:49.045722 pread(17, "\r\0\0\0\25\0004\0\17\247\f\341\f\217\t\304\t\205\t*\10\322\10t\10\26\7\276\7c\7\10\6\227\0062\5\232\4\312\3\372\2\331\1\312\0\377\0004\0\0\201H\25\7\33E\33\10\202;triggermessage_count_message_deleteMessageCREATE TRIGGER message_count_message_delete after delete on Message begin update Mailbox set messageCount=messageCount-1  where _id=OLD.mailboxKey; end\201H\24\7\33E\33\10\202;triggermessage_count_message_insertMessageCREATE TRIGGER message_count_message_insert after insert on Message begin update Mailbox set messageCount=messageCount+1  where _id=NEW.mailboxKey; end\202\f\23\7\0333\33\10\203Utriggerunread_message_readMessag"..., 4096, 139264) = 4096 <0.000124>
+15:05:49.051087 pread(17, "\r\0\0\0\f\0015\0\16\342\f\314\vR\n\347\0015\n\217\n1\te\10]\6K\5#\4\23\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\205[\32\7\27\33\33\1\213\rtableMailboxMailbox\23CREATE TABLE Mailbox (_id integer primary key autoincrement, displayName text, serverId text, parentServerId text, parentKey integer, accountKey integer, type in"..., 4096, 143360) = 4096 <0.000109>
+15:05:49.056534 pread(17, "\r\t\204\0\17\1\264\0\t\25\10\246\7\351\7,\5\242\5\26\4\212\3\270\2\346\r1\f\235\v\365\1\373\t\257\1\264\0\0\1\264\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0E0\6\27Y3\1\0indexsqlite_autoindex_ExchangeOofSettings_1ExchangeOofSe"..., 4096, 147456) = 4096 <0.000125>
+15:05:49.060522 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000108>
+15:05:49.061359 gettimeofday({1444230349, 61495}, NULL) = 0 <0.000108>
+15:05:49.061769 gettimeofday({1444230349, 61902}, NULL) = 0 <0.000105>
+15:05:49.062482 gettimeofday({1444230349, 62632}, NULL) = 0 <0.000122>
+15:05:49.063490 gettimeofday({1444230349, 63641}, NULL) = 0 <0.000125>
+15:05:49.064029 gettimeofday({1444230349, 64160}, NULL) = 0 <0.000104>
+15:05:49.064676 gettimeofday({1444230349, 64806}, NULL) = 0 <0.000104>
+15:05:49.065182 gettimeofday({1444230349, 65474}, NULL) = 0 <0.000272>
+15:05:49.065734 gettimeofday({1444230349, 65885}, NULL) = 0 <0.000122>
+15:05:49.066407 gettimeofday({1444230349, 66616}, NULL) = 0 <0.000113>
+15:05:49.066891 gettimeofday({1444230349, 67022}, NULL) = 0 <0.000106>
+15:05:49.067520 gettimeofday({1444230349, 67711}, NULL) = 0 <0.000166>
+15:05:49.067964 gettimeofday({1444230349, 68205}, NULL) = 0 <0.000220>
+15:05:49.068606 gettimeofday({1444230349, 68739}, NULL) = 0 <0.000115>
+15:05:49.070052 gettimeofday({1444230349, 70190}, NULL) = 0 <0.000106>
+15:05:49.070573 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000162>
+15:05:49.071006 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000191>
+15:05:49.071870 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000424>
+15:05:49.072595 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000125>
+15:05:49.073012 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000122>
+15:05:49.073427 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000124>
+15:05:49.073829 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000157>
+15:05:49.074255 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.001278>
+15:05:49.076458 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 18 <0.000120>
+15:05:49.077008 fstat64(18, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.007473>
+15:05:49.084937 geteuid32()             = 10071 <0.000033>
+15:05:49.085154 fstat64(18, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000542>
+15:05:49.085978 pread(18, "\0", 1, 0)   = 1 <0.000082>
+15:05:49.086326 close(18)               = 0 <0.000113>
+15:05:49.087300 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000034>
+15:05:49.087529 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000034>
+15:05:49.089771 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000337>
+15:05:49.091468 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000129>
+15:05:49.091871 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000097>
+15:05:49.092557 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000093>
+15:05:49.092943 gettimeofday({1444230349, 93060}, NULL) = 0 <0.000090>
+15:05:49.093325 gettimeofday({1444230349, 93438}, NULL) = 0 <0.000092>
+15:05:49.094615 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000095>
+15:05:49.095044 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000119>
+15:05:49.095546 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000103>
+15:05:49.096113 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000103>
+15:05:49.096549 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000103>
+15:05:49.097021 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000105>
+15:05:49.097418 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000103>
+15:05:49.097905 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000120>
+15:05:49.098572 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 20 <0.000106>
+15:05:49.098969 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000102>
+15:05:49.099363 geteuid32()             = 10071 <0.000101>
+15:05:49.099877 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000102>
+15:05:49.100272 pread(20, "\0", 1, 0)   = 1 <0.000103>
+15:05:49.100776 close(20)               = 0 <0.000103>
+15:05:49.101159 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000102>
+15:05:49.101686 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000103>
+15:05:49.102080 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000101>
+15:05:49.102595 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000103>
+15:05:49.102994 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000102>
+15:05:49.103516 pread(17, "\r\0\0\0\1\17\367\0\17\367\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 8192) = 4096 <0.000107>
+15:05:49.104042 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000269>
+15:05:49.104581 gettimeofday({1444230349, 104737}, NULL) = 0 <0.000127>
+15:05:49.104980 fchmodat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", 0660) = 0 <0.000296>
+15:05:49.105680 gettimeofday({1444230349, 105811}, NULL) = 0 <0.000105>
+15:05:49.106277 gettimeofday({1444230349, 106457}, NULL) = 0 <0.000154>
+15:05:49.106693 gettimeofday({1444230349, 106871}, NULL) = 0 <0.000126>
+15:05:49.107248 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000160>
+15:05:49.107706 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000091>
+15:05:49.108098 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000094>
+15:05:49.108489 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000093>
+15:05:49.108874 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000580>
+15:05:49.109858 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000140>
+15:05:49.110310 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000089>
+15:05:49.110695 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000091>
+15:05:49.111085 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 20 <0.000088>
+15:05:49.111477 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000090>
+15:05:49.111856 geteuid32()             = 10071 <0.000088>
+15:05:49.112219 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000088>
+15:05:49.112565 pread(20, "\0", 1, 0)   = 1 <0.000242>
+15:05:49.113072 close(20)               = 0 <0.000114>
+15:05:49.113535 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000632>
+15:05:49.114461 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000092>
+15:05:49.114847 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000089>
+15:05:49.115227 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000089>
+15:05:49.115607 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000089>
+15:05:49.116075 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000100>
+15:05:49.116663 gettimeofday({1444230349, 116970}, NULL) = 0 <0.000365>
+15:05:49.123353 gettimeofday({1444230349, 123472}, NULL) = 0 <0.000037>
+15:05:49.124244 gettimeofday({1444230349, 126456}, NULL) = 0 <0.002265>
+15:05:49.126777 gettimeofday({1444230349, 126894}, NULL) = 0 <0.000039>
+15:05:49.127055 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000047>
+15:05:49.127430 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000040>
+15:05:49.127772 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000047>
+15:05:49.128044 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000072>
+15:05:49.128348 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000064>
+15:05:49.128659 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000044>
+15:05:49.128929 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000042>
+15:05:49.129206 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000054>
+15:05:49.129597 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 20 <0.000140>
+15:05:49.129959 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000042>
+15:05:49.130229 geteuid32()             = 10071 <0.000039>
+15:05:49.130475 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000040>
+15:05:49.130739 pread(20, "\0", 1, 0)   = 1 <0.000043>
+15:05:49.131003 close(20)               = 0 <0.000045>
+15:05:49.131257 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000041>
+15:05:49.131524 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000044>
+15:05:49.131843 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000041>
+15:05:49.132110 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000065>
+15:05:49.132405 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000043>
+15:05:49.132686 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000046>
+15:05:49.132982 pread(17, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 90112) = 4096 <0.000047>
+15:05:49.133300 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000045>
+15:05:49.133570 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000046>
+15:05:49.133846 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000045>
+15:05:49.134115 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000045>
+15:05:49.134387 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000045>
+15:05:49.134670 gettimeofday({1444230349, 134789}, NULL) = 0 <0.000041>
+15:05:49.134958 futex(0xb4c87250, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.001179>
+15:05:49.136493 gettimeofday({1444230349, 136631}, NULL) = 0 <0.000054>
+15:05:49.137016 gettimeofday({1444230349, 137146}, NULL) = 0 <0.000043>
+15:05:49.137336 gettimeofday({1444230349, 137459}, NULL) = 0 <0.000042>
+15:05:49.137627 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000047>
+15:05:49.137899 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000044>
+15:05:49.138159 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000051>
+15:05:49.138534 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000140>
+15:05:49.138894 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000063>
+15:05:49.139199 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000043>
+15:05:49.139465 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000041>
+15:05:49.139732 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000060>
+15:05:49.140032 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 20 <0.000066>
+15:05:49.140323 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000041>
+15:05:49.140583 geteuid32()             = 10071 <0.000038>
+15:05:49.140822 fstat64(20, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000039>
+15:05:49.141084 pread(20, "\0", 1, 0)   = 1 <0.000044>
+15:05:49.141344 close(20)               = 0 <0.000044>
+15:05:49.141596 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000041>
+15:05:49.141863 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000043>
+15:05:49.142155 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000041>
+15:05:49.142427 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000063>
+15:05:49.142720 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000040>
+15:05:49.143077 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000038>
+15:05:49.143409 pread(17, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 86016) = 4096 <0.000043>
+15:05:49.143784 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000038>
+15:05:49.144112 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000046>
+15:05:49.144386 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000044>
+15:05:49.144653 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000047>
+15:05:49.144924 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000045>
+15:05:49.145208 gettimeofday({1444230349, 145324}, NULL) = 0 <0.000042>
+15:05:49.145706 clock_gettime(CLOCK_MONOTONIC, {226, 869452415}) = 0 <0.000046>
+15:05:49.146041 clock_gettime(CLOCK_MONOTONIC, {226, 869786165}) = 0 <0.000044>
+15:05:49.146529 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases", {st_mode=S_IFDIR|0771, st_size=4096, ...}, 0) = 0 <0.000064>
+15:05:49.146952 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000068>
+15:05:49.147276 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", O_RDWR|O_CREAT|O_LARGEFILE|O_CLOEXEC, 0600) = 20 <0.000067>
+15:05:49.147570 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000042>
+15:05:49.147843 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000040>
+15:05:49.148108 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000062>
+15:05:49.148528 pread(20, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\4\0\0\0\6\0\0\0\0\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\0\0\0\0\6\0\0\0\1\0\0\0e\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0-\346\n", 100, 0) = 100 <0.000040>
+15:05:49.149018 gettimeofday({1444230349, 149132}, NULL) = 0 <0.000045>
+15:05:49.149363 gettimeofday({1444230349, 149476}, NULL) = 0 <0.000041>
+15:05:49.149628 gettimeofday({1444230349, 149741}, NULL) = 0 <0.000039>
+15:05:49.149940 gettimeofday({1444230349, 150055}, NULL) = 0 <0.000040>
+15:05:49.150304 gettimeofday({1444230349, 150426}, NULL) = 0 <0.000040>
+15:05:49.150738 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000040>
+15:05:49.151076 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000041>
+15:05:49.151431 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000039>
+15:05:49.151785 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", F_OK) = 0 <0.000070>
+15:05:49.152081 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000063>
+15:05:49.152384 fcntl64(20, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000042>
+15:05:49.152652 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000041>
+15:05:49.152920 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000141>
+15:05:49.153294 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 21 <0.000070>
+15:05:49.156589 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000049>
+15:05:49.156935 geteuid32()             = 10071 <0.000043>
+15:05:49.157226 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000049>
+15:05:49.157549 pread(21, "\0", 1, 0)   = 1 <0.000048>
+15:05:49.157863 close(21)               = 0 <0.000049>
+15:05:49.158162 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000047>
+15:05:49.158483 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000072>
+15:05:49.158829 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000047>
+15:05:49.159165 pread(20, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\4\0\0\0\6\0\0\0\0\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\0\0\0\0\6\0\0\0\1\0\0\0e\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0-\346\n\r\0\0\0\4\16\27\0\17\247\16\273\16i\16\27\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 0) = 4096 <0.000051>
+15:05:49.159828 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000054>
+15:05:49.160305 gettimeofday({1444230349, 160477}, NULL) = 0 <0.000136>
+15:05:49.160755 gettimeofday({1444230349, 160888}, NULL) = 0 <0.000041>
+15:05:49.161121 gettimeofday({1444230349, 161249}, NULL) = 0 <0.000040>
+15:05:49.161505 gettimeofday({1444230349, 161638}, NULL) = 0 <0.000040>
+15:05:49.161864 gettimeofday({1444230349, 161996}, NULL) = 0 <0.000042>
+15:05:49.162204 gettimeofday({1444230349, 162336}, NULL) = 0 <0.000041>
+15:05:49.162554 gettimeofday({1444230349, 162684}, NULL) = 0 <0.000041>
+15:05:49.162859 gettimeofday({1444230349, 162985}, NULL) = 0 <0.000040>
+15:05:49.163206 gettimeofday({1444230349, 163334}, NULL) = 0 <0.000041>
+15:05:49.163528 gettimeofday({1444230349, 163655}, NULL) = 0 <0.000040>
+15:05:49.163870 gettimeofday({1444230349, 163998}, NULL) = 0 <0.000040>
+15:05:49.164168 gettimeofday({1444230349, 164294}, NULL) = 0 <0.000041>
+15:05:49.164510 gettimeofday({1444230349, 164645}, NULL) = 0 <0.000160>
+15:05:49.165146 gettimeofday({1444230349, 165284}, NULL) = 0 <0.000042>
+15:05:49.165511 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000049>
+15:05:49.165814 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000046>
+15:05:49.166111 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000047>
+15:05:49.166552 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", F_OK) = 0 <0.000069>
+15:05:49.166923 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000053>
+15:05:49.167229 fcntl64(20, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000043>
+15:05:49.167511 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000042>
+15:05:49.167796 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000062>
+15:05:49.168097 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 21 <0.000067>
+15:05:49.168403 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000040>
+15:05:49.168680 geteuid32()             = 10071 <0.000039>
+15:05:49.168941 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000041>
+15:05:49.169217 pread(21, "\0", 1, 0)   = 1 <0.000044>
+15:05:49.169498 close(21)               = 0 <0.000043>
+15:05:49.169766 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000041>
+15:05:49.170045 pread(20, "\0\0\0\4\0\0\0\6\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000044>
+15:05:49.170325 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000042>
+15:05:49.170607 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000062>
+15:05:49.170914 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000044>
+15:05:49.171217 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000046>
+15:05:49.171532 gettimeofday({1444230349, 171658}, NULL) = 0 <0.000041>
+15:05:49.171928 gettimeofday({1444230349, 172044}, NULL) = 0 <0.000121>
+15:05:49.172449 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000047>
+15:05:49.172860 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000119>
+15:05:49.173220 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000047>
+15:05:49.173613 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", F_OK) = 0 <0.000116>
+15:05:49.174065 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000116>
+15:05:49.174533 fcntl64(20, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000116>
+15:05:49.174982 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000119>
+15:05:49.175345 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000137>
+15:05:49.175818 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 21 <0.000132>
+15:05:49.176267 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000079>
+15:05:49.176699 geteuid32()             = 10071 <0.000118>
+15:05:49.177135 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000118>
+15:05:49.177625 pread(21, "\0", 1, 0)   = 1 <0.000116>
+15:05:49.178074 close(21)               = 0 <0.000121>
+15:05:49.178636 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000108>
+15:05:49.179087 pread(20, "\0\0\0\4\0\0\0\6\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000108>
+15:05:49.179528 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000108>
+15:05:49.179976 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000140>
+15:05:49.180478 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000110>
+15:05:49.180936 pread(20, "\r\0\0\0\1\17\367\0\17\367\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 8192) = 4096 <0.000109>
+15:05:49.181428 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000108>
+15:05:49.181880 gettimeofday({1444230349, 182046}, NULL) = 0 <0.000702>
+15:05:49.183042 fchmodat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", 0660) = 0 <0.000156>
+15:05:49.183539 gettimeofday({1444230349, 183672}, NULL) = 0 <0.000104>
+15:05:49.184119 gettimeofday({1444230349, 184254}, NULL) = 0 <0.000104>
+15:05:49.184562 gettimeofday({1444230349, 184690}, NULL) = 0 <0.000102>
+15:05:49.185002 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000106>
+15:05:49.185446 fcntl64(20, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000106>
+15:05:49.185885 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000103>
+15:05:49.186320 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", F_OK) = 0 <0.000120>
+15:05:49.186819 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000145>
+15:05:49.187287 fcntl64(20, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000136>
+15:05:49.187736 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.001383>
+15:05:49.189716 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000269>
+15:05:49.190330 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 21 <0.000206>
+15:05:49.190871 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000044>
+15:05:49.191289 geteuid32()             = 10071 <0.000350>
+15:05:49.192202 fstat64(21, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000105>
+15:05:49.192681 pread(21, "\0", 1, 0)   = 1 <0.000120>
+15:05:49.193191 close(21)               = 0 <0.000100>
+15:05:49.193625 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000103>
+15:05:49.194083 pread(20, "\0\0\0\4\0\0\0\6\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000366>
+15:05:49.194930 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000103>
+15:05:49.195377 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000533>
+15:05:49.197498 fstat64(20, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000378>
+15:05:49.198346 fcntl64(20, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.002313>
+15:05:49.202716 gettimeofday({1444230349, 206124}, NULL) = 0 <0.004275>
+15:05:49.207403 gettimeofday({1444230349, 207504}, NULL) = 0 <0.000116>
+15:05:49.207891 gettimeofday({1444230349, 207987}, NULL) = 0 <0.000083>
+15:05:49.208238 gettimeofday({1444230349, 208335}, NULL) = 0 <0.000083>
+15:05:49.208589 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000083>
+15:05:49.208954 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", O_RDWR|O_CREAT|O_LARGEFILE|O_CLOEXEC, 0600) = 21 <0.000084>
+15:05:49.209325 fstat64(21, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000083>
+15:05:49.209674 fstat64(21, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000082>
+15:05:49.210020 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000081>
+15:05:49.210373 pread(21, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\4\0\0\0\6\0\0\0\0\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\0\0\0\0\6\0\0\0\1\0\0\0e\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0-\346\n", 100, 0) = 100 <0.000081>
+15:05:49.210724 fcntl64(21, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000083>
+15:05:49.211073 fcntl64(21, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000083>
+15:05:49.211431 fcntl64(21, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000081>
+15:05:49.211777 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", F_OK) = 0 <0.000083>
+15:05:49.212120 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000083>
+15:05:49.212496 fcntl64(21, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000093>
+15:05:49.212862 fstat64(21, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000083>
+15:05:49.213210 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db", {st_mode=S_IFREG|0660, st_size=24576, ...}, 0) = 0 <0.000174>
+15:05:49.213687 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 22 <0.000116>
+15:05:49.214075 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000082>
+15:05:49.214420 geteuid32()             = 10071 <0.000083>
+15:05:49.214758 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000081>
+15:05:49.215102 pread(22, "\0", 1, 0)   = 1 <0.000081>
+15:05:49.215444 close(22)               = 0 <0.000080>
+15:05:49.216104 fstat64(21, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000081>
+15:05:49.216489 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBody.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.009963>
+15:05:49.226754 fstat64(21, {st_mode=S_IFREG|0660, st_size=24576, ...}) = 0 <0.000085>
+15:05:49.227138 pread(21, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\4\0\0\0\6\0\0\0\0\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0\0\0\0\0\6\0\0\0\1\0\0\0e\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0-\346\n\r\0\0\0\4\16\27\0\17\247\16\273\16i\16\27\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 0) = 4096 <0.000086>
+15:05:49.228228 fcntl64(21, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000123>
+15:05:49.228643 gettimeofday({1444230349, 228744}, NULL) = 0 <0.000094>
+15:05:49.229242 clock_gettime(CLOCK_MONOTONIC, {226, 952975332}) = 0 <0.000096>
+15:05:49.229735 clock_gettime(CLOCK_MONOTONIC, {226, 953466895}) = 0 <0.000100>
+15:05:49.230773 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 23 <0.000126>
+15:05:49.231312 ioctl(23, 0x41007701, 0xb38feadc) = 0 <0.000131>
+15:05:49.231834 ioctl(23, 0x40047703, 0x2000) = 0 <0.000130>
+15:05:49.232360 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE, 23, 0) = 0xb3943000 <0.001175>
+15:05:49.233959 close(23)               = 0 <0.000130>
+15:05:49.234484 mmap2(NULL, 1069056, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xa93bb000 <0.000352>
+15:05:49.235177 mprotect(0xa93bb000, 4096, PROT_NONE) = 0 <0.000180>
+15:05:49.237488 clone(child_stack=0xa94bf928, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0xa94bf938, tls=0xa94bf978, child_tidptr=0xa94bf938) = 4609 <0.001533>
+15:05:49.239477 futex(0xa94bf970, FUTEX_WAKE_PRIVATE, 1) = 1 <0.000641>
+15:05:49.241387 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProviderBackup.db", F_OK) = -1 ENOENT (No such file or directory) <0.002052>
+15:05:49.245129 gettimeofday({1444230349, 245570}, NULL) = 0 <0.000549>
+15:05:49.256870 gettimeofday({1444230349, 257039}, NULL) = 0 <0.000200>
+15:05:49.257506 gettimeofday({1444230349, 257661}, NULL) = 0 <0.000206>
+15:05:49.258137 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000199>
+15:05:49.258761 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000984>
+15:05:49.260179 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000193>
+15:05:49.260798 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000197>
+15:05:49.261420 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000195>
+15:05:49.262065 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000203>
+15:05:49.262696 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000197>
+15:05:49.263319 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000358>
+15:05:49.264139 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 22 <0.000197>
+15:05:49.264768 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000219>
+15:05:49.265400 geteuid32()             = 10071 <0.000214>
+15:05:49.265998 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000215>
+15:05:49.266765 pread(22, "\0", 1, 0)   = 1 <0.000215>
+15:05:49.267390 close(22)               = 0 <0.000192>
+15:05:49.267991 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000203>
+15:05:49.268619 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000196>
+15:05:49.269239 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000193>
+15:05:49.269859 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000194>
+15:05:49.270520 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000194>
+15:05:49.271132 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000198>
+15:05:49.271751 gettimeofday({1444230349, 271907}, NULL) = 0 <0.000195>
+15:05:49.272754 clock_gettime(CLOCK_MONOTONIC, {226, 996540749}) = 0 <0.000160>
+15:05:49.273371 clock_gettime(CLOCK_MONOTONIC, {226, 997155957}) = 0 <0.000158>
+15:05:49.274004 clock_gettime(CLOCK_MONOTONIC, {226, 997790905}) = 0 <0.000142>
+15:05:49.274607 clock_gettime(CLOCK_MONOTONIC, {226, 998389707}) = 0 <0.000159>
+15:05:49.275223 clock_gettime(CLOCK_MONOTONIC, {226, 999009342}) = 0 <0.000159>
+15:05:49.275840 clock_gettime(CLOCK_MONOTONIC, {226, 999631738}) = 0 <0.000158>
+15:05:49.277103 clock_gettime(CLOCK_MONOTONIC, {227, 969968}) = 0 <0.000285>
+15:05:49.277887 clock_gettime(CLOCK_MONOTONIC, {227, 1671582}) = 0 <0.000228>
+15:05:49.278545 clock_gettime(CLOCK_MONOTONIC, {227, 2323822}) = 0 <0.000202>
+15:05:49.279237 clock_gettime(CLOCK_MONOTONIC, {227, 3025228}) = 0 <0.000206>
+15:05:49.280089 clock_gettime(CLOCK_MONOTONIC, {227, 3870280}) = 0 <0.000209>
+15:05:49.280697 clock_gettime(CLOCK_MONOTONIC, {227, 4520853}) = 0 <0.000232>
+15:05:49.281372 clock_gettime(CLOCK_MONOTONIC, {227, 5161009}) = 0 <0.000214>
+15:05:49.281995 clock_gettime(CLOCK_MONOTONIC, {227, 5775801}) = 0 <0.000217>
+15:05:49.282628 getuid32()              = 10071 <0.000138>
+15:05:49.283361 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38fee28) = 0 <0.000441>
+15:05:49.284334 getuid32()              = 10071 <0.001584>
+15:05:49.286663 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38fee28) = 0 <0.002145>
+15:05:49.289282 getuid32()              = 10071 <0.000142>
+15:05:49.289860 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38fee28) = 0 <0.000166>
+15:05:49.290504 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb38fee28) = 0 <0.000151>
+15:05:49.291284 gettimeofday({1444230349, 291620}, NULL) = 0 <0.000309>
+15:05:49.292123 gettimeofday({1444230349, 292296}, NULL) = 0 <0.000145>
+15:05:49.292777 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 22 <0.000146>
+15:05:49.293434 ioctl(22, 0x41007701, 0xb38fede4) = 0 <0.000143>
+15:05:49.294064 ioctl(22, 0x40047703, 0x200000) = 0 <0.000144>
+15:05:49.294688 ioctl(22, 0x40047705, 0x3) = 0 <0.000144>
+15:05:49.295314 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 22, 0) = 0x9fb6f000 <0.000145>
+15:05:49.295985 ioctl(22, 0x40047705, 0x1) = 0 <0.000153>
+15:05:49.300791 gettimeofday({1444230349, 300960}, NULL) = 0 <0.000152>
+15:05:49.301476 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000202>
+15:05:49.302262 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.004280>
+15:05:49.307020 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000142>
+15:05:49.307620 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000152>
+15:05:49.308221 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000144>
+15:05:49.308833 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000163>
+15:05:49.309441 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000143>
+15:05:49.310046 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000170>
+15:05:49.310699 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 23 <0.000173>
+15:05:49.311163 fstat64(23, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000202>
+15:05:49.311793 geteuid32()             = 10071 <0.000192>
+15:05:49.312370 fstat64(23, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000190>
+15:05:49.312976 pread(23, "\0", 1, 0)   = 1 <0.000193>
+15:05:49.313579 close(23)               = 0 <0.000191>
+15:05:49.314163 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000191>
+15:05:49.314765 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000071>
+15:05:49.315341 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000143>
+15:05:49.315937 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000144>
+15:05:49.316702 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000049>
+15:05:49.316978 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x9fb2f000 <0.000048>
+15:05:49.317219 prctl(0x53564d41 /* PR_??? */, 0, 0x9fb2f000, 0x40000, 0xb6cbebe1) = 0 <0.000044>
+15:05:49.317447 munmap(0x9fb2f000, 262144) = 0 <0.000051>
+15:05:49.317674 mmap2(NULL, 520192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x9faf0000 <0.000040>
+15:05:49.317892 prctl(0x53564d41 /* PR_??? */, 0, 0x9faf0000, 0x7f000, 0xb6cbebe1) = 0 <0.000102>
+15:05:49.318272 munmap(0x9faf0000, 65536) = 0 <0.000088>
+15:05:49.318631 munmap(0x9fb40000, 192512) = 0 <0.000088>
+15:05:49.318978 pread(17, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 20480) = 4096 <0.000095>
+15:05:49.319375 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000231>
+15:05:49.319880 gettimeofday({1444230349, 319970}, NULL) = 0 <0.000116>
+15:05:49.320260 munmap(0x9fb6f000, 2097152) = 0 <0.000090>
+15:05:49.320616 close(22)               = 0 <0.000089>
+15:05:49.321041 gettimeofday({1444230349, 321135}, NULL) = 0 <0.000128>
+15:05:49.321724 gettimeofday({1444230349, 321816}, NULL) = 0 <0.000089>
+15:05:49.322077 gettimeofday({1444230349, 322166}, NULL) = 0 <0.000094>
+15:05:49.322430 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000154>
+15:05:49.322848 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000112>
+15:05:49.323221 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000087>
+15:05:49.323583 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000088>
+15:05:49.323937 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000088>
+15:05:49.324307 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000089>
+15:05:49.324665 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000045>
+15:05:49.324903 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000056>
+15:05:49.325170 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 22 <0.000094>
+15:05:49.325558 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000078>
+15:05:49.325905 geteuid32()             = 10071 <0.000078>
+15:05:49.326226 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000107>
+15:05:49.326606 pread(22, "\0", 1, 0)   = 1 <0.000079>
+15:05:49.326927 close(22)               = 0 <0.000107>
+15:05:49.327261 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000108>
+15:05:49.327591 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000117>
+15:05:49.327925 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000108>
+15:05:49.328254 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000110>
+15:05:49.328621 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000083>
+15:05:49.328960 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000083>
+15:05:49.329303 pread(17, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 73728) = 4096 <0.000095>
+15:05:49.329685 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000048>
+15:05:49.329928 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000043>
+15:05:49.330207 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000111>
+15:05:49.330545 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000111>
+15:05:49.330879 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000111>
+15:05:49.331226 gettimeofday({1444230349, 331316}, NULL) = 0 <0.000114>
+15:05:49.331565 gettimeofday({1444230349, 331660}, NULL) = 0 <0.000127>
+15:05:49.332228 gettimeofday({1444230349, 332370}, NULL) = 0 <0.000133>
+15:05:49.332676 gettimeofday({1444230349, 332805}, NULL) = 0 <0.000128>
+15:05:49.333103 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000126>
+15:05:49.333492 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000120>
+15:05:49.333886 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000035>
+15:05:49.334223 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000094>
+15:05:49.334610 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000096>
+15:05:49.335008 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000094>
+15:05:49.335398 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000034>
+15:05:49.335761 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000127>
+15:05:49.336165 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 22 <0.000166>
+15:05:49.336616 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000122>
+15:05:49.337004 geteuid32()             = 10071 <0.000123>
+15:05:49.337876 fstat64(22, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000215>
+15:05:49.338301 pread(22, "\0", 1, 0)   = 1 <0.000106>
+15:05:49.338703 close(22)               = 0 <0.000092>
+15:05:49.339082 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000090>
+15:05:49.339465 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000090>
+15:05:49.339853 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000091>
+15:05:49.340238 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000091>
+15:05:49.340624 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000090>
+15:05:49.341244 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000090>
+15:05:49.341628 pread(17, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 12288) = 4096 <0.000090>
+15:05:49.342043 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000089>
+15:05:49.342419 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000088>
+15:05:49.342794 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000090>
+15:05:49.343267 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000089>
+15:05:49.343643 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000090>
+15:05:49.344033 gettimeofday({1444230349, 344132}, NULL) = 0 <0.000090>
+15:05:49.344412 gettimeofday({1444230349, 344517}, NULL) = 0 <0.000091>
+15:05:49.344993 gettimeofday({1444230349, 345093}, NULL) = 0 <0.000120>
+15:05:49.345369 gettimeofday({1444230349, 345470}, NULL) = 0 <0.000120>
+15:05:49.345747 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000118>
+15:05:49.346125 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000118>
+15:05:49.346547 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000113>
+15:05:49.346890 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000110>
+15:05:49.347224 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000108>
+15:05:49.347579 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000108>
+15:05:49.347930 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000118>
+15:05:49.348237 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000101>
+15:05:49.348663 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 24 <0.000095>
+15:05:49.349056 fstat64(24, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000095>
+15:05:49.349469 geteuid32()             = 10071 <0.000116>
+15:05:49.349882 fstat64(24, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000112>
+15:05:49.350319 pread(24, "\0", 1, 0)   = 1 <0.000116>
+15:05:49.350756 close(24)               = 0 <0.000107>
+15:05:49.351168 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000101>
+15:05:49.351573 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000097>
+15:05:49.351982 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000100>
+15:05:49.352396 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000103>
+15:05:49.352821 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000103>
+15:05:49.353245 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000102>
+15:05:49.353672 pread(17, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 118784) = 4096 <0.000101>
+15:05:49.354127 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000101>
+15:05:49.354543 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000101>
+15:05:49.354958 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000102>
+15:05:49.355377 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000100>
+15:05:49.355795 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000100>
+15:05:49.356213 gettimeofday({1444230349, 356340}, NULL) = 0 <0.000147>
+15:05:49.356686 gettimeofday({1444230349, 356788}, NULL) = 0 <0.000088>
+15:05:49.357222 gettimeofday({1444230349, 357323}, NULL) = 0 <0.000119>
+15:05:49.357593 gettimeofday({1444230349, 357765}, NULL) = 0 <0.000229>
+15:05:49.358145 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000116>
+15:05:49.358507 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000504>
+15:05:49.359296 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000206>
+15:05:49.367423 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000313>
+15:05:49.368078 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.001775>
+15:05:49.370831 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000231>
+15:05:49.371334 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000180>
+15:05:49.371783 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000212>
+15:05:49.372387 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 24 <0.000128>
+15:05:49.372791 fstat64(24, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000143>
+15:05:49.373276 geteuid32()             = 10071 <0.000206>
+15:05:49.373748 fstat64(24, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000259>
+15:05:49.374289 pread(24, "\0", 1, 0)   = 1 <0.000128>
+15:05:49.374699 close(24)               = 0 <0.000126>
+15:05:49.375082 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000138>
+15:05:49.375491 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000136>
+15:05:49.376304 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.001910>
+15:05:49.378595 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000096>
+15:05:49.379058 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000134>
+15:05:49.379471 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000100>
+15:05:49.380000 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000103>
+15:05:49.380395 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000098>
+15:05:49.380762 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000242>
+15:05:49.381282 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000120>
+15:05:49.381674 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000123>
+15:05:49.382070 gettimeofday({1444230349, 382214}, NULL) = 0 <0.000122>
+15:05:49.382688 gettimeofday({1444230349, 382821}, NULL) = 0 <0.000103>
+15:05:49.383599 gettimeofday({1444230349, 383726}, NULL) = 0 <0.000102>
+15:05:49.383981 gettimeofday({1444230349, 384160}, NULL) = 0 <0.000126>
+15:05:49.384413 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000122>
+15:05:49.384812 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000258>
+15:05:49.385349 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000120>
+15:05:49.385744 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000121>
+15:05:49.386136 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000122>
+15:05:49.386608 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000137>
+15:05:49.387013 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000121>
+15:05:49.387404 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000125>
+15:05:49.387806 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 25 <0.000127>
+15:05:49.388199 fstat64(25, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000119>
+15:05:49.388585 geteuid32()             = 10071 <0.000126>
+15:05:49.388962 fstat64(25, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000124>
+15:05:49.389372 pread(25, "\0", 1, 0)   = 1 <0.000124>
+15:05:49.390289 close(25)               = 0 <0.000312>
+15:05:49.390899 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000859>
+15:05:49.392069 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000094>
+15:05:49.392467 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000092>
+15:05:49.392865 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000093>
+15:05:49.393238 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000123>
+15:05:49.393641 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000128>
+15:05:49.394043 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000126>
+15:05:49.394432 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000121>
+15:05:49.394814 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000133>
+15:05:49.395211 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000127>
+15:05:49.395616 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000130>
+15:05:49.396028 gettimeofday({1444230349, 396185}, NULL) = 0 <0.000132>
+15:05:49.396840 gettimeofday({1444230349, 396939}, NULL) = 0 <0.000125>
+15:05:49.397423 gettimeofday({1444230349, 397517}, NULL) = 0 <0.000419>
+15:05:49.398102 gettimeofday({1444230349, 398194}, NULL) = 0 <0.000260>
+15:05:49.399634 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000294>
+15:05:49.400199 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000528>
+15:05:49.400992 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000159>
+15:05:49.402429 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000764>
+15:05:49.403467 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000845>
+15:05:49.405152 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.002286>
+15:05:49.409331 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.001009>
+15:05:49.411195 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000114>
+15:05:49.411556 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 26 <0.000114>
+15:05:49.412106 fstat64(26, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000082>
+15:05:49.412564 geteuid32()             = 10071 <0.000266>
+15:05:49.413042 fstat64(26, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000109>
+15:05:49.413378 pread(26, "\0", 1, 0)   = 1 <0.000122>
+15:05:49.413730 close(26)               = 0 <0.000125>
+15:05:49.414078 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000126>
+15:05:49.414450 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000122>
+15:05:49.414811 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000120>
+15:05:49.415161 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000121>
+15:05:49.415519 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000111>
+15:05:49.415872 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741825, len=1}) = 0 <0.000125>
+15:05:49.416229 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000160>
+15:05:49.416634 fcntl64(17, F_SETLK, {type=F_WRLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000110>
+15:05:49.416976 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000116>
+15:05:49.417435 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=2}) = 0 <0.000114>
+15:05:49.417780 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000126>
+15:05:49.418137 gettimeofday({1444230349, 418227}, NULL) = 0 <0.000111>
+15:05:49.418594 gettimeofday({1444230349, 418686}, NULL) = 0 <0.000085>
+15:05:49.418971 gettimeofday({1444230349, 419096}, NULL) = 0 <0.000098>
+15:05:49.419481 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 27 <0.000050>
+15:05:49.419834 ioctl(27, 0x41007701, 0xb38fed94) = 0 <0.000103>
+15:05:49.420227 ioctl(27, 0x40047703, 0x200000) = 0 <0.000110>
+15:05:49.420621 ioctl(27, 0x40047705, 0x3) = 0 <0.000098>
+15:05:49.420998 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 27, 0) = 0x9f7fb000 <0.000138>
+15:05:49.421446 ioctl(27, 0x40047705, 0x1) = 0 <0.000097>
+15:05:49.421936 gettimeofday({1444230349, 422043}, NULL) = 0 <0.000124>
+15:05:49.422711 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000122>
+15:05:49.423464 fcntl64(17, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000125>
+15:05:49.429544 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000201>
+15:05:49.430888 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", F_OK) = 0 <0.000093>
+15:05:49.431279 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", {st_mode=S_IFREG|0600, st_size=8720, ...}, 0) = 0 <0.000182>
+15:05:49.431782 fcntl64(17, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000104>
+15:05:49.432179 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000106>
+15:05:49.432588 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db", {st_mode=S_IFREG|0660, st_size=151552, ...}, 0) = 0 <0.000111>
+15:05:49.432921 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 26 <0.000053>
+15:05:49.433286 fstat64(26, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000099>
+15:05:49.433689 geteuid32()             = 10071 <0.001171>
+15:05:49.435125 fstat64(26, {st_mode=S_IFREG|0600, st_size=8720, ...}) = 0 <0.000120>
+15:05:49.435522 pread(26, "\0", 1, 0)   = 1 <0.000101>
+15:05:49.436040 close(26)               = 0 <0.000103>
+15:05:49.436460 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000110>
+15:05:49.436858 pread(17, "\0\0\0\5\0\0\0%\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000125>
+15:05:49.437291 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000035>
+15:05:49.439242 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/EmailProvider.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000059>
+15:05:49.440934 fstat64(17, {st_mode=S_IFREG|0660, st_size=151552, ...}) = 0 <0.000146>
+15:05:49.441563 fcntl64(17, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000137>
+15:05:49.442072 gettimeofday({1444230349, 443263}, NULL) = 0 <0.000333>
+15:05:49.443881 munmap(0x9f7fb000, 2097152) = 0 <0.000121>
+15:05:49.444250 close(27)               = 0 <0.000119>
+15:05:49.445009 clock_gettime(CLOCK_MONOTONIC, {227, 168791894}) = 0 <0.000121>
+15:05:49.445440 clock_gettime(CLOCK_MONOTONIC, {227, 169187623}) = 0 <0.000091>
+15:05:49.445819 clock_gettime(CLOCK_MONOTONIC, {227, 169566530}) = 0 <0.000092>
+15:05:49.446203 futex(0xaedc4578, FUTEX_WAKE, 1) = 1 <0.000340>
+15:05:49.446823 futex(0xaedc4550, FUTEX_WAKE, 1) = 0 <0.000089>
+15:05:49.447362 gettimeofday({1444230349, 447458}, NULL) = 0 <0.000112>
+15:05:49.447928 gettimeofday({1444230349, 448023}, NULL) = 0 <0.000084>
+15:05:49.448278 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 26 <0.000083>
+15:05:49.448710 ioctl(26, 0x41007701, 0xb38feef4) = 0 <0.000099>
+15:05:49.449168 ioctl(26, 0x40047703, 0x200000) = 0 <0.000098>
+15:05:49.449518 ioctl(26, 0x40047705, 0x3) = 0 <0.000082>
+15:05:49.449850 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 26, 0) = 0x9f7fb000 <0.000083>
+15:05:49.450187 ioctl(26, 0x40047705, 0x1) = 0 <0.000082>
+15:05:49.450519 sched_yield()           = 0 <0.000083>
+15:05:49.450857 sched_yield()           = 0 <0.000088>
+15:05:49.451206 sched_yield()           = 0 <0.000087>
+15:05:49.451554 sched_yield()           = 0 <0.000089>
+15:05:49.451905 sched_yield( <unfinished ...>
+15:05:49.476731 +++ killed by SIGKILL +++

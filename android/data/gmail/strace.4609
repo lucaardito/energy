@@ -1,0 +1,24 @@
+15:05:49.238640 futex(0xa94bf970, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000845>
+15:05:49.239991 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb37ee000 <0.000217>
+15:05:49.241555 mprotect(0xb37ee000, 4096, PROT_NONE) = 0 <0.000118>
+15:05:49.242052 sigaltstack({ss_sp=0xb37ef000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000122>
+15:05:49.242581 prctl(0x53564d41 /* PR_??? */, 0, 0xb37ef000, 0x2000, 0xb6cbded3) = 0 <0.000121>
+15:05:49.243088 mprotect(0xa93bc000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000120>
+15:05:49.246704 mprotect(0xa93bc000, 4096, PROT_NONE) = 0 <0.000239>
+15:05:49.247543 madvise(0xa93bc000, 1056768, MADV_DONTNEED) = 0 <0.000165>
+15:05:49.248145 prctl(PR_SET_NAME, 0xa94bf844, 0x312d64, 0xa94bf978, 0xaedd6840) = 0 <0.000154>
+15:05:49.248745 getpriority(PRIO_PROCESS, 4609) = 10 <0.000160>
+15:05:49.249341 write(9, "4609", 4)     = 4 <0.000170>
+15:05:49.249982 prctl(0x29 /* PR_??? */, 0xc350, 0x1201, 0x2, 0xb6cd630c) = 0 <0.000139>
+15:05:49.250590 setpriority(PRIO_PROCESS, 4609, 0) = 0 <0.000198>
+15:05:49.251189 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/UnifiedEmail.xml", F_OK) = 0 <0.000158>
+15:05:49.251824 futex(0xaedd0dc0, FUTEX_WAKE, 1) = 0 <0.000161>
+15:05:49.252425 futex(0xb362ad98, FUTEX_WAIT, 0, NULL) = 0 <0.050931>
+15:05:49.303761 futex(0xaedd0dc0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000196>
+15:05:49.304353 futex(0xaedc4f60, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000199>
+15:05:49.304945 futex(0xaedc4f60, FUTEX_WAKE, 1) = 0 <0.000201>
+15:05:49.305531 futex(0xaedc4f88, FUTEX_WAIT, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000197>
+15:05:49.306121 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", F_OK) = 0 <0.000304>
+15:05:49.306847 futex(0xaedd0dc0, FUTEX_WAKE, 1) = 0 <0.000213>
+15:05:49.307446 futex(0xb362ad98, FUTEX_WAIT, 1, NULL <unfinished ...>
+15:05:49.454219 +++ killed by SIGKILL +++

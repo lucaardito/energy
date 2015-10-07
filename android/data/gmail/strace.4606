@@ -1,0 +1,65 @@
+15:05:49.182801 futex(0xaecba970, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000635>
+15:05:49.183856 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb3942000 <0.000275>
+15:05:49.184437 mprotect(0xb3942000, 4096, PROT_NONE) = 0 <0.000131>
+15:05:49.184870 sigaltstack({ss_sp=0xb3943000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000148>
+15:05:49.185320 prctl(0x53564d41 /* PR_??? */, 0, 0xb3943000, 0x2000, 0xb6cbded3) = 0 <0.000144>
+15:05:49.185762 mprotect(0xaebb7000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000144>
+15:05:49.186954 mprotect(0xaebb7000, 4096, PROT_NONE) = 0 <0.000120>
+15:05:49.187409 madvise(0xaebb7000, 1056768, MADV_DONTNEED) = 0 <0.000120>
+15:05:49.188958 prctl(PR_SET_NAME, 0xaecba844, 0x636e65, 0xaecba978, 0xa8821920) = 0 <0.000212>
+15:05:49.189560 getpriority(PRIO_PROCESS, 4606) = 20 <0.000180>
+15:05:49.190002 setpriority(PRIO_PROCESS, 4606, 0) = 0 <0.000124>
+15:05:49.190502 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/_has_set_default_values.xml.bak", F_OK) = -1 ENOENT (No such file or directory) <0.000127>
+15:05:49.191147 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/_has_set_default_values.xml", F_OK) = 0 <0.000181>
+15:05:49.192010 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/_has_set_default_values.xml", R_OK) = 0 <0.000166>
+15:05:49.192551 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/_has_set_default_values.xml", {st_mode=S_IFREG|0660, st_size=130, ...}, 0) = 0 <0.000183>
+15:05:49.193058 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/_has_set_default_values.xml", R_OK) = 0 <0.000136>
+15:05:49.193493 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/_has_set_default_values.xml", O_RDONLY|O_LARGEFILE) = 21 <0.000132>
+15:05:49.193948 fstat64(21, {st_mode=S_IFREG|0660, st_size=130, ...}) = 0 <0.000150>
+15:05:49.194389 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 22 <0.000137>
+15:05:49.194801 ioctl(22, 0x41007701, 0xaecba234) = 0 <0.000137>
+15:05:49.195250 ioctl(22, 0x40047703, 0x5000) = 0 <0.000172>
+15:05:49.195615 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 22, 0) = 0xb37f6000 <0.000172>
+15:05:49.196136 close(22)               = 0 <0.000036>
+15:05:49.196441 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 22 <0.000048>
+15:05:49.196706 ioctl(22, 0x41007701, 0xaecba1c4) = 0 <0.000034>
+15:05:49.196920 ioctl(22, 0x40047703, 0x5000) = 0 <0.000031>
+15:05:49.197132 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 22, 0) = 0xb37f1000 <0.000051>
+15:05:49.197373 close(22)               = 0 <0.000161>
+15:05:49.197827 ioctl(21, FIONREAD, [130]) = 0 <0.000147>
+15:05:49.198196 read(21, "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <boolean name=\"_has_set_default_values\" value=\"true\" />\n</map>\n", 16384) = 130 <0.000200>
+15:05:49.198601 ioctl(21, FIONREAD, [0]) = 0 <0.000031>
+15:05:49.198836 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xaeedb000 <0.000051>
+15:05:49.199067 prctl(0x53564d41 /* PR_??? */, 0, 0xaeedb000, 0x40000, 0xb6cbebe1) = 0 <0.000034>
+15:05:49.199274 munmap(0xaeedb000, 262144) = 0 <0.000040>
+15:05:49.199485 mmap2(NULL, 520192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xaee9c000 <0.000033>
+15:05:49.199691 prctl(0x53564d41 /* PR_??? */, 0, 0xaee9c000, 0x7f000, 0xb6cbebe1) = 0 <0.000032>
+15:05:49.199893 munmap(0xaee9c000, 147456) = 0 <0.000037>
+15:05:49.200098 munmap(0xaef00000, 110592) = 0 <0.000035>
+15:05:49.200350 ioctl(21, FIONREAD, [0]) = 0 <0.000030>
+15:05:49.200630 getsockopt(21, SOL_SOCKET, SO_DEBUG, 0xaecba470, 0xaecba474) = -1 ENOTSOCK (Socket operation on non-socket) <0.000127>
+15:05:49.200946 close(21)               = 0 <0.000032>
+15:05:49.201156 futex(0xb4c8c2e8, FUTEX_WAKE, 1) = 1 <0.000278>
+15:05:49.201611 futex(0xb4c89200, FUTEX_WAKE, 1) = 1 <0.000263>
+15:05:49.202051 futex(0xab42edb0, FUTEX_WAKE, 1) = 1 <0.000700>
+15:05:49.202927 futex(0xab42edd8, FUTEX_WAKE, 1) = 1 <0.000257>
+15:05:49.203356 futex(0xab42edb0, FUTEX_WAKE, 1) = 1 <0.003251>
+15:05:49.206980 munmap(0xb3945000, 8192) = 0 <0.000171>
+15:05:49.207507 madvise(0xaeed0000, 8192, MADV_DONTNEED) = 0 <0.000097>
+15:05:49.207788 madvise(0xaeece000, 8192, MADV_DONTNEED) = 0 <0.000111>
+15:05:49.208138 madvise(0xaeecc000, 8192, MADV_DONTNEED) = 0 <0.000112>
+15:05:49.208485 madvise(0xaeeca000, 8192, MADV_DONTNEED) = 0 <0.000130>
+15:05:49.208855 madvise(0xaeec8000, 8192, MADV_DONTNEED) = 0 <0.000146>
+15:05:49.209226 madvise(0xaeec6000, 8192, MADV_DONTNEED) = 0 <0.000112>
+15:05:49.209575 madvise(0xaeec4000, 8192, MADV_DONTNEED) = 0 <0.000111>
+15:05:49.209921 madvise(0xaeec2000, 8192, MADV_DONTNEED) = 0 <0.000122>
+15:05:49.210275 madvise(0xb37bd000, 8192, MADV_DONTNEED) = 0 <0.000112>
+15:05:49.210621 madvise(0xb37bb000, 8192, MADV_DONTNEED) = 0 <0.000128>
+15:05:49.210972 madvise(0xb37ba000, 4096, MADV_DONTNEED) = 0 <0.000125>
+15:05:49.211320 sigaltstack({ss_sp=0, ss_flags=SS_DISABLE, ss_size=3069324164}, NULL) = 0 <0.000125>
+15:05:49.211679 munmap(0xb3942000, 12288) = 0 <0.000123>
+15:05:49.212023 set_tid_address(0)      = 4606 <0.000122>
+15:05:49.212379 rt_sigprocmask(SIG_SETMASK, ~[RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], [QUIT USR1 PIPE], 8) = 0 <0.000116>
+15:05:49.212755 munmap(0xaebb6000, 1069056) = 0 <0.000122>
+15:05:49.213112 exit(0)                 = ?
+15:05:49.213321 +++ exited with 0 +++

@@ -1,0 +1,63 @@
+15:05:48.769464 futex(0xb3a6f970, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000341>
+15:05:48.770067 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb4d95000 <0.000060>
+15:05:48.770327 mprotect(0xb4d95000, 4096, PROT_NONE) = 0 <0.000033>
+15:05:48.770554 sigaltstack({ss_sp=0xb4d96000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000124>
+15:05:48.770949 prctl(0x53564d41 /* PR_??? */, 0, 0xb4d96000, 0x2000, 0xb6cbded3) = 0 <0.000032>
+15:05:48.771169 mprotect(0xb396c000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000122>
+15:05:48.771767 mprotect(0xb396c000, 4096, PROT_NONE) = 0 <0.000123>
+15:05:48.772154 madvise(0xb396c000, 1056768, MADV_DONTNEED) = 0 <0.000673>
+15:05:48.777286 prctl(PR_SET_NAME, 0xb3a6f844, 0x636e65, 0xb3a6f978, 0xa8821560) = 0 <0.000045>
+15:05:48.777542 getpriority(PRIO_PROCESS, 4591) = 20 <0.000473>
+15:05:48.778198 setpriority(PRIO_PROCESS, 4591, 0) = 0 <0.000035>
+15:05:48.778486 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/UnifiedEmail.xml.bak", F_OK) = -1 ENOENT (No such file or directory) <0.000058>
+15:05:48.778864 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/UnifiedEmail.xml", F_OK) = 0 <0.000359>
+15:05:48.779549 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/UnifiedEmail.xml", R_OK) = 0 <0.000632>
+15:05:48.780406 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/UnifiedEmail.xml", {st_mode=S_IFREG|0660, st_size=912, ...}, 0) = 0 <0.000052>
+15:05:48.780706 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/UnifiedEmail.xml", R_OK) = 0 <0.000050>
+15:05:48.780987 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/UnifiedEmail.xml", O_RDONLY|O_LARGEFILE) = 15 <0.000053>
+15:05:48.781277 fstat64(15, {st_mode=S_IFREG|0660, st_size=912, ...}) = 0 <0.000032>
+15:05:48.781526 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 16 <0.000047>
+15:05:48.781761 ioctl(16, 0x41007701, 0xb3a6f234) = 0 <0.000033>
+15:05:48.781971 ioctl(16, 0x40047703, 0x5000) = 0 <0.000031>
+15:05:48.782185 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 16, 0) = 0xb4d90000 <0.000064>
+15:05:48.782446 close(16)               = 0 <0.000035>
+15:05:48.782690 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 16 <0.000527>
+15:05:48.783407 ioctl(16, 0x41007701, 0xb3a6f1c4) = 0 <0.000032>
+15:05:48.783615 ioctl(16, 0x40047703, 0x5000) = 0 <0.000033>
+15:05:48.783835 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 16, 0) = 0xb4d8b000 <0.000055>
+15:05:48.784091 close(16)               = 0 <0.000035>
+15:05:48.784463 ioctl(15, FIONREAD, [912]) = 0 <0.000562>
+15:05:48.785260 read(15, "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <boolean name=\"conversation-list-sender-image\" value=\"true\" />\n    <set name=\"cache-active-notification-set\" />\n    <set name=\"display_images\" />\n    <int name=\"auto-advance-mode\" value=\"0\" />\n    <int name=\"migrated-version\" value=\"4\" />\n    <boolean name=\"confirm-send\" value=\"false\" />\n    <int name=\"required-sanitizer-version-number\" value=\"1\" />\n    <set name=\"display_sender_images_patterns_set\" />\n    <boolean name=\"conversa"..., 16384) = 912 <0.000034>
+15:05:48.785519 ioctl(15, FIONREAD, [0]) = 0 <0.000031>
+15:05:48.785771 mmap2(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb392b000 <0.000731>
+15:05:48.786699 prctl(0x53564d41 /* PR_??? */, 0, 0xb392b000, 0x40000, 0xb6cbebe1) = 0 <0.000033>
+15:05:48.786913 munmap(0xb392b000, 262144) = 0 <0.000044>
+15:05:48.787130 mmap2(NULL, 520192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb38ec000 <0.000033>
+15:05:48.787339 prctl(0x53564d41 /* PR_??? */, 0, 0xb38ec000, 0x7f000, 0xb6cbebe1) = 0 <0.000032>
+15:05:48.787542 munmap(0xb38ec000, 81920) = 0 <0.000035>
+15:05:48.787747 munmap(0xb3940000, 176128) = 0 <0.000035>
+15:05:48.788034 ioctl(15, FIONREAD, [0]) = 0 <0.000032>
+15:05:48.788534 getsockopt(15, SOL_SOCKET, SO_DEBUG, 0xb3a6f470, 0xb3a6f474) = -1 ENOTSOCK (Socket operation on non-socket) <0.000517>
+15:05:48.789244 close(15)               = 0 <0.000270>
+15:05:48.789790 munmap(0xb4d98000, 8192) = 0 <0.000383>
+15:05:48.790823 madvise(0xaede8000, 28672, MADV_DONTNEED) = 0 <0.000040>
+15:05:48.791059 madvise(0xb390a000, 8192, MADV_DONTNEED) = 0 <0.000035>
+15:05:48.791278 madvise(0xb3908000, 8192, MADV_DONTNEED) = 0 <0.000146>
+15:05:48.791602 madvise(0xb3906000, 8192, MADV_DONTNEED) = 0 <0.000269>
+15:05:48.792182 madvise(0xb3904000, 8192, MADV_DONTNEED) = 0 <0.000259>
+15:05:48.792784 madvise(0xb3902000, 8192, MADV_DONTNEED) = 0 <0.000032>
+15:05:48.792994 madvise(0xaedfd000, 8192, MADV_DONTNEED) = 0 <0.000032>
+15:05:48.793203 madvise(0xaedfb000, 8192, MADV_DONTNEED) = 0 <0.000032>
+15:05:48.793409 madvise(0xaedf9000, 8192, MADV_DONTNEED) = 0 <0.000176>
+15:05:48.793758 madvise(0xaedf7000, 8192, MADV_DONTNEED) = 0 <0.000126>
+15:05:48.794190 madvise(0xaedf5000, 8192, MADV_DONTNEED) = 0 <0.000138>
+15:05:48.794505 madvise(0xab1f8000, 4096, MADV_DONTNEED) = 0 <0.000249>
+15:05:48.795073 madvise(0xaedef000, 4096, MADV_DONTNEED) = 0 <0.000090>
+15:05:48.795348 madvise(0xb390c000, 20480, MADV_DONTNEED) = 0 <0.000143>
+15:05:48.795840 sigaltstack({ss_sp=0, ss_flags=SS_DISABLE, ss_size=3069324164}, NULL) = 0 <0.000030>
+15:05:48.796057 munmap(0xb4d95000, 12288) = 0 <0.000131>
+15:05:48.796519 set_tid_address(0)      = 4591 <0.000042>
+15:05:48.796749 rt_sigprocmask(SIG_SETMASK, ~[RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], [QUIT USR1 PIPE], 8) = 0 <0.000030>
+15:05:48.796983 munmap(0xb396b000, 1069056) = 0 <0.000043>
+15:05:48.797195 exit(0)                 = ?
+15:05:48.797321 +++ exited with 0 +++

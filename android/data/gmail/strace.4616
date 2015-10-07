@@ -1,0 +1,54 @@
+15:05:49.337991 futex(0xa8fbf970, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000632>
+15:05:49.338966 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xa8eb8000 <0.000122>
+15:05:49.339351 mprotect(0xa8eb8000, 4096, PROT_NONE) = 0 <0.000126>
+15:05:49.339736 sigaltstack({ss_sp=0xa8eb9000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000119>
+15:05:49.340124 prctl(0x53564d41 /* PR_??? */, 0, 0xa8eb9000, 0x2000, 0xb6cbded3) = 0 <0.000135>
+15:05:49.340510 mprotect(0xa8ebc000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000123>
+15:05:49.341132 mprotect(0xa8ebc000, 4096, PROT_NONE) = 0 <0.000139>
+15:05:49.341517 madvise(0xa8ebc000, 1056768, MADV_DONTNEED) = 0 <0.000124>
+15:05:49.341929 prctl(PR_SET_NAME, 0xa8fbf844, 0x455b65, 0xa8fbf978, 0xa8821a40) = 0 <0.000130>
+15:05:49.342312 getpriority(PRIO_PROCESS, 4616) = 20 <0.000129>
+15:05:49.342688 setpriority(PRIO_PROCESS, 4616, 0) = 0 <0.000130>
+15:05:49.343156 eventfd2(0, O_NONBLOCK) = 22 <0.000133>
+15:05:49.343538 epoll_create1(0)        = 23 <0.000130>
+15:05:49.343913 epoll_ctl(23, EPOLL_CTL_ADD, 22, {EPOLLIN, {u32=22, u64=22}}) = 0 <0.000118>
+15:05:49.344300 futex(0xb4c8c2e8, FUTEX_WAKE, 1) = 0 <0.000124>
+15:05:49.344685 futex(0xb4c89200, FUTEX_WAKE, 1) = 0 <0.000133>
+15:05:49.345098 getpriority(PRIO_PROCESS, 4616) = 20 <0.000102>
+15:05:49.345475 setpriority(PRIO_PROCESS, 4616, 0) = 0 <0.000102>
+15:05:49.345868 getuid32()              = 10071 <0.000089>
+15:05:49.346247 getuid32()              = 10071 <0.000123>
+15:05:49.346662 getuid32()              = 10071 <0.000080>
+15:05:49.346999 epoll_pwait(23, {}, 16, 0, NULL) = 0 <0.000078>
+15:05:49.347329 clock_gettime(CLOCK_MONOTONIC, {227, 71050072}) = 0 <0.000096>
+15:05:49.347676 epoll_pwait(23, {{EPOLLIN, {u32=22, u64=22}}}, 16, -1, NULL) = 1 <0.002676>
+15:05:49.350636 read(22, "\1\0\0\0\0\0\0\0", 8) = 8 <0.000130>
+15:05:49.351050 sched_yield()           = 0 <0.000132>
+15:05:49.351464 sched_yield()           = 0 <0.000122>
+15:05:49.351864 sched_yield()           = 0 <0.000130>
+15:05:49.352281 sched_yield()           = 0 <0.000143>
+15:05:49.352704 sched_yield()           = 0 <0.000134>
+15:05:49.353128 sched_yield()           = 0 <0.000148>
+15:05:49.353549 sched_yield()           = 0 <0.000136>
+15:05:49.354007 sched_yield()           = 0 <0.000145>
+15:05:49.354428 sched_yield()           = 0 <0.000140>
+15:05:49.354840 sched_yield()           = 0 <0.000145>
+15:05:49.355259 sched_yield()           = 0 <0.000142>
+15:05:49.355676 sched_yield()           = 0 <0.000144>
+15:05:49.356094 sched_yield()           = 0 <0.000132>
+15:05:49.356566 sched_yield()           = 0 <0.000127>
+15:05:49.356948 sched_yield()           = 0 <0.000107>
+15:05:49.357328 clock_gettime(CLOCK_MONOTONIC, {227, 81057260}) = 0 <0.000100>
+15:05:49.357804 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8fbf238) = 0 <0.000178>
+15:05:49.358264 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8fbf238) = 0 <0.000088>
+15:05:49.358996 clock_gettime(CLOCK_REALTIME, {1444230349, 359105277}) = 0 <0.000101>
+15:05:49.359428 writev(3, [{"\0\10\22\3154\25V\375\202g\25", 11}, {"\6", 1}, {"Gmail\0", 6}, {"Error finding the version of the Email provider.....\nandroid.content.pm.PackageManager$NameNotFoundException: com.google.android.email\n\tat android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:137)\n\tat com.google.android.gm.EmailMigrationService.a(SourceFile:1280)\n\tat com.google.android.gm.EmailMigrationService.onHandleIntent(SourceFile:219)\n\tat android.app.IntentService$ServiceHandler.handleMessage(IntentService.java:66)\n\tat android.os.Handler.dispatchMessage(Handl"..., 614}], 4) = 632 <0.000103>
+15:05:49.366572 clock_gettime(CLOCK_REALTIME, {1444230349, 366680902}) = 0 <0.000127>
+15:05:49.366975 writev(3, [{"\0\10\22\3154\25VF\33\333\25", 11}, {"\5", 1}, {"EmailMigration\0", 15}, {"We do not support migrating this version of the Email provider.\0", 64}], 4) = 91 <0.000128>
+15:05:49.367659 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8fbf318) = 0 <0.000528>
+15:05:49.368486 getuid32()              = 10071 <0.000091>
+15:05:49.368858 epoll_pwait(23, {}, 16, 0, NULL) = 0 <0.000091>
+15:05:49.369307 clock_gettime(CLOCK_MONOTONIC, {227, 93040228}) = 0 <0.000098>
+15:05:49.370172 ioctl(8, BT819_FIFO_RESET_HIGH, 0xa8fbf510) = 0 <0.000091>
+15:05:49.370938 epoll_pwait(23,  <unfinished ...>
+15:05:49.454059 +++ killed by SIGKILL +++

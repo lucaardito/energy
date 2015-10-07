@@ -1,0 +1,62 @@
+15:05:48.953999 futex(0xb377f970, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000405>
+15:05:48.954943 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb395b000 <0.000257>
+15:05:48.955592 mprotect(0xb395b000, 4096, PROT_NONE) = 0 <0.000189>
+15:05:48.956163 sigaltstack({ss_sp=0xb395c000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000237>
+15:05:48.956822 prctl(0x53564d41 /* PR_??? */, 0, 0xb395c000, 0x2000, 0xb6cbded3) = 0 <0.000191>
+15:05:48.957417 mprotect(0xb367c000, 4096, PROT_READ|PROT_WRITE) = 0 <0.000221>
+15:05:48.958245 mprotect(0xb367c000, 4096, PROT_NONE) = 0 <0.000052>
+15:05:48.958572 madvise(0xb367c000, 1056768, MADV_DONTNEED) = 0 <0.000052>
+15:05:48.958929 prctl(PR_SET_NAME, 0xb377f844, 0x636e65, 0xb377f978, 0xaedd6300) = 0 <0.000033>
+15:05:48.959216 getpriority(PRIO_PROCESS, 4602) = 10 <0.000030>
+15:05:48.959490 write(9, "4602", 4)     = 4 <0.000046>
+15:05:48.959788 prctl(0x29 /* PR_??? */, 0xc350, 0x11fa, 0x2, 0xb6cd630c) = 0 <0.000030>
+15:05:48.960058 setpriority(PRIO_PROCESS, 4602, 0) = 0 <0.000036>
+15:05:48.960389 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/AndroidMail.Main.xml.bak", F_OK) = -1 ENOENT (No such file or directory) <0.000050>
+15:05:48.960775 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/AndroidMail.Main.xml", F_OK) = 0 <0.000046>
+15:05:48.961084 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/AndroidMail.Main.xml", R_OK) = 0 <0.000044>
+15:05:48.961387 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/AndroidMail.Main.xml", {st_mode=S_IFREG|0660, st_size=129, ...}, 0) = 0 <0.000044>
+15:05:48.961721 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/AndroidMail.Main.xml", R_OK) = 0 <0.000044>
+15:05:48.962031 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/AndroidMail.Main.xml", O_RDONLY|O_LARGEFILE) = 15 <0.000046>
+15:05:48.962351 fstat64(15, {st_mode=S_IFREG|0660, st_size=129, ...}) = 0 <0.000029>
+15:05:48.962647 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 16 <0.000042>
+15:05:48.962936 ioctl(16, 0x41007701, 0xb377f234) = 0 <0.000031>
+15:05:48.963206 ioctl(16, 0x40047703, 0x5000) = 0 <0.000029>
+15:05:48.963474 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 16, 0) = 0xb3956000 <0.000087>
+15:05:48.963833 close(16)               = 0 <0.000034>
+15:05:48.964130 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 16 <0.000038>
+15:05:48.964418 ioctl(16, 0x41007701, 0xb377f1c4) = 0 <0.000030>
+15:05:48.964683 ioctl(16, 0x40047703, 0x5000) = 0 <0.000029>
+15:05:48.964949 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 16, 0) = 0xb3951000 <0.000052>
+15:05:48.965249 close(16)               = 0 <0.000032>
+15:05:48.965606 ioctl(15, FIONREAD, [129]) = 0 <0.000030>
+15:05:48.965911 read(15, "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <int name=\"oneTimeInitializationProgress\" value=\"2\" />\n</map>\n", 16384) = 129 <0.000032>
+15:05:48.966210 ioctl(15, FIONREAD, [0]) = 0 <0.000030>
+15:05:48.966884 ioctl(15, FIONREAD, [0]) = 0 <0.000031>
+15:05:48.967184 getsockopt(15, SOL_SOCKET, SO_DEBUG, 0xb377f470, 0xb377f474) = -1 ENOTSOCK (Socket operation on non-socket) <0.000029>
+15:05:48.967416 close(15)               = 0 <0.000031>
+15:05:48.967637 futex(0xab1f0948, FUTEX_WAKE, 1) = 1 <0.000038>
+15:05:48.967926 futex(0xa878a1e0, FUTEX_WAKE, 1) = 0 <0.000141>
+15:05:48.968255 futex(0xb4c8c2e8, FUTEX_WAKE, 1) = 1 <0.000039>
+15:05:48.968547 futex(0xb4c89200, FUTEX_WAKE, 1) = 0 <0.000120>
+15:05:48.968852 futex(0xaedc42b0, FUTEX_WAKE, 1) = 1 <0.000036>
+15:05:48.969130 futex(0xaedc42b0, FUTEX_WAKE, 1) = 1 <0.000116>
+15:05:48.969569 munmap(0xb395e000, 8192) = 0 <0.000120>
+15:05:48.970041 madvise(0xb3914000, 8192, MADV_DONTNEED) = 0 <0.000116>
+15:05:48.970399 madvise(0xb3912000, 8192, MADV_DONTNEED) = 0 <0.000117>
+15:05:48.970757 madvise(0xb3910000, 8192, MADV_DONTNEED) = 0 <0.000091>
+15:05:48.971130 madvise(0xb390e000, 8192, MADV_DONTNEED) = 0 <0.000101>
+15:05:48.971507 madvise(0xb390c000, 8192, MADV_DONTNEED) = 0 <0.000100>
+15:05:48.971882 madvise(0xb390a000, 8192, MADV_DONTNEED) = 0 <0.000091>
+15:05:48.972275 madvise(0xb3908000, 8192, MADV_DONTNEED) = 0 <0.000100>
+15:05:48.972648 madvise(0xb3906000, 8192, MADV_DONTNEED) = 0 <0.000099>
+15:05:48.973026 madvise(0xb3904000, 8192, MADV_DONTNEED) = 0 <0.000088>
+15:05:48.973387 madvise(0xb3902000, 8192, MADV_DONTNEED) = 0 <0.000117>
+15:05:48.973760 madvise(0xb379d000, 4096, MADV_DONTNEED) = 0 <0.000117>
+15:05:48.974131 madvise(0xb3916000, 20480, MADV_DONTNEED) = 0 <0.000035>
+15:05:48.974440 sigaltstack({ss_sp=0, ss_flags=SS_DISABLE, ss_size=3012557184}, NULL) = 0 <0.000098>
+15:05:48.974826 munmap(0xb395b000, 12288) = 0 <0.000098>
+15:05:48.975106 set_tid_address(0)      = 4602 <0.000117>
+15:05:48.975477 rt_sigprocmask(SIG_SETMASK, ~[RT_1 RT_2 RT_3 RT_4 RT_5 RT_6 RT_7 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15 RT_16 RT_17 RT_18 RT_19 RT_20 RT_21 RT_22 RT_23 RT_24 RT_25 RT_26 RT_27 RT_28 RT_29 RT_30 RT_31], [QUIT USR1 PIPE], 8) = 0 <0.000117>
+15:05:48.975878 munmap(0xb367b000, 1069056) = 0 <0.000044>
+15:05:48.976196 exit(0)                 = ?
+15:05:48.976413 +++ exited with 0 +++

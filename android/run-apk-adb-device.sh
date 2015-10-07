@@ -17,8 +17,8 @@ PACKAGE="com.google.android.gm"
 ACTIVITY="ConversationListActivityGmail"
 
 su -c 'setenforce 0'
+rm -rf "$DIR"
 mkdir -p "$DIR"
-rm -f "$DIR/*"
 PID=$(echo `ps | grep zygote` | cut -d' ' -f2)  # zygote process is forked to run application
 su -c "strace -p $PID -q -ff -tt -T -s 500 -o \"$DIR/strace\"" &  # Now we are recording the trace
 am start -n $PACKAGE"/"$PACKAGE"."$ACTIVITY
