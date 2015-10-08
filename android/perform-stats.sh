@@ -12,27 +12,40 @@ fi
 DIR="./data/$1/*"
 REPORT="./data/report-$1.txt"
 
-declare -A globsyscalls # associative array
+#declare -A globsyscalls # associative array
+#declare -A globktime
 
+function elapsed_time {
+  sed -r -n -e '1 s/^([^a-z]{15})[ ].*/Begin: \1/p ; $ s/^([^a-z]{15})[ ].*/End:   \1/p' "$1" >> $REPORT
+  #var=$(sed -r -n -e '1 s/^([^a-z]{15})[ ].*/\1/p ; $ s/^([^a-z]{15})[ ].*/\1/p' "$1")
+  #IFS=' ' read b e <<< $var
+  #echo "Begin: $b End: $e" >> $REPORT
+}
+
+# Count syscall frequency and time spent in execution
 function process_file {
   echo "Processing $(basename $1)" >> $REPORT
   declare -A syscalls
-  while read line
+  declare -A stime
+  while IFS=$'\t' read -r utime syscall st
   do
-    # Saving into variables useful information (invocation time, syscall name and time spent in kernel space)
-    IFS=$'\t' read -r utime syscall ktime < <(echo $line | sed -r -n -e 's/^([^a-z]{15})[ ]([a-z0-9_-]*)[^<]*<(.*)>$/\1\t\2\t\3/p')
-    # Ignoring non-matching lines
-    if ! [[ -z $syscall ]]; then
-      ((syscalls[$syscall]++))
-      ((globsyscalls[$syscall]++))
-    fi
-  done < "$1"
+    ((syscalls[$syscall]++))
+    stime[$syscall]=$(awk "BEGIN {print ${stime[$syscall]}+$st; exit}")
+    #((globsyscalls[$syscall]++))
+    #globktime[$syscall]=$(awk "BEGIN {print ${globktime[$syscall]}+$st; exit}")
+  done < <(sed -r -n -e 's/^([^a-z]{15})[ ]([a-z0-9_-]*).*<([0-9.]*\.[0-9]*)>$/\1\t\2\t\3/p' "$1") # Using regexp to get invocation time, syscall name and execution time
   # Writing to file the total for the file
   for key in "${!syscalls[@]}"
   do
-    echo -e "$key\t${syscalls[$key]}" >> $REPORT
+    echo -e "$key\t${syscalls[$key]}\t${stime[$key]}" >> $REPORT
+    stot=$(awk "BEGIN {print $stot+${stime[$key]}; exit}")
   done
+  echo "System call total time: $stot" >> $REPORT
+  elapsed_time "$1"
+  echo "" >> $REPORT
   syscalls=
+  ktime=
+  stot=
 }
 
 echo -n "" > $REPORT
@@ -42,9 +55,11 @@ do
   process_file "$f"
 done
 
-echo -e "\n***TOTAL***" >> $REPORT
+#echo -e "\n***TOTAL***" >> $REPORT
 
-for key in "${!globsyscalls[@]}"
-do
-  echo -e "$key\t${globsyscalls[$key]}" >> $REPORT
-done
+#for key in "${!globsyscalls[@]}"
+#do
+#  echo -e "$key\t${globsyscalls[$key]}\t${globktime[$key]}" >> $REPORT
+#  total=$(awk "BEGIN {print $total+${globktime[$key]}; exit}")
+#done
+#echo $total
