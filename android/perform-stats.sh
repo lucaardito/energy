@@ -12,7 +12,7 @@ fi
 DIR="./data/$1/*"
 REPORT="./data/report-$1.txt"
 
-#declare -A globsyscalls # associative array
+declare -A globsyscalls # associative array
 #declare -A globktime
 
 function elapsed_time {
@@ -31,15 +31,19 @@ function process_file {
   do
     ((syscalls[$syscall]++))
     stime[$syscall]=$(awk "BEGIN {print ${stime[$syscall]}+$st; exit}")
-    #((globsyscalls[$syscall]++))
+    ((globsyscalls[$syscall]++))
     #globktime[$syscall]=$(awk "BEGIN {print ${globktime[$syscall]}+$st; exit}")
   done < <(sed -r -n -e 's/^([^a-z]{15})[ ]([a-z0-9_-]*).*<([0-9.]*\.[0-9]*)>$/\1\t\2\t\3/p' "$1") # Using regexp to get invocation time, syscall name and execution time
+  # Calculating total time
+  for key in "${!syscalls[@]}"
+  do
+    stot=$(awk "BEGIN {print $stot+${stime[$key]}; exit}")
+  done
   # Writing to file the total for the file
   for key in "${!syscalls[@]}"
   do
-    echo -e "$key\t${syscalls[$key]}\t${stime[$key]}" >> $REPORT
-    stot=$(awk "BEGIN {print $stot+${stime[$key]}; exit}")
-  done
+    echo -e "$key\t${syscalls[$key]}\t${stime[$key]}"
+  done | sort -rn -k2  >> $REPORT
   echo "System call total time: $stot" >> $REPORT
   elapsed_time "$1"
   echo "" >> $REPORT
@@ -55,11 +59,11 @@ do
   process_file "$f"
 done
 
-#echo -e "\n***TOTAL***" >> $REPORT
+echo -e "*** TOTAL ***" >> $REPORT
 
-#for key in "${!globsyscalls[@]}"
-#do
-#  echo -e "$key\t${globsyscalls[$key]}\t${globktime[$key]}" >> $REPORT
+for key in "${!globsyscalls[@]}"
+do
+  echo -e "$key\t${globsyscalls[$key]}\t${globktime[$key]}"
 #  total=$(awk "BEGIN {print $total+${globktime[$key]}; exit}")
-#done
+done | sort -rn -k2  >> $REPORT
 #echo $total
