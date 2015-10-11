@@ -9,7 +9,6 @@
 
 #define BUSY_LEN 5
 #define SLEEP_LEN 8
-#define DEBUG
 
 /*void busy(int dur){
 	int end = time(NULL) + dur;
@@ -20,7 +19,7 @@ void busy(int dur){
 	struct timeval end, now;
 
 	gettimeofday(&end,NULL);
-	end.tv_sec += BUSY_LEN;
+	end.tv_sec += dur;
 	do{
 		gettimeofday(&now,NULL);
 	}while(timercmp(&now, &end, <));

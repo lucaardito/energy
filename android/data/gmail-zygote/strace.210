@@ -1,0 +1,7 @@
+19:14:03.890643 ppoll([{fd=12, events=POLLIN}, {fd=8, events=POLLIN}], 2, NULL, NULL, 0) = ? ERESTARTNOHAND (To be restarted if no handler) <14.962333>
+19:14:18.853490 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=4430, si_status=SIGKILL, si_utime=146, si_stime=37} ---
+19:14:18.853656 wait4(-1, [{WIFSIGNALED(s) && WTERMSIG(s) == SIGKILL}], WNOHANG, NULL) = 4430 <0.000353>
+19:14:18.854350 wait4(-1, 0xbee221e4, WNOHANG, NULL) = 0 <0.000035>
+19:14:18.854682 sigreturn() (mask [HUP ABRT USR1 ALRM CONT TTOU URG XCPU VTALRM PROF WINCH IO PWR RTMIN]) = -1 EINTR (Interrupted system call) <0.000026>
+19:14:18.855033 clock_gettime(CLOCK_MONOTONIC, {837, 221274949}) = 0 <0.000026>
+19:14:18.855439 ppoll([{fd=12, events=POLLIN}, {fd=8, events=POLLIN}], 2, NULL, NULL, 0 <detached ...>

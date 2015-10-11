@@ -45,13 +45,12 @@
 </table>
 
 ## Scenario
-App: Gmail
+Application: Gmail
 No mails present on the device (maybe no mails on account)
 Synchronization disabled
 Airplane mode activated
-Wifi active?
-Screen active?
-Wakelocks?
+Wifi active (ATM)
+Screen active (default options)
 
 [Running APK](./run_APK.md)
 
