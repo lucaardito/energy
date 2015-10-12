@@ -43,7 +43,7 @@ function process_file {
   for key in "${!syscalls[@]}"
   do
     echo -e "$key\t${syscalls[$key]}\t${stime[$key]}"
-  done | sort -rn -k2  >> $REPORT
+  done | LC_ALL="C" sort -rg -k3 >> $REPORT
   echo "System call total time: $stot" >> $REPORT
   elapsed_time "$1"
   echo "" >> $REPORT
