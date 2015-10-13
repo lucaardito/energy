@@ -9,7 +9,7 @@ su -c "strace -p $PID -q -ff -tt -T -s 500 -o \"/sdcard/test/strace\""
 ```
 [Source](http://stackoverflow.com/questions/12166917/android-how-to-strace-an-app-using-adb-shell-am-start)
 
-In order to mantain the same conditions for each execution of the application, it is suggested to use a script. `am start` can be used to launch a package and activity, while `am force-stop` closes the application.
+In order to maintain the same conditions for each execution of the application, it is suggested to use a script. `am start` can be used to launch a package and activity, while `am force-stop` closes the application.
 
 A sample of a final form of the script is [run-apk-adb-device.sh](./run-apk-adb-device.sh)
 

@@ -22,12 +22,15 @@ void busy(int dur){
 
 int main(int argc, char * argv[]){
 	int len;
-	
+
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
 		exit(1);
 	}
 	len = atoi(argv[1]);
-	busy(len);
+	for(i=0; i<4; i++)
+		if (!fork()) {
+			busy(len);
+		}
 	return 0;
 }

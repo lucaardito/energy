@@ -1,11 +1,21 @@
 # Trace system calls for binary
-## Generate binary
-Read [instruction](./setup_toolchain.md) to generate the toolchain and create an executable
+## Setup the toolchain
+Compiling *.c* files for Android requires to build the binary for the target architecture (ARM in our case). To speedup the process, cross-compilation is widely used.
+
+This is the sequence to follow to obtain a configuration already compatible with the provided scripts:
+- Download Android NDK
+- Extract NDK in `/opt/android-ndk`
+- run `/opt/android-ndk/build/tools/make-standalone-toolchain.sh --toolchain=arm-linux-androideabi-4.8 --system=linux-x86_64 --install-dir=/opt/android-toolchain --ndk-dir=/opt/android-ndk`
+- Compile with `/opt/toolchain/bin/arm-linux-androideabi-gcc -FPIE -pie`. PIE flag is mandatory from Android 4.1 (API 16).
+
+[Source](https://developer.android.com/ndk/guides/standalone_toolchain.html)
 
 ## Install binary on device
-Use the [energy-install.sh](./energy-install.sh) script.
+Since the */sdcard* partition has the *noexec* mount flag, it is not possible to set the execution bit for regular files. Therefore the */system* partition is used.
 
-By default the script pushes the binary in `/system/bin/energy-test`
+The */system* partition is normally not writable, but with superuser permission is possible to remount the partition in read-write mode. Now it is possible to place the binary in the */system/bin* folder and make it executable. This directory is already in the **path** environmental variable, hence no further actions are required to run the binary system-wide.
+
+The [energy-install.sh](./energy-install.sh) script is a sample. It performs all the operations described before. By default this script pushes the binary in `/system/bin/energy-test`
 
 ## Run tests
 Use the [run-energy-bin-adb.sh](./run-energy-bin-adb.sh) script on a PC or use the [energy-run-standalone](./energy-run-standalone) script on the device.
