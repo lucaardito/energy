@@ -13,7 +13,7 @@ DIR="./data/$1/*"
 REPORT="./data/report-$1.txt"
 
 declare -A globsyscalls # associative array
-#declare -A globktime
+declare -A globmaxtime
 
 function elapsed_time {
   sed -r -n -e '1 s/^([^a-z]{15})[ ].*/Begin: \1/p ; $ s/^([^a-z]{15})[ ].*/End:   \1/p' "$1" >> $REPORT
@@ -32,7 +32,9 @@ function process_file {
     ((syscalls[$syscall]++))
     stime[$syscall]=$(awk "BEGIN {print ${stime[$syscall]}+$st; exit}")
     ((globsyscalls[$syscall]++))
-    #globktime[$syscall]=$(awk "BEGIN {print ${globktime[$syscall]}+$st; exit}")
+    if (( $(bc <<< "$st > ${globmaxtime[$syscall]:-0}") )); then
+      globmaxtime[$syscall]=$st
+    fi
   done < <(sed -r -n -e 's/^([^a-z]{15})[ ]([a-z0-9_-]*).*<([0-9.]*\.[0-9]*)>$/\1\t\2\t\3/p' "$1") # Using regexp to get invocation time, syscall name and execution time
   # Calculating total time
   for key in "${!syscalls[@]}"
@@ -59,11 +61,16 @@ do
   process_file "$f"
 done
 
-echo -e "*** TOTAL ***" >> $REPORT
+echo "*** TOTAL ***" >> $REPORT
 
+echo "* Frequency *" >> $REPORT
 for key in "${!globsyscalls[@]}"
 do
-  echo -e "$key\t${globsyscalls[$key]}\t${globktime[$key]}"
-#  total=$(awk "BEGIN {print $total+${globktime[$key]}; exit}")
+  echo -e "$key\t${globsyscalls[$key]}"
 done | sort -rn -k2  >> $REPORT
-#echo $total
+
+echo -e "\n*  Longest  *" >> $REPORT
+for key in "${!globsyscalls[@]}"
+do
+  echo -e "$key\t${globmaxtime[$key]}"
+done | LC_ALL="C" sort -rg -k2  >> $REPORT
