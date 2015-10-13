@@ -1,0 +1,18 @@
+21:13:31.467309 futex(0xaef3f0f8, FUTEX_WAIT, 4, NULL) = 0 <0.473518>
+21:13:31.941301 futex(0xaee85120, FUTEX_WAIT, 1, NULL) = 0 <0.000221>
+21:13:31.941757 futex(0xaee85120, FUTEX_WAKE, 1) = 0 <0.000133>
+21:13:31.942121 futex(0xaee85148, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000136>
+21:13:31.942498 futex(0xa85cbf80, FUTEX_WAKE, 1) = 0 <0.000138>
+21:13:31.942870 futex(0xaef3f0f8, FUTEX_WAIT, 5, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000132>
+21:13:31.943238 futex(0xaee85120, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000134>
+21:13:31.943611 futex(0xaee85120, FUTEX_WAKE, 1) = 0 <0.000133>
+21:13:31.943978 futex(0xaee85148, FUTEX_WAIT, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000157>
+21:13:31.944498 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fbae268) = 0 <0.000111>
+21:13:31.944894 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fbae268) = 0 <0.001208>
+21:13:31.946380 getpriority(PRIO_PROCESS, 10077) = 20 <0.000130>
+21:13:31.946790 clock_gettime(CLOCK_MONOTONIC, {12696, 237024337}) = 0 <0.000024>
+21:13:31.948635 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fbae100) = 0 <0.000041>
+21:13:31.948885 ioctl(8, BT819_FIFO_RESET_HIGH, 0x9fbae268) = 0 <0.000031>
+21:13:31.949116 futex(0xa85cbf80, FUTEX_WAKE, 1) = 0 <0.000031>
+21:13:31.949311 futex(0xaef3f0f8, FUTEX_WAIT, 6, NULL <unfinished ...>
+21:13:46.066757 +++ killed by SIGKILL +++

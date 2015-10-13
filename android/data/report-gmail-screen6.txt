@@ -1,0 +1,485 @@
+Processing strace.12046
+epoll_pwait	82	7.50702
+futex	185	0.483755
+write	117	0.102423
+clock_gettime	778	0.069021
+ioctl	102	0.020907
+recvfrom	158	0.01413
+read	40	0.011201
+getuid32	75	0.008932
+mmap2	10	0.001038
+clone	1	0.000832
+close	9	0.000672
+munmap	7	0.000374
+openat	4	0.000354
+writev	3	0.000291
+pread	8	0.00025
+madvise	3	0.000233
+gettimeofday	6	0.000232
+dup	1	0.000193
+fcntl64	1	0.000172
+prctl	1	3.7e-05
+mprotect	1	3.3e-05
+System call total time: 8.22208
+Begin: 21:19:04.143567
+End:   21:19:18.730044
+
+Processing strace.12051
+System call total time: 
+Begin: 21:19:04.143294
+End:   21:19:18.697001
+
+Processing strace.12052
+System call total time: 
+Begin: 21:19:04.140021
+End:   21:19:18.696699
+
+Processing strace.12053
+System call total time: 
+Begin: 21:19:04.143106
+End:   21:19:18.696395
+
+Processing strace.12054
+restart_syscall	1	9.21736
+clock_gettime	2	0.000457
+futex	1	0.000268
+System call total time: 9.21809
+Begin: 21:19:04.142916
+End:   21:19:18.696096
+
+Processing strace.12055
+restart_syscall	1	4.21433
+madvise	111	0.00762
+clock_gettime	6	0.000508
+mprotect	1	0.000251
+futex	1	3.2e-05
+System call total time: 4.22274
+Begin: 21:19:04.142555
+End:   21:19:18.695788
+
+Processing strace.12056
+ioctl	35	4.17322
+gettimeofday	154	0.056946
+write	20	0.016333
+fdatasync	1	0.013228
+futex	27	0.01147
+pwrite	20	0.010796
+clock_gettime	19	0.009662
+fcntl64	20	0.003988
+pread	13	0.002798
+prctl	19	0.002766
+getuid32	2	0.001283
+mmap2	4	0.000829
+openat	4	0.000726
+munmap	4	0.000505
+close	4	0.000381
+madvise	2	0.000249
+getpriority	6	0.000188
+writev	1	0.000117
+System call total time: 4.30549
+Begin: 21:19:04.142230
+End:   21:19:18.695433
+
+Processing strace.12057
+ioctl	32	3.81485
+futex	35	0.009018
+write	28	0.00608
+prctl	26	0.001822
+clone	1	0.001789
+gettimeofday	26	0.001647
+fcntl64	14	0.000709
+mmap2	5	0.000503
+getpriority	9	0.000461
+openat	4	0.000255
+close	3	0.000225
+munmap	3	0.000208
+clock_gettime	4	0.000184
+mprotect	1	9.3e-05
+getuid32	2	7.7e-05
+System call total time: 3.83792
+Begin: 21:19:04.141880
+End:   21:19:18.695106
+
+Processing strace.12068
+futex	4	0.148544
+clock_gettime	5	0.003998
+ioctl	3	0.000991
+write	1	0.000573
+prctl	1	0.000486
+setpriority	1	0.00031
+getuid32	1	0.000106
+System call total time: 0.155008
+Begin: 21:19:04.145174
+End:   21:19:18.729656
+
+Processing strace.12069
+futex	6	0.076393
+ioctl	32	0.025487
+gettimeofday	8	0.006284
+pread	2	0.001301
+fcntl64	7	0.001234
+clock_gettime	7	0.00113
+fstat64	6	0.000968
+getuid32	4	0.000941
+mmap2	2	0.000526
+close	2	0.000401
+openat	3	0.000392
+write	2	0.000282
+prctl	2	0.00028
+newfstatat	2	0.000279
+setpriority	2	0.000252
+faccessat	2	0.000207
+writev	1	0.000156
+munmap	1	0.000129
+geteuid32	1	0.000123
+System call total time: 0.116765
+Begin: 21:19:04.144550
+End:   21:19:18.694807
+
+Processing strace.12074
+clock_gettime	1	0.00065
+System call total time: 0.00065
+Begin: 21:19:04.141601
+End:   21:19:18.694480
+
+Processing strace.12075
+clock_gettime	1	0.000205
+System call total time: 0.000205
+Begin: 21:19:04.141331
+End:   21:19:18.694119
+
+Processing strace.12076
+restart_syscall	1	3.79147
+futex	15	0.014845
+ioctl	4	0.00339
+clock_gettime	40	0.002846
+nanosleep	1	0.001602
+sched_yield	58	0.001467
+faccessat	4	0.000251
+mmap2	2	0.000243
+gettimeofday	2	0.00016
+openat	3	0.000137
+getuid32	3	0.000107
+clone	1	9.4e-05
+close	2	6.9e-05
+getsockopt	1	5.7e-05
+writev	1	4.7e-05
+mprotect	1	4.3e-05
+read	1	3e-05
+fstat64	1	2.6e-05
+System call total time: 3.81691
+Begin: 21:19:04.141148
+End:   21:19:18.693807
+
+Processing strace.12077
+futex	7	0.115302
+fsync	1	0.0104
+faccessat	2	0.001666
+openat	2	0.000219
+close	2	0.000161
+unlinkat	1	0.000146
+getsockopt	1	0.000124
+mmap2	1	0.0001
+renameat	1	9.7e-05
+ioctl	3	8.6e-05
+newfstatat	2	8.1e-05
+write	1	6.7e-05
+fchmodat	1	5.7e-05
+fstat64	1	2.8e-05
+System call total time: 0.128534
+Begin: 21:19:04.140952
+End:   21:19:18.693483
+
+Processing strace.12079
+clock_gettime	1	0.000601
+System call total time: 0.000601
+Begin: 21:19:04.144990
+End:   21:19:18.693168
+
+Processing strace.12082
+futex	7	0.124918
+System call total time: 0.124918
+Begin: 21:19:04.144795
+End:   21:19:18.692839
+
+Processing strace.12084
+ioctl	14	4.86572
+write	27	0.003226
+futex	30	0.003192
+prctl	27	0.002064
+getpriority	9	0.001623
+munmap	1	0.000197
+close	1	0.000139
+System call total time: 4.87616
+Begin: 21:19:04.140759
+End:   21:19:18.692352
+
+Processing strace.12093
+futex	6	0.35173
+ioctl	4	0.003511
+clock_gettime	3	0.000784
+write	1	0.000165
+prctl	1	0.000144
+setpriority	1	0.000134
+getuid32	1	0.000125
+System call total time: 0.356593
+Begin: 21:19:04.148260
+End:   21:19:18.692051
+
+Processing strace.12094
+System call total time: 
+Begin: 21:19:04.140561
+End:   21:19:18.691727
+
+Processing strace.12095
+System call total time: 
+Begin: 21:19:04.140374
+End:   21:19:18.691422
+
+Processing strace.12096
+futex	13	0.252813
+clock_gettime	9	0.005019
+ioctl	9	0.00186
+gettimeofday	5	0.000715
+restart_syscall	1	0.00058
+getuid32	2	0.000386
+writev	2	0.000248
+fcntl64	2	0.000226
+mmap2	1	0.000151
+prctl	1	0.000133
+write	1	0.000127
+setpriority	1	0.000127
+openat	1	0.000122
+System call total time: 0.262507
+Begin: 21:19:04.148659
+End:   21:19:18.691109
+
+Processing strace.12097
+epoll_pwait	77	1.80967
+futex	372	0.101505
+ioctl	492	0.069524
+clock_gettime	234	0.009908
+close	195	0.008599
+read	77	0.00475
+dup	117	0.004385
+madvise	83	0.003622
+rt_sigprocmask	38	0.00091
+mmap2	6	0.000488
+munmap	3	0.0001
+prctl	2	5.5e-05
+System call total time: 2.01351
+Begin: 21:19:04.139406
+End:   21:19:18.690779
+
+Processing strace.12099
+clock_gettime	1	0.000197
+System call total time: 0.000197
+Begin: 21:19:04.139220
+End:   21:19:18.690452
+
+Processing strace.12100
+clock_gettime	1	0.000664
+System call total time: 0.000664
+Begin: 21:19:04.148474
+End:   21:19:18.690143
+
+Processing strace.12101
+futex	136	2.39928
+ioctl	1	0.000448
+System call total time: 2.39973
+Begin: 21:19:04.136989
+End:   21:19:18.689778
+
+Processing strace.12105
+futex	125	2.39118
+System call total time: 2.39118
+Begin: 21:19:04.138851
+End:   21:19:18.689471
+
+Processing strace.12106
+System call total time: 
+Begin: 21:19:04.138581
+End:   21:19:18.689164
+
+Processing strace.12108
+clock_gettime	1	0.001203
+System call total time: 0.001203
+Begin: 21:19:04.153308
+End:   21:19:18.688803
+
+Processing strace.12113
+epoll_pwait	2	2.36781
+madvise	16	0.004928
+clock_gettime	3	0.001556
+munmap	3	0.000571
+sigaltstack	1	0.000279
+close	2	0.000182
+getuid32	1	0.000166
+rt_sigprocmask	1	0.000145
+read	1	0.000129
+write	1	0.000128
+set_tid_address	1	9.6e-05
+ioctl	1	9.1e-05
+System call total time: 2.37609
+Begin: 21:19:04.153103
+End:   21:19:06.538092
+
+Processing strace.12119
+epoll_pwait	6	1.12229
+futex	14	0.006035
+sched_yield	51	0.002037
+clock_gettime	8	0.000771
+getuid32	3	0.000392
+read	3	0.000256
+System call total time: 1.13179
+Begin: 21:19:04.138409
+End:   21:19:18.688495
+
+Processing strace.12121
+System call total time: 
+Begin: 21:19:04.138118
+End:   21:19:18.688188
+
+Processing strace.12123
+System call total time: 
+Begin: 21:19:04.137857
+End:   21:19:18.687882
+
+Processing strace.12155
+futex	9	0.033395
+epoll_pwait	1	0.02745
+sched_yield	50	0.004559
+clock_gettime	3	0.000232
+munmap	3	0.000119
+close	2	5.6e-05
+madvise	1	2.6e-05
+ioctl	1	2.5e-05
+read	1	2.4e-05
+sigaltstack	1	2.1e-05
+set_tid_address	1	2.1e-05
+rt_sigprocmask	1	2.1e-05
+System call total time: 0.065949
+Begin: 21:19:04.137695
+End:   21:19:04.218716
+
+Processing strace.12163
+ioctl	12	4.36865
+write	25	0.00485
+futex	29	0.004746
+prctl	25	0.001977
+getpriority	9	0.00062
+clock_gettime	2	4.5e-05
+System call total time: 4.38089
+Begin: 21:19:04.137529
+End:   21:19:18.687577
+
+Processing strace.12164
+ioctl	39	4.49672
+futex	32	0.003442
+write	28	0.001984
+prctl	27	0.001962
+gettimeofday	25	0.001345
+getpriority	10	0.000772
+fcntl64	12	0.000582
+mmap2	4	0.000288
+openat	4	0.000243
+close	3	0.000194
+munmap	3	0.000181
+clock_gettime	3	0.000136
+getuid32	2	8.9e-05
+System call total time: 4.50793
+Begin: 21:19:04.137339
+End:   21:19:18.687231
+
+Processing strace.12172
+ioctl	14	2.32277
+futex	24	0.003183
+write	22	0.001532
+prctl	25	0.001521
+mmap2	2	0.000632
+getpriority	10	0.0005
+mprotect	3	0.000352
+clock_gettime	1	0.000234
+close	2	0.000151
+sigaltstack	1	0.000116
+openat	1	8.9e-05
+setpriority	1	8.8e-05
+madvise	1	8.8e-05
+getuid32	1	8.6e-05
+munmap	1	6e-05
+System call total time: 2.3314
+Begin: 21:19:04.200316
+End:   21:19:18.678129
+
+Processing strace.12199
+futex	3	0.011296
+mprotect	3	0.000465
+munmap	3	0.000376
+prctl	2	0.000339
+setpriority	1	0.000296
+sigaltstack	2	0.000225
+madvise	2	0.00022
+mmap2	1	0.000218
+gettimeofday	1	0.000207
+getpriority	1	0.000108
+set_tid_address	1	9.8e-05
+rt_sigprocmask	1	9.5e-05
+System call total time: 0.013943
+Begin: 21:19:08.032974
+End:   21:19:08.053904
+
+Processing strace.12206
+mprotect	3	0.000447
+prctl	2	0.000259
+futex	2	0.000227
+mmap2	1	0.000211
+sigaltstack	1	0.00012
+madvise	1	0.000119
+gettimeofday	1	0.000105
+setpriority	1	0.000101
+getpriority	1	9e-05
+System call total time: 0.001679
+Begin: 21:19:08.073190
+End:   21:19:18.677324
+
+*** TOTAL ***
+clock_gettime	1133	
+futex	1083	
+ioctl	798	
+write	274	
+gettimeofday	228	
+close	227	
+madvise	220	
+epoll_pwait	168	
+prctl	161	
+sched_yield	159	
+recvfrom	158	
+read	123	
+dup	118	
+getuid32	97	
+fcntl64	56	
+getpriority	55	
+rt_sigprocmask	41	
+mmap2	39	
+munmap	32	
+openat	26	
+pread	23	
+pwrite	20	
+mprotect	13	
+writev	8	
+setpriority	8	
+fstat64	8	
+faccessat	8	
+sigaltstack	6	
+restart_syscall	4	
+newfstatat	4	
+set_tid_address	3	
+clone	3	
+getsockopt	2	
+unlinkat	1	
+renameat	1	
+nanosleep	1	
+geteuid32	1	
+fsync	1	
+fdatasync	1	
+fchmodat	1	

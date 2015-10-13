@@ -1,0 +1,3 @@
+21:13:31.469830 clock_gettime(CLOCK_MONOTONIC, {12695, 760336109}) = 0 <0.000250>
+21:13:31.470879 epoll_pwait(20,  <unfinished ...>
+21:13:46.068084 +++ killed by SIGKILL +++

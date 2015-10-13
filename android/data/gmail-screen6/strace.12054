@@ -1,0 +1,6 @@
+21:19:04.142916 restart_syscall(<... resuming interrupted call ...>) = -1 ETIMEDOUT (Connection timed out) <9.217360>
+21:19:13.366855 clock_gettime(CLOCK_MONOTONIC, {13036, 575516758}) = 0 <0.000281>
+21:19:13.369056 clock_gettime(CLOCK_MONOTONIC, {13036, 577210617}) = 0 <0.000176>
+21:19:13.370607 futex(0xaf105520, FUTEX_WAKE, 1) = 0 <0.000268>
+21:19:13.372034 futex(0xacc8ae28, FUTEX_WAIT, 2, NULL <unfinished ...>
+21:19:18.696096 +++ killed by SIGKILL +++

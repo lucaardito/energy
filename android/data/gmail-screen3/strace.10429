@@ -1,0 +1,5 @@
+21:14:29.235171 futex(0xa85cc0d8, FUTEX_WAIT, 7, NULL) = 0 <0.062713>
+21:14:29.300303 futex(0xa85cb440, FUTEX_WAIT, 1, NULL) = 0 <0.000654>
+21:14:29.301420 futex(0xa85cb440, FUTEX_WAKE, 1) = 0 <0.000157>
+21:14:29.302013 futex(0xa85cc0d8, FUTEX_WAIT, 8, NULL <unfinished ...>
+21:14:43.721551 +++ killed by SIGKILL +++

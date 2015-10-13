@@ -1,0 +1,65 @@
+21:20:16.747719 futex(0xab2bf368, FUTEX_WAIT, 12, NULL) = 0 <0.811164>
+21:20:17.559693 futex(0xaee84f60, FUTEX_WAIT, 1, NULL) = 0 <0.003216>
+21:20:17.563450 futex(0xaee84f60, FUTEX_WAKE, 1) = 0 <0.001219>
+21:20:17.565420 futex(0xaee84f88, FUTEX_WAIT, 0, NULL) = 0 <0.000514>
+21:20:17.566196 futex(0xaee84f60, FUTEX_WAIT, 1, NULL) = 0 <0.002091>
+21:20:17.568552 write(11, "12490", 5)   = 5 <0.000136>
+21:20:17.569181 prctl(0x29 /* PR_??? */, 0x2625a00, 0x30ca, 0x2, 0) = 0 <0.000403>
+21:20:17.569884 setpriority(PRIO_PROCESS, 12490, 10) = 0 <0.000109>
+21:20:17.570281 clock_gettime(CLOCK_MONOTONIC, {13100, 777974026}) = 0 <0.000102>
+21:20:17.574568 gettimeofday({1444598417, 574752}, NULL) = 0 <0.000144>
+21:20:17.575384 gettimeofday({1444598417, 575525}, NULL) = 0 <0.000109>
+21:20:17.575843 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 30 <0.000110>
+21:20:17.576180 ioctl(30, 0x41007701, 0xb3b0bef4) = 0 <0.000043>
+21:20:17.576433 ioctl(30, 0x40047703, 0x200000) = 0 <0.000041>
+21:20:17.576685 ioctl(30, 0x40047705, 0x3) = 0 <0.000043>
+21:20:17.576938 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 30, 0) = 0x9ef40000 <0.000108>
+21:20:17.577267 ioctl(30, 0x40047705, 0x1) = 0 <0.000042>
+21:20:17.577593 gettimeofday({1444598417, 577708}, NULL) = 0 <0.000040>
+21:20:17.578088 gettimeofday({1444598417, 578230}, NULL) = 0 <0.000111>
+21:20:17.578580 gettimeofday({1444598417, 578718}, NULL) = 0 <0.000110>
+21:20:17.578936 gettimeofday({1444598417, 579049}, NULL) = 0 <0.000041>
+21:20:17.579272 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 69 <0.000055>
+21:20:17.579553 ioctl(69, 0x41007701, 0xb3b0bd84) = 0 <0.000043>
+21:20:17.579806 ioctl(69, 0x40047703, 0x200000) = 0 <0.000042>
+21:20:17.580059 ioctl(69, 0x40047705, 0x3) = 0 <0.000042>
+21:20:17.580405 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 69, 0) = 0x9ed40000 <0.000105>
+21:20:17.580815 ioctl(69, 0x40047705, 0x1) = 0 <0.000107>
+21:20:17.581186 gettimeofday({1444598417, 581300}, NULL) = 0 <0.000041>
+21:20:17.581464 fcntl64(40, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000048>
+21:20:17.581732 fcntl64(40, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000045>
+21:20:17.581997 fcntl64(40, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000046>
+21:20:17.582265 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000095>
+21:20:17.582594 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000058>
+21:20:17.582890 fcntl64(40, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000042>
+21:20:17.583153 fstat64(40, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000041>
+21:20:17.583414 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000139>
+21:20:17.583862 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 81 <0.000062>
+21:20:17.584251 fstat64(81, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000043>
+21:20:17.584608 geteuid32()             = 10071 <0.000042>
+21:20:17.584951 fstat64(81, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000041>
+21:20:17.585218 pread(81, "\0", 1, 0)   = 1 <0.000044>
+21:20:17.585474 close(81)               = 0 <0.000126>
+21:20:17.585872 fstat64(40, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000123>
+21:20:17.586277 pread(40, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000043>
+21:20:17.586534 fstat64(40, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000039>
+21:20:17.586785 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000058>
+21:20:17.587061 fstat64(40, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000042>
+21:20:17.587380 fcntl64(40, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000046>
+21:20:17.587685 gettimeofday({1444598417, 587792}, NULL) = 0 <0.000039>
+21:20:17.588099 munmap(0x9ed40000, 2097152) = 0 <0.000105>
+21:20:17.588497 close(69)               = 0 <0.000101>
+21:20:17.588908 getuid32()              = 10071 <0.000041>
+21:20:17.589223 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb3b0be98) = 0 <0.000464>
+21:20:17.590003 clock_gettime(CLOCK_MONOTONIC, {13100, 797707047}) = 0 <0.000106>
+21:20:17.590776 ioctl(8, BT819_FIFO_RESET_HIGH, 0xb3b0c4c0) = 0 <0.000108>
+21:20:17.591110 clock_gettime(CLOCK_MONOTONIC, {13100, 798792516}) = 0 <0.000040>
+21:20:17.591392 futex(0xa85ca090, FUTEX_WAKE, 1) = 0 <0.000047>
+21:20:17.591643 futex(0xab2bf368, FUTEX_WAIT, 13, NULL) = 0 <0.247734>
+21:20:17.839732 futex(0xa85ca090, FUTEX_WAIT, 1, NULL) = 0 <0.000895>
+21:20:17.841010 futex(0xaee84f60, FUTEX_WAIT, 1, NULL) = 0 <0.001277>
+21:20:17.842774 futex(0xaee84f60, FUTEX_WAKE, 1) = 0 <0.000243>
+21:20:17.843554 futex(0xaee84f88, FUTEX_WAIT, 1, NULL) = 0 <0.008623>
+21:20:17.852670 futex(0xa85ca090, FUTEX_WAKE, 1) = 0 <0.000217>
+21:20:17.853324 futex(0xab2bf368, FUTEX_WAIT, 14, NULL) = ? <unavailable>
+21:20:31.347651 +++ killed by SIGKILL +++

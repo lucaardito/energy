@@ -1,0 +1,13 @@
+21:14:29.238335 futex(0xacc8ae78, FUTEX_WAIT, 1, NULL) = 0 <0.311449>
+21:14:29.550326 futex(0xaee84010, FUTEX_WAIT, 1, NULL) = 0 <0.000540>
+21:14:29.551145 futex(0xacc8ae58, FUTEX_WAKE, 1) = 1 <0.001102>
+21:14:29.552410 futex(0xaf105580, FUTEX_WAKE, 1) = 1 <0.001902>
+21:14:29.554563 futex(0xb4dcf2b0, FUTEX_WAKE, 1) = 1 <0.000948>
+21:14:29.555809 futex(0xb4dcf2d8, FUTEX_WAKE, 1) = 1 <0.001191>
+21:14:29.557169 futex(0xb4dcf2b0, FUTEX_WAKE, 1) = 1 <0.000203>
+21:14:29.558079 futex(0xb4dcf2b0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000093>
+21:14:29.558444 futex(0xb4dcf2b0, FUTEX_WAKE, 1) = 0 <0.000094>
+21:14:29.558800 futex(0xb4dcf2d8, FUTEX_WAIT, 196, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000090>
+21:14:29.559823 futex(0xaf1055e0, FUTEX_WAKE, 1) = 0 <0.000025>
+21:14:29.560254 futex(0xacc8ae78, FUTEX_WAIT, 2, NULL <unfinished ...>
+21:14:43.724279 +++ killed by SIGKILL +++

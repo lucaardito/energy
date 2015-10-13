@@ -1,0 +1,159 @@
+21:17:53.307645 futex(0xae3f2748, FUTEX_WAIT, 8, NULL) = 0 <0.314698>
+21:17:53.622835 write(11, "11713", 5)   = 5 <0.000210>
+21:17:53.623343 prctl(0x29 /* PR_??? */, 0x2625a00, 0x2dc1, 0x2, 0) = 0 <0.000128>
+21:17:53.623746 setpriority(PRIO_PROCESS, 11713, 10) = 0 <0.000130>
+21:17:53.624394 clock_gettime(CLOCK_MONOTONIC, {12956, 832126425}) = 0 <0.000126>
+21:17:53.625675 gettimeofday({1444598273, 628229}, NULL) = 0 <0.002651>
+21:17:53.628622 gettimeofday({1444598273, 628720}, NULL) = 0 <0.000098>
+21:17:53.628993 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 58 <0.000135>
+21:17:53.629404 ioctl(58, 0x41007701, 0xaee7eef4) = 0 <0.000149>
+21:17:53.629841 ioctl(58, 0x40047703, 0x200000) = 0 <0.000120>
+21:17:53.630196 ioctl(58, 0x40047705, 0x3) = 0 <0.000118>
+21:17:53.630550 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 58, 0) = 0x94600000 <0.000306>
+21:17:53.631125 ioctl(58, 0x40047705, 0x1) = 0 <0.000088>
+21:17:53.631680 gettimeofday({1444598273, 631777}, NULL) = 0 <0.000119>
+21:17:53.632471 fcntl64(43, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000060>
+21:17:53.633072 fcntl64(43, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=124, len=1}) = 0 <0.000044>
+21:17:53.633455 gettimeofday({1444598273, 633562}, NULL) = 0 <0.000040>
+21:17:53.634263 gettimeofday({1444598273, 634402}, NULL) = 0 <0.000169>
+21:17:53.645645 gettimeofday({1444598273, 645757}, NULL) = 0 <0.000040>
+21:17:53.645952 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 59 <0.000171>
+21:17:53.646659 ioctl(59, 0x41007701, 0xaee7ed84) = 0 <0.000043>
+21:17:53.647015 ioctl(59, 0x40047703, 0x200000) = 0 <0.000246>
+21:17:53.647530 ioctl(59, 0x40047705, 0x3) = 0 <0.000040>
+21:17:53.647760 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 59, 0) = 0x94400000 <0.000259>
+21:17:53.648231 ioctl(59, 0x40047705, 0x1) = 0 <0.000043>
+21:17:53.648560 gettimeofday({1444598273, 648672}, NULL) = 0 <0.000040>
+21:17:53.649074 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000168>
+21:17:53.649514 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000313>
+21:17:53.650045 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000044>
+21:17:53.650293 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000061>
+21:17:53.650558 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000055>
+21:17:53.650835 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000149>
+21:17:53.651265 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000226>
+21:17:53.651699 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000057>
+21:17:53.651975 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 81 <0.000059>
+21:17:53.652358 fstat64(81, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000334>
+21:17:53.653037 geteuid32()             = 10071 <0.000040>
+21:17:53.653384 fstat64(81, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000118>
+21:17:53.653829 pread(81, "\0", 1, 0)   = 1 <0.000116>
+21:17:53.654146 close(81)               = 0 <0.000318>
+21:17:53.654871 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000162>
+21:17:53.655299 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000041>
+21:17:53.655545 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000042>
+21:17:53.655800 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000063>
+21:17:53.656074 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000042>
+21:17:53.656613 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000169>
+21:17:53.657169 gettimeofday({1444598273, 657280}, NULL) = 0 <0.000040>
+21:17:53.657535 munmap(0x94400000, 2097152) = 0 <0.000060>
+21:17:53.657805 close(59)               = 0 <0.000239>
+21:17:53.658577 getuid32()              = 10071 <0.000147>
+21:17:53.659051 ioctl(8, BT819_FIFO_RESET_HIGH, 0xaee7ee98) = 0 <0.000631>
+21:17:53.660048 clock_gettime(CLOCK_MONOTONIC, {12956, 867765644}) = 0 <0.000044>
+21:17:53.660769 ioctl(8, BT819_FIFO_RESET_HIGH, 0xaee7f4c0) = 0 <0.000049>
+21:17:53.661059 clock_gettime(CLOCK_MONOTONIC, {12956, 868741894}) = 0 <0.000041>
+21:17:53.661609 futex(0xa85cb1d0, FUTEX_WAKE, 1) = 0 <0.000046>
+21:17:53.662101 futex(0xae3f2748, FUTEX_WAIT, 9, NULL) = 0 <0.513876>
+21:17:54.176227 futex(0xa85cb1d0, FUTEX_WAIT, 1, NULL) = 0 <0.000473>
+21:17:54.176930 futex(0xaee84e10, FUTEX_WAIT, 1, NULL) = 0 <0.000476>
+21:17:54.177635 futex(0xaee84e10, FUTEX_WAKE, 1) = 0 <0.000116>
+21:17:54.177980 futex(0xaee84e38, FUTEX_WAIT, 1, NULL) = 0 <0.000475>
+21:17:54.178687 futex(0xaee84e10, FUTEX_WAIT, 1, NULL) = 0 <0.000474>
+21:17:54.179392 write(11, "11713", 5)   = 5 <0.000117>
+21:17:54.179753 prctl(0x29 /* PR_??? */, 0x2625a00, 0x2dc1, 0x2, 0) = 0 <0.000122>
+21:17:54.180110 setpriority(PRIO_PROCESS, 11713, 10) = 0 <0.000124>
+21:17:54.180473 clock_gettime(CLOCK_MONOTONIC, {12957, 388137310}) = 0 <0.000121>
+21:17:54.182573 gettimeofday({1444598274, 182689}, NULL) = 0 <0.000100>
+21:17:54.183072 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = 0 <0.000383>
+21:17:54.183803 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000085>
+21:17:54.184259 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000089>
+21:17:54.184592 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000230>
+21:17:54.185306 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000091>
+21:17:54.185751 futex(0xb6d7ce90, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000087>
+21:17:54.186101 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000086>
+21:17:54.186451 gettimeofday({1444598274, 186548}, NULL) = 0 <0.000085>
+21:17:54.186822 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 81 <0.000094>
+21:17:54.187211 ioctl(81, 0x41007701, 0xaee7eef4) = 0 <0.000101>
+21:17:54.187595 ioctl(81, 0x40047703, 0x200000) = 0 <0.000092>
+21:17:54.188071 ioctl(81, 0x40047705, 0x3) = 0 <0.000094>
+21:17:54.188438 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 81, 0) = 0x94000000 <0.000094>
+21:17:54.188809 ioctl(81, 0x40047705, 0x1) = 0 <0.000098>
+21:17:54.189191 gettimeofday({1444598274, 189287}, NULL) = 0 <0.000090>
+21:17:54.189571 pread(45, "SQLite format 3\0\20\0\2\2\0@  \0\0\0P\0\0\0A\0\0\0\0\0\0\0\0\0\0\5\270\0\0\0\4\0\0\0\0\0\0\0=\0\0\0\1\0\0\0\265\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0P\0-\346\n\5\0\0\0\3\17\361\0\0\0\0A\17\373\17\366\17\361\t\232\r\361\6\317\tc\t,\6b\4k\3\347\2\310\3\252\2.\1\231\17\243\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\201\22\21\7\27C)\1\201Eindexmessage_labels_conversationmessage_labels\23CREATE INDEX message_labels_conver"..., 4096, 4176) = 4096 <0.000104>
+21:17:54.191470 pread(45, "\r\0\0\0\20\1\352\0\17\247\17'\16\354\16e\16&\1\352\r\365\v\230\va\v*\n\275\10\306\10B\7`\7#\6\211\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\211\34\6\7\27\35\35\1\222\v"..., 4096, 28896) = 4096 <0.000127>
+21:17:54.192126 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000085>
+21:17:54.192788 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000105>
+21:17:54.193699 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000100>
+21:17:54.194200 futex(0xb6d7ce90, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000103>
+21:17:54.194601 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000101>
+21:17:54.195264 pread(45, "\r\6#\0\22\2U\0\2U\10\340\10\216\7\373\7>\6\217\6'\4\331\5\334\4\33\3o\2\352\f\352\f\257\f\26\v\250\vW\v\24\nd\1\366\1\235\1)\0\260\0=\6#\0\0\0\201\0)\7\27G\35\1\201)indexmessages_conversation_queryIdmessages+CREATE INDEX messages_conversation_queryId on messages (converw'\7\27A\35\1\201\35indexmessages_messageId_queryIdmessages)CREATE INDEX messages_messageId_queryId on messages (messageId, queryId)r&\7\0277\35\1\201\35indexmessages_conversationmessages(CREATE INDEX messages_conversation on messages (conversation, messageId)W%\6\27-\35\1sindexmessages_queryIdmessages'CREATE INDEX messages_queryId on messages (queryI"..., 4096, 33016) = 4096 <0.000151>
+21:17:54.195889 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000100>
+21:17:54.196398 futex(0xb6d7ce90, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000102>
+21:17:54.196796 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000100>
+21:17:54.197637 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000100>
+21:17:54.198171 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000103>
+21:17:54.199045 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000105>
+21:17:54.199465 pread(45, "\r\0\0\0\20\3\254\0\5Q\4\362\4\231\4%\3\254\17{\16\370\0166\r\213\rH\f\241\f\\\v\263\7R\7+\6\1\2\226\2S\1'\0I\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\201[F\7\33+\35\10\202ytriggerinsert_messagesmessagesCREATE TRIGGER insert_messages AFTER INSERT ON messages\nBEGIN\n  INSERT INTO search_sequence (type,action,messageId,conversationId)  VALUES(0,0,  new.messageId, new.conversation);\nEND\202)E\7\27++\1\204\ttablesearch_sequencesearch_sequence<CREATE TABLE search_sequence (\n_id INTEGER PRIMARY KEY AUTOINCREMENT, type INTEGER NOT NULL DEFAULT 0, action INTEGER NOT NULL DEFAULT 0, messageId INTEGER NOT"..., 4096, 37136) = 4096 <0.000101>
+21:17:54.199983 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000100>
+21:17:54.200659 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000101>
+21:17:54.201172 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000094>
+21:17:54.201682 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000095>
+21:17:54.202168 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000100>
+21:17:54.203147 pread(45, "\r\0\0\0\20\0m\0\17\222\16\332\16\233\r\345\r\234\f\225\fR\v&\nH\t\37\7\31\5\350\4\313\2\240\1\21\0m\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\202\4C\7\201!M\7\27Y+\1\201Kindexsearch_sequence_messageId_type_labelIdsearch_sequence=CREATE INDEX search_sequence_messageId_type_labelId ON search_sequence (messageId,type,labelId)\203\fL\7\0337)\10\205Ctriggerdelete_message_labelsmessage_labelsCREATE TRIGGER delete_message_labels AFTER DELETE ON message_labels\nBEGIN\n  DELETE FROM search_sequence WHERE messageId = old.message_messageId\n  AND type = 1 AND labelId = ol"..., 4096, 41256) = 4096 <0.000102>
+21:17:54.204472 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000096>
+21:17:54.204970 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000098>
+21:17:54.205761 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000096>
+21:17:54.206263 futex(0xb6d7ce90, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000097>
+21:17:54.206641 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000096>
+21:17:54.207419 futex(0xb6d7ce90, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000096>
+21:17:54.207801 futex(0xb6d7ce90, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000096>
+21:17:54.208279 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000095>
+21:17:54.208779 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000095>
+21:17:54.209131 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000137>
+21:17:54.209683 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000095>
+21:17:54.210225 futex(0xb690cf0c, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000096>
+21:17:54.210734 futex(0xb690cf0c, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000098>
+21:17:54.211120 pread(44, "\n\17A\0A\fB\35\r\20\f\260\f\340\r\6\f\276\f\315\f}\f`\fB\17\257\17\3\17\303\17\250\16S\16u\0177\17}\r\273\17\331\17M\f\375\16|\17l\16H\f\361\16h\17#\16\207\r\35\16\245\16\345\16^\17\223\17*\17\211\17\314\rA\r\257\16\363\17u\17F\rP\16\33\r$\r\331\rs\r\224\r\301\16\216\0161\f\247\16\273\r\375\16\321\f\236\17e\17\31\rh\16\260\r\362\17V\r\211\16\20\16\372\17\16\17\16\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 139264) = 4096 <0.000097>
+21:17:54.211658 pread(44, "\r\4\267\0A\4\2\10\4\2\4>\4y\4\350\5\24\5A\5r\5\241\16\352\5\337\17\324\6\322\10\307\fX\v\236\vh\n\257\vA\17>\v\361\f6\4\307\7/\rO\n\324\n\210\ng\t\10\r\317\r\206\r\255\10\347\16\307\t\220\16\242\n\376\fw\7\322\r-\10o\16\177\16:\r\370\16\33\f\311\t\312\n\4\7\235\6\t\7\\\6R\tS\7\367\17b\6\360\f\356\0102\v#\10\224\f\234\t0\n<\f\21\v\303\6\215\6\207\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 53248) = 4096 <0.000098>
+21:17:54.212204 gettimeofday({1444598274, 212307}, NULL) = 0 <0.000174>
+21:17:54.212714 gettimeofday({1444598274, 212843}, NULL) = 0 <0.000099>
+21:17:54.213152 gettimeofday({1444598274, 213263}, NULL) = 0 <0.000107>
+21:17:54.213621 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 59 <0.000143>
+21:17:54.214183 ioctl(59, 0x41007701, 0xaee7ed84) = 0 <0.000136>
+21:17:54.214584 ioctl(59, 0x40047703, 0x200000) = 0 <0.000128>
+21:17:54.214966 ioctl(59, 0x40047705, 0x3) = 0 <0.000276>
+21:17:54.215531 mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_SHARED, 59, 0) = 0x94400000 <0.000137>
+21:17:54.215936 ioctl(59, 0x40047705, 0x1) = 0 <0.000143>
+21:17:54.216377 gettimeofday({1444598274, 216483}, NULL) = 0 <0.000107>
+21:17:54.216784 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000109>
+21:17:54.217212 fcntl64(41, F_SETLK, {type=F_RDLCK, whence=SEEK_SET, start=1073741826, len=510}) = 0 <0.000099>
+21:17:54.217608 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741824, len=1}) = 0 <0.000098>
+21:17:54.217999 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", F_OK) = 0 <0.000099>
+21:17:54.218395 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", {st_mode=S_IFREG|0600, st_size=12824, ...}, 0) = 0 <0.000097>
+21:17:54.218809 fcntl64(41, F_GETLK, {type=F_UNLCK, whence=SEEK_SET, start=1073741825, len=1, pid=0}) = 0 <0.000096>
+21:17:54.219203 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000095>
+21:17:54.219604 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db", {st_mode=S_IFREG|0660, st_size=20480, ...}, 0) = 0 <0.000108>
+21:17:54.220035 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-journal", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 82 <0.000097>
+21:17:54.220444 fstat64(82, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000095>
+21:17:54.220864 geteuid32()             = 10071 <0.000136>
+21:17:54.221434 fstat64(82, {st_mode=S_IFREG|0600, st_size=12824, ...}) = 0 <0.000095>
+21:17:54.221831 pread(82, "\0", 1, 0)   = 1 <0.000122>
+21:17:54.222267 close(82)               = 0 <0.000155>
+21:17:54.222720 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000107>
+21:17:54.223125 pread(41, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16 <0.000109>
+21:17:54.223670 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000097>
+21:17:54.224217 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/databases/internal.lab1polito@gmail.com.db-wal", F_OK) = -1 ENOENT (No such file or directory) <0.000104>
+21:17:54.225033 fstat64(41, {st_mode=S_IFREG|0660, st_size=20480, ...}) = 0 <0.000132>
+21:17:54.226571 fcntl64(41, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0 <0.000132>
+21:17:54.226983 gettimeofday({1444598274, 227097}, NULL) = 0 <0.000128>
+21:17:54.227400 munmap(0x94400000, 2097152) = 0 <0.000146>
+21:17:54.227827 close(59)               = 0 <0.000132>
+21:17:54.228564 getuid32()              = 10071 <0.000100>
+21:17:54.230668 ioctl(8, BT819_FIFO_RESET_HIGH, 0xaee7ee98) = 0 <0.000134>
+21:17:54.231133 ioctl(8, BT819_FIFO_RESET_HIGH, 0xaee7ee98) = 0 <0.000096>
+21:17:54.231523 clock_gettime(CLOCK_MONOTONIC, {12957, 439194914}) = 0 <0.000093>
+21:17:54.233420 ioctl(8, BT819_FIFO_RESET_HIGH, 0xaee7f4c0) = 0 <0.000101>
+21:17:54.233976 clock_gettime(CLOCK_MONOTONIC, {12957, 441646477}) = 0 <0.000096>
+21:17:54.234401 futex(0xa85cb1d0, FUTEX_WAKE, 1) = 0 <0.000212>
+21:17:54.234905 futex(0xae3f2748, FUTEX_WAIT, 10, NULL <unfinished ...>
+21:18:07.860822 +++ killed by SIGKILL +++

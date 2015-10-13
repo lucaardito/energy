@@ -1,0 +1,28 @@
+21:19:04.140952 futex(0xb3929fd8, FUTEX_WAIT, 9, NULL) = 0 <0.113520>
+21:19:04.254799 futex(0xaee93d00, FUTEX_WAIT, 1, NULL) = 0 <0.000408>
+21:19:04.255462 futex(0xaee84d30, FUTEX_WAIT, 1, NULL) = 0 <0.000412>
+21:19:04.256122 futex(0xaee84d30, FUTEX_WAKE, 1) = 0 <0.000132>
+21:19:04.256481 futex(0xaee84d58, FUTEX_WAIT, 4, NULL) = 0 <0.000407>
+21:19:04.257158 futex(0xaee84d30, FUTEX_WAIT, 1, NULL) = 0 <0.000392>
+21:19:04.257743 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", F_OK) = 0 <0.000063>
+21:19:04.258020 faccessat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml.bak", F_OK) = -1 ENOENT (No such file or directory) <0.001603>
+21:19:04.259891 renameat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml.bak") = 0 <0.000097>
+21:19:04.260235 openat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0600) = 81 <0.000176>
+21:19:04.260620 fstat64(81, {st_mode=S_IFREG|0600, st_size=0, ...}) = 0 <0.000028>
+21:19:04.260853 openat(AT_FDCWD, "/dev/ashmem", O_RDWR|O_LARGEFILE) = 82 <0.000043>
+21:19:04.261073 ioctl(82, 0x41007701, 0xaee7f164) = 0 <0.000028>
+21:19:04.261266 ioctl(82, 0x40047703, 0x5000) = 0 <0.000026>
+21:19:04.261455 mmap2(NULL, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE, 82, 0) = 0xb398d000 <0.000100>
+21:19:04.261747 close(82)               = 0 <0.000031>
+21:19:04.262157 write(81, "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\"accountList\">[{&quot;acct&quot;:&quot;{\\&quot;name\\&quot;:\\&quot;lab1polito@gmail.com\\&quot;,\\&quot;type\\&quot;:\\&quot;com.google\\&quot;,\\&quot;accountManagerName\\&quot;:\\&quot;lab1polito@gmail.com\\&quot;,\\&quot;accountId\\&quot;:\\&quot;lab1polito@gmail.com\\&quot;,\\&quot;providerVersion\\&quot;:0,\\&quot;accountUri\\&quot;:\\&quot;content:\\\\\\/\\\\\\/com.android.gmail.ui\\\\\\/lab1polito@gmail.com\\\\\\/account\\&quot;,\\&quot;capab"..., 4475) = 4475 <0.000067>
+21:19:04.262431 ioctl(81, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS, 0xaee7f410) = -1 ENOTTY (Inappropriate ioctl for device) <0.000032>
+21:19:04.262698 fsync(81)               = 0 <0.010400>
+21:19:04.273358 getsockopt(81, SOL_SOCKET, SO_DEBUG, 0xaee7f410, 0xaee7f414) = -1 ENOTSOCK (Socket operation on non-socket) <0.000124>
+21:19:04.273724 close(81)               = 0 <0.000130>
+21:19:04.274029 fchmodat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", 0660) = 0 <0.000057>
+21:19:04.274274 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml", {st_mode=S_IFREG|0660, st_size=4475, ...}, 0) = 0 <0.000041>
+21:19:04.274527 newfstatat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml.bak", {st_mode=S_IFREG|0660, st_size=4475, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000040>
+21:19:04.274752 unlinkat(AT_FDCWD, "/data/user/0/com.google.android.gm/shared_prefs/MailAppProvider.xml.bak", 0) = 0 <0.000146>
+21:19:04.275102 futex(0xaee93d00, FUTEX_WAKE, 1) = 0 <0.000031>
+21:19:04.275295 futex(0xb3929fd8, FUTEX_WAIT, 10, NULL <unfinished ...>
+21:19:18.693483 +++ killed by SIGKILL +++
