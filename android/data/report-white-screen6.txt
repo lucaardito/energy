@@ -1,0 +1,125 @@
+Processing strace.9270
+epoll_pwait	3	0.551716
+clock_gettime	4	0.000105
+getuid32	2	4.2e-05
+read	1	2.3e-05
+System call total time: 0.551886
+Begin: 17:19:21.323614
+End:   17:19:36.972489
+
+Processing strace.9276
+System call total time: 
+Begin: 17:19:21.323355
+End:   17:19:36.943701
+
+Processing strace.9277
+System call total time: 
+Begin: 17:19:21.323183
+End:   17:19:36.943524
+
+Processing strace.9278
+System call total time: 
+Begin: 17:19:21.322972
+End:   17:19:36.943344
+
+Processing strace.9279
+System call total time: 
+Begin: 17:19:21.322798
+End:   17:19:36.943170
+
+Processing strace.9280
+System call total time: 
+Begin: 17:19:21.322587
+End:   17:19:36.942437
+
+Processing strace.9281
+ioctl	1	0.470424
+clone	1	0.000358
+futex	4	0.000349
+mmap2	1	0.000158
+mprotect	1	0.000153
+write	2	5.8e-05
+prctl	2	4.6e-05
+clock_gettime	1	2.1e-05
+getpriority	1	2e-05
+System call total time: 0.471587
+Begin: 17:19:21.322407
+End:   17:19:36.972237
+
+Processing strace.9282
+ioctl	1	0.469389
+write	3	0.002344
+futex	3	0.00088
+prctl	2	0.00028
+getpriority	1	0.000127
+clock_gettime	1	0.000127
+System call total time: 0.473147
+Begin: 17:19:21.322176
+End:   17:19:36.942993
+
+Processing strace.9294
+System call total time: 
+Begin: 17:19:21.321985
+End:   17:19:36.942815
+
+Processing strace.9297
+System call total time: 
+Begin: 17:19:21.321634
+End:   17:19:36.942173
+
+Processing strace.9320
+prctl	6	0.000183
+sigaltstack	1	0.000171
+mmap2	2	0.000122
+write	3	9.5e-05
+mprotect	3	9.4e-05
+ioctl	3	8.7e-05
+madvise	1	4.6e-05
+openat	1	4.5e-05
+setpriority	1	3.5e-05
+close	1	3.2e-05
+futex	1	2.8e-05
+getuid32	1	2.6e-05
+getpriority	1	2.6e-05
+System call total time: 0.00099
+Begin: 17:19:21.878432
+End:   17:19:36.942623
+
+*** TOTAL ***
+* Frequency *
+prctl	10
+write	8
+futex	8
+clock_gettime	6
+ioctl	5
+mprotect	4
+mmap2	3
+getuid32	3
+getpriority	3
+epoll_pwait	3
+sigaltstack	1
+setpriority	1
+read	1
+openat	1
+madvise	1
+close	1
+clone	1
+
+*  Longest  *
+epoll_pwait	0.551671
+ioctl	0.470424
+write	0.002007
+futex	0.000613
+clone	0.000358
+sigaltstack	0.000171
+mmap2	0.000158
+mprotect	0.000153
+prctl	0.000144
+getpriority	0.000127
+clock_gettime	0.000127
+madvise	0.000046
+openat	0.000045
+setpriority	0.000035
+close	0.000032
+getuid32	0.000026
+read	0.000023

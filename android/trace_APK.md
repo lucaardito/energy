@@ -14,8 +14,10 @@ In order to maintain the same conditions for each execution of the application, 
 A sample of a final form of the script is [run-apk-adb-device.sh](./run-apk-adb-device.sh)
 
 ## Performing statistic
-We need to trace most frequent or longest system calls. In order to help with the analysis, the [perfor-stats.sh](./perfor-stats.sh) script can be used.
+We need to trace most frequent or longest system calls. In order to help with the analysis, the [report-strace.sh](./report-strace.sh) script can be used.
 The script count the frequency of the system calls for each thread and for the global process. It also shows the total duration for each kind of system call (per-thread).
+
+Simple results of this analysis can be found in the [data section](./data/README.md).
 
 ## Notes
 - tracing overhead (tracing + writing on files)

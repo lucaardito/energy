@@ -15,5 +15,5 @@ $ADB push $SCRIPT /sdcard/
 $ADB shell sh /sdcard/$SCRIPT "$1"
 rm -rf "./data/$1"
 mkdir -p "./data/$1"
-sleep 8
+#sleep 8
 $ADB pull "/sdcard/test/$1" "./data/$1"

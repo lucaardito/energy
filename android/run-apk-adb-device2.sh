@@ -13,15 +13,18 @@ if [ -z $1 ]; then
 fi
 
 DIR=/sdcard/test/"$1"
-PACKAGE="com.google.android.gm"
-PACKAGE_REGEXP="com\.google\.android\.gm$"
-ACTIVITY="ConversationListActivityGmail"
+#PACKAGE="com.google.android.gm"
+#PACKAGE_REGEXP="com\.google\.android\.gm$"
+#ACTIVITY="ConversationListActivityGmail"
+PACKAGE="it.bbqcode.energy"
+PACKAGE_REGEXP="it\.bbqcode\.energy$"
+ACTIVITY="White"
 
 su -c 'setenforce 0'
 rm -rf "$DIR"
 mkdir -p "$DIR"
-$BUSY 8
-sleep 8
+#$BUSY 8
+#sleep 8
 am start -n $PACKAGE"/"$PACKAGE"."$ACTIVITY &&
 PID=$(pgrep "$PACKAGE_REGEXP")
 su -c "strace -p $PID -q -ff -tt -T -s 500 -o \"$DIR/strace\"" &  # Now we are recording the trace
