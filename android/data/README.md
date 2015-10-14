@@ -10,7 +10,7 @@
   <tr>
     <td></td>
     <td colspan="3">Frequency</td>
-    <td colspan="3">Longest</td>
+    <td colspan="3">Length (seconds)</td>
   </tr>
   <tr>
     <td>System call</td>
@@ -433,7 +433,7 @@
   <tr>
     <td></td>
     <td colspan="3">Frequency</td>
-    <td colspan="3">Longest</td>
+    <td colspan="3">Length (seconds)</td>
   </tr>
   <tr>
     <td>System call</td>
@@ -609,7 +609,7 @@
 * **prctl**
 * **write**
 
-## Longest (alphabetical order)
+## Length (alphabetical order)
 * **clock_gettime**
 * **clone**
 * **epoll_pwait**
