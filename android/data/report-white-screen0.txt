@@ -1,8 +1,8 @@
 Processing strace.8191
-epoll_pwait	3	0.521248
-getuid32	2	0.000265
-clock_gettime	4	0.000143
-read	1	8.2e-05
+epoll_pwait	3	.521248
+getuid32	2	.000265
+clock_gettime	4	.000143
+read	1	.000082
 System call total time: 0.521738
 Begin: 17:14:48.643480
 End:   17:15:04.312568
@@ -38,12 +38,12 @@ Begin: 17:14:48.640856
 End:   17:15:04.293096
 
 Processing strace.8202
-ioctl	1	0.484055
-write	2	0.009039
-futex	4	0.003588
-prctl	2	0.000168
-getpriority	1	0.000136
-clock_gettime	1	2.6e-05
+ioctl	1	.484055
+write	2	.009039
+futex	4	.003588
+prctl	2	.000168
+getpriority	1	.000136
+clock_gettime	1	.000026
 System call total time: 0.497012
 Begin: 17:14:48.640454
 End:   17:15:04.283930
@@ -59,12 +59,12 @@ Begin: 17:14:48.639584
 End:   17:15:04.292464
 
 Processing strace.8220
-ioctl	1	0.480898
-futex	3	0.001128
-write	3	0.001108
-getpriority	1	0.000561
-clock_gettime	1	0.000547
-prctl	2	0.000307
+ioctl	1	.480898
+futex	3	.001128
+write	3	.001108
+getpriority	1	.000561
+clock_gettime	1	.000547
+prctl	2	.000307
 System call total time: 0.484549
 Begin: 17:14:48.638990
 End:   17:15:04.292099
@@ -81,13 +81,13 @@ getuid32	2
 getpriority	2
 read	1
 
-*  Longest  *
-epoll_pwait	0.521188
-ioctl	0.484055
-write	0.008867
-futex	0.002030
-getpriority	0.000561
-clock_gettime	0.000547
-getuid32	0.000237
-prctl	0.000170
-read	0.000082
+*  Length  *
+ioctl	0.480898	0.484055	.964953
+write	0.000164	0.008867	.010147
+getpriority	0.000136	0.000561	.000697
+read	0.000082	0.000082	.000082
+epoll_pwait	0.000029	0.521188	.521248
+getuid32	0.000028	0.000237	.000265
+clock_gettime	0.000026	0.000547	.000716
+prctl	0.000023	0.000170	.000475
+futex	0.000023	0.002030	.004716

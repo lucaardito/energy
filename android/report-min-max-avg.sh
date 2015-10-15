@@ -16,6 +16,7 @@ declare -A maxcallt
 declare -A avgcallt
 
 function process_file {
+  #echo "Processing $(basename $1)"
   while IFS=$'\t' read -r syscall freq
   do
     ((cntcall[$syscall]++))
@@ -26,18 +27,18 @@ function process_file {
     if (( $(bc <<< "$freq < ${mincallf[$syscall]:-2147483647}") )); then
       mincallf[$syscall]=$freq
     fi
-  done < <(sed -r -n -e '/Frequency/,/Longest/ s/^(.+)\t(.+)$/\1\t\2/p' "$1")
+  done < <(sed -r -n -e '/Frequency/,/Length/ s/^(.+)\t(.+)$/\1\t\2/p' "$1")
 
-  while IFS=$'\t' read -r syscall sec
+  while IFS=$'\t' read -r syscall minsec maxsec totsec
   do
-    avgcallt[$syscall]=$(bc <<< "${avgcallt[$syscall]:-0} + $sec")
-    if (( $(bc <<< "$sec > ${maxcallt[$syscall]:-0}") )); then
-      maxcallt[$syscall]=$sec
+    avgcallt[$syscall]=$(bc -l <<< "${avgcallt[$syscall]:-0} + $totsec")
+    if (( $(bc <<< "$maxsec > ${maxcallt[$syscall]:-0}") )); then
+      maxcallt[$syscall]=$maxsec
     fi
-    if (( $(bc <<< "$sec < ${mincallt[$syscall]:-2147483647}") )); then
-      mincallt[$syscall]=$sec
+    if (( $(bc <<< "$minsec < ${mincallt[$syscall]:-2147483647}") )); then
+      mincallt[$syscall]=$minsec
     fi
-  done < <(sed -r -n -e '/Longest/,$ s/^(.+)\t(.+)$/\1\t\2/p' "$1")
+  done < <(sed -r -n -e '/Length/,$ s/^(.+)\t(.+)\t(.+)\t(.+)$/\1\t\2\t\3\t\4/p' "$1")
 }
 
 for f in $INPUT

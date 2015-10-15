@@ -14,6 +14,8 @@ REPORT="./data/report-$1.txt"
 
 declare -A globsyscalls # associative array
 declare -A globmaxtime
+declare -A globmintime
+declare -A globtottime
 
 function elapsed_time {
   sed -r -n -e '1 s/^([^a-z]{15})[ ].*/Begin: \1/p ; $ s/^([^a-z]{15})[ ].*/End:   \1/p' "$1" >> $REPORT
@@ -30,11 +32,15 @@ function process_file {
   while IFS=$'\t' read -r utime syscall st
   do
     ((syscalls[$syscall]++))
-    stime[$syscall]=$(awk "BEGIN {print ${stime[$syscall]}+$st; exit}")
+    stime[$syscall]=$(bc <<< "${stime[$syscall]:-0} + $st")
     ((globsyscalls[$syscall]++))
     if (( $(bc <<< "$st > ${globmaxtime[$syscall]:-0}") )); then
       globmaxtime[$syscall]=$st
     fi
+    if (( $(bc <<< "$st < ${globmintime[$syscall]:-2147483647}") )); then
+      globmintime[$syscall]=$st
+    fi
+    globtottime[$syscall]=$(bc <<< "${globtottime[$syscall]:-0} + $st")
   done < <(sed -r -n -e 's/^([^a-z]{15})[ ]([a-z0-9_-]*).*<([0-9.]*\.[0-9]*)>$/\1\t\2\t\3/p' "$1") # Using regexp to get invocation time, syscall name and execution time
   # Calculating total time
   for key in "${!syscalls[@]}"
@@ -69,8 +75,8 @@ do
   echo -e "$key\t${globsyscalls[$key]}"
 done | sort -rn -k2  >> $REPORT
 
-echo -e "\n*  Longest  *" >> $REPORT
+echo -e "\n*  Length  *" >> $REPORT
 for key in "${!globsyscalls[@]}"
 do
-  echo -e "$key\t${globmaxtime[$key]}"
+  echo -e "$key\t${globmintime[$key]}\t${globmaxtime[$key]}\t${globtottime[$key]}"
 done | LC_ALL="C" sort -rg -k2  >> $REPORT
