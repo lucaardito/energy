@@ -28,14 +28,14 @@ function process_file {
     fi
   done < <(sed -r -n -e '/Frequency/,/Longest/ s/^(.+)\t(.+)$/\1\t\2/p' "$1")
 
-  while IFS=$'\t' read -r syscall freq
+  while IFS=$'\t' read -r syscall sec
   do
-    avgcallt[$syscall]=$(bc <<< "${avgcallt[$syscall]:-0} + $freq")
-    if (( $(bc <<< "$freq > ${maxcallt[$syscall]:-0}") )); then
-      maxcallt[$syscall]=$freq
+    avgcallt[$syscall]=$(bc <<< "${avgcallt[$syscall]:-0} + $sec")
+    if (( $(bc <<< "$sec > ${maxcallt[$syscall]:-0}") )); then
+      maxcallt[$syscall]=$sec
     fi
-    if (( $(bc <<< "$freq < ${mincallt[$syscall]:-2147483647}") )); then
-      mincallt[$syscall]=$freq
+    if (( $(bc <<< "$sec < ${mincallt[$syscall]:-2147483647}") )); then
+      mincallt[$syscall]=$sec
     fi
   done < <(sed -r -n -e '/Longest/,$ s/^(.+)\t(.+)$/\1\t\2/p' "$1")
 }
@@ -52,14 +52,14 @@ do
   echo -e "\t\t<td>$key</td>"
   echo -e "\t\t<td>${mincallf[$key]}</td>"
   echo -e "\t\t<td>${maxcallf[$key]}</td>"
+  avgcallt[$key]=$(bc -l <<< "scale=6;${avgcallt[$key]} / ${avgcallf[$key]}")
   x=$(bc -l <<< "scale=2;${avgcallf[$key]} / ${cntcall[$key]}")
   x=$(echo $x | sed -e 's/^\./0./')
   echo -e "\t\t<td>$x</td>"
 
   echo -e "\t\t<td>${mincallt[$key]}</td>"
   echo -e "\t\t<td>${maxcallt[$key]}</td>"
-  x=$(bc -l <<< "scale=6;${avgcallt[$key]} / ${cntcall[$key]}")
-  x=$(echo $x | sed -e 's/^\./0./')
+  x=$(echo "${avgcallt[$key]}" | sed -e 's/^\./0./')
   echo -e "\t\t<td>$x</td>"
   echo -e "\t</tr>"
 done
