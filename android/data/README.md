@@ -670,6 +670,9 @@ The second argument is a device-dependent request code. The third argument is an
 
 An ioctl() request has encoded in it whether the argument is an in parameter or out parameter, and the size of the argument argp in bytes. Macros and defines used in specifying an ioctl() request are located in the file &lt;sys/ioctl.h&gt;.
 
+## madvise()
+The madvise() system call advises the kernel about how to handle paging input/output in the address range beginning at address addr and with size length bytes. It allows an application to tell the kernel how it expects to use some mapped or shared memory areas, so that the kernel can choose appropriate read-ahead and caching techniques. This call does not influence the semantics of the application (except in the case of MADV_DONTNEED), but may influence its performance. The kernel is free to ignore the advice.
+
 ## mprotect()
 mprotect() changes protection for the calling process's memory page(s) containing any part of the address range in the interval [addr, addr+len-1]. addr must be aligned to a page boundary.
 

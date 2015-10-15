@@ -8,6 +8,6 @@
 ADB=/opt/android-sdk/platform-tools/adb
 
 $ADB shell "su -c 'echo energy-lock > /sys/power/wake_lock'"
-$ADB shell "strace -C -T -tt -r -D -o /sdcard/trace.txt energy-test"
+$ADB shell "strace -C -T -tt -r -D -o /sdcard/trace.txt energy-test $1"
 $ADB pull /sdcard/trace.txt .
 $ADB shell "su -c 'echo energy-lock > /sys/power/wake_unlock'"

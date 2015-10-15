@@ -21,7 +21,7 @@ void busy(int dur){
 }
 
 int main(int argc, char * argv[]){
-	int len;
+	long len, i;
 	struct timespec dummy;
 
 	if(argc != 2){
@@ -29,11 +29,11 @@ int main(int argc, char * argv[]){
 		exit(1);
 	}
 
-	len=atoi(argv[2]);
+	len=atoi(argv[1]);
 	busy(len);
 	sleep(len);
 
-	for(i=0;i<15000;i++)
+	for(i=0;i<30000;i++)
 		clock_gettime(CLOCK_REALTIME,&dummy);
 
 	sleep(len);
