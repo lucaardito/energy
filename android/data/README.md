@@ -663,6 +663,9 @@ getuid() returns the real user ID of the calling process.
 
 The original Linux getuid() and geteuid() system calls supported only 16-bit user IDs. Subsequently, Linux 2.4 added getuid32() and geteuid32(), supporting 32-bit IDs.
 
+## gettimeofday()
+The function gettimeofday() can get the time as well as a timezone in a timeval struct.
+
 ## ioctl()
 The ioctl() function manipulates the underlying device parameters of special files. In particular, many operating characteristics of character special files (e.g., terminals) may be controlled with ioctl() requests. The argument d must be an open file descriptor.
 
