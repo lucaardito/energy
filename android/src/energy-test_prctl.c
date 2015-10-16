@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <sys/ioctl.h>
+#include <sys/prctl.h>
 #include <sys/time.h>
 
 
@@ -18,7 +18,7 @@ void busy(int dur){
 }
 
 int main(int argc, char * argv[]){
-  int fd, status, i, len;
+  int i, len;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
@@ -26,21 +26,17 @@ int main(int argc, char * argv[]){
 	}
 	len=atoi(argv[1]);
 
-	fd = open("/dev/tty", O_RDONLY);
-
 	busy(len);
 	sleep(len);
 
-  if (ioctl(fd, TIOCGETD, &status) == -1)
+  if (prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL) == -1)
     printf("TIOCGETD failed: %s\n", strerror(errno));
   else {
 		for(i=0; i<12999; i++)
-		 	ioctl(fd, TIOCGETD, &status);
+		 	prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
   }
 
 	sleep(len);
 	busy(len);
-
-  close(fd);
 	return(0);
 }
