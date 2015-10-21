@@ -1,6 +1,10 @@
 # Tracing system calls for APKs
-Android apps are started by forking the zygote process, so it is possible to trace the system calls for initialization and execution by tracing the zygote process and following child processes.
-To do this, simply start strace with the *-ff* parameter in order to save the trace of each thread in a different file:
+Profiling the power consumption of system calls requires firstly to define with precision which are the system calls invoked by a specific program. On Android OS, it is possible to use **strace**, an open-source program that is almost a standard in Unix-like operating systems.
+
+**strace** is a diagnostic, debugging and instructional userspace utility for Linux. It is used to monitor interactions between processes and the Linux kernel, which include system calls, signal deliveries, and changes of process state. The operation of strace is made possible by the kernel feature known as ptrace.
+
+Android apps are started by forking the zygote process, so it should be possible to trace the system calls for initialization and execution by tracing the zygote process and following child processes.
+To achieve this result, strace provide the *-ff* parameter in order to save the trace of each thread in a different file:
 
 ```shell
 su -c 'setenforce 0'
@@ -11,7 +15,11 @@ su -c "strace -p $PID -q -ff -tt -T -s 500 -o \"/sdcard/test/strace\""
 
 In order to maintain the same conditions for each execution of the application, it is suggested to use a script. `am start` can be used to launch a package and activity, while `am force-stop` closes the application.
 
-A sample of a final form of the script is [run-apk-adb-device.sh](./run-apk-adb-device.sh)
+An example of the script is [run-apk-adb-device.sh](./run-apk-adb-device.sh).
+
+In our case, this approach lead to useless results: strace is not able to track the application if it is started in foreground (maybe because of the start from a script?).
+
+Then we followed another approach: attach strace to the desired application as soon as it starts. A sample of this kind of script is [run-apk-adb-device2.sh](./run-apk-adb-device2.sh).
 
 ## Performing statistic
 We need to trace most frequent or longest system calls. In order to help with the analysis, the [report-strace.sh](./report-strace.sh) script can be used.
