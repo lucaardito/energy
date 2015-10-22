@@ -1,9 +1,7 @@
 # Tracing system calls for APKs
-Profiling the power consumption of system calls requires firstly to define with precision which are the system calls invoked by a specific program. On Android OS, it is possible to use **strace**, an open-source program that is almost a standard in Unix-like operating systems.
+Profiling the power consumption of system calls requires firstly to define with precision which are the system calls invoked by a specific program. On Android OS, it is possible to use **strace**, an open-source program that is almost a standard in Unix-like operating systems. This tool will be discussed later.
 
-**strace** is a diagnostic, debugging and instructional userspace utility for Linux. It is used to monitor interactions between processes and the Linux kernel, which include system calls, signal deliveries, and changes of process state. The operation of strace is made possible by the kernel feature known as ptrace.
-
-Android apps are started by forking the zygote process, so it should be possible to trace the system calls for initialization and execution by tracing the zygote process and following child processes.
+In the Android environment, applications are started by forking the zygote process. This means that it possible to trace the system calls for initialization and execution by tracing the zygote process and following its child processes.
 To achieve this result, strace provide the *-ff* parameter in order to save the trace of each thread in a different file:
 
 ```shell
@@ -13,27 +11,32 @@ su -c "strace -p $PID -q -ff -tt -T -s 500 -o \"/sdcard/test/strace\""
 ```
 [Source](http://stackoverflow.com/questions/12166917/android-how-to-strace-an-app-using-adb-shell-am-start)
 
-In order to maintain the same conditions for each execution of the application, it is suggested to use a script. `am start` can be used to launch a package and activity, while `am force-stop` closes the application.
-
 An example of the script is [run-apk-adb-device.sh](./run-apk-adb-device.sh).
 
-In our case, this approach lead to useless results: strace is not able to track the application if it is started in foreground (maybe because of the start from a script?).
+> This approach, however, does not show the system calls of processes and thread started by any application [VERIFY THIS BEHAVIOR].
+The other approach consist simply to attach strace to the desired application. A sample of this kind of script is [run-apk-adb-device2.sh](./run-apk-adb-device2.sh).
 
-Then we followed another approach: attach strace to the desired application as soon as it starts. A sample of this kind of script is [run-apk-adb-device2.sh](./run-apk-adb-device2.sh).
+In order to maintain the same conditions for each execution of the application, it is suggested to script the actions to perform. The *adb* tool provide a wide range of possibility in order to achieve this result. For example, running `am start` from the *adb shell* will launch a specific activity, while `am force-stop` closes the application.
 
-## Performing statistic
-We need to trace most frequent or longest system calls. In order to help with the analysis, the [report-strace.sh](./report-strace.sh) script can be used.
-The script count the frequency of the system calls for each thread and for the global process. It also shows the total duration for each kind of system call (per-thread).
+## strace
+**strace** is a diagnostic, debugging and instructional userspace utility for Linux. It is used to monitor interactions between processes and the Linux kernel, which include system calls, signal deliveries, and changes of process state. The operation of strace is made possible by the kernel feature known as ptrace.
+
+It gives a wide list of parameters
+
+PID and TID
+
+It is important to stress that the use of strace has an heavy impact on the performance of the application. It uses the ptrace() debugging interface, which operates by pausing the target process for each syscall so that the debugger can read the actual state. This operation is done twice: when the syscall begins and when it ends. This means strace pauses the application twice for each syscall, and context-switches each time between the application and strace. For this reason, any timing information may also be so distorted as to be misleading.
+
+## Performing statistics
+The analysis and interpretation of acquired data is the main objective of this thesis. Particular attention will be given to the most frequents or longest system calls, that is all those functions that have an important time slice in the application life cycle. This is due to the fact that preceding studies already demonstrated that the power spent is strictly connected with the time.
+
+In order to help with the analysis, the [report-strace.sh](./report-strace.sh) script can be used. This script count the frequency of the system calls for each thread and for the global process. It also shows the total duration for each kind of system call (per-thread).
 
 Simple results of this analysis can be found in the [data section](./data/README.md).
 
-## Notes
-- tracing overhead (tracing + writing on files)
-- a wakelock is used because the screen is kept off
+## adb
 
----
-
-### Emulate touches
+#### Emulate touches
 To discover the event to reproduce, it is necessary to start logging:
 
 `adb shell getevent | grep event2`
