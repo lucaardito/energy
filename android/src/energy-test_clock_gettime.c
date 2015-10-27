@@ -20,6 +20,16 @@ void busy(int dur){
 	}while(timercmp(&now, &end, <));
 }
 
+void head(int len){
+	sleep(len);
+	busy(len);
+	sleep(len);
+}
+
+void tail(int len){
+	return;
+}
+
 int main(int argc, char * argv[]){
 	long len, i;
 	struct timespec dummy;
@@ -30,13 +40,11 @@ int main(int argc, char * argv[]){
 	}
 
 	len=atoi(argv[1]);
-	busy(len);
-	sleep(len);
+	head(len);
 
 	for(i=0;i<30000;i++)
 		clock_gettime(CLOCK_REALTIME,&dummy);
 
-	sleep(len);
-	busy(len);
+	tail(len);
 	return 0;
 }

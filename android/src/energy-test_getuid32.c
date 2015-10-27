@@ -23,6 +23,16 @@ void busy(int dur){
 	}while(timercmp(&now, &end, <));
 }
 
+void head(int len){
+	sleep(len);
+	busy(len);
+	sleep(len);
+}
+
+void tail(int len){
+	return;
+}
+
 int main(int argc, char * argv[]){
 	int i, len;
 
@@ -32,11 +42,9 @@ int main(int argc, char * argv[]){
 	}
 	len=atoi(argv[1]);
 
-	busy(len);
-	sleep(len);
+	head(len);
 	for(i=0; i<12800; i++)
 		getuid();
-	sleep(len);
-	busy(len);
+	tail(len);
 	return 0;
 }

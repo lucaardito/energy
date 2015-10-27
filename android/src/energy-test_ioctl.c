@@ -17,8 +17,18 @@ void busy(int dur){
 	}while(timercmp(&now, &end, <));
 }
 
+void head(int len){
+	sleep(len);
+	busy(len);
+	sleep(len);
+}
+
+void tail(int len){
+	return;
+}
+
 int main(int argc, char * argv[]){
-  int fd, status, i, len;
+	int fd, status, i, len;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
@@ -28,19 +38,17 @@ int main(int argc, char * argv[]){
 
 	fd = open("/dev/tty", O_RDONLY);
 
-	busy(len);
-	sleep(len);
+	head(len);
 
-  if (ioctl(fd, TIOCGETD, &status) == -1)
-    printf("TIOCGETD failed: %s\n", strerror(errno));
-  else {
+	if (ioctl(fd, TIOCGETD, &status) == -1)
+		printf("TIOCGETD failed: %s\n", strerror(errno));
+	else {
 		for(i=0; i<12999; i++)
 		 	ioctl(fd, TIOCGETD, &status);
-  }
+	}
 
-	sleep(len);
-	busy(len);
+	tail(len);
 
-  close(fd);
+	close(fd);
 	return(0);
 }

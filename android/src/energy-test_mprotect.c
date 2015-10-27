@@ -25,6 +25,16 @@ void busy(int dur){
 	}while(timercmp(&now, &end, <));
 }
 
+void head(int len){
+	sleep(len);
+	busy(len);
+	sleep(len);
+}
+
+void tail(int len){
+	return;
+}
+
 int main(int argc, char *argv[]) {
   int pagesize, i, len;
   struct sigaction sa;
@@ -52,8 +62,7 @@ int main(int argc, char *argv[]) {
   if (buffer == NULL)
     handle_error("memalign");
 
-	busy(len);
-	sleep(len);
+	head(len);
 
   if (mprotect(buffer + pagesize * 2, pagesize, PROT_READ) == -1)
     handle_error("mprotect");
@@ -61,8 +70,7 @@ int main(int argc, char *argv[]) {
 	for(i=0; i<12999; i++)
 		mprotect(buffer + pagesize * 2, pagesize, PROT_READ);
 
-	sleep(len);
-	busy(len);
+	tail(len);
 
   exit(EXIT_SUCCESS);
 }

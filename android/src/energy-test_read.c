@@ -25,6 +25,16 @@ void busy(int dur){
 	}while(timercmp(&now, &end, <));
 }
 
+void head(int len){
+	sleep(len);
+	busy(len);
+	sleep(len);
+}
+
+void tail(int len){
+	return;
+}
+
 int main(int argc, char * argv[]){
 	const char * fn = "/sdcard/test/hello.txt";
 	char content[SIZE]; // 4KB content line
@@ -40,13 +50,11 @@ int main(int argc, char * argv[]){
 	fd = open(fn, O_RDONLY);
 
 	if(fd >= 0){
-		busy(len);
-		sleep(len);
+		head(len);
 		for(i=0; i<12800; i++)	// 50MB file size
 			read(fd, content, SIZE);
 		// Close file
-		sleep(len);
-		busy(len);
+		tail(len);
 		close(fd);
 	}else{
 		printf("fopen() FAILED");

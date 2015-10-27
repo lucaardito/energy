@@ -5,7 +5,8 @@
 # Push binary and install it on /system/bin
 
 NRG_NAME=energy-test
-ADB=/opt/android-sdk/platform-tools/adb
+#ADB=/opt/android-sdk/platform-tools/adb
+ADB=adb
 
 if [[ -z $1 ]]
   then

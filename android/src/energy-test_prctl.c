@@ -17,6 +17,16 @@ void busy(int dur){
 	}while(timercmp(&now, &end, <));
 }
 
+void head(int len){
+	sleep(len);
+	busy(len);
+	sleep(len);
+}
+
+void tail(int len){
+	return;
+}
+
 int main(int argc, char * argv[]){
   int i, len;
 
@@ -26,8 +36,7 @@ int main(int argc, char * argv[]){
 	}
 	len=atoi(argv[1]);
 
-	busy(len);
-	sleep(len);
+	head(len);
 
   if (prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL) == -1)
     printf("TIOCGETD failed: %s\n", strerror(errno));
@@ -36,7 +45,6 @@ int main(int argc, char * argv[]){
 		 	prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
   }
 
-	sleep(len);
-	busy(len);
+	tail(len);
 	return(0);
 }
