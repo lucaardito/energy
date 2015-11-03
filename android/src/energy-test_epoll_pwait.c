@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <string.h>
+#include <signal.h>
 #include <errno.h>
 #include <fcntl.h>
 
@@ -60,7 +61,7 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 
-  error = epoll_pwait(epfd, &evt, 1, 10000, NULL); // Waiting 1 event for 10 seconds
+  error = epoll_wait(epfd, &evt, 1, 10000); // Waiting 1 event for 10 seconds
   /*
   if (error != -1)
 		fprintf(stdout, "FAIL (%d returned instead of -1)\n", error);
