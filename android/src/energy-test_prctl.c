@@ -41,7 +41,7 @@ int main(int argc, char * argv[]){
   if (prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL) == -1)
     printf("TIOCGETD failed: %s\n", strerror(errno));
   else {
-		for(i=0; i<12999; i++)
+		for(i=1; i<300000; i++)
 		 	prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
   }
 
