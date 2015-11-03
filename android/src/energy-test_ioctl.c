@@ -28,7 +28,8 @@ void tail(int len){
 }
 
 int main(int argc, char * argv[]){
-	int fd, status, i, len;
+	int fd, status;
+	long i, len;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
@@ -43,7 +44,7 @@ int main(int argc, char * argv[]){
 	if (ioctl(fd, TIOCGETD, &status) == -1)
 		printf("TIOCGETD failed: %s\n", strerror(errno));
 	else {
-		for(i=0; i<12999; i++)
+		for(i=1; i<300000; i++)
 		 	ioctl(fd, TIOCGETD, &status);
 	}
 

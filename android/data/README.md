@@ -10,7 +10,7 @@
   <tr>
     <td></td>
     <td colspan="3">Frequency</td>
-    <td colspan="3">Length (seconds)</td>
+    <td colspan="4">Length (seconds)</td>
   </tr>
   <tr>
     <td>System call</td>
@@ -20,412 +20,53 @@
     <td>min</td>
     <td>max</td>
     <td>avg</td>
+    <td>tot</td>
   </tr>
-  <tr>
-    <td>mprotect</td>
-    <td>10</td>
-    <td>37</td>
-    <td>23.50</td>
-    <td>0.000021</td>
-    <td>0.021022</td>
-    <td>0.000211</td>
-  </tr>
-  <tr>
-    <td>pwrite</td>
-    <td>20</td>
-    <td>31</td>
-    <td>21.10</td>
-    <td>0.000059</td>
-    <td>0.007197</td>
-    <td>0.000233</td>
-  </tr>
-  <tr>
-    <td>mmap2</td>
-    <td>35</td>
-    <td>66</td>
-    <td>56.10</td>
-    <td>0.000026</td>
-    <td>0.004830</td>
-    <td>0.000242</td>
-  </tr>
-  <tr>
-    <td>restart_syscall</td>
-    <td>2</td>
-    <td>4</td>
-    <td>2.90</td>
-    <td>0.000580</td>
-    <td>9.397483</td>
-    <td>4.552083</td>
-  </tr>
-  <tr>
-    <td>sigaltstack</td>
-    <td>5</td>
-    <td>13</td>
-    <td>9.40</td>
-    <td>0.000020</td>
-    <td>0.001716</td>
-    <td>0.000136</td>
-  </tr>
-  <tr>
-    <td>pread</td>
-    <td>23</td>
-    <td>57</td>
-    <td>40.20</td>
-    <td>0.000029</td>
-    <td>0.006150</td>
-    <td>0.000234</td>
-  </tr>
-  <tr>
-    <td>getpriority</td>
-    <td>55</td>
-    <td>101</td>
-    <td>79.20</td>
-    <td>0.000018</td>
-    <td>0.008639</td>
-    <td>0.000143</td>
-  </tr>
-  <tr>
-    <td>clock_gettime</td>
-    <td>1133</td>
-    <td>2760</td>
-    <td>2032.30</td>
-    <td>0.000018</td>
-    <td>0.171895</td>
-    <td>0.000144</td>
-  </tr>
-  <tr>
-    <td>fchmodat</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.000053</td>
-    <td>0.000273</td>
-    <td>0.000139</td>
-  </tr>
-  <tr>
-    <td>pselect6</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.076822</td>
-    <td>0.574914</td>
-    <td>0.339859</td>
-  </tr>
-  <tr>
-    <td>clone</td>
-    <td>2</td>
-    <td>9</td>
-    <td>5.60</td>
-    <td>0.000074</td>
-    <td>0.026230</td>
-    <td>0.001610</td>
-  </tr>
-  <tr>
-    <td>fcntl64</td>
-    <td>56</td>
-    <td>94</td>
-    <td>78.60</td>
-    <td>0.000029</td>
-    <td>0.010029</td>
-    <td>0.000345</td>
-  </tr>
-  <tr>
-    <td>fsync</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.006513</td>
-    <td>0.013021</td>
-    <td>0.009062</td>
-  </tr>
-  <tr>
-    <td>rt_sigprocmask</td>
-    <td>25</td>
-    <td>42</td>
-    <td>40.20</td>
-    <td>0.000020</td>
-    <td>0.000779</td>
-    <td>0.000053</td>
-  </tr>
-  <tr>
-    <td>epoll_pwait</td>
-    <td>161</td>
-    <td>283</td>
-    <td>217.10</td>
-    <td>0.000020</td>
-    <td>4.238300</td>
-    <td>0.059458</td>
-  </tr>
-  <tr>
-    <td>newfstatat</td>
-    <td>4</td>
-    <td>16</td>
-    <td>13.20</td>
-    <td>0.000036</td>
-    <td>0.011845</td>
-    <td>0.000406</td>
-  </tr>
-  <tr>
-    <td>write</td>
-    <td>233</td>
-    <td>590</td>
-    <td>375.40</td>
-    <td>0.000021</td>
-    <td>0.078820</td>
-    <td>0.000374</td>
-  </tr>
-  <tr>
-    <td>epoll_ctl</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.000027</td>
-    <td>0.000168</td>
-    <td>0.000083</td>
-  </tr>
-  <tr>
-    <td>setpriority</td>
-    <td>8</td>
-    <td>19</td>
-    <td>16.10</td>
-    <td>0.000021</td>
-    <td>0.012566</td>
-    <td>0.000228</td>
-  </tr>
-  <tr>
-    <td>recvfrom</td>
-    <td>114</td>
-    <td>269</td>
-    <td>193.40</td>
-    <td>0.000022</td>
-    <td>0.099773</td>
-    <td>0.000151</td>
-  </tr>
-  <tr>
-    <td>munmap</td>
-    <td>32</td>
-    <td>63</td>
-    <td>51.10</td>
-    <td>0.000025</td>
-    <td>0.006052</td>
-    <td>0.000249</td>
-  </tr>
-  <tr>
-    <td>faccessat</td>
-    <td>8</td>
-    <td>16</td>
-    <td>13.30</td>
-    <td>0.000037</td>
-    <td>0.005297</td>
-    <td>0.000253</td>
-  </tr>
-  <tr>
-    <td>getuid32</td>
-    <td>97</td>
-    <td>177</td>
-    <td>146.00</td>
-    <td>0.000019</td>
-    <td>0.029453</td>
-    <td>0.000278</td>
-  </tr>
-  <tr>
-    <td>gettimeofday</td>
-    <td>228</td>
-    <td>272</td>
-    <td>256.90</td>
-    <td>0.000021</td>
-    <td>0.055956</td>
-    <td>0.000360</td>
-  </tr>
-  <tr>
-    <td>openat</td>
-    <td>26</td>
-    <td>44</td>
-    <td>37.60</td>
-    <td>0.000037</td>
-    <td>0.005287</td>
-    <td>0.000235</td>
-  </tr>
-  <tr>
-    <td>madvise</td>
-    <td>131</td>
-    <td>299</td>
-    <td>249.80</td>
-    <td>0.000024</td>
-    <td>0.010951</td>
-    <td>0.000096</td>
-  </tr>
-  <tr>
-    <td>fdatasync</td>
-    <td>1</td>
-    <td>3</td>
-    <td>1.20</td>
-    <td>0.000363</td>
-    <td>0.015527</td>
-    <td>0.009905</td>
-  </tr>
-  <tr>
-    <td>set_tid_address</td>
-    <td>3</td>
-    <td>4</td>
-    <td>3.80</td>
-    <td>0.000019</td>
-    <td>0.000236</td>
-    <td>0.000097</td>
-  </tr>
-  <tr>
-    <td>ftruncate64</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.000109</td>
-    <td>0.000109</td>
-    <td>0.000109</td>
-  </tr>
-  <tr>
-    <td>sched_yield</td>
-    <td>14</td>
-    <td>208</td>
-    <td>129.60</td>
-    <td>0.000018</td>
-    <td>0.002601</td>
-    <td>0.000063</td>
-  </tr>
-  <tr>
-    <td>ioctl</td>
-    <td>798</td>
-    <td>1373</td>
-    <td>1087.30</td>
-    <td>0.000021</td>
-    <td>2.653122</td>
-    <td>0.022584</td>
-  </tr>
-  <tr>
-    <td>futex</td>
-    <td>1083</td>
-    <td>2043</td>
-    <td>1492.20</td>
-    <td>0.000018</td>
-    <td>9.997884</td>
-    <td>0.012485</td>
-  </tr>
-  <tr>
-    <td>dup</td>
-    <td>88</td>
-    <td>202</td>
-    <td>146.70</td>
-    <td>0.000019</td>
-    <td>0.005177</td>
-    <td>0.000049</td>
-  </tr>
-  <tr>
-    <td>close</td>
-    <td>192</td>
-    <td>385</td>
-    <td>287.40</td>
-    <td>0.000021</td>
-    <td>0.014263</td>
-    <td>0.000072</td>
-  </tr>
-  <tr>
-    <td>renameat</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.000094</td>
-    <td>0.000406</td>
-    <td>0.000192</td>
-  </tr>
-  <tr>
-    <td>geteuid32</td>
-    <td>1</td>
-    <td>5</td>
-    <td>3.80</td>
-    <td>0.000034</td>
-    <td>0.000617</td>
-    <td>0.000148</td>
-  </tr>
-  <tr>
-    <td>fstat64</td>
-    <td>8</td>
-    <td>32</td>
-    <td>24.80</td>
-    <td>0.000026</td>
-    <td>0.007958</td>
-    <td>0.000270</td>
-  </tr>
-  <tr>
-    <td>nanosleep</td>
-    <td>1</td>
-    <td>3</td>
-    <td>1.40</td>
-    <td>0.001600</td>
-    <td>0.003104</td>
-    <td>0.001832</td>
-  </tr>
-  <tr>
-    <td>unlinkat</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.000146</td>
-    <td>0.000380</td>
-    <td>0.000244</td>
-  </tr>
-  <tr>
-    <td>eventfd2</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.000024</td>
-    <td>0.000132</td>
-    <td>0.000056</td>
-  </tr>
-  <tr>
-    <td>writev</td>
-    <td>8</td>
-    <td>14</td>
-    <td>12.00</td>
-    <td>0.000042</td>
-    <td>0.007569</td>
-    <td>0.000335</td>
-  </tr>
-  <tr>
-    <td>epoll_create1</td>
-    <td>1</td>
-    <td>1</td>
-    <td>1.00</td>
-    <td>0.000024</td>
-    <td>0.000131</td>
-    <td>0.000056</td>
-  </tr>
-  <tr>
-    <td>read</td>
-    <td>88</td>
-    <td>211</td>
-    <td>151.30</td>
-    <td>0.000022</td>
-    <td>0.030345</td>
-    <td>0.000132</td>
-  </tr>
-  <tr>
-    <td>prctl</td>
-    <td>152</td>
-    <td>399</td>
-    <td>240.00</td>
-    <td>0.000018</td>
-    <td>0.103392</td>
-    <td>0.000210</td>
-  </tr>
-  <tr>
-    <td>getsockopt</td>
-    <td>1</td>
-    <td>3</td>
-    <td>2.00</td>
-    <td>0.000024</td>
-    <td>0.000232</td>
-    <td>0.000093</td>
-  </tr>
+  <tr>	<td>ioctl</td>	<td>798</td>	<td>1373</td>	<td>1087.30</td>	<td>0.000021</td>	<td>2.653122</td>	<td>0.022584</td>	<td>	245.563588	</td>	</tr>
+  <tr>	<td>futex</td>	<td>1083</td>	<td>2043</td>	<td>1492.20</td>	<td>0.000018</td>	<td>9.997884</td>	<td>0.012485</td>	<td>	186.301315	</td>	</tr>
+  <tr>	<td>restart_syscall</td>	<td>2</td>	<td>4</td>	<td>2.90</td>	<td>0.000580</td>	<td>9.397483</td>	<td>4.552083</td>	<td>	132.010407	</td>	</tr>
+  <tr>	<td>epoll_pwait</td>	<td>161</td>	<td>283</td>	<td>217.10</td>	<td>0.000020</td>	<td>4.238300</td>	<td>0.059458</td>	<td>	129.084503	</td>	</tr>
+  <tr>	<td>clock_gettime</td>	<td>1133</td>	<td>2760</td>	<td>2032.30</td>	<td>0.000018</td>	<td>0.171895</td>	<td>0.000144</td>	<td>	2.931320	</td>	</tr>
+  <tr>	<td>pselect6</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.076822</td>	<td>0.574914</td>	<td>0.339859</td>	<td>	2.039157	</td>	</tr>
+  <tr>	<td>write</td>	<td>233</td>	<td>590</td>	<td>375.40</td>	<td>0.000021</td>	<td>0.078820</td>	<td>0.000374</td>	<td>	1.404989	</td>	</tr>
+  <tr>	<td>gettimeofday</td>	<td>228</td>	<td>272</td>	<td>256.90</td>	<td>0.000021</td>	<td>0.055956</td>	<td>0.000360</td>	<td>	0.925165	</td>	</tr>
+  <tr>	<td>prctl</td>	<td>152</td>	<td>399</td>	<td>240.00</td>	<td>0.000018</td>	<td>0.103392</td>	<td>0.000210</td>	<td>	0.505497	</td>	</tr>
+  <tr>	<td>getuid32</td>	<td>97</td>	<td>177</td>	<td>146.00</td>	<td>0.000019</td>	<td>0.029453</td>	<td>0.000278</td>	<td>	0.406434	</td>	</tr>
+  <tr>	<td>recvfrom</td>	<td>114</td>	<td>269</td>	<td>193.40</td>	<td>0.000022</td>	<td>0.099773</td>	<td>0.000151</td>	<td>	0.293252	</td>	</tr>
+  <tr>	<td>fcntl64</td>	<td>56</td>	<td>94</td>	<td>78.60</td>	<td>0.000029</td>	<td>0.010029</td>	<td>0.000345</td>	<td>	0.271836	</td>	</tr>
+  <tr>	<td>madvise</td>	<td>131</td>	<td>299</td>	<td>249.80</td>	<td>0.000024</td>	<td>0.010951</td>	<td>0.000096</td>	<td>	0.240590	</td>	</tr>
+  <tr>	<td>close</td>	<td>192</td>	<td>385</td>	<td>287.40</td>	<td>0.000021</td>	<td>0.014263</td>	<td>0.000072</td>	<td>	0.207160	</td>	</tr>
+  <tr>	<td>read</td>	<td>88</td>	<td>211</td>	<td>151.30</td>	<td>0.000022</td>	<td>0.030345</td>	<td>0.000132</td>	<td>	0.200252	</td>	</tr>
+  <tr>	<td>mmap2</td>	<td>35</td>	<td>66</td>	<td>56.10</td>	<td>0.000026</td>	<td>0.004830</td>	<td>0.000242</td>	<td>	0.136210	</td>	</tr>
+  <tr>	<td>munmap</td>	<td>32</td>	<td>63</td>	<td>51.10</td>	<td>0.000025</td>	<td>0.006052</td>	<td>0.000249</td>	<td>	0.127735	</td>	</tr>
+  <tr>	<td>fdatasync</td>	<td>1</td>	<td>3</td>	<td>1.20</td>	<td>0.000363</td>	<td>0.015527</td>	<td>0.009905</td>	<td>	0.118866	</td>	</tr>
+  <tr>	<td>getpriority</td>	<td>55</td>	<td>101</td>	<td>79.20</td>	<td>0.000018</td>	<td>0.008639</td>	<td>0.000143</td>	<td>	0.113582	</td>	</tr>
+  <tr>	<td>pread</td>	<td>23</td>	<td>57</td>	<td>40.20</td>	<td>0.000029</td>	<td>0.006150</td>	<td>0.000234</td>	<td>	0.094389	</td>	</tr>
+  <tr>	<td>fsync</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.006513</td>	<td>0.013021</td>	<td>0.009062</td>	<td>	0.090625	</td>	</tr>
+  <tr>	<td>clone</td>	<td>2</td>	<td>9</td>	<td>5.60</td>	<td>0.000074</td>	<td>0.026230</td>	<td>0.001610</td>	<td>	0.090203	</td>	</tr>
+  <tr>	<td>openat</td>	<td>26</td>	<td>44</td>	<td>37.60</td>	<td>0.000037</td>	<td>0.005287</td>	<td>0.000235</td>	<td>	0.088473	</td>	</tr>
+  <tr>	<td>sched_yield</td>	<td>14</td>	<td>208</td>	<td>129.60</td>	<td>0.000018</td>	<td>0.002601</td>	<td>0.000063</td>	<td>	0.082477	</td>	</tr>
+  <tr>	<td>dup</td>	<td>88</td>	<td>202</td>	<td>146.70</td>	<td>0.000019</td>	<td>0.005177</td>	<td>0.000049</td>	<td>	0.072857	</td>	</tr>
+  <tr>	<td>fstat64</td>	<td>8</td>	<td>32</td>	<td>24.80</td>	<td>0.000026</td>	<td>0.007958</td>	<td>0.000270</td>	<td>	0.066965	</td>	</tr>
+  <tr>	<td>newfstatat</td>	<td>4</td>	<td>16</td>	<td>13.20</td>	<td>0.000036</td>	<td>0.011845</td>	<td>0.000406</td>	<td>	0.053600	</td>	</tr>
+  <tr>	<td>mprotect</td>	<td>10</td>	<td>37</td>	<td>23.50</td>	<td>0.000021</td>	<td>0.021022</td>	<td>0.000211</td>	<td>	0.049731	</td>	</tr>
+  <tr>	<td>pwrite</td>	<td>20</td>	<td>31</td>	<td>21.10</td>	<td>0.000059</td>	<td>0.007197</td>	<td>0.000233</td>	<td>	0.049237	</td>	</tr>
+  <tr>	<td>writev</td>	<td>8</td>	<td>14</td>	<td>12.00</td>	<td>0.000042</td>	<td>0.007569</td>	<td>0.000335</td>	<td>	0.040223	</td>	</tr>
+  <tr>	<td>setpriority</td>	<td>8</td>	<td>19</td>	<td>16.10</td>	<td>0.000021</td>	<td>0.012566</td>	<td>0.000228</td>	<td>	0.036824	</td>	</tr>
+  <tr>	<td>faccessat</td>	<td>8</td>	<td>16</td>	<td>13.30</td>	<td>0.000037</td>	<td>0.005297</td>	<td>0.000253</td>	<td>	0.033780	</td>	</tr>
+  <tr>	<td>rt_sigprocmask</td>	<td>25</td>	<td>42</td>	<td>40.20</td>	<td>0.000020</td>	<td>0.000779</td>	<td>0.000053</td>	<td>	0.021641	</td>	</tr>
+  <tr>	<td>nanosleep</td>	<td>1</td>	<td>3</td>	<td>1.40</td>	<td>0.001600</td>	<td>0.003104</td>	<td>0.001832</td>	<td>	0.012830	</td>	</tr>
+  <tr>	<td>sigaltstack</td>	<td>5</td>	<td>13</td>	<td>9.40</td>	<td>0.000020</td>	<td>0.001716</td>	<td>0.000136</td>	<td>	0.012808	</td>	</tr>
+  <tr>	<td>geteuid32</td>	<td>1</td>	<td>5</td>	<td>3.80</td>	<td>0.000034</td>	<td>0.000617</td>	<td>0.000148</td>	<td>	0.005649	</td>	</tr>
+  <tr>	<td>set_tid_address</td>	<td>3</td>	<td>4</td>	<td>3.80</td>	<td>0.000019</td>	<td>0.000236</td>	<td>0.000097</td>	<td>	0.003716	</td>	</tr>
+  <tr>	<td>unlinkat</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000146</td>	<td>0.000380</td>	<td>0.000244</td>	<td>	0.002446	</td>	</tr>
+  <tr>	<td>renameat</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000094</td>	<td>0.000406</td>	<td>0.000192</td>	<td>	0.001921	</td>	</tr>
+  <tr>	<td>getsockopt</td>	<td>1</td>	<td>3</td>	<td>2.00</td>	<td>0.000024</td>	<td>0.000232</td>	<td>0.000093</td>	<td>	0.001875	</td>	</tr>
+  <tr>	<td>fchmodat</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000053</td>	<td>0.000273</td>	<td>0.000139</td>	<td>	0.001394	</td>	</tr>
+  <tr>	<td>epoll_ctl</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000027</td>	<td>0.000168</td>	<td>0.000083</td>	<td>	0.000748	</td>	</tr>
+  <tr>	<td>eventfd2</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000024</td>	<td>0.000132</td>	<td>0.000056</td>	<td>	0.000512	</td>	</tr>
+  <tr>	<td>epoll_create1</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000024</td>	<td>0.000131</td>	<td>0.000056</td>	<td>	0.000510	</td>	</tr>
+  <tr>	<td>ftruncate64</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000109</td>	<td>0.000109</td>	<td>0.000109</td>	<td>	0.000109	</td>	</tr>
 </table>
 
 ## White
@@ -433,7 +74,7 @@
   <tr>
     <td></td>
     <td colspan="3">Frequency</td>
-    <td colspan="3">Length (seconds)</td>
+    <td colspan="4">Length (seconds)</td>
   </tr>
   <tr>
     <td>System call</td>
@@ -443,160 +84,25 @@
     <td>min</td>
     <td>max</td>
     <td>avg</td>
+    <td>tot</td>
   </tr>
-  <tr>
-		<td>mprotect</td>
-		<td>4</td>
-		<td>4</td>
-		<td>4.00</td>
-		<td>0.000021</td>
-		<td>0.000848</td>
-		<td>0.000141</td>
-	</tr>
-	<tr>
-		<td>mmap2</td>
-		<td>3</td>
-		<td>3</td>
-		<td>3.00</td>
-		<td>0.000028</td>
-		<td>0.003860</td>
-		<td>0.000412</td>
-	</tr>
-	<tr>
-		<td>sigaltstack</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1.00</td>
-		<td>0.000026</td>
-		<td>0.001281</td>
-		<td>0.000290</td>
-	</tr>
-	<tr>
-		<td>getpriority</td>
-		<td>2</td>
-		<td>3</td>
-		<td>2.60</td>
-		<td>0.000020</td>
-		<td>0.000599</td>
-		<td>0.000128</td>
-	</tr>
-	<tr>
-		<td>clock_gettime</td>
-		<td>6</td>
-		<td>6</td>
-		<td>6.00</td>
-		<td>0.000020</td>
-		<td>0.002519</td>
-		<td>0.000138</td>
-	</tr>
-	<tr>
-		<td>clone</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1.00</td>
-		<td>0.000080</td>
-		<td>0.000542</td>
-		<td>0.000377</td>
-	</tr>
-	<tr>
-		<td>epoll_pwait</td>
-		<td>3</td>
-		<td>3</td>
-		<td>3.00</td>
-		<td>0.000021</td>
-		<td>0.602746</td>
-		<td>0.168716</td>
-	</tr>
-	<tr>
-		<td>write</td>
-		<td>5</td>
-		<td>8</td>
-		<td>6.80</td>
-		<td>0.000024</td>
-		<td>0.015051</td>
-		<td>0.001007</td>
-	</tr>
-	<tr>
-		<td>setpriority</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1.00</td>
-		<td>0.000028</td>
-		<td>0.000139</td>
-		<td>0.000062</td>
-	</tr>
-	<tr>
-		<td>getuid32</td>
-		<td>2</td>
-		<td>3</td>
-		<td>2.60</td>
-		<td>0.000019</td>
-		<td>0.000237</td>
-		<td>0.000051</td>
-	</tr>
-	<tr>
-		<td>openat</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1.00</td>
-		<td>0.000043</td>
-		<td>0.000060</td>
-		<td>0.000052</td>
-	</tr>
-	<tr>
-		<td>madvise</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1.00</td>
-		<td>0.000039</td>
-		<td>0.000201</td>
-		<td>0.000070</td>
-	</tr>
-	<tr>
-		<td>ioctl</td>
-		<td>2</td>
-		<td>5</td>
-		<td>3.80</td>
-		<td>0.000020</td>
-		<td>0.548940</td>
-		<td>0.243317</td>
-	</tr>
-	<tr>
-		<td>futex</td>
-		<td>4</td>
-		<td>13</td>
-		<td>7.60</td>
-		<td>0.000020</td>
-		<td>0.011290</td>
-		<td>0.000531</td>
-	</tr>
-	<tr>
-		<td>close</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1.00</td>
-		<td>0.000024</td>
-		<td>0.000032</td>
-		<td>0.000029</td>
-	</tr>
-	<tr>
-		<td>read</td>
-		<td>1</td>
-		<td>1</td>
-		<td>1.00</td>
-		<td>0.000022</td>
-		<td>0.034426</td>
-		<td>0.003663</td>
-	</tr>
-	<tr>
-		<td>prctl</td>
-		<td>4</td>
-		<td>10</td>
-		<td>7.60</td>
-		<td>0.000021</td>
-		<td>0.003480</td>
-		<td>0.000135</td>
-	</tr>
+  <tr>	<td>ioctl</td>	<td>2</td>	<td>5</td>	<td>3.80</td>	<td>0.000020</td>	<td>0.548940</td>	<td>0.243317</td>	<td>	9.246053	</td>	</tr>
+  <tr>	<td>epoll_pwait</td>	<td>3</td>	<td>3</td>	<td>3.00</td>	<td>0.000021</td>	<td>0.602746</td>	<td>0.168716</td>	<td>	5.061495	</td>	</tr>
+  <tr>	<td>write</td>	<td>5</td>	<td>8</td>	<td>6.80</td>	<td>0.000024</td>	<td>0.015051</td>	<td>0.001007</td>	<td>	0.068510	</td>	</tr>
+  <tr>	<td>futex</td>	<td>4</td>	<td>13</td>	<td>7.60</td>	<td>0.000020</td>	<td>0.011290</td>	<td>0.000531</td>	<td>	0.040388	</td>	</tr>
+  <tr>	<td>read</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000022</td>	<td>0.034426</td>	<td>0.003663</td>	<td>	0.036635	</td>	</tr>
+  <tr>	<td>prctl</td>	<td>4</td>	<td>10</td>	<td>7.60</td>	<td>0.000021</td>	<td>0.003480</td>	<td>0.000135</td>	<td>	0.010318	</td>	</tr>
+  <tr>	<td>clock_gettime</td>	<td>6</td>	<td>6</td>	<td>6.00</td>	<td>0.000020</td>	<td>0.002519</td>	<td>0.000138</td>	<td>	0.008316	</td>	</tr>
+  <tr>	<td>mmap2</td>	<td>3</td>	<td>3</td>	<td>3.00</td>	<td>0.000028</td>	<td>0.003860</td>	<td>0.000412</td>	<td>	0.007424	</td>	</tr>
+  <tr>	<td>mprotect</td>	<td>4</td>	<td>4</td>	<td>4.00</td>	<td>0.000021</td>	<td>0.000848</td>	<td>0.000141</td>	<td>	0.003398	</td>	</tr>
+  <tr>	<td>getpriority</td>	<td>2</td>	<td>3</td>	<td>2.60</td>	<td>0.000020</td>	<td>0.000599</td>	<td>0.000128</td>	<td>	0.003346	</td>	</tr>
+  <tr>	<td>clone</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000080</td>	<td>0.000542</td>	<td>0.000377</td>	<td>	0.002264	</td>	</tr>
+  <tr>	<td>sigaltstack</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000026</td>	<td>0.001281</td>	<td>0.000290</td>	<td>	0.001743	</td>	</tr>
+  <tr>	<td>getuid32</td>	<td>2</td>	<td>3</td>	<td>2.60</td>	<td>0.000019</td>	<td>0.000237</td>	<td>0.000051</td>	<td>	0.001349	</td>	</tr>
+  <tr>	<td>madvise</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000039</td>	<td>0.000201</td>	<td>0.000070</td>	<td>	0.000424	</td>	</tr>
+  <tr>	<td>setpriority</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000028</td>	<td>0.000139</td>	<td>0.000062</td>	<td>	0.000374	</td>	</tr>
+  <tr>	<td>openat</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000043</td>	<td>0.000060</td>	<td>0.000052</td>	<td>	0.000316	</td>	</tr>
+  <tr>	<td>close</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.000024</td>	<td>0.000032</td>	<td>0.000029</td>	<td>	0.000176	</td>	</tr>
 </table>
 
 # Common system calls

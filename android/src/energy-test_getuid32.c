@@ -34,7 +34,7 @@ void tail(int len){
 }
 
 int main(int argc, char * argv[]){
-	int i, len;
+	long i, len;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
@@ -43,7 +43,7 @@ int main(int argc, char * argv[]){
 	len=atoi(argv[1]);
 
 	head(len);
-	for(i=0; i<12800; i++)
+	for(i=0; i<300000; i++)
 		getuid();
 	tail(len);
 	return 0;

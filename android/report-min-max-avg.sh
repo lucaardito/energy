@@ -48,19 +48,21 @@ done
 
 for key in "${!cntcall[@]}"
 do
-  echo -e "\t<tr>"
+  echo -ne "<tr>"
 
-  echo -e "\t\t<td>$key</td>"
-  echo -e "\t\t<td>${mincallf[$key]}</td>"
-  echo -e "\t\t<td>${maxcallf[$key]}</td>"
-  avgcallt[$key]=$(bc -l <<< "scale=6;${avgcallt[$key]} / ${avgcallf[$key]}")
+  echo -ne "\t<td>$key</td>"
+  echo -ne "\t<td>${mincallf[$key]}</td>"
+  echo -ne "\t<td>${maxcallf[$key]}</td>"
   x=$(bc -l <<< "scale=2;${avgcallf[$key]} / ${cntcall[$key]}")
   x=$(echo $x | sed -e 's/^\./0./')
-  echo -e "\t\t<td>$x</td>"
+  echo -ne "\t<td>$x</td>"
 
-  echo -e "\t\t<td>${mincallt[$key]}</td>"
-  echo -e "\t\t<td>${maxcallt[$key]}</td>"
-  x=$(echo "${avgcallt[$key]}" | sed -e 's/^\./0./')
-  echo -e "\t\t<td>$x</td>"
+  echo -ne "\t<td>${mincallt[$key]}</td>"
+  echo -ne "\t<td>${maxcallt[$key]}</td>"
+  x=$(echo $(bc -l <<< "scale=6;${avgcallt[$key]} / ${avgcallf[$key]}") | sed -e 's/^\./0./')
+  echo -ne "\t<td>$x</td>"
+  x=$(echo $(bc -l <<< "scale=6;${avgcallt[$key]}") | sed -e 's/^\./0./')
+  echo -ne "\t<td>\t$x\t</td>"
+
   echo -e "\t</tr>"
-done
+done | LC_ALL="C" sort -rg -k10

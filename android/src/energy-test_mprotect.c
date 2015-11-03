@@ -36,7 +36,8 @@ void tail(int len){
 }
 
 int main(int argc, char *argv[]) {
-  int pagesize, i, len;
+  int pagesize;
+	long i, len;
   struct sigaction sa;
 
 	if(argc != 2){
@@ -67,7 +68,7 @@ int main(int argc, char *argv[]) {
   if (mprotect(buffer + pagesize * 2, pagesize, PROT_READ) == -1)
     handle_error("mprotect");
 
-	for(i=0; i<12999; i++)
+	for(i=1; i<300000; i++)
 		mprotect(buffer + pagesize * 2, pagesize, PROT_READ);
 
 	tail(len);

@@ -42,7 +42,7 @@ int main(int argc, char * argv[]){
 	len=atoi(argv[1]);
 	head(len);
 
-	for(i=0;i<30000;i++)
+	for(i=0;i<300000;i++)
 		gettimeofday(&dummy, NULL);
 
 	tail(len);

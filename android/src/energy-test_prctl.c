@@ -28,7 +28,7 @@ void tail(int len){
 }
 
 int main(int argc, char * argv[]){
-  int i, len;
+  long i, len;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
