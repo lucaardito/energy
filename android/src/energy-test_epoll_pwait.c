@@ -50,7 +50,6 @@ int main(int argc, char *argv[]) {
 	}
 
 	len=atoi(argv[1]);
-	head(len);
 
   // Creating the event
   memset(&evt, 0, sizeof(evt));
@@ -60,6 +59,8 @@ int main(int argc, char *argv[]) {
 		perror("epoll_ctl(EPOLL_CTL_ADD)");
 		return 1;
 	}
+
+	head(len);
 
   error = epoll_wait(epfd, &evt, 1, 10000); // Waiting 1 event for 10 seconds
   /*
