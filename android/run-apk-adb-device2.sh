@@ -13,12 +13,22 @@ if [ -z $1 ]; then
 fi
 
 DIR=/sdcard/test/"$1"
+# Gmail
 #PACKAGE="com.google.android.gm"
 #PACKAGE_REGEXP="com\.google\.android\.gm$"
 #ACTIVITY="ConversationListActivityGmail"
-PACKAGE="it.bbqcode.energy"
-PACKAGE_REGEXP="it\.bbqcode\.energy$"
-ACTIVITY="White"
+# EnergyWhite
+#PACKAGE="it.bbqcode.energy.empty"
+#PACKAGE_REGEXP="it\.bbqcode\.energy\.empty$"
+#ACTIVITY="White"
+# EnergyImage
+PACKAGE="ib.bbqcode.energy.image" # Typo in the apk
+PACKAGE_REGEXP="ib\.bbqcode\.energy\.image$" # Typo in the apk
+ACTIVITY="ImageActivity"
+# EnergyWebImage
+#PACKAGE="it.bbqcode.energy.webimage"
+#PACKAGE_REGEXP="it\.bbqcode\.energy\.webimage$"
+#ACTIVITY="WebImageActivity"
 
 su -c 'setenforce 0'
 rm -rf "$DIR"

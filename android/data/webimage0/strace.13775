@@ -1,0 +1,2 @@
+15:45:05.689978 futex(0xacc0ae58, FUTEX_WAIT, 0, NULL <unfinished ...>
+15:45:21.312003 +++ killed by SIGKILL +++

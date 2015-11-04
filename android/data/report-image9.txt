@@ -1,0 +1,237 @@
+Processing strace.17193
+futex	9	.685286
+ioctl	56	.034388
+epoll_pwait	17	.007844
+mmap2	27	.002414
+clock_gettime	53	.002110
+openat	51	.001868
+mprotect	48	.001285
+write	15	.001018
+close	32	.000860
+madvise	1	.000809
+getuid32	16	.000674
+clone	1	.000606
+munmap	15	.000592
+fstat64	25	.000562
+eventfd2	1	.000294
+recvfrom	8	.000286
+pread	7	.000270
+faccessat	6	.000249
+prctl	9	.000226
+readlinkat	3	.000157
+dup	6	.000156
+epoll_ctl	3	.000130
+getsockopt	1	.000122
+rt_sigprocmask	4	.000107
+read	2	.000100
+writev	1	.000070
+epoll_create1	1	.000039
+getppid	1	.000033
+fcntl64	1	.000022
+System call total time: 0.742577
+Begin: 15:58:36.546350
+End:   15:58:52.076538
+
+Processing strace.17195
+System call total time: 
+Begin: 15:58:36.422052
+End:   15:58:52.076307
+
+Processing strace.17199
+System call total time: 
+Begin: 15:58:36.422311
+End:   15:58:52.033385
+
+Processing strace.17200
+System call total time: 
+Begin: 15:58:36.421768
+End:   15:58:52.033171
+
+Processing strace.17201
+restart_syscall	1	9.868351
+clock_gettime	2	.000056
+futex	1	.000033
+System call total time: 9.86844
+Begin: 15:58:36.421337
+End:   15:58:52.032578
+
+Processing strace.17202
+restart_syscall	1	4.871384
+madvise	30	.006169
+clock_gettime	6	.000994
+mprotect	1	.000369
+futex	1	.000204
+System call total time: 4.87911
+Begin: 15:58:36.421554
+End:   15:58:52.032377
+
+Processing strace.17203
+ioctl	2	.433727
+futex	6	.016931
+write	4	.000339
+prctl	4	.000318
+getpriority	2	.000130
+clock_gettime	2	.000127
+fcntl64	1	.000030
+dup	1	.000029
+close	1	.000027
+System call total time: 0.451658
+Begin: 15:58:36.421066
+End:   15:58:52.032174
+
+Processing strace.17204
+ioctl	5	.476021
+mprotect	1	.001951
+futex	13	.001445
+clone	1	.001155
+write	10	.000927
+prctl	10	.000852
+clock_gettime	5	.000417
+getpriority	5	.000409
+mmap2	1	.000071
+System call total time: 0.483248
+Begin: 15:58:36.420729
+End:   15:58:52.031924
+
+Processing strace.17228
+epoll_pwait	12	.152410
+ioctl	83	.038022
+mprotect	177	.008875
+mmap2	60	.004936
+openat	36	.002666
+close	24	.001595
+read	13	.001365
+futex	16	.000792
+rt_sigprocmask	33	.000785
+clock_gettime	14	.000752
+madvise	16	.000691
+clone	1	.000640
+writev	5	.000623
+faccessat	6	.000561
+fstat64	14	.000536
+munmap	5	.000256
+connect	2	.000240
+prctl	7	.000239
+socket	2	.000204
+dup	4	.000090
+fcntl64	2	.000074
+setpriority	2	.000063
+readlinkat	1	.000063
+getdents64	2	.000063
+write	1	.000050
+pread	1	.000043
+epoll_ctl	1	.000033
+getuid32	1	.000029
+sigaltstack	1	.000026
+getpriority	1	.000026
+System call total time: 0.216748
+Begin: 15:58:36.564247
+End:   15:58:52.031711
+
+Processing strace.17235
+futex	3	.615799
+ioctl	1	.003414
+prctl	2	.000251
+mmap2	1	.000212
+sigaltstack	1	.000134
+setpriority	1	.000134
+mprotect	1	.000127
+System call total time: 0.620071
+Begin: 15:58:36.796234
+End:   15:58:52.025594
+
+Processing strace.17236
+ioctl	4	.032188
+prctl	8	.001273
+futex	6	.000803
+mprotect	3	.000712
+write	5	.000659
+mmap2	2	.000646
+getpriority	2	.000247
+madvise	1	.000210
+sigaltstack	1	.000209
+getuid32	1	.000207
+close	1	.000206
+openat	1	.000200
+setpriority	1	.000199
+clock_gettime	1	.000047
+System call total time: 0.037806
+Begin: 15:58:36.861419
+End:   15:58:52.031100
+
+*** TOTAL ***
+* Frequency *
+mprotect	231
+ioctl	151
+mmap2	91
+openat	88
+clock_gettime	83
+close	58
+futex	55
+madvise	48
+prctl	40
+fstat64	39
+rt_sigprocmask	37
+write	35
+epoll_pwait	29
+munmap	20
+getuid32	18
+read	15
+faccessat	12
+dup	11
+getpriority	10
+recvfrom	8
+pread	8
+writev	6
+setpriority	4
+readlinkat	4
+fcntl64	4
+epoll_ctl	4
+sigaltstack	3
+clone	3
+socket	2
+restart_syscall	2
+getdents64	2
+connect	2
+getsockopt	1
+getppid	1
+eventfd2	1
+epoll_create1	1
+
+*  Length  *
+restart_syscall	4.871384	9.868351	14.739735
+clone	0.000606	0.001155	.002401
+eventfd2	0.000294	0.000294	.000294
+getsockopt	0.000122	0.000122	.000122
+connect	0.000093	0.000147	.000240
+socket	0.000065	0.000139	.000204
+writev	0.000058	0.000197	.000693
+readlinkat	0.000043	0.000064	.000220
+epoll_create1	0.000039	0.000039	.000039
+getppid	0.000033	0.000033	.000033
+faccessat	0.000032	0.000100	.000810
+setpriority	0.000031	0.000199	.000396
+openat	0.000029	0.000330	.004734
+read	0.000028	0.000432	.001465
+munmap	0.000028	0.000100	.000848
+epoll_ctl	0.000027	0.000061	.000163
+sigaltstack	0.000026	0.000209	.000369
+madvise	0.000026	0.000809	.007879
+getpriority	0.000026	0.000203	.000812
+recvfrom	0.000025	0.000050	.000286
+pread	0.000025	0.000058	.000313
+write	0.000023	0.000213	.002993
+prctl	0.000023	0.000231	.003159
+mmap2	0.000023	0.001127	.008279
+ioctl	0.000022	0.433611	1.017760
+getdents64	0.000022	0.000041	.000063
+fcntl64	0.000022	0.000037	.000126
+mprotect	0.000021	0.001951	.013319
+futex	0.000021	0.615563	1.321293
+fstat64	0.000021	0.000097	.001098
+epoll_pwait	0.000021	0.055124	.160254
+dup	0.000021	0.000034	.000275
+rt_sigprocmask	0.000020	0.000030	.000892
+getuid32	0.000020	0.000207	.000910
+close	0.000020	0.000756	.002688
+clock_gettime	0.000020	0.000248	.004503

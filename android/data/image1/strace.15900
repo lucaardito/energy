@@ -1,0 +1,2 @@
+15:55:27.368489 rt_sigtimedwait([QUIT USR1], NULL, NULL, 8 <unfinished ...>
+15:55:43.012324 +++ killed by SIGKILL +++
