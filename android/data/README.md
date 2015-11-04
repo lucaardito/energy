@@ -265,13 +265,13 @@ If the sigmask argument is NULL, epoll_pwait() is equivalent to epoll_wait().
 ## futex()
 The futex() system call provides a method for a program to wait for a value at a given address to change, and a method to wake up anyone waiting on a particular address (while the addresses for the same memory in separate processes may not be equal, the kernel maps them internally so the same memory mapped in different locations will correspond for futex() calls). This system call is typically used to implement the contended case of a lock in shared memory.
 
+## gettimeofday()
+The function gettimeofday() can get the time as well as a timezone in a timeval struct.
+
 ## getuid32()
 getuid() returns the real user ID of the calling process.
 
 The original Linux getuid() and geteuid() system calls supported only 16-bit user IDs. Subsequently, Linux 2.4 added getuid32() and geteuid32(), supporting 32-bit IDs.
-
-## gettimeofday()
-The function gettimeofday() can get the time as well as a timezone in a timeval struct.
 
 ## ioctl()
 The ioctl() function manipulates the underlying device parameters of special files. In particular, many operating characteristics of character special files (e.g., terminals) may be controlled with ioctl() requests. The argument d must be an open file descriptor.
@@ -283,17 +283,25 @@ An ioctl() request has encoded in it whether the argument is an in parameter or 
 ## madvise()
 The madvise() system call advises the kernel about how to handle paging input/output in the address range beginning at address addr and with size length bytes. It allows an application to tell the kernel how it expects to use some mapped or shared memory areas, so that the kernel can choose appropriate read-ahead and caching techniques. This call does not influence the semantics of the application (except in the case of MADV_DONTNEED), but may influence its performance. The kernel is free to ignore the advice.
 
+## mmap2()
+mmap() creates a new mapping in the virtual address space of the calling process. The starting address for the new mapping is specified in addr. The length argument specifies the length of the mapping.
+
+If addr is NULL, then the kernel chooses the address at which to create the mapping; this is the most portable method of creating a new mapping. If addr is not NULL, then the kernel takes it as a hint about where to place the mapping; on Linux, the mapping will be created at a nearby page boundary. The address of the new mapping is returned as the result of the call.
+
 ## mprotect()
 mprotect() changes protection for the calling process's memory page(s) containing any part of the address range in the interval [addr, addr+len-1]. addr must be aligned to a page boundary.
 
 If the calling process tries to access memory in a manner that violates the protection, then the kernel generates a SIGSEGV signal for the process.
+
+## munmap()
+The munmap() system call deletes the mappings for the specified address range, and causes further references to addresses within the range to generate invalid memory references. The region is also automatically unmapped when the process is terminated. On the other hand, closing the file descriptor does not unmap the region.
 
 ## prctl()
 The prctl() performs operations on a process.
 
 prctl() is called with a first argument describing what to do (with values defined in &lt;linux/prctl.h&gt;), and further arguments with a significance depending on the first one.
 
-## read
+## read()
 read() attempts to read up to count bytes from file descriptor fd into the buffer starting at buf.
 
 On files that support seeking, the read operation commences at the current file offset, and the file offset is incremented by the number of bytes read. If the current file offset is at or past the end of file, no bytes are read, and read() returns zero.
@@ -301,6 +309,13 @@ On files that support seeking, the read operation commences at the current file 
 If count is zero, read() may detect the errors described below. In the absence of any errors, or if read() does not check for errors, a read() with a count of 0 returns zero and has no other effects.
 
 If count is greater than SSIZE_MAX, the result is unspecified.
+
+## recvfrom()
+The recvfrom() call is used to receive messages from a socket, and may be used to receive data on a socket whether or not it is connection-oriented.
+
+The routine return the length of the message on successful completion. If a message is too long to fit in the supplied buffer, excess bytes may be discarded depending on the type of socket the message is received from.
+
+If no messages are available at the socket, the receive call wait for a message to arrive, unless the socket is nonblocking (see fcntl(2)), in which case the value -1 is returned and the external variable errno is set to EAGAIN or EWOULDBLOCK. The receive calls normally return any data available, up to the requested amount, rather than waiting for receipt of the full amount requested.
 
 ## write()
 write() writes up to count bytes from the buffer pointed buf to the file referred to by the file descriptor fd.
