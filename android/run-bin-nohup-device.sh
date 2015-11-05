@@ -11,14 +11,16 @@ if ! [ $(id -u) = 0 ]; then
 fi
 
 if [ -z $1 ]; then
-  SLEEP_LEN=10
+  SLEEP_LEN=15
 fi
 
 if [ -z $2 ]; then
-  BIN_NAME="strace -C -T -tt -r -D -o /sdcard/trace.txt energy-test"
+  BIN_NAME="energy-test"
 fi
 
 echo energy-lock > /sys/power/wake_lock
+svc wifi disable
 sleep $SLEEP_LEN
-$BIN_NAME
+$BIN_NAME 5
+svc wifi enable
 echo energy-lock > /sys/power/wake_unlock
