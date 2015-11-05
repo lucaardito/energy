@@ -38,27 +38,28 @@ void tail(int len){
 int main(int argc, char * argv[]){
 	const char * fn = "/sdcard/test/hello.txt";
 	char content[SIZE]; // 4KB content line
-	int fd, i, len;
+	int fd, i, len, j;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
 		exit(1);
 	}
 	len=atoi(argv[1]);
+	for(j=0; j<31; j++){
+		// Open file
+		fd = open(fn, O_RDONLY);
 
-	// Open file
-	fd = open(fn, O_RDONLY);
-
-	if(fd >= 0){
-		head(len);
-		for(i=0; i<12800; i++)	// 50MB file size
-			read(fd, content, SIZE);
-		// Close file
-		tail(len);
-		close(fd);
-	}else{
-		printf("fopen() FAILED");
-		return 1;
+		if(fd >= 0){
+			head(len);
+			for(i=0; i<12800; i++)	// 50MB file size
+				read(fd, content, SIZE);
+			// Close file
+			tail(len);
+			close(fd);
+		}else{
+			printf("fopen() FAILED");
+			return 1;
+		}
 	}
 	return 0;
 }

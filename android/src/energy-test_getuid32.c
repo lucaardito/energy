@@ -34,17 +34,18 @@ void tail(int len){
 }
 
 int main(int argc, char * argv[]){
-	long i, len;
+	long i, len, j;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
 		exit(1);
 	}
 	len=atoi(argv[1]);
-
-	head(len);
-	for(i=0; i<300000; i++)
-		getuid();
-	tail(len);
+	for(j=0; j<31; j++){
+		head(len);
+		for(i=0; i<3000000; i++)
+			getuid();
+		tail(len);
+	}
 	return 0;
 }

@@ -54,7 +54,7 @@ void* thread_f(void* par){
 
 int main(int argc, char *argv[]){
   //pthread_t threads[NUM];
-  //int i;
+  int i;
   int futex_addr, len;
   struct timespec tout;
 
@@ -74,11 +74,13 @@ int main(int argc, char *argv[]){
     pthread_create(&threads[i], NULL, thread_f, (void *)&futex_addr);
   */
 
-  head(len);
+	for(i=0; i<31; i++){
+		head(len);
 
-  futex_wait(&futex_addr, 0, &tout);
+		futex_wait(&futex_addr, 0, &tout);
 
-  tail(len);
+		tail(len);
+	}
   /*wake threads
   futex_wake(&futex_addr, NUM);
   */

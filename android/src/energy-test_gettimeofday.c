@@ -31,7 +31,7 @@ void tail(int len){
 }
 
 int main(int argc, char * argv[]){
-	long len, i;
+	long len, i, j;
 	struct timeval dummy;
 
 	if(argc != 2){
@@ -40,11 +40,13 @@ int main(int argc, char * argv[]){
 	}
 
 	len=atoi(argv[1]);
-	head(len);
+	for(j=0; j<31; j++){
+		head(len);
 
-	for(i=0;i<300000;i++)
-		gettimeofday(&dummy, NULL);
+		for(i=0;i<3000000;i++)
+			gettimeofday(&dummy, NULL);
 
-	tail(len);
+		tail(len);
+	}
 	return 0;
 }

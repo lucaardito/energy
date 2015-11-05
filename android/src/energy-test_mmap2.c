@@ -32,7 +32,7 @@ void tail(int len){
 }
 
 int main(int argc, char * argv[]){
-	long len, i;
+	long len, i, j;
 	const char * fn = "/sdcard/test/hello.txt";
 	void *map;
 	int fd;
@@ -46,13 +46,15 @@ int main(int argc, char * argv[]){
 	len=atoi(argv[1]);
 	fd = open(fn, O_RDONLY);
 
-	head(len);
+	for(j=0; j<31; j++){
+		head(len);
 
-	for(i=0;i<150000;i++){
-		map = mmap(NULL, 1, PROT_READ, MAP_PRIVATE, fd, 0);
-		munmap(map, 1);
+		for(i=0;i<1500000;i++){
+			map = mmap(NULL, 1, PROT_READ, MAP_PRIVATE, fd, 0);
+			munmap(map, 1);
+		}
+
+		tail(len);
 	}
-
-	tail(len);
 	return 0;
 }

@@ -33,7 +33,7 @@ void tail(int len){
 
 int main(int argc, char *argv[]) {
   long len;
-  int fd[2], error, epfd;
+  int fd[2], error, epfd, j;
   struct epoll_event evt;
 
   if(argc != 2){
@@ -60,9 +60,10 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 
-	head(len);
+	for(j=0; j<31; j++){
+		head(len);
 
-  error = epoll_wait(epfd, &evt, 1, 10000); // Waiting 1 event for 10 seconds
+		error = epoll_wait(epfd, &evt, 1, 10000); // Waiting 1 event for 10 seconds
   /*
   if (error != -1)
 		fprintf(stdout, "FAIL (%d returned instead of -1)\n", error);
@@ -72,7 +73,8 @@ int main(int argc, char *argv[]) {
 		fprintf(stdout, "OK\n");
   */
 
-  tail(len);
+		tail(len);
+	}
 
   return(0);
 }

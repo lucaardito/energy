@@ -36,7 +36,7 @@ void tail(int len){
 }
 
 int main(int argc, char *argv[]) {
-  int pagesize;
+  int pagesize, j;
 	long i, len;
   struct sigaction sa;
 
@@ -63,15 +63,17 @@ int main(int argc, char *argv[]) {
   if (buffer == NULL)
     handle_error("memalign");
 
-	head(len);
 
   if (mprotect(buffer + pagesize * 2, pagesize, PROT_READ) == -1)
     handle_error("mprotect");
 
-	for(i=1; i<300000; i++)
-		mprotect(buffer + pagesize * 2, pagesize, PROT_READ);
+	for(j=0; j<31; j++){
+		head(len);
+	
+		for(i=0; i<3000000; i++)
+			mprotect(buffer + pagesize * 2, pagesize, PROT_READ);
 
-	tail(len);
-
+		tail(len);
+	}
   exit(EXIT_SUCCESS);
 }

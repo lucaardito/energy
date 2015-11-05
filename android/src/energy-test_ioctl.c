@@ -29,7 +29,7 @@ void tail(int len){
 
 int main(int argc, char * argv[]){
 	int fd, status;
-	long i, len;
+	long i, len, j;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
@@ -39,16 +39,18 @@ int main(int argc, char * argv[]){
 
 	fd = open("/dev/tty", O_RDONLY);
 
-	head(len);
+	for(j=0; j<31; j++){
+		head(len);
 
-	if (ioctl(fd, TIOCGETD, &status) == -1)
-		printf("TIOCGETD failed: %s\n", strerror(errno));
-	else {
-		for(i=1; i<300000; i++)
-		 	ioctl(fd, TIOCGETD, &status);
+		if (ioctl(fd, TIOCGETD, &status) == -1)
+			printf("TIOCGETD failed: %s\n", strerror(errno));
+		else {
+			for(i=1; i<3000000; i++)
+			 	ioctl(fd, TIOCGETD, &status);
+		}
+
+		tail(len);
 	}
-
-	tail(len);
 
 	close(fd);
 	return(0);

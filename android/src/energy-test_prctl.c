@@ -28,7 +28,7 @@ void tail(int len){
 }
 
 int main(int argc, char * argv[]){
-  long i, len;
+	long i, len, j;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
@@ -36,15 +36,17 @@ int main(int argc, char * argv[]){
 	}
 	len=atoi(argv[1]);
 
-	head(len);
+	if (prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL) == -1)
+		printf("TIOCGETD failed: %s\n", strerror(errno));
+	else {
+		for(j=0; j<31; j++){
+			head(len);
+	
+			for(i=0; i<3000000; i++)
+			 	prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
+			tail(len);
+		}
+	}
 
-  if (prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL) == -1)
-    printf("TIOCGETD failed: %s\n", strerror(errno));
-  else {
-		for(i=1; i<300000; i++)
-		 	prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
-  }
-
-	tail(len);
 	return(0);
 }
