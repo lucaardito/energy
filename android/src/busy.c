@@ -3,12 +3,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/time.h>
-//#include <time.h>
-
-/*void busy(int dur){
-	int end = time(NULL) + dur;
-	while(end > time(NULL));
-}*/
 
 void busy(int dur){
 	struct timeval end, now;
@@ -28,9 +22,6 @@ int main(int argc, char * argv[]){
 		exit(1);
 	}
 	len = atoi(argv[1]);
-	for(i=0; i<4; i++)
-		if (!fork()) {
-			busy(len);
-		}
+	busy(len);
 	return 0;
 }
