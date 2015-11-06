@@ -61,7 +61,7 @@ do
   echo -ne "\t<td>${mincallt[$key]}</td>"
   echo -ne "\t<td>${maxcallt[$key]}</td>"
   avgcallt[$key]=$(echo $(bc -l <<< "scale=6;${avgcallt[$key]} / $totcallf") | sed -e 's/^\./0./')
-  echo -ne "\t<td>$x</td>"
+  echo -ne "\t<td>${avgcallt[$key]}</td>"
   x=$(echo $(bc -l <<< "scale=6;${avgcallt[$key]} *  ${avgcallf[$key]}") | sed -e 's/^\./0./')
   echo -ne "\t<td>\t$x\t</td>"
 
