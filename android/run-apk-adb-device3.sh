@@ -17,19 +17,20 @@ fi
 #PACKAGE_REGEXP="com\.google\.android\.gm$"
 #ACTIVITY="ConversationListActivityGmail"
 # EnergyWhite
-#PACKAGE="it.bbqcode.energy.empty"
-#PACKAGE_REGEXP="it\.bbqcode\.energy\.empty$"
-#ACTIVITY="White"
+PACKAGE="it.bbqcode.energy"
+PACKAGE_REGEXP="it\.bbqcode\.energy$"
+ACTIVITY="White"
 # EnergyImage
-PACKAGE="ib.bbqcode.energy.image" # Typo in the apk
-PACKAGE_REGEXP="ib\.bbqcode\.energy\.image$" # Typo in the apk
-ACTIVITY="ImageActivity"
+#PACKAGE="ib.bbqcode.energy.image" # Typo in the apk
+#PACKAGE_REGEXP="ib\.bbqcode\.energy\.image$" # Typo in the apk
+#ACTIVITY="ImageActivity"
 # EnergyWebImage
 #PACKAGE="it.bbqcode.energy.webimage"
 #PACKAGE_REGEXP="it\.bbqcode\.energy\.webimage$"
 #ACTIVITY="WebImageActivity"
 
-for (( i=0; i<30; i++ ))
+i=0
+while [ i -lt 30 ]
 do
 	sleep $1
 	energy-busy $1
@@ -38,6 +39,7 @@ do
 	sleep 15  # ATM we are performing only a sleep
 	am force-stop $PACKAGE
 	am force-stop $PACKAGE  # Stopping again, just to be sure the application is completely closed
+	i=$(expr $i + 1)
 done
 sleep $1
-busy $1
+energy-busy $1
