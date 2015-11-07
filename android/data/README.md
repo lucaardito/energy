@@ -29,7 +29,7 @@
   <tr>	<td>restart_syscall</td>	<td>2</td>	<td>4</td>	<td>2.90</td>	<td>0.000580</td>	<td>9.397483</td>	<td>4.552083</td>	<td>	13.201040	</td>	</tr>
   <tr>	<td>epoll_pwait</td>	<td>161</td>	<td>283</td>	<td>217.10</td>	<td>0.000020</td>	<td>4.238300</td>	<td>0.059458</td>	<td>	12.908331	</td>	</tr>
   <tr>	<td>pselect6</td>	<td>1</td>	<td>1</td>	<td>1.00</td>	<td>0.076822</td>	<td>0.574914</td>	<td>0.339859</td>	<td>	0.339859	</td>	</tr>
-  <tr>	<td>clock\_gettime</td>	<td>1133</td>	<td>2760</td>	<td>2032.30</td>	<td>0.000018</td>	<td>0.171895</td>	<td>0.000144</td>	<td>	0.292651	</td>	</tr>
+  <tr>	<td>clock_gettime</td>	<td>1133</td>	<td>2760</td>	<td>2032.30</td>	<td>0.000018</td>	<td>0.171895</td>	<td>0.000144</td>	<td>	0.292651	</td>	</tr>
   <tr>	<td>write</td>	<td>233</td>	<td>590</td>	<td>375.40</td>	<td>0.000021</td>	<td>0.078820</td>	<td>0.000374</td>	<td>	0.140399	</td>	</tr>
   <tr>	<td>gettimeofday</td>	<td>228</td>	<td>272</td>	<td>256.90</td>	<td>0.000021</td>	<td>0.055956</td>	<td>0.000360</td>	<td>	0.092484	</td>	</tr>
   <tr>	<td>prctl</td>	<td>152</td>	<td>399</td>	<td>240.00</td>	<td>0.000018</td>	<td>0.103392</td>	<td>0.000210</td>	<td>	0.050400	</td>	</tr>
