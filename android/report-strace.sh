@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# perform-stats.sh
+# report-strace.sh
 # Run on host
-# Process strace logs to count number the number of invocation for each system call (globally and per-thread)
+# Process strace logs to count number the number of invocation for each system call and execution times (globally and per-thread)
 
 if [[ -z $1 ]]; then
   echo "Please specify the directory"

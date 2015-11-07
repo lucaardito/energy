@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# run-apk-adb.sh
+# run-apk-adb-device.sh
 # Run on device
 # Trace system calls of a running application (APK)
+# This script is used to record system calls
 
 BUSY='energy-test'
 
@@ -18,13 +19,13 @@ DIR=/sdcard/test/"$1"
 #PACKAGE_REGEXP="com\.google\.android\.gm$"
 #ACTIVITY="ConversationListActivityGmail"
 # EnergyWhite
-#PACKAGE="it.bbqcode.energy.empty"
-#PACKAGE_REGEXP="it\.bbqcode\.energy\.empty$"
-#ACTIVITY="White"
+PACKAGE="it.bbqcode.energy"
+PACKAGE_REGEXP="it\.bbqcode\.energy$"
+ACTIVITY="White"
 # EnergyImage
-PACKAGE="ib.bbqcode.energy.image" # Typo in the apk
-PACKAGE_REGEXP="ib\.bbqcode\.energy\.image$" # Typo in the apk
-ACTIVITY="ImageActivity"
+#PACKAGE="ib.bbqcode.energy.image" # Typo in the apk
+#PACKAGE_REGEXP="ib\.bbqcode\.energy\.image$" # Typo in the apk
+#ACTIVITY="ImageActivity"
 # EnergyWebImage
 #PACKAGE="it.bbqcode.energy.webimage"
 #PACKAGE_REGEXP="it\.bbqcode\.energy\.webimage$"

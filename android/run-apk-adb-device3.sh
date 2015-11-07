@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# run-apk-adb.sh
+# run-apk-adb-device3.sh
 # Run on device
-# Trace system calls of a running application (APK)
+# Launch application (APK) from command line (without strace)
+# This script is used to record current values without the strace overhead
 
 BUSY='energy-test'
 

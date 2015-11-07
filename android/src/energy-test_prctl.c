@@ -41,9 +41,9 @@ int main(int argc, char * argv[]){
 	else {
 		for(j=0; j<31; j++){
 			head(len);
-	
+
 			for(i=0; i<3000000; i++)
-			 	prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
+				prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
 			tail(len);
 		}
 	}

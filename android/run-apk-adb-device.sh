@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# run-apk-adb.sh
+# run-apk-adb-device.sh
 # Run on device
-# Trace system calls of a running application (APK)
-
+# Trace system calls of a running application (APK) following the children of 'zygote'
 # THIS SOLUTION SEEMS NOT WORKING WHEN SCREEN IS ON
 
 

@@ -2,7 +2,7 @@
 
 # run-energy-bin-nowifi.sh
 # Run on host
-# 
+# The script pushes the right script to run a binary without the wifi power overhead
 
 #ADB=/opt/android-sdk/platform-tools/adb
 ADB=adb

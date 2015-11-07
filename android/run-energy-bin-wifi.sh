@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# run-energy-bin-nowifi.sh
+# run-energy-bin-wifi.sh
 # Run on host
-# 
+# The script pushes the right script to run a binary
 
 #ADB=/opt/android-sdk/platform-tools/adb
 ADB=adb

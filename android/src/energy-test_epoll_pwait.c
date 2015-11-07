@@ -32,30 +32,30 @@ void tail(int len){
 }
 
 int main(int argc, char *argv[]) {
-  long len;
-  int fd[2], error, epfd, j;
-  struct epoll_event evt;
+	long len;
+	int fd[2], error, epfd, j;
+	struct epoll_event evt;
 
-  if(argc != 2){
+	if(argc != 2){
 		printf("Please specify busy lenght\n");
 		exit(1);
 	}
-  if ((epfd = epoll_create(1)) == -1) {
+	if ((epfd = epoll_create(1)) == -1) {
 		perror("epoll_create(1)");
 		return 1;
 	}
-  if (pipe(fd) < 0) {
+	if (pipe(fd) < 0) {
 		printf("pipe() error\n");
 		exit(1);
 	}
 
 	len=atoi(argv[1]);
 
-  // Creating the event
-  memset(&evt, 0, sizeof(evt));
+	// Creating the event
+	memset(&evt, 0, sizeof(evt));
 	evt.events = EPOLLIN;
-  // Binding the event with the pipe
-  if (epoll_ctl(epfd, EPOLL_CTL_ADD, fd[0], &evt) < 0) {
+	// Binding the event with the pipe
+	if (epoll_ctl(epfd, EPOLL_CTL_ADD, fd[0], &evt) < 0) {
 		perror("epoll_ctl(EPOLL_CTL_ADD)");
 		return 1;
 	}
@@ -64,17 +64,17 @@ int main(int argc, char *argv[]) {
 		head(len);
 
 		error = epoll_wait(epfd, &evt, 1, 10000); // Waiting 1 event for 10 seconds
-  /*
-  if (error != -1)
-		fprintf(stdout, "FAIL (%d returned instead of -1)\n", error);
-	else if (errno != EINVAL)
-		fprintf(stdout, "FAIL (errno is %d instead of EINVAL)\n", errno);
-	else
-		fprintf(stdout, "OK\n");
-  */
+		/*
+		if (error != -1)
+			fprintf(stdout, "FAIL (%d returned instead of -1)\n", error);
+		else if (errno != EINVAL)
+			fprintf(stdout, "FAIL (errno is %d instead of EINVAL)\n", errno);
+		else
+			fprintf(stdout, "OK\n");
+		*/
 
 		tail(len);
 	}
 
-  return(0);
+	return(0);
 }

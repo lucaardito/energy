@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# run-apk-adb.sh
+# run-apk-adb-host-strace.sh
 # Run on host
-# Trace system calls of a running application (APK)
+# Push the correct script (that run strace) and pull the results in the directory given as first parameter
 
 ADB=/opt/android-sdk/platform-tools/adb
 SCRIPT="run-apk-adb-device2.sh"

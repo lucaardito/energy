@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# report-min-max-avg.sh
+# Run on host
+# Perform statistics using as input, data produced by report-strace.sh.
+# Results are printed in html ready to be inserted as a table
+
 if [[ -z $1 ]]; then
   echo "Please specify the input name"
   exit 1

@@ -46,7 +46,7 @@ int main(int argc, char * argv[]){
 			printf("TIOCGETD failed: %s\n", strerror(errno));
 		else {
 			for(i=1; i<3000000; i++)
-			 	ioctl(fd, TIOCGETD, &status);
+				ioctl(fd, TIOCGETD, &status);
 		}
 
 		tail(len);

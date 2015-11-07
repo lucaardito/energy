@@ -1,9 +1,8 @@
 #!/system/bin/sh
 
-# energy-run-standalone
+# run-bin-nowifi-device.sh
 # Run on device
-# Utility to run the energy-test after a sleep. In this way it is possible to run this script with
-# `nohup` and collect data with less overhead (it is possible to close the shell and disable wifi)
+# Utility to run the energy-test after a sleep
 
 if ! [ $(id -u) = 0 ]; then
 	echo "Please run this script as root. It is required to acquire a wakelock."
