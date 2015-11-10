@@ -17,11 +17,11 @@ peaks <- function(series, span = 3, do.pad = TRUE) {
   } else v
 }
 ##########################################################################
-
-gp <- NULL
+out.filename = paste0(base.folder,"/power_values.txt")
+file.create(file = out.filename)
 for(i in 1:length(data.sources)){
   data <- read.delim2(paste0(base.folder,data.sources[i]), header = FALSE, skip = 7)
-  
+  data$V1 <- data$V1*5.03
   dens = density(data$V1,adjust=.2)
   dens$peaks = peaks(dens$y,9) & dens$y > mean(dens$y)
   
@@ -33,16 +33,19 @@ for(i in 1:length(data.sources)){
   dens$peaks = which(peaks(dens$y) & dens$y>mean(dens$y))
   between.peaks = seq(dens$peaks[1],dens$peaks[2])
   gap = intersect(which(dens$y==min(dens$y[between.peaks])),between.peaks)
-  
+
   gap.min = min(dens$x[gap])
   gap.max = max(dens$x[gap])
   
   idle.power = dens$x[dens$peaks[1]]
   discr.power = mean(dens$x[gap])
+  #work.power = dens$x[dens$peaks[length(dens$peaks)]]
+  
+  write(paste0(syscall[i],": ",dens$x[dens$peaks[1:length(dens$peaks)]]),
+        file = out.filename,
+        append = TRUE)
   
   dens.gap = data.frame(dens[c("x","y")])[gap,]
-  
-  
   
   p <- ggplot(data,aes(x=V1))
   p <- p + geom_line(stat="density",adjust=.2) + expand_limits(y=0)
@@ -54,7 +57,7 @@ for(i in 1:length(data.sources)){
   #                  fill="green")
   p <- p + annotate("segment", x=discr.power,xend=discr.power,y=0,yend=max(dens$y), color="red",linewidth=2)
   
-  p <- p + xlab("Power [mw]")
+  p <- p + xlab("Power [w]")
   p <- p + ggtitle(syscall[i])
   
   p
