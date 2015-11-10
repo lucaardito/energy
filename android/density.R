@@ -1,3 +1,6 @@
+setwd("~")
+library("ggplot2")
+
 base.folder = "./git/energy/android/data/"
 data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
 syscall = sub("syscall_", "",sub("\\.txt$","",data.sources))
@@ -18,7 +21,7 @@ peaks <- function(series, span = 3, do.pad = TRUE) {
 }
 ##########################################################################
 
-out.filename = paste0(base.folder,"/power_values.txt")
+out.filename = paste0(base.folder,"power_density_peaks_values.txt")
 file.create(file = out.filename)
 
 for(i in 1:length(data.sources)){
@@ -61,6 +64,15 @@ for(i in 1:length(data.sources)){
   p <- p + xlab("Power [w]")
   p <- p + ggtitle(syscall[i])
   
-  p
-  #ggsave(paste0(base.folder,"plot/density_",syscall[i],".png"))
+  # Save density distribution to file
+  #ggsave(paste0(base.folder,"plot/density_",syscall[i],".png"), plot = p)
+  
+  # Save power distribution to file
+  #png(filename = paste0(base.folder,"plot/data_",syscall[i],".png"), width = 8600, height = 1000)
+  rp <- ggplot(data,aes(x=c(1:length(data$V1)),y=V1))
+  rp <- rp + geom_line()
+  for(j in 1:length(dens$peaks)){
+    rp <- rp + annotate("segment", x=0,xend=length(data$V1),y=dens$x[dens$peaks[j]],yend=dens$x[dens$peaks[j]], color="red",linewidth=2)
+  }
+  #ggsave(paste0(base.folder,"plot/power_",syscall[i],".png"), plot = rp)
 }
