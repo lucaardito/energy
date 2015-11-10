@@ -17,8 +17,10 @@ peaks <- function(series, span = 3, do.pad = TRUE) {
   } else v
 }
 ##########################################################################
+
 out.filename = paste0(base.folder,"/power_values.txt")
 file.create(file = out.filename)
+
 for(i in 1:length(data.sources)){
   data <- read.delim2(paste0(base.folder,data.sources[i]), header = FALSE, skip = 7)
   data$V1 <- data$V1*5.03
@@ -39,9 +41,8 @@ for(i in 1:length(data.sources)){
   
   idle.power = dens$x[dens$peaks[1]]
   discr.power = mean(dens$x[gap])
-  #work.power = dens$x[dens$peaks[length(dens$peaks)]]
-  
-  write(paste0(syscall[i],": ",dens$x[dens$peaks[1:length(dens$peaks)]]),
+
+  write(paste0(syscall[i],": ",dens$x[dens$peaks]),
         file = out.filename,
         append = TRUE)
   
@@ -61,5 +62,5 @@ for(i in 1:length(data.sources)){
   p <- p + ggtitle(syscall[i])
   
   p
-  ggsave(paste0(base.folder,"plot/density_",syscall[i],".png"))
+  #ggsave(paste0(base.folder,"plot/density_",syscall[i],".png"))
 }
