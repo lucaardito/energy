@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
 		futex_wait(&futex_addr, 0, &tout);
 		gettimeofday(&end,NULL);	// Execution time end
 		timersub(&end,&start,&time_len);	// Execution time
-		printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
+		printf("Run %2d - %d:%06d\n", i, time_len.tv_sec, time_len.tv_usec);
 		timeradd(&total_time,&time_len,&total_time);
 	}
 	printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
