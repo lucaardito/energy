@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <sys/mman.h>
+#include "energy-utils.h"
 
 #define handle_error(msg) do { perror(msg); exit(EXIT_FAILURE); } while (0)
 
@@ -15,37 +16,19 @@ static void handler(int sig, siginfo_t *si, void *unused){
 	exit(EXIT_FAILURE);
 }
 
-void busy(int dur){
-	struct timeval end, now;
-
-	gettimeofday(&end,NULL);
-	end.tv_sec += dur;
-	do{
-		gettimeofday(&now,NULL);
-	}while(timercmp(&now, &end, <));
-}
-
-void head(int len){
-	sleep(len);
-	busy(len);
-	sleep(len);
-}
-
-void tail(int len){
-	return;
-}
-
 int main(int argc, char *argv[]) {
 	int pagesize, j;
 	long i, len;
 	struct sigaction sa;
+	struct timeval end, start, time_len, total_time;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
 		exit(1);
 	}
 	len=atoi(argv[1]);
-
+	total_time.tv_sec = 0;
+	total_time.tv_usec = 0;
 	sa.sa_flags = SA_SIGINFO;
 	sigemptyset(&sa.sa_mask);
 	sa.sa_sigaction = handler;
@@ -63,17 +46,20 @@ int main(int argc, char *argv[]) {
 	if (buffer == NULL)
 		handle_error("memalign");
 
-
 	if (mprotect(buffer + pagesize * 2, pagesize, PROT_READ) == -1)
 		handle_error("mprotect");
 
-	for(j=0; j<31; j++){
-		head(len);
-
+	for(j=0; j<30; j++){
+		marker(len);
+		gettimeofday(&start,NULL);	// Execution time begin
 		for(i=0; i<3000000; i++)
 			mprotect(buffer + pagesize * 2, pagesize, PROT_READ);
-
-		tail(len);
+		gettimeofday(&end,NULL);	// Execution time end
+		timersub(&end,&start,&time_len);	// Execution time
+		printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
+		timeradd(&total_time,&time_len,&total_time);
 	}
+	printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
+	marker(len);
 	exit(EXIT_SUCCESS);
 }

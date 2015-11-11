@@ -10,31 +10,13 @@
 #include <signal.h>
 #include <errno.h>
 #include <fcntl.h>
-
-void busy(int dur){
-	struct timeval end, now;
-
-	gettimeofday(&end,NULL);
-	end.tv_sec += dur;
-	do{
-		gettimeofday(&now,NULL);
-	}while(timercmp(&now, &end, <));
-}
-
-void head(int len){
-	sleep(len);
-	busy(len);
-	sleep(len);
-}
-
-void tail(int len){
-	return;
-}
+#include "energy-utils.h"
 
 int main(int argc, char *argv[]) {
 	long len;
 	int fd[2], error, epfd, j;
 	struct epoll_event evt;
+	struct timeval end, start, time_len, total_time;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
@@ -50,7 +32,8 @@ int main(int argc, char *argv[]) {
 	}
 
 	len=atoi(argv[1]);
-
+	total_time.tv_sec = 0;
+	total_time.tv_usec = 0;
 	// Creating the event
 	memset(&evt, 0, sizeof(evt));
 	evt.events = EPOLLIN;
@@ -60,9 +43,9 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 
-	for(j=0; j<31; j++){
-		head(len);
-
+	for(j=0; j<30; j++){
+		marker(len);
+		gettimeofday(&start,NULL);	// Execution time begin
 		error = epoll_wait(epfd, &evt, 1, 10000); // Waiting 1 event for 10 seconds
 		/*
 		if (error != -1)
@@ -72,9 +55,12 @@ int main(int argc, char *argv[]) {
 		else
 			fprintf(stdout, "OK\n");
 		*/
-
-		tail(len);
+		gettimeofday(&end,NULL);	// Execution time end
+		timersub(&end,&start,&time_len);	// Execution time
+		printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
+		timeradd(&total_time,&time_len,&total_time);
 	}
-
+	printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
+	marker(len);
 	return(0);
 }

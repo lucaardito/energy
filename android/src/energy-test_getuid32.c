@@ -5,47 +5,31 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-//#include <time.h>
 #include <sys/time.h>
-
-/*void busy(int dur){
-	int end = time(NULL) + dur;
-	while(end > time(NULL));
-}*/
-
-void busy(int dur){
-	struct timeval end, now;
-
-	gettimeofday(&end,NULL);
-	end.tv_sec += dur;
-	do{
-		gettimeofday(&now,NULL);
-	}while(timercmp(&now, &end, <));
-}
-
-void head(int len){
-	sleep(len);
-	busy(len);
-	sleep(len);
-}
-
-void tail(int len){
-	return;
-}
+#include "energy-utils.h"
 
 int main(int argc, char * argv[]){
 	long i, len, j;
+	struct timeval end, start, time_len, total_time;
 
 	if(argc != 2){
 		printf("Please specify busy lenght\n");
 		exit(1);
 	}
 	len=atoi(argv[1]);
-	for(j=0; j<31; j++){
-		head(len);
+	total_time.tv_sec = 0;
+	total_time.tv_usec = 0;
+	for(j=0; j<30; j++){
+		marker(len);
+		gettimeofday(&start,NULL);	// Execution time begin
 		for(i=0; i<3000000; i++)
 			getuid();
-		tail(len);
+		gettimeofday(&end,NULL);	// Execution time end
+		timersub(&end,&start,&time_len);	// Execution time
+		printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
+		timeradd(&total_time,&time_len,&total_time);
 	}
+	printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
+	marker(len);
 	return 0;
 }
