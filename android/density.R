@@ -53,14 +53,21 @@ for(i in 1:length(data.sources)){
   id.noise <- unique(data$runid)[table(data$runid)<=noise]
   data$tag[data$runid%in%id.noise] = "NOISE"
   
+  
+  
   # merging consecutive noise runs into one
   data$runid <- cumsum(c(1,abs(diff(as.numeric(data$tag))) ) )
   
   # assigning consecutive runids
   data$runid <- cumsum(c(1,abs(diff(data$runid)) )!=0 )
   
+  
   # updating noise id
-  id.noise <- unique(data$runid)[data$tag=="NOISE"]
+  id.noise <- unique(data$runid[data$tag=="NOISE"])
+
+  data$tag[data$runid%in%id.noise] = data$tag[data$runid%in%(id.noise-1)]
+  
+  
   
   # marking NOISE AS WORK --- tweak this?
   data$tag[data$tag=="NOISE"] = "WORK"
