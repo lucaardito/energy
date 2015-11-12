@@ -53,11 +53,20 @@ peaks <- function(series, span = 3, do.pad = TRUE) {
   id.noise = unique(data$runid)[table(data$runid)<=noise]
   data$tag[data$runid%in%id.noise] = "NOISE"
   
-  ## discard NOISE runs --- better to set the lower peak value instead of removing the sample?
-  data=subset(data,tag!="NOISE")
+  # merging consecutive noise runs into one
+  data$runid = cumsum(c(0,abs(diff(as.numeric(data$tag))) ) )
+  
+  # assigning consecutive 
+  data$runid = cumsum(c(0,abs(diff(data$runid)) )!=0 )
+
+  # check near (left and right runid) to see their tag
+  # if the tag is the same, change NOISE tag => their tag
+  
+  ## discard NOISE runs
+  #data=subset(data,tag!="NOISE")
   
   # re-assign run ids
-  data$runid = cumsum(c(0,abs(diff(as.numeric(data$tag))) ) )
+  #data$runid = cumsum(c(0,abs(diff(as.numeric(data$tag))) ) )
   
   # find energy markers
   id.markers = unique(data$runid)[table(data$runid)>=4700 & table(data$runid)<=5000] # ~ length of the marker
