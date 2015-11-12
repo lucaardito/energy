@@ -2,7 +2,7 @@ setwd("~")
 library("ggplot2")
 
 base.folder = "./git/energy/android/data/"
-noise = 60
+noise = 10
 
 data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
 syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
@@ -39,7 +39,7 @@ for(i in 1:length(data.sources)){
   
   idle.power <- dens$x[dens$peaks[1]]
   #discr.power = mean(dens$x[gap])
-  discr.power <- dens$x[gap] + (dens$x[dens$peaks[3]]-dens$x[dens$peaks[2]])/5
+  discr.power <- dens$x[gap] # + (dens$x[dens$peaks[3]]-dens$x[dens$peaks[2]])/5
   dens.gap <- data.frame(dens[c("x","y")])[gap,]
   
   ## tag as IDLE or WORK based on discr.power threshold
@@ -65,8 +65,9 @@ for(i in 1:length(data.sources)){
   # updating noise id
   id.noise <- unique(data$runid[data$tag=="NOISE"])
 
-  data$tag[data$runid%in%id.noise] = data$tag[data$runid%in%(id.noise-1)]
-  
+  ## NO:
+  ## data$tag[data$runid%in%id.noise] = data$tag[data$runid%in%(id.noise-1)]
+  ## deve lavorare per runin
   
   
   # marking NOISE AS WORK --- tweak this?
