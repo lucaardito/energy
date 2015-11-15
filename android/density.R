@@ -1,11 +1,12 @@
-setwd("~")
 library("ggplot2")
 
-base.folder = "./git/energy/android/data/"
+# CONFIG
+base.folder = "./data/"
 noise = 10
-
-data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
-syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
+save.density = FALSE
+save.power = FALSE
+save.peaks = FALSE
+#
 
 ##########################################################################
 ## code by Martin Maechler <maechler at stat.math.ethz.ch>
@@ -23,11 +24,15 @@ peaks <- function(series, span = 3, do.pad = TRUE) {
 }
 ##########################################################################
 
-#out.filename = paste0(base.folder,"power_density_peaks_values.txt")
-#file.create(file = out.filename)
+data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
+syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
+
+if(save.peaks){
+  out.filename = paste0(base.folder,"power_density_peaks_values.txt")
+  file.create(file = out.filename)
+}
 
 for(i in 1:length(data.sources)){
-  #i=3
   data <- read.delim2(paste0(base.folder,data.sources[i]), header = FALSE, skip = 7)
   data$P <- data$V1*5.03
   dens <- density(data$P,adjust=2)
@@ -53,44 +58,35 @@ for(i in 1:length(data.sources)){
   id.noise <- unique(data$runid)[table(data$runid)<=noise]
   data$tag[data$runid%in%id.noise] = "NOISE"
   
-  
-  
-  # merging consecutive noise runs into one
+  ## merge consecutive noise runs into one
   data$runid <- cumsum(c(1,abs(diff(as.numeric(data$tag))) ) )
   
-  # assigning consecutive runids
+  ## assign consecutive runids
   data$runid <- cumsum(c(1,abs(diff(data$runid)) )!=0 )
   
-  
-  # updating noise id
+  ## update noise id
   id.noise <- unique(data$runid[data$tag=="NOISE"])
-
+  
+  ## first runid always marked as IDLE, not NOISE
+  data$tag[data$runid==1] = "IDLE"
+  if(id.noise[1]==1){
+    id.noise <- subset(id.noise!=1)
+  }
+  
   ## NO:
   ## data$tag[data$runid%in%id.noise] = data$tag[data$runid%in%(id.noise-1)]
   ## deve lavorare per runin
   
+  ## mark NOISE runid with preceding runid tag
+  for(j in id.noise){
+    data$tag[data$runid==j] = unique(data$tag[data$runid==j-1])
+  }
   
-  # marking NOISE AS WORK --- tweak this?
-  data$tag[data$tag=="NOISE"] = "WORK"
-  # check near (left and right runid) to see their tag
-  # if their tag is the same, change NOISE tag => their tag
-  #for(j in 1:length(id.noise)){
-  #  id.prev <- id.noise[j]-1
-  #  id.next <- id.noise[j]+1
-  #  if(data$tag[data$runid==id.prev] == data$tag[data$runid==id.next]){
-  #    data$tag[data$runid[id.noise[j]]] = data$tag[data$runid[id.prev]]
-  #    print(paste("AUTO TAGGING", data$tag[data$runid[id.noise[j]]]))
-  #  }else{
-  #    data$tag[data$runid[id.noise[j]]] = "WORK"
-  #    print(paste("MANUAL TAGGING", data$tag[data$runid[id.noise[j]]]))
-  #  }
-  #}
-  
-  # merging consecutive runs into one
+  ## merge consecutive runs into one
   data$runid = cumsum(c(1,abs(diff(as.numeric(data$tag))) ) )
   data$runid = cumsum(c(1,abs(diff(data$runid)) )!=0 )
   
-  # find energy markers
+  ## find energy markers
   id.markers <- unique(data$runid)[table(data$runid)>=4800 & table(data$runid)<=5300] # ~ length of the marker
   data$tag[(data$runid %in% id.markers) & (data$tag=="WORK")] = "PAUSE"
   id.markers <- unique(data$runid[data$tag=="PAUSE"])
@@ -99,35 +95,38 @@ for(i in 1:length(data.sources)){
   print(paste(syscall[i], as.character(length(id.markers))))
   
   # Take sets between two consecutive marker and extract data
-  
-  #write(paste0(syscall[i],": ",dens$x[dens$peaks]),
-  #      file = out.filename,
-  #      append = TRUE)
-  
-  p <- ggplot(data,aes(x=P))
-  p <- p + geom_line(stat="density",adjust=2) + expand_limits(y=0)
-  p <- p + geom_line(data=dens.gap,aes(x=x,y=y),color="red")
-  p <- p + geom_point(data=data.frame(x=dens$x,y=dens$y)[dens$peaks,],aes(x=x,y=y),col="red",size=5, pch=1)
-  #p <- p + annotate("rect", xmin=min(dens$x), xmax=gap.min, ymin=0, ymax=max(dens$y), alpha=.1,
-  #                  fill="blue")
-  #p <- p + annotate("rect", xmax=max(dens$x), xmin=gap.max, ymin=0, ymax=max(dens$y), alpha=.1,
-  #                  fill="green")
-  p <- p + annotate("segment", x=discr.power,xend=discr.power,y=0,yend=max(dens$y), color="red",linewidth=2)
-  
-  p <- p + xlab("Power [w]")
-  p <- p + ggtitle(syscall[i])
-  
-  # Save density distribution to file
-  #ggsave(paste0(base.folder,"plot/density_",syscall[i],".png"), plot = p)
-  
-  # Save power distribution to file
-  rp <- ggplot(data,aes(x=c(1:length(data$P)),y=P))
-  #rp <- rp + geom_line(size=.5)
-  rp <- rp + geom_point(size=.5)
-  for(j in 1:length(dens$peaks)){
-    rp <- rp + annotate("segment", x=0,xend=length(data$P),y=dens$x[dens$peaks[j]],yend=dens$x[dens$peaks[j]], color="green",linewidth=2)
+  if(save.peaks){
+    write(paste0(syscall[i], ": ", dens$x[dens$peaks]), file = out.filename, append = TRUE)
   }
-  rp <- rp + annotate("segment", x=0,xend=length(data$P),y=discr.power,yend=discr.power, color="red",linewidth=2)
-
-  ggsave(paste0(base.folder,"plot/power_",syscall[i],".png"), plot = rp, limitsize = FALSE)
+  
+  if(save.density){
+    p <- ggplot(data,aes(x=P))
+    p <- p + geom_line(stat="density",adjust=2) + expand_limits(y=0)
+    p <- p + geom_line(data=dens.gap,aes(x=x,y=y),color="red")
+    p <- p + geom_point(data=data.frame(x=dens$x,y=dens$y)[dens$peaks,],aes(x=x,y=y),col="red",size=5, pch=1)
+    #p <- p + annotate("rect", xmin=min(dens$x), xmax=gap.min, ymin=0, ymax=max(dens$y), alpha=.1,
+    #                  fill="blue")
+    #p <- p + annotate("rect", xmax=max(dens$x), xmin=gap.max, ymin=0, ymax=max(dens$y), alpha=.1,
+    #                  fill="green")
+    p <- p + annotate("segment", x=discr.power,xend=discr.power,y=0,yend=max(dens$y), color="red",linewidth=2)
+    
+    p <- p + xlab("Power [w]")
+    p <- p + ggtitle(syscall[i])
+    
+    ggsave(paste0(base.folder,"plot/density_",syscall[i],".png"), plot = p)
+  }
+  
+  if(save.power){
+    rp <- ggplot(data,aes(x=seq_along(data$P),y=P))
+    #rp <- rp + geom_line(size=.5)
+    rp <- rp + geom_point(size=.5)
+    for(j in 1:length(dens$peaks)){
+      rp <- rp + annotate("segment", x=0,xend=length(data$P),y=dens$x[dens$peaks[j]],yend=dens$x[dens$peaks[j]], color="green",linewidth=2)
+    }
+    rp <- rp + annotate("segment", x=0,xend=length(data$P),y=discr.power,yend=discr.power, color="red",linewidth=2)
+    rp <- rp + xlab("Sample")
+    rp <- rp + ggtitle(syscall[i])
+  
+    ggsave(paste0(base.folder,"plot/power_",syscall[i],".png"), plot = rp, limitsize = FALSE)
+  }
 }
