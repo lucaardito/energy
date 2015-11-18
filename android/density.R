@@ -2,9 +2,9 @@ library("ggplot2")
 
 # CONFIG
 base.folder = "./data/"
-noise = 10
+noise = 25
 save.density = FALSE
-save.power = FALSE
+save.power = TRUE
 save.peaks = FALSE
 #
 
@@ -48,7 +48,7 @@ for(i in 1:length(data.sources)){
   dens.gap <- data.frame(dens[c("x","y")])[gap,]
   
   ## tag as IDLE or WORK based on discr.power threshold
-  tag.levels <- c("IDLE","WORK","PAUSE","NOISE")
+  tag.levels <- c("IDLE","WORK","PAUSE","NOISE","DATA","MARKER")
   data$tag <- factor(tag.levels[findInterval(data$P,c(0,discr.power))],tag.levels)
   
   ## assign unique id to runs
@@ -73,10 +73,6 @@ for(i in 1:length(data.sources)){
     id.noise <- subset(id.noise!=1)
   }
   
-  ## NO:
-  ## data$tag[data$runid%in%id.noise] = data$tag[data$runid%in%(id.noise-1)]
-  ## deve lavorare per runin
-  
   ## mark NOISE runid with preceding runid tag
   for(j in id.noise){
     data$tag[data$runid==j] = unique(data$tag[data$runid==j-1])
@@ -87,12 +83,38 @@ for(i in 1:length(data.sources)){
   data$runid = cumsum(c(1,abs(diff(data$runid)) )!=0 )
   
   ## find energy markers
-  id.markers <- unique(data$runid)[table(data$runid)>=4800 & table(data$runid)<=5300] # ~ length of the marker
-  data$tag[(data$runid %in% id.markers) & (data$tag=="WORK")] = "PAUSE"
-  id.markers <- unique(data$runid[data$tag=="PAUSE"])
+  id.markers <- unique(data$runid)[table(data$runid)>=4900 & table(data$runid)<=5100] # ~ length of the marker
+  data$tag[(data$runid %in% id.markers) & (data$tag=="WORK")] = "MARKER"
+  id.markers <- unique(data$runid[data$tag=="MARKER"])
   
-  # check consistency of markers
+  ## check consistency of markers
   print(paste(syscall[i], as.character(length(id.markers))))
+  # TODO: exclude data if lenght between markers is significantly different
+  
+  ## mark data between two valid markers
+  for(j in 1:(length(id.markers)-1)){
+    for(k in (id.markers[j]+1):(id.markers[j+1]-1)){
+      # TODO: do not mark if data should be excluded
+      data$tag[data$runid==k] = "DATA"
+    }
+  }
+  
+  ## reassign consecutive runids based on new tag
+  data$runid = cumsum(c(1,abs(diff(as.numeric(data$tag))) ) )
+  data$runid = cumsum(c(1,abs(diff(data$runid)) )!=0 )
+  
+  # set DATA runid
+  id.data <- unique(data$runid[data$tag=="DATA"])
+  
+  # tag first and last 5000 samples fo each DATA as IDLE
+  #for(j in id.data){
+  #  data$tag[data$runid==j & ]
+  #}
+  
+  # update id
+  id.markers <- unique(data$runid[data$tag=="MARKER"])
+  id.noise <- unique(data$runid[data$tag=="NOISE"])
+  id.data <- unique(data$runid[data$tag=="DATA"])
   
   # Take sets between two consecutive marker and extract data
   if(save.peaks){
@@ -126,6 +148,14 @@ for(i in 1:length(data.sources)){
     rp <- rp + annotate("segment", x=0,xend=length(data$P),y=discr.power,yend=discr.power, color="red",linewidth=2)
     rp <- rp + xlab("Sample")
     rp <- rp + ggtitle(syscall[i])
+    for(j in id.markers){
+      rp <- rp + annotate("rect", xmin=min(which(data$runid==j)), xmax=max(which(data$runid==j)),
+                          ymin=0, ymax=max(data$P), alpha=.1, fill="red")
+    }
+    for(j in id.data){
+      rp <- rp + annotate("rect", xmin=min(which(data$runid==j)), xmax=max(which(data$runid==j)),
+                          ymin=0, ymax=max(data$P), alpha=.1, fill="green")
+    }
   
     ggsave(paste0(base.folder,"plot/power_",syscall[i],".png"), plot = rp, limitsize = FALSE)
   }
