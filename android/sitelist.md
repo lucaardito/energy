@@ -5,7 +5,7 @@ https://developer.android.com/index.html
 https://lttng.org/
 http://linux.die.net/
 http://www.brendangregg.com/blog/2014-05-11/strace-wow-much-syscall.html
-http://locklessinc.com/articles/futex_cheat_sheet/
+http://locklessinc.com/articles/futex\_cheat\_sheet/
 
 # Possible interest
 http://stackoverflow.com/questions/5780280/how-can-i-see-which-wakelocks-are-active

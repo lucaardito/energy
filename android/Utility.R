@@ -1,4 +1,6 @@
 ## Utility functions
+library("reshape2")
+library("plyr")
 
 ##########################################################################
 ## code by Martin Maechler <maechler at stat.math.ethz.ch>
@@ -69,7 +71,7 @@ outliers <- function(x,iqm=4,index=F,logic=F){
 #
 extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tolerance=0.1, intermediate=FALSE){
   if(! "P" %in% names(data)){
-     stop("data must a a 'P' column" )
+     stop("data must have a 'P' column" )
   }
   result = list()
   # Density analysis
