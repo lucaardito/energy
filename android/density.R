@@ -25,7 +25,7 @@ for(i in 1:length(data.sources)){
   # compute the power
   data$P <- with(data, I*voltage )
   
-  dp[[i]] <- extract.power(data, intermediate = TRUE)
+  dp[[i]] <- extract.power(data, adjust = 3.5, marker.tolerance = 0.02, intermediate = TRUE)
   
   #dens <- density(data$P,adjust=2)
   #dens$peaks <- peaks(dens$y,9) & dens$y > mean(dens$y)
