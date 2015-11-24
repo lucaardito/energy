@@ -9,8 +9,11 @@ save.power = TRUE
 save.peaks = FALSE
 #
 
-data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
-syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
+#data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
+#syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
+
+data.sources <- list.files(base.folder,pattern = "apk_.*\\.txt",full.names = F)
+syscall <- sub("apk_", "",sub("\\.txt$","",data.sources))
 
 if(save.peaks){
   out.filename = paste0(base.folder,"power_density_peaks_values.txt")
