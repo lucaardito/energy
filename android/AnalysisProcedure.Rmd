@@ -2,7 +2,9 @@
 title: "Analysis Procedure"
 author: "Marco Torchiano"
 date: "19 November 2015"
-output: html_document
+output: 
+  pdf_document: 
+    keep_tex: yes
 ---
 ```{r setup,echo=FALSE}
 library(ggplot2)
@@ -27,7 +29,7 @@ to mark tasks begin and end. A typical profile is:
 
 `WAIT`  : is a period of busy waiting for a given (marker.length) time
 
-`WORK` : is a period of actual work 
+`WORK` : is a period of actual work
          (the one we aim to measure the energy consumption of)
 
 
@@ -40,7 +42,7 @@ Typically file containing current (`I`) values (expressed in Ampere) is the
 starting point.
 
 The power, given a _constant_ `voltage` in output from the
-generator (`r voltage` V) -- can be computer using the basic relation 
+generator (5.03 V) -- can be computer using the basic relation
 
 $$P=V \cdot I$$
 
@@ -73,7 +75,7 @@ The algorithm takes the following input parameters:
 ```{r parameters}
 adjust = 1.5 ## density parameter
 marker.length = 5000
-marker.tolerance= 0.1
+marker.tolerance= 0.02
 N = 30 # number of task markers
 ```
 
@@ -88,10 +90,10 @@ in order to identify the typical working levels.
   ## Distribution density of values
   dens <- density(data$P,adjust=adjust)
   #dens <- density(data$P)
-  
+
   ## Find peaks in the distribution (the most common power levels)
   dens$peaks <- which(peaks(dens$y) & dens$y>mean(dens$y))
-  
+
   ## Identify thresholds between peaks as the points of minimum density between peaks
   thresholds = dens$x[apply(cbind(head(dens$peaks,-1),tail(dens$peaks,-1)),1,function(x){
     ss = dens$y[x[1]:x[2]]
@@ -101,17 +103,17 @@ in order to identify the typical working levels.
   baseline = dens$x[dens$peaks[1]]
 ```
 
-```{r plot density, echo=FALSE}
+```{r density, echo=FALSE}
   p=ggplot(as.data.frame(dens[c("x","y")]),aes(x=x,y=y))+geom_line()
   p <- p+xlab("Power [W]")+ylab("Density")
   p <- p+geom_point(data=with(dens,data.frame(x=x[peaks],y=y[peaks])),size=4,pch=1,col="red")
-  p <- p+annotate("segment",x=min(dens$x),xend=max(dens$y),y=mean(dens$y),yend=mean(dens$y),col="blue",lty=2)
+#  p <- p+annotate("segment",x=min(dens$x),xend=max(dens$y),y=mean(dens$y),yend=mean(dens$y),col="blue",lty=2)
   p <- p+annotate("segment",x=thresholds,xend=thresholds,y=0,yend=max(dens$y),col="red")
-  
+
   p
 ```
 
-The baseline, representing the idle level of consumption correspond to the first 
+The baseline, representing the idle level of consumption correspond to the first
 peak in the density plot: `r baseline` W.
 
 Tagging
@@ -136,21 +138,24 @@ To avoid manipulating the whole series of points, a summary table is computed th
 
   ## assign unique id to runs
   data$runid <- cumsum(c(1,abs(diff(as.numeric(data$tag))!=0) ) )
-  
+
   ## build run summary table
   id.tab = subset(melt(with(data,table(tag,runid)),id.vars="runid",value.name="length"),length!=0)
   id.tab$start=cumsum(c(1,head(id.tab$length,-1)))
   id.tab$end=cumsum(id.tab$length)
 ```
 
-```{r plot tagged data, echo=FALSE}
+```{r tagged_data, echo=FALSE}
   p <- ggplot(head(data,50000),aes(y=P,x=seq_along(P),color=tag))+geom_point(size=1,alpha=.5)
+  p <- p + xlab("Sample")
   p
 
   p <- ggplot(head(id.tab,1000),aes(x=start,y=tag,color=tag))
   p <- p+geom_segment(aes(xend=end,yend=tag))
   p <- p+geom_rect(aes(xmin=start,xmax=end,ymin=as.numeric(tag)-0.5,ymax=as.numeric(tag)+0.5,
                        fill=tag),alpha=0.2,color=NA)
+  p <- p + xlab("Sample")
+  p <- p + ylab("Tag")
   p
 ```
 
@@ -163,7 +168,7 @@ Generally there are series of a few points that have a different value.
 ```{r characterize noise}
   dens = density(id.tab$length)
   dens$peaks <- which(peaks(dens$y) & dens$y>mean(dens$y))
-  
+
   ## Identify thresholds between peaks as the points of minimum density between peaks
   thresholds = dens$x[apply(cbind(head(dens$peaks,-1),tail(dens$peaks,-1)),1,function(x){
     ss = dens$y[x[1]:x[2]]
@@ -172,12 +177,12 @@ Generally there are series of a few points that have a different value.
   noise=thresholds[1]
 ```
 
-```{r plot noise density,echo=FALSE,warning=FALSE}
+```{r noise_density,echo=FALSE,warning=FALSE}
   p=ggplot(as.data.frame(dens[c("x","y")]),aes(x=x,y=y))+geom_line()
   p <- p+xlab("Power [W]")+ylab("Density")
   p <- p+geom_point(data=with(dens,data.frame(x=x[peaks],y=y[peaks])),size=4,pch=1,col="red")
-  p <- p+annotate("segment",x=min(dens$x),xend=max(dens$y),y=mean(dens$y),yend=mean(dens$y),col="blue",lty=2)
-#  p <- p+annotate("segment",x=thresholds,xend=thresholds,y=0,yend=max(dens$y),col="red")
+  p <- p+annotate("segment",x=min(dens$x),xend=max(dens$y),y=mean(dens$y),yend=mean(dens$y),col="blue")
+#  p <- p+annotate("segment",x=thresholds,xend=thresholds,y=0,yend=max(dens$y),col="green")
   p <- p+geom_segment(data=data.frame(x=thresholds),
                       aes(xend=x,y=0,yend=max(dens$y)),col="red",linetype=2)
   p <- p + scale_x_log10()
@@ -198,10 +203,12 @@ We have, first, to identify the noise using a `noise` threshold on the lenght of
   id.tab$tag[id.tab$length<noise] = "NOISE"
 ```
 
-```{r plot runs with noise,echo=FALSE}
+```{r runs_with_noise,echo=FALSE}
   p <- ggplot(head(id.tab,1000),aes(x=start,y=tag,color=tag))
   p <- p+geom_segment(aes(xend=end,yend=tag))
   p <- p+geom_rect(aes(xmin=start,xmax=end,ymin=as.numeric(tag)-0.5,ymax=as.numeric(tag)+0.5,fill=tag),alpha=0.2,color=NA)
+  p <- p + xlab("Sample")
+  p <- p + ylab("Tag")
   p
 ```
 
@@ -223,7 +230,7 @@ Then, we can remove the noise using some strategy:
     id.noise = which(id.tab$tag=="NOISE")
   }
   ## id.tab = id.tab[order(id.tab$runid),] ### probably not useful
-  
+
   ## Merge consecutive runs havin the same tag
   ## a) recompute the run id
   id.tab$runid = cumsum(c(1,abs(diff(as.numeric(id.tab$tag))!=0) ) )
@@ -235,14 +242,18 @@ Then, we can remove the noise using some strategy:
                  )
 ```
 
-```{r plot denoised,echo=FALSE}
+```{r denoised,echo=FALSE}
   data$tag = rep(id.tab$tag,id.tab$length)
   p <- ggplot(head(data,50000),aes(y=P,x=seq_along(P),color=tag))+geom_point(size=1,alpha=.5)
+  p <- p + xlab("Sample")
+  p <- p + ylab("Power [W]")
   p
 
   p <- ggplot(id.tab,aes(x=start,y=tag,color=tag))
   p <- p+geom_segment(aes(xend=end,yend=tag))
   p <- p+geom_rect(aes(xmin=start,xmax=end,ymin=as.numeric(tag)-0.5,ymax=as.numeric(tag)+0.5,fill=tag),alpha=0.2,color=NA)
+  p <- p + xlab("Sample")
+  p <- p + ylab("Tag")
   p
 
   kable(head(id.tab,10))
@@ -258,17 +269,17 @@ We do not make any hypothesis as to the level at which markers are found (it sho
 The markers are (a subset of) the runs whose lenght is close to the predefined marker length.
 
 First we need to understand at which level (tag) are located the markers.
-   
+
   For each distinct level/run:
-  
-  - Count how many runs are in the expected range 
+
+  - Count how many runs are in the expected range
     (the interval centered around `marker.length` with emiwidth `marker.tolerance`).
-    
+
   - Compute the median period separating two consecutive runs
 
   - Compute the standard deviation of the period separating two consecutive runs
-  
-  - Select as marker level/tag the one 
+
+  - Select as marker level/tag the one
      with the number of potential markers, closer to
      the expected value (`N`) and with the smallest variability
      around of the period.
@@ -315,7 +326,7 @@ First we need to understand at which level (tag) are located the markers.
       t.expected = current.marker$start + marker$t
       t.lower = t.expected - marker$tv
       t.upper = t.expected + marker$tv
-      
+
       successor = subset(potential.markers,start>=t.lower & start<=t.upper & length>marker.length/2)
       if(dim(successor)[1]>0){
         if(dim(successor)[1]>1){
@@ -326,7 +337,7 @@ First we need to understand at which level (tag) are located the markers.
           new.markers <- rbind(new.markers,successor)
         }
       }
-      
+
       t.expected = current.marker$start - marker$t
       t.lower = t.expected - marker$tv
       t.upper = t.expected + marker$tv
@@ -353,12 +364,14 @@ First we need to understand at which level (tag) are located the markers.
   selected.markers <- selected.markers[order(selected.markers$runid),]
 ```
 
-```{r plot runs with markers,echo=FALSE, fig.width=14,fig.height=6}
+```{r runs_with_markers,echo=FALSE, fig.width=14,fig.height=6}
   selected.markers$Gen = factor(selected.markers$Gen)
 
   p <- ggplot(id.tab,aes(x=start,y=tag,color=tag))
   p <- p+geom_segment(aes(xend=end,yend=tag))
   p <- p+geom_rect(data=selected.markers,aes(xmin=start,xmax=end,ymin=0.5,ymax=as.numeric(tag)+0.5,fill=Gen),alpha=0.2,color=NA)
+  p <- p + xlab("Sample")
+  p <- p + ylab("Tag")
   p
 ```
 
@@ -375,9 +388,9 @@ For each marker, identify the beginning and end of the work run.
 
 Possible options:
 
-1. **End + T _to_ Start - T** (E2S): 
-  Skip a `marker.length` after marker _end_: that's the beginning of a work; 
-  stop `marker.length` before the next marker _start_ 
+1. **End + T _to_ Start - T** (E2S):
+  Skip a `marker.length` after marker _end_: that's the beginning of a work;
+  stop `marker.length` before the next marker _start_
 ```{r identify work E2S}
 work = data.frame(
       start = head(selected.markers,-1)$end+marker.length,
@@ -390,8 +403,8 @@ summary(work)
 ```
 
 2. **Start + 2 T _to_ Start - T** (S2S):
-  Skip two `marker.length`s after marker _end_: that's the beginning of a work; 
-  stop `marker.length` before the next marker _start_ 
+  Skip two `marker.length`s after marker _end_: that's the beginning of a work;
+  stop `marker.length` before the next marker _start_
 ```{r identify work S2S}
 work.run = data.frame(
       start = head(selected.markers,-1)$start+2*marker.length,
@@ -405,10 +418,12 @@ summary(work.run)
 
 The second approach consistently gives better and more consistent results.
 
-```{r plot work runs with markers,echo=FALSE, fig.width=14,fig.height=6}
+```{r work_runs_with_markers,echo=FALSE, fig.width=14,fig.height=6}
   p <- ggplot(id.tab,aes(x=start,y=tag,color=tag))
   p <- p+geom_segment(aes(xend=end,yend=tag))
   p <- p+geom_rect(data=work.run,aes(xmin=start,xmax=end,ymin=0.5,ymax=3.5,color=NA,y=NA),alpha=0.2,color=NA)
+  p <- p + xlab("Sample")
+  p <- p + ylab("Tag")
   p
 ```
 
@@ -417,16 +432,13 @@ Extract work data
 
 ```{r extract work data}
 
-work.run$P <- apply(work.run,1,function(x) 
+work.run$P <- apply(work.run,1,function(x)
                       mean(data[x["start"]:x["end"],]$P)-baseline)
 
 ```
 
-```{r plot work mean power}
+```{r work_mean_power}
 p <- ggplot(data=work.run,aes(x='',y=P))+geom_boxplot()
 p <- p+geom_segment(aes(yend=P),x=0.5,xend=0.52)
 p
 ```
-
-
-

@@ -1,0 +1,641 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textbf{{#1}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Marco Torchiano},
+            pdftitle={Analysis Procedure},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{Analysis Procedure}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Marco Torchiano}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{19 November 2015}
+
+
+
+\begin{document}
+
+\maketitle
+
+
+Computes the average power for the working tasks in a series of
+measures.
+
+The computation assumes the execution follows a well defined protocol to
+mark tasks begin and end. A typical profile is:
+
+\begin{verbatim}
+       --------      --v-^v^--
+       |      |      |       |
+       |      |      |       |
+ -------      --------       -....
+  SLEEP: WAIT :SLEEP : WORK  :   
+\end{verbatim}
+
+\texttt{SLEEP} : is a period of sleep for a given (marker.length) time
+
+\texttt{WAIT} : is a period of busy waiting for a given (marker.length)
+time
+
+\texttt{WORK} : is a period of actual work (the one we aim to measure
+the energy consumption of)
+
+\subsection{Load data}\label{load-data}
+
+The analysis procedure can be applied on data containing Power samples.
+
+Typically file containing current (\texttt{I}) values (expressed in
+Ampere) is the starting point.
+
+The power, given a \emph{constant} \texttt{voltage} in output from the
+generator (5.03 V) -- can be computer using the basic relation
+
+\[P=V \cdot I\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{filepath =}\StringTok{ "data/syscall_mmap2.txt"}
+  \CommentTok{#filepath = "data/syscall_futex.txt"}
+  \CommentTok{#filepath = "data/syscall_gettimeofday.txt"}
+  \CommentTok{#filepath = "data/syscall_mprotect.txt"}
+  \NormalTok{voltage =}\StringTok{ }\FloatTok{5.03} \NormalTok{## Volt}
+
+  \CommentTok{# read the file containing current values (in A)}
+  \NormalTok{data =}\StringTok{ }\KeywordTok{read.delim2}\NormalTok{(filepath, }\DataTypeTok{header =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{skip =} \DecValTok{7}\NormalTok{)}
+  \KeywordTok{names}\NormalTok{(data)=}\StringTok{"I"}
+
+\CommentTok{#  data = read.csv("~/Dropbox/PhDRifat/ENERGY ESEM 2015/Samples/Java/JavaBubble10000.csv")}
+\CommentTok{#  names(data)[2]="I"}
+\CommentTok{#  marker.length=1000}
+
+  \CommentTok{# compute the power}
+  \NormalTok{data$P <-}\StringTok{ }\KeywordTok{with}\NormalTok{(data, I*voltage )}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Input parameters}\label{input-parameters}
+
+The algorithm takes the following input parameters:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{adjust =}\StringTok{ }\FloatTok{1.5} \NormalTok{## density parameter}
+\NormalTok{marker.length =}\StringTok{ }\DecValTok{5000}
+\NormalTok{marker.tolerance=}\StringTok{ }\FloatTok{0.02}
+\NormalTok{N =}\StringTok{ }\DecValTok{30} \CommentTok{# number of task markers}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Density analysis}\label{density-analysis}
+
+Compute the distribution density of the instant power in order to
+identify the typical working levels.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{## Distribution density of values}
+  \NormalTok{dens <-}\StringTok{ }\KeywordTok{density}\NormalTok{(data$P,}\DataTypeTok{adjust=}\NormalTok{adjust)}
+  \CommentTok{#dens <- density(data$P)}
+
+  \NormalTok{## Find peaks in the distribution (the most common power levels)}
+  \NormalTok{dens$peaks <-}\StringTok{ }\KeywordTok{which}\NormalTok{(}\KeywordTok{peaks}\NormalTok{(dens$y) &}\StringTok{ }\NormalTok{dens$y>}\KeywordTok{mean}\NormalTok{(dens$y))}
+
+  \NormalTok{## Identify thresholds between peaks as the points of minimum density between peaks}
+  \NormalTok{thresholds =}\StringTok{ }\NormalTok{dens$x[}\KeywordTok{apply}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{head}\NormalTok{(dens$peaks,-}\DecValTok{1}\NormalTok{),}\KeywordTok{tail}\NormalTok{(dens$peaks,-}\DecValTok{1}\NormalTok{)),}\DecValTok{1}\NormalTok{,function(x)\{}
+    \NormalTok{ss =}\StringTok{ }\NormalTok{dens$y[x[}\DecValTok{1}\NormalTok{]:x[}\DecValTok{2}\NormalTok{]]}
+    \NormalTok{x[}\DecValTok{1}\NormalTok{] +}\StringTok{ }\KeywordTok{which}\NormalTok{(ss ==}\StringTok{ }\KeywordTok{min}\NormalTok{(ss))}
+  \NormalTok{\})]}
+
+  \NormalTok{baseline =}\StringTok{ }\NormalTok{dens$x[dens$peaks[}\DecValTok{1}\NormalTok{]]}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{AnalysisProcedure_files/figure-latex/density-1.pdf}
+
+The baseline, representing the idle level of consumption correspond to
+the first peak in the density plot: 0.6256976 W.
+
+\subsection{Tagging}\label{tagging}
+
+Each peak is assigned to a level, the the thresholds are used to
+discriminate between consecutive levels. The data points are tagged with
+the level name.
+
+The tagging indetify runs of consecutive points having the same level.
+The runs are then identified with a unique number.
+
+To avoid manipulating the whole series of points, a summary table is
+computed that reports:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  tag
+\item
+  run ID
+\item
+  length
+\item
+  start position
+\item
+  end position
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{## tag levels are those corresponding to peaks plus a special NOISE tag}
+  \NormalTok{tag.levels <-}\StringTok{ }\KeywordTok{paste0}\NormalTok{(}\StringTok{"L"}\NormalTok{,}\KeywordTok{seq}\NormalTok{(dens$peaks))}
+  \NormalTok{data$tag <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(tag.levels[}\KeywordTok{findInterval}\NormalTok{(data$P,}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,thresholds))],}\KeywordTok{c}\NormalTok{(tag.levels,}\StringTok{"NOISE"}\NormalTok{))}
+
+  \NormalTok{## assign unique id to runs}
+  \NormalTok{data$runid <-}\StringTok{ }\KeywordTok{cumsum}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\KeywordTok{abs}\NormalTok{(}\KeywordTok{diff}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(data$tag))!=}\DecValTok{0}\NormalTok{) ) )}
+
+  \NormalTok{## build run summary table}
+  \NormalTok{id.tab =}\StringTok{ }\KeywordTok{subset}\NormalTok{(}\KeywordTok{melt}\NormalTok{(}\KeywordTok{with}\NormalTok{(data,}\KeywordTok{table}\NormalTok{(tag,runid)),}\DataTypeTok{id.vars=}\StringTok{"runid"}\NormalTok{,}\DataTypeTok{value.name=}\StringTok{"length"}\NormalTok{),length!=}\DecValTok{0}\NormalTok{)}
+  \NormalTok{id.tab$start=}\KeywordTok{cumsum}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\KeywordTok{head}\NormalTok{(id.tab$length,-}\DecValTok{1}\NormalTok{)))}
+  \NormalTok{id.tab$end=}\KeywordTok{cumsum}\NormalTok{(id.tab$length)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{AnalysisProcedure_files/figure-latex/tagged_data-1.pdf}
+\includegraphics{AnalysisProcedure_files/figure-latex/tagged_data-2.pdf}
+
+\subsection{Denoise}\label{denoise}
+
+The collected measures are subject to noise (as any measure is).
+Generally there are series of a few points that have a different value.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{dens =}\StringTok{ }\KeywordTok{density}\NormalTok{(id.tab$length)}
+  \NormalTok{dens$peaks <-}\StringTok{ }\KeywordTok{which}\NormalTok{(}\KeywordTok{peaks}\NormalTok{(dens$y) &}\StringTok{ }\NormalTok{dens$y>}\KeywordTok{mean}\NormalTok{(dens$y))}
+
+  \NormalTok{## Identify thresholds between peaks as the points of minimum density between peaks}
+  \NormalTok{thresholds =}\StringTok{ }\NormalTok{dens$x[}\KeywordTok{apply}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{head}\NormalTok{(dens$peaks,-}\DecValTok{1}\NormalTok{),}\KeywordTok{tail}\NormalTok{(dens$peaks,-}\DecValTok{1}\NormalTok{)),}\DecValTok{1}\NormalTok{,function(x)\{}
+    \NormalTok{ss =}\StringTok{ }\NormalTok{dens$y[x[}\DecValTok{1}\NormalTok{]:x[}\DecValTok{2}\NormalTok{]]}
+    \NormalTok{x[}\DecValTok{1}\NormalTok{] +}\StringTok{ }\KeywordTok{which}\NormalTok{(ss ==}\StringTok{ }\KeywordTok{min}\NormalTok{(ss))}
+  \NormalTok{\})]}
+  \NormalTok{noise=thresholds[}\DecValTok{1}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{AnalysisProcedure_files/figure-latex/noise_density-1.pdf}
+
+A possible suggested threshold for noise is: 89.2087986
+
+In most cases the nois is a small variation around the expected value.
+Though, in some cases the noise is so large to cause a different tag to
+be assigned.
+
+We have, first, to identify the noise using a \texttt{noise} threshold
+on the lenght of the runs.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{## identify noise runs by means of a run length threshold}
+  \NormalTok{id.tab$tag[id.tab$length<noise] =}\StringTok{ "NOISE"}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{AnalysisProcedure_files/figure-latex/runs_with_noise-1.pdf}
+
+Then, we can remove the noise using some strategy:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  merge noise run with the preceding run
+\item
+  merge the noise run with either the preceding or the following one,
+  depending which is the largest.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{## Remove noise}
+  \NormalTok{if(id.tab$tag[}\DecValTok{1}\NormalTok{]==}\StringTok{"NOISE"}\NormalTok{)\{}
+    \NormalTok{id.tab$tag[}\DecValTok{1}\NormalTok{] =}\StringTok{ }\NormalTok{id.tab$tag[}\KeywordTok{min}\NormalTok{(id.tab$runid[id.tab$tag!=}\StringTok{"NOISE"}\NormalTok{])]}
+  \NormalTok{\}}
+  \NormalTok{id.noise =}\StringTok{ }\KeywordTok{which}\NormalTok{(id.tab$tag==}\StringTok{"NOISE"}\NormalTok{)}
+  \NormalTok{while(}\KeywordTok{length}\NormalTok{(id.noise)>}\DecValTok{0}\NormalTok{)\{}
+    \NormalTok{##  assign the noise run the same level as the  the preceding run}
+    \NormalTok{id.tab$tag[id.noise] =}\StringTok{ }\NormalTok{id.tab$tag[id.noise}\DecValTok{-1}\NormalTok{]}
+    \NormalTok{id.noise =}\StringTok{ }\KeywordTok{which}\NormalTok{(id.tab$tag==}\StringTok{"NOISE"}\NormalTok{)}
+  \NormalTok{\}}
+  \NormalTok{## id.tab = id.tab[order(id.tab$runid),] ### probably not useful}
+
+  \NormalTok{## Merge consecutive runs havin the same tag}
+  \NormalTok{## a) recompute the run id}
+  \NormalTok{id.tab$runid =}\StringTok{ }\KeywordTok{cumsum}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\KeywordTok{abs}\NormalTok{(}\KeywordTok{diff}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(id.tab$tag))!=}\DecValTok{0}\NormalTok{) ) )}
+  \NormalTok{## b) merge all the fragments with the same runid}
+  \NormalTok{id.tab =}\StringTok{ }\KeywordTok{ddply}\NormalTok{(id.tab,.(runid,tag),summarize,}
+                 \DataTypeTok{length =} \KeywordTok{sum}\NormalTok{(length),}
+                 \DataTypeTok{start =} \KeywordTok{min}\NormalTok{(start),}
+                 \DataTypeTok{end =} \KeywordTok{max}\NormalTok{(end)}
+                 \NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{AnalysisProcedure_files/figure-latex/denoised-1.pdf}
+\includegraphics{AnalysisProcedure_files/figure-latex/denoised-2.pdf}
+
+\begin{longtable}[c]{@{}rlrrr@{}}
+\toprule
+runid & tag & length & start & end\tabularnewline
+\midrule
+\endhead
+1 & L1 & 22947 & 1 & 22947\tabularnewline
+2 & L3 & 4922 & 22948 & 27869\tabularnewline
+3 & L2 & 2315 & 27870 & 30184\tabularnewline
+4 & L1 & 2742 & 30185 & 32926\tabularnewline
+5 & L3 & 11874 & 32927 & 44800\tabularnewline
+6 & L2 & 3423 & 44801 & 48223\tabularnewline
+7 & L1 & 1646 & 48224 & 49869\tabularnewline
+8 & L3 & 4935 & 49870 & 54804\tabularnewline
+9 & L2 & 2588 & 54805 & 57392\tabularnewline
+10 & L1 & 2474 & 57393 & 59866\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Identify task markers}\label{identify-task-markers}
+
+Then we need to identify the marker that introduce the experiment.
+
+We do not make any hypothesis as to the level at which markers are found
+(it should be the highest one\ldots{})
+
+The markers are (a subset of) the runs whose lenght is close to the
+predefined marker length.
+
+First we need to understand at which level (tag) are located the
+markers.
+
+For each distinct level/run:
+
+\begin{itemize}
+\item
+  Count how many runs are in the expected range (the interval centered
+  around \texttt{marker.length} with emiwidth
+  \texttt{marker.tolerance}).
+\item
+  Compute the median period separating two consecutive runs
+\item
+  Compute the standard deviation of the period separating two
+  consecutive runs
+\item
+  Select as marker level/tag the one with the number of potential
+  markers, closer to the expected value (\texttt{N}) and with the
+  smallest variability around of the period.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{l.min =}\StringTok{ }\NormalTok{marker.length*(}\DecValTok{1}\NormalTok{-marker.tolerance)}
+  \NormalTok{l.max =}\StringTok{ }\NormalTok{marker.length*(}\DecValTok{1}\NormalTok{+marker.tolerance)}
+  \NormalTok{markers =}\StringTok{ }\KeywordTok{subset}\NormalTok{(id.tab,length>=l.min &}\StringTok{ }\NormalTok{length<=l.max)}
+  \NormalTok{mark.sum =}\StringTok{ }\KeywordTok{ddply}\NormalTok{(markers,.(tag),summarize,}
+        \DataTypeTok{n=}\KeywordTok{length}\NormalTok{(tag),}
+        \DataTypeTok{length =} \KeywordTok{median}\NormalTok{(length),}
+        \DataTypeTok{t=} \KeywordTok{median}\NormalTok{(}\KeywordTok{diff}\NormalTok{(start)),}
+\CommentTok{#        tv = sd(diff(start))}
+\CommentTok{#        tv = 2*diff(quantile(diff(start),c(.25,.75)))}
+        \DataTypeTok{tv =} \KeywordTok{median}\NormalTok{(}\KeywordTok{diff}\NormalTok{(start))*.}\DecValTok{1}
+        \NormalTok{)}
+  \NormalTok{mark.sum$score =}\StringTok{ }\KeywordTok{dim}\NormalTok{(mark.sum)[}\DecValTok{1}\NormalTok{]*(}\KeywordTok{rank}\NormalTok{(}\KeywordTok{abs}\NormalTok{(mark.sum$n-N))-}\DecValTok{1}\NormalTok{)+}\KeywordTok{rank}\NormalTok{(mark.sum$tv)-}\DecValTok{1}
+  \NormalTok{marker =}\StringTok{ }\KeywordTok{subset}\NormalTok{(mark.sum,score==}\KeywordTok{min}\NormalTok{(score))}
+  \NormalTok{marker.tag =}\StringTok{ }\NormalTok{marker$tag}
+
+  \KeywordTok{kable}\NormalTok{(mark.sum)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[c]{@{}lrrrrr@{}}
+\toprule
+tag & n & length & t & tv & score\tabularnewline
+\midrule
+\endhead
+L2 & 2 & 5072.5 & 90771 & 9077.1 & 3\tabularnewline
+L3 & 24 & 4938.5 & 26977 & 2697.7 & 0\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\item
+  the initial set of markers are the runs in the expected range
+\item
+  the we proceed with all the markers trying to find the next one either
+  in the existing set of markers or in the runs with the market tag
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{potential.markers =}\StringTok{ }\KeywordTok{subset}\NormalTok{(id.tab,tag==marker$tag)}
+
+  \NormalTok{selected.markers =}\StringTok{ }\KeywordTok{c}\NormalTok{()}
+  \NormalTok{initial.markers =}\StringTok{ }\KeywordTok{subset}\NormalTok{(markers,tag==marker$tag)}
+  \KeywordTok{print}\NormalTok{(initial.markers$runid)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]   2   8  14  20  26  34  40  46  52  57  63  69  81  87  93  99 105
+## [18] 121 131 141 146 152 164 170
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{generation =}\StringTok{ }\DecValTok{0}
+  \NormalTok{while(!}\KeywordTok{is.null}\NormalTok{(initial.markers))\{}
+    \NormalTok{generation <-}\StringTok{ }\NormalTok{generation +}\StringTok{ }\DecValTok{1}
+    \NormalTok{if(generation >}\StringTok{ }\DecValTok{5}\NormalTok{) break}
+    \NormalTok{new.markers=}\KeywordTok{c}\NormalTok{()}
+    \NormalTok{for(id in initial.markers$runid)\{}
+      \CommentTok{#cat(id,"\textbackslash{}n")}
+      \NormalTok{current.marker =}\StringTok{ }\KeywordTok{subset}\NormalTok{(potential.markers,runid==id)}
+      \NormalTok{t.expected =}\StringTok{ }\NormalTok{current.marker$start +}\StringTok{ }\NormalTok{marker$t}
+      \NormalTok{t.lower =}\StringTok{ }\NormalTok{t.expected -}\StringTok{ }\NormalTok{marker$tv}
+      \NormalTok{t.upper =}\StringTok{ }\NormalTok{t.expected +}\StringTok{ }\NormalTok{marker$tv}
+
+      \NormalTok{successor =}\StringTok{ }\KeywordTok{subset}\NormalTok{(potential.markers,start>=t.lower &}\StringTok{ }\NormalTok{start<=t.upper &}\StringTok{ }\NormalTok{length>marker.length/}\DecValTok{2}\NormalTok{)}
+      \NormalTok{if(}\KeywordTok{dim}\NormalTok{(successor)[}\DecValTok{1}\NormalTok{]>}\DecValTok{0}\NormalTok{)\{}
+        \NormalTok{if(}\KeywordTok{dim}\NormalTok{(successor)[}\DecValTok{1}\NormalTok{]>}\DecValTok{1}\NormalTok{)\{}
+          \NormalTok{successor <-}\StringTok{ }\KeywordTok{subset}\NormalTok{(successor,}\KeywordTok{abs}\NormalTok{(length-marker.length)==}\KeywordTok{min}\NormalTok{(}\KeywordTok{abs}\NormalTok{(length-marker.length)))}
+          \CommentTok{#stop("No strategy to prioritize defined yet!!")}
+        \NormalTok{\}}
+        \NormalTok{if(!}\StringTok{ }\NormalTok{successor$runid%in%selected.markers$runid)\{}
+          \NormalTok{new.markers <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(new.markers,successor)}
+        \NormalTok{\}}
+      \NormalTok{\}}
+
+      \NormalTok{t.expected =}\StringTok{ }\NormalTok{current.marker$start -}\StringTok{ }\NormalTok{marker$t}
+      \NormalTok{t.lower =}\StringTok{ }\NormalTok{t.expected -}\StringTok{ }\NormalTok{marker$tv}
+      \NormalTok{t.upper =}\StringTok{ }\NormalTok{t.expected +}\StringTok{ }\NormalTok{marker$tv}
+      \NormalTok{predecessor =}\StringTok{ }\KeywordTok{subset}\NormalTok{(potential.markers,start>=t.lower &}\StringTok{ }\NormalTok{start<=t.upper&}\StringTok{ }\NormalTok{length>marker.length/}\DecValTok{2}\NormalTok{)}
+      \NormalTok{if(}\KeywordTok{dim}\NormalTok{(predecessor)[}\DecValTok{1}\NormalTok{]>}\DecValTok{0}\NormalTok{)\{}
+        \NormalTok{if(}\KeywordTok{dim}\NormalTok{(predecessor)[}\DecValTok{1}\NormalTok{]>}\DecValTok{1}\NormalTok{)\{}
+          \NormalTok{predecessor <-}\StringTok{ }\KeywordTok{subset}\NormalTok{(predecessor,}\KeywordTok{abs}\NormalTok{(length-marker.length)==}\KeywordTok{min}\NormalTok{(}\KeywordTok{abs}\NormalTok{(length-marker.length)))}
+        \NormalTok{\}}
+        \NormalTok{if(!}\StringTok{ }\NormalTok{predecessor$runid%in%selected.markers$runid)\{}
+          \NormalTok{new.markers <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(new.markers,predecessor)}
+        \NormalTok{\}}
+      \NormalTok{\}}
+    \NormalTok{\}}
+    \NormalTok{new.markers =}\StringTok{ }\KeywordTok{unique}\NormalTok{(new.markers)}
+    \NormalTok{initial.markers=new.markers}
+    \NormalTok{if(!}\KeywordTok{is.null}\NormalTok{(new.markers))\{}
+      \KeywordTok{print}\NormalTok{(new.markers$runid)}
+
+      \NormalTok{new.markers$Gen =}\StringTok{ }\NormalTok{generation}
+      \NormalTok{selected.markers=}\KeywordTok{rbind}\NormalTok{(selected.markers,new.markers)}
+    \NormalTok{\}}
+  \NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]   8  14   2  20  26  34  40  46  52  57  63  69  75  87  93  81  99
+## [18] 105 111 126 116 137 146 152 141 158 170 164
+## [1] 131 121
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{selected.markers <-}\StringTok{ }\KeywordTok{unique}\NormalTok{(selected.markers)}
+  \NormalTok{selected.markers <-}\StringTok{ }\NormalTok{selected.markers[}\KeywordTok{order}\NormalTok{(selected.markers$runid),]}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{AnalysisProcedure_files/figure-latex/runs_with_markers-1.pdf}
+
+The procedure identified 30 markers. The average length of markers is
+5202.3666667, median: 4942, sd: 594.3077389.
+
+\begin{longtable}[c]{@{}lrlrrrl@{}}
+\toprule
+& runid & tag & length & start & end & Gen\tabularnewline
+\midrule
+\endhead
+2 & 2 & L3 & 4922 & 22948 & 27869 & 1\tabularnewline
+8 & 8 & L3 & 4935 & 49870 & 54804 & 1\tabularnewline
+14 & 14 & L3 & 4946 & 76886 & 81831 & 1\tabularnewline
+20 & 20 & L3 & 4933 & 103900 & 108832 & 1\tabularnewline
+26 & 26 & L3 & 4937 & 130909 & 135845 & 1\tabularnewline
+34 & 34 & L3 & 4943 & 157859 & 162801 & 1\tabularnewline
+40 & 40 & L3 & 4938 & 184709 & 189646 & 1\tabularnewline
+46 & 46 & L3 & 4939 & 211727 & 216665 & 1\tabularnewline
+52 & 52 & L3 & 4938 & 238747 & 243684 & 1\tabularnewline
+57 & 57 & L3 & 5096 & 265785 & 270880 & 1\tabularnewline
+63 & 63 & L3 & 4937 & 292589 & 297525 & 1\tabularnewline
+69 & 69 & L3 & 4942 & 319547 & 324488 & 1\tabularnewline
+75 & 75 & L3 & 5392 & 346489 & 351880 & 1\tabularnewline
+811 & 81 & L3 & 4992 & 373369 & 378360 & 1\tabularnewline
+87 & 87 & L3 & 4942 & 400259 & 405200 & 1\tabularnewline
+93 & 93 & L3 & 5003 & 427060 & 432062 & 1\tabularnewline
+99 & 99 & L3 & 4940 & 454008 & 458947 & 1\tabularnewline
+105 & 105 & L3 & 4933 & 480985 & 485917 & 1\tabularnewline
+111 & 111 & L3 & 5862 & 507947 & 513808 & 1\tabularnewline
+116 & 116 & L3 & 6348 & 534817 & 541164 & 1\tabularnewline
+121 & 121 & L3 & 4942 & 561628 & 566569 & 2\tabularnewline
+126 & 126 & L3 & 7098 & 588477 & 595574 & 1\tabularnewline
+131 & 131 & L3 & 4936 & 615369 & 620304 & 2\tabularnewline
+137 & 137 & L3 & 7008 & 642299 & 649306 & 1\tabularnewline
+1411 & 141 & L3 & 4935 & 669240 & 674174 & 1\tabularnewline
+146 & 146 & L3 & 5053 & 696128 & 701180 & 1\tabularnewline
+152 & 152 & L3 & 4944 & 723087 & 728030 & 1\tabularnewline
+158 & 158 & L3 & 5481 & 750060 & 755540 & 1\tabularnewline
+164 & 164 & L3 & 4937 & 777058 & 781994 & 1\tabularnewline
+170 & 170 & L3 & 4919 & 803906 & 808824 & 1\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Identify work}\label{identify-work}
+
+For each marker, identify the beginning and end of the work run.
+
+Possible options:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{End + T \emph{to} Start - T} (E2S): Skip a
+  \texttt{marker.length} after marker \emph{end}: that's the beginning
+  of a work; stop \texttt{marker.length} before the next marker
+  \emph{start}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{work =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}
+      \DataTypeTok{start =} \KeywordTok{head}\NormalTok{(selected.markers,-}\DecValTok{1}\NormalTok{)$end+marker.length,}
+      \DataTypeTok{end =} \KeywordTok{tail}\NormalTok{(selected.markers,-}\DecValTok{1}\NormalTok{)$start-marker.length}
+      \NormalTok{)}
+\NormalTok{work <-}\StringTok{ }\KeywordTok{within}\NormalTok{(work,}
+       \NormalTok{length <-}\StringTok{ }\NormalTok{end-start}
+       \NormalTok{)}
+\KeywordTok{summary}\NormalTok{(work)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      start             end             length     
+##  Min.   : 32869   Min.   : 44870   Min.   : 9795  
+##  1st Qu.:221665   1st Qu.:233747   1st Qu.:11860  
+##  Median :410200   Median :422060   Median :11954  
+##  Mean   :410341   Mean   :422059   Mean   :11718  
+##  3rd Qu.:600574   3rd Qu.:610369   3rd Qu.:12030  
+##  Max.   :786994   Max.   :798906   Max.   :12101
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{Start + 2 T \emph{to} Start - T} (S2S): Skip two
+  \texttt{marker.length}s after marker \emph{end}: that's the beginning
+  of a work; stop \texttt{marker.length} before the next marker
+  \emph{start}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{work.run =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}
+      \DataTypeTok{start =} \KeywordTok{head}\NormalTok{(selected.markers,-}\DecValTok{1}\NormalTok{)$start}\DecValTok{+2}\NormalTok{*marker.length,}
+      \DataTypeTok{end =} \KeywordTok{tail}\NormalTok{(selected.markers,-}\DecValTok{1}\NormalTok{)$start-marker.length}
+      \NormalTok{)}
+\NormalTok{work.run <-}\StringTok{ }\KeywordTok{within}\NormalTok{(work.run,}
+       \NormalTok{length <-}\StringTok{ }\NormalTok{end-start}\DecValTok{+1}
+       \NormalTok{)}
+\KeywordTok{summary}\NormalTok{(work.run)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      start             end             length     
+##  Min.   : 32948   Min.   : 44870   Min.   :11802  
+##  1st Qu.:221727   1st Qu.:233747   1st Qu.:11881  
+##  Median :410259   Median :422060   Median :11943  
+##  Mean   :410130   Mean   :422059   Mean   :11931  
+##  3rd Qu.:598477   3rd Qu.:610369   3rd Qu.:11978  
+##  Max.   :787058   Max.   :798906   Max.   :12039
+\end{verbatim}
+
+The second approach consistently gives better and more consistent
+results.
+
+\includegraphics{AnalysisProcedure_files/figure-latex/work_runs_with_markers-1.pdf}
+
+\subsection{Extract work data}\label{extract-work-data}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{work.run$P <-}\StringTok{ }\KeywordTok{apply}\NormalTok{(work.run,}\DecValTok{1}\NormalTok{,function(x)}
+                      \KeywordTok{mean}\NormalTok{(data[x[}\StringTok{"start"}\NormalTok{]:x[}\StringTok{"end"}\NormalTok{],]$P)-baseline)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data=}\NormalTok{work.run,}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\StringTok{''}\NormalTok{,}\DataTypeTok{y=}\NormalTok{P))+}\KeywordTok{geom_boxplot}\NormalTok{()}
+\NormalTok{p <-}\StringTok{ }\NormalTok{p+}\KeywordTok{geom_segment}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{yend=}\NormalTok{P),}\DataTypeTok{x=}\FloatTok{0.5}\NormalTok{,}\DataTypeTok{xend=}\FloatTok{0.52}\NormalTok{)}
+\NormalTok{p}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{AnalysisProcedure_files/figure-latex/work_mean_power-1.pdf}
+
+\end{document}

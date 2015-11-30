@@ -5,14 +5,14 @@ This is the circuit configuration with the National Instruments USB-6210 device.
 
 # Instruments
 ## [FriedCircuits USB Tester 2.0](http://friedcircuits.us/46)
-This USB tester, produced by FriedCircuitus, is an Arduino board capable of measuring and exportin voltage and current values. The provided applications (Java and Chrome extension) allows to record, at most, one sampling every 150 ms, too low for accurate results with the tipical duration of a system call. Thus, this tester will be used only to have an initial idea of the values for voltages and currents.
+This USB tester, produced by FriedCircuitus, is an Arduino board capable of measuring and exporting voltage and current values. The provided applications (Java and Chrome extension) allows to record, at most, one sampling every 150 ms, too low for accurate results with the typical duration of a system call. Thus, this tester will be used only to have an initial idea of the values for voltages and currents.
 
 ## [National Instruments USB-6210](http://sine.ni.com/nips/cds/view/p/lang/it/nid/203223)
 The *NI USB-6210* is a multifunctional DAQ that allow up to 250 kS/s, enough for the power consumption analysis. For full specification, please refer to the official [datasheet](http://www.ni.com/datasheet/pdf/en/ds-9).
 
 In order to acquire the value of the current, it is necessary to use an external shunt resistor.
 
-*LabView SignalExpress 2011* is the software trough whitch data is acquired.
+*LabView SignalExpress 2011* is the software trough which data is acquired.
 
 # Shunt Resistor analysis
 Due to the circuit configuration, the chose of the resistor has a great impact on the test and the data. It is placed in series to the device, hence, from the Kirchhoff's current law, the flowing current is the same that is absorbed by the phone. This current produce a voltage drop on the resistor equal to:
@@ -29,7 +29,7 @@ Where V is the voltage on the Nexus 5, Vg is the generator and Vr is the voltage
 
 In order to have the smallest possible variation on V, it is necessary to minimize the value of Vr. This is achieved by reducing the value of R from the formula (1). Of course, in a ideal situation R should be 0 &Omega;.
 
-Data acquired with the USB Tester shows peaks of current of about 1.2 A, then this vaue is considered like a upper bound for the dimensioning of the resistor. To have an idea of the final values, three different voltage drop (Vr) have been considered: 0.1 V, 0.5 V and 0.01 V:
+Data acquired with the USB Tester shows peaks of current of about 1.2 A, then this value is considered like a upper bound for the dimensioning of the resistor. To have an idea of the final values, three different voltage drop (Vr) have been considered: 0.1 V, 0.5 V and 0.01 V:
 
 >(3) R = Vr / I = 0.1 V / 1.2 A = 0.08864 &Omega;
 
@@ -46,7 +46,7 @@ With this resistor, using (1), the maximum voltage drop should be 0.06V, equival
 > (6) P = R \* I^2 = 0,072 W
 
 # Data acquisition procedure
-LabView 2011 is configured to acquire data from the National Intruments board. In order to ge enough data, 100 samples are acquired at 1 kHz frequency.
+LabView 2011 is configured to acquire data from the National Instruments board. In order to get enough data, 100 samples are acquired at 1 kHz frequency.
 
 To make easier the identification of the data zone, a pattern of busy-sleep-busy is used. This pattern is composed of three states: two sleep states and one busy state. In the sleep state, the processor perform no computation, so it is possible to observe the minimum power level consumption. The busy state, instead, is implemented in a busy form of waiting, so there is the highest power level consumption. Busy and sleep duration have the same duration, making them even more easier to identify.
 
