@@ -10,6 +10,8 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
+#define BUFFER_SIZE 2048
+
 int socket_connect(char *host, int port){
 	struct hostent *hp;
 	struct sockaddr_in addr;
@@ -38,12 +40,9 @@ int socket_connect(char *host, int port){
 	return sock;
 }
 
-#define BUFFER_SIZE 2048
-
 int main(int argc, char *argv[]){
-	int fd;
-	char buffer[BUFFER_SIZE];
-	char sendline[BUFFER_SIZE + 1];
+	int fd;//, fp;
+	char buffer[BUFFER_SIZE + 1];
 	size_t n;
 
 	if(argc < 4){
@@ -52,9 +51,10 @@ int main(int argc, char *argv[]){
 	}
 
 	fd = socket_connect(argv[1], atoi(argv[2]));
+	//fp = open("http.png", O_CREAT|O_RDWR, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH);
 
 	/// Form request
-	snprintf(sendline, BUFFER_SIZE,
+	snprintf(buffer, BUFFER_SIZE,
 		"GET %s HTTP/1.0\r\n"	// POST or GET, both tested and works. Both HTTP 1.0 HTTP 1.1 works, but sometimes
 		"Host: %s\r\n"				// but sometimes HTTP 1.0 works better in localhost type
 		//"Content-type: application/x-www-form-urlencoded\r\n"
@@ -62,14 +62,20 @@ int main(int argc, char *argv[]){
 	);
 
 	/// Write the request
-	if (write(fd, sendline, strlen(sendline))>= 0){
-		//bzero(buffer, BUFFER_SIZE);
+	if (write(fd, buffer, strlen(buffer))>= 0){
+		bzero(buffer, BUFFER_SIZE);
 
+		// Reading headers
+		read(fd, buffer, BUFFER_SIZE - 1);
+		//printf("%s", buffer);
+		// Reading image
 		while((n = read(fd, buffer, BUFFER_SIZE - 1)) != 0){
+			//write(fp, buffer, n);
 			//bzero(buffer, BUFFER_SIZE);
 		}
 	}
 	shutdown(fd, SHUT_RDWR);
 	close(fd);
+	//close(fp);
 	return 0;
 }
