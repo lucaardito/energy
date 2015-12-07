@@ -16,6 +16,7 @@ int main(int argc, char *argv[]){
     diep("bind");
 
   for (i=0; i<31*NPACK; i++) {
+    head(5);
     if (recvfrom(s, buf, BUFLEN, 0, (struct sockaddr *) &si_other, &slen)==-1)
       diep("recvfrom()");
     //printf("Received packet from %s:%d\nData: %s\n", inet_ntoa(si_other.sin_addr), ntohs(si_other.sin_port), buf);

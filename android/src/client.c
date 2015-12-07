@@ -27,14 +27,14 @@ int main(int argc, char *argv[]){
   //printf("strlen(buf) = %s\n", argv[2]);
 
   for(j=0; j<31; j++){
-		head(len);
+		//head(len);
     for (i=0; i<NPACK; i++) {
       //printf("Sending packet %d\n", i);
       //sprintf(buf, "This is packet %d", i);
       if (sendto(s, buf, BUFLEN, 0, (struct sockaddr *) &si_other, slen)==-1)
         diep("sendto()");
     }
-    tail(len);
+    //tail(len);
   }
 
   close(s);
