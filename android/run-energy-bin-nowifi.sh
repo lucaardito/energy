@@ -6,7 +6,8 @@
 
 #ADB=/opt/android-sdk/platform-tools/adb
 ADB=adb
+SCRIPT_PATH="scripts_device/"
 SCRIPT="run-bin-nowifi-device.sh"
 
-$ADB push $SCRIPT /sdcard/
+$ADB push $SCRIPT_PATH$SCRIPT /sdcard/
 $ADB shell "su -c \"nohup sh /sdcard/$SCRIPT > /dev/null\""
