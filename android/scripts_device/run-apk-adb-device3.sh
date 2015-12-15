@@ -18,17 +18,25 @@ fi
 #PACKAGE_REGEXP="com\.google\.android\.gm$"
 #ACTIVITY="ConversationListActivityGmail"
 # EnergyWhite
-PACKAGE="it.bbqcode.energy"
-PACKAGE_REGEXP="it\.bbqcode\.energy$"
-ACTIVITY="White"
+#PACKAGE="it.bbqcode.energy.empty"
+#PACKAGE_REGEXP="it\.bbqcode\.energy\.empty$"
+#ACTIVITY="White"
 # EnergyImage
-#PACKAGE="ib.bbqcode.energy.image" # Typo in the apk
-#PACKAGE_REGEXP="ib\.bbqcode\.energy\.image$" # Typo in the apk
+#PACKAGE="it.bbqcode.energy.image"
+#PACKAGE_REGEXP="it\.bbqcode\.energy\.image$"
 #ACTIVITY="ImageActivity"
 # EnergyWebImage
 #PACKAGE="it.bbqcode.energy.webimage"
 #PACKAGE_REGEXP="it\.bbqcode\.energy\.webimage$"
 #ACTIVITY="WebImageActivity"
+# EnergyImageSD
+PACKAGE="it.bbqcode.energy.image.sd"
+PACKAGE_REGEXP="it\.bbqcode\.energy\.image\.sd$"
+ACTIVITY="ImageActivity"
+# EnergyWebImageNoCache
+PACKAGE="it.bbqcode.energy.webimage.nocache"
+PACKAGE_REGEXP="it\.bbqcode\.energy\.webimage\.nocache$"
+ACTIVITY="WebImageActivity"
 
 i=0
 while [ i -lt 30 ]

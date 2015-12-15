@@ -7,7 +7,7 @@
 #ADB=/opt/android-sdk/platform-tools/adb
 ADB=adb
 SCRIPT_PATH="scripts_device/"
-SCRIPT="run-apk-adb-device4.sh"
+SCRIPT="run-apk-adb-device3.sh"
 
 $ADB push $SCRIPT_PATH$SCRIPT /sdcard/
 $ADB shell sh /sdcard/$SCRIPT "$1"
