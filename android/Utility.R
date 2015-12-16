@@ -91,10 +91,10 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   baseline=dens$x[dens$peaks[1]]
   result$baseline = dens$x[dens$peaks[1]]
   
-  if(intermediate){
+  #if(intermediate){
     result$peaks = dens$x[dens$peaks]
     result$thresholds = thresholds
-  }
+  #}
   
   # Tagging
   #---------
@@ -121,6 +121,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
     x[1] + which(ss == min(ss))
   })]
   noise=thresholds[1]
+  noise=70
   result$noise = noise
   ## identify noise runs by means of a run length threshold
   id.tab$tag[id.tab$length<noise] = "NOISE"
@@ -160,10 +161,10 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
                    t= median(diff(start)),
                    #        tv = sd(diff(start))
                    #        tv = 2*diff(quantile(diff(start),c(.25,.75)))
-                   tv = median(diff(start))*.1
+                   tv = median(diff(start))*.02#.1
   )
   mark.sum$score = dim(mark.sum)[1]*(rank(abs(mark.sum$n-N))-1)+rank(mark.sum$tv)-1
-  marker = subset(mark.sum,score==min(score))
+  marker = subset(mark.sum,(tag==max(tag.levels))) # score==min(score))
   marker.tag = marker$tag
   
   potential.markers = subset(id.tab,tag==marker$tag)
@@ -219,9 +220,9 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   selected.markers <- unique(selected.markers)
   selected.markers <- selected.markers[order(selected.markers$runid),]
   
-  if(intermediate){
+  #if(intermediate){
     result$markers = selected.markers
-  }
+  #}
   
   # Identify work
   #---------------
