@@ -20,8 +20,8 @@ int main(int argc, char * argv[]){
 		exit(1);
 	}
 	len=atoi(argv[1]);
-	total_time.tv_sec = 0;
-	total_time.tv_usec = 0;
+	//total_time.tv_sec = 0;
+	//total_time.tv_usec = 0;
 	for(j=0; j<30; j++){
 		// Open file
 		fd = open(fn, O_CREAT|O_RDWR, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH);
@@ -29,21 +29,21 @@ int main(int argc, char * argv[]){
 		if(fd >= 0){
 			// Write file (different size can lead to different power states?)
 			marker(len);
-			gettimeofday(&start,NULL);	// Execution time begin
+			//gettimeofday(&start,NULL);	// Execution time begin
 			for(i=0; i<12800; i++)	// 50MB file size
 				err = write(fd, content, strlen(content));
 			// Close file
-			gettimeofday(&end,NULL);	// Execution time end
-			timersub(&end,&start,&time_len);	// Execution time
-			printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
-			timeradd(&total_time,&time_len,&total_time);
+			//gettimeofday(&end,NULL);	// Execution time end
+			//timersub(&end,&start,&time_len);	// Execution time
+			//printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
+			//timeradd(&total_time,&time_len,&total_time);
 			close(fd);
 		}else{
 			printf("fopen() FAILED");
 			return 1;
 		}
 	}
-	printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
+	//printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
 	marker(len);
 	return 0;
 }

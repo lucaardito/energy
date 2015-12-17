@@ -46,8 +46,8 @@ int main(int argc, char *argv[]){
 	}
 
 	len=atoi(argv[1]);
-	total_time.tv_sec = 0;
-	total_time.tv_usec = 0;
+	//total_time.tv_sec = 0;
+	//total_time.tv_usec = 0;
 	futex_addr = 0;
 	tout.tv_sec=TIMEOUT;
 	tout.tv_nsec=0;
@@ -59,14 +59,14 @@ int main(int argc, char *argv[]){
 
 	for(i=0; i<30; i++){
 		marker(len);
-		gettimeofday(&start,NULL);	// Execution time begin
+		//gettimeofday(&start,NULL);	// Execution time begin
 		futex_wait(&futex_addr, 0, &tout);
-		gettimeofday(&end,NULL);	// Execution time end
-		timersub(&end,&start,&time_len);	// Execution time
-		printf("Run %2d - %d:%06d\n", i, time_len.tv_sec, time_len.tv_usec);
-		timeradd(&total_time,&time_len,&total_time);
+		//gettimeofday(&end,NULL);	// Execution time end
+		//timersub(&end,&start,&time_len);	// Execution time
+		//printf("Run %2d - %d:%06d\n", i, time_len.tv_sec, time_len.tv_usec);
+		//timeradd(&total_time,&time_len,&total_time);
 	}
-	printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
+	//printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
 	marker(len);
 	/*wake threads
 	futex_wake(&futex_addr, NUM);

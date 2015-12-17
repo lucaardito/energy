@@ -27,8 +27,8 @@ int main(int argc, char *argv[]) {
 		exit(1);
 	}
 	len=atoi(argv[1]);
-	total_time.tv_sec = 0;
-	total_time.tv_usec = 0;
+	//total_time.tv_sec = 0;
+	//total_time.tv_usec = 0;
 	sa.sa_flags = SA_SIGINFO;
 	sigemptyset(&sa.sa_mask);
 	sa.sa_sigaction = handler;
@@ -51,15 +51,15 @@ int main(int argc, char *argv[]) {
 
 	for(j=0; j<30; j++){
 		marker(len);
-		gettimeofday(&start,NULL);	// Execution time begin
+		//gettimeofday(&start,NULL);	// Execution time begin
 		for(i=0; i<3000000; i++)
 			mprotect(buffer + pagesize * 2, pagesize, PROT_READ);
-		gettimeofday(&end,NULL);	// Execution time end
-		timersub(&end,&start,&time_len);	// Execution time
-		printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
-		timeradd(&total_time,&time_len,&total_time);
+		//gettimeofday(&end,NULL);	// Execution time end
+		//timersub(&end,&start,&time_len);	// Execution time
+		//printf("Run %2d - %d:%06d\n", j, time_len.tv_sec, time_len.tv_usec);
+		//timeradd(&total_time,&time_len,&total_time);
 	}
-	printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
+	//printf("Total: %d:%06d\n", total_time.tv_sec, total_time.tv_usec);
 	marker(len);
 	exit(EXIT_SUCCESS);
 }
