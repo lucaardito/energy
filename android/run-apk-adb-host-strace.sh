@@ -12,9 +12,15 @@ if [[ -z $1 ]]; then
   echo "Please specify the name of the test (a directory with the results will be created)"
   exit 1
 fi
-$ADB push $SCRIPT_PATH$SCRIPT /sdcard/
-$ADB shell sh /sdcard/$SCRIPT "$1"
-rm -rf "./data/$1"
-mkdir -p "./data/$1"
-#sleep 8
-$ADB pull "/sdcard/test/$1" "./data/$1"
+
+i=0
+while [[ i -lt 10 ]]
+do
+  $ADB push $SCRIPT_PATH$SCRIPT /sdcard/
+  $ADB shell sh /sdcard/$SCRIPT "$1$i"
+  rm -rf "./data/$1$i"
+  mkdir -p "./data/$1$i"
+  $ADB pull "/sdcard/test/$1$i" "./data/$1$i"
+  i=$(expr $i + 1)
+  sleep 5
+done

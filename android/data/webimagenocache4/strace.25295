@@ -1,0 +1,6 @@
+15:39:23.677241 futex(0xaedac4f8, FUTEX_WAIT_PRIVATE, 8, NULL) = 0 <0.287961>
+15:39:23.965978 futex(0xaedac4f4, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable) <0.000206>
+15:39:23.966621 futex(0xaedac4f4, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000204>
+15:39:23.967259 futex(0xaedac4f8, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000208>
+15:39:23.967778 futex(0xaedac4f8, FUTEX_WAIT_PRIVATE, 16, NULL <unfinished ...>
+15:39:39.313559 +++ killed by SIGKILL +++

@@ -1,0 +1,5 @@
+15:41:02.601983 futex(0xaedac4f8, FUTEX_WAIT_PRIVATE, 8, NULL) = 0 <0.130988>
+15:41:02.733475 ioctl(21, 0x400c0907, 0xaec9e81c) = 0 <0.000113>
+15:41:02.733873 futex(0xaedac4f8, FUTEX_WAKE_PRIVATE, 1) = 0 <0.000113>
+15:41:02.734255 futex(0xaedac4f8, FUTEX_WAIT_PRIVATE, 16, NULL <unfinished ...>
+15:41:18.249264 +++ killed by SIGKILL +++
