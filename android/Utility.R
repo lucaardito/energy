@@ -121,7 +121,8 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
     x[1] + which(ss == min(ss))
   })]
   noise=thresholds[1]
-  noise=70
+  #if(noise<70)
+  #noise=70
   result$noise = noise
   ## identify noise runs by means of a run length threshold
   id.tab$tag[id.tab$length<noise] = "NOISE"
@@ -175,7 +176,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   generation = 0
   while(!is.null(initial.markers)){
     generation <- generation + 1
-    if(generation > 5) break
+    if(generation > 2) break
     new.markers=c()
     for(id in initial.markers$runid){
       #cat(id,"\n")

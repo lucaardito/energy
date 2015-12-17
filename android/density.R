@@ -5,12 +5,12 @@ base.folder = "./data/"
 #noise = 25
 voltage = 5.03
 save.density = FALSE
-save.power = TRUE
+save.power = FALSE
 save.peaks = FALSE
 #
 
-data.sources <- list.files(base.folder,pattern = "current_.*\\.txt",full.names = F)
-syscall <- sub("current_", "",sub("\\.txt$","",data.sources))
+data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
+syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
 
 #data.sources <- list.files(base.folder,pattern = "apk_.*\\.txt",full.names = F)
 #syscall <- sub("apk_", "",sub("\\.txt$","",data.sources))
@@ -22,6 +22,9 @@ if(save.peaks){
 
 dp = list()
 for(i in 1:length(data.sources)){
+  print(syscall[[i]])
+  #if(i==7)
+  #  next
   data <- read.delim2(paste0(base.folder,data.sources[i]), header = FALSE, skip = 7)
   names(data)="I"
   
@@ -29,8 +32,8 @@ for(i in 1:length(data.sources)){
   data$P <- with(data, I*voltage )
   
   ## extract the power
-  dp[[i]] <- extract.power(data, adjust = 2.5, marker.tolerance = 0.02, intermediate = FALSE)
-  
+  dp[[i]] <- extract.power(data, adjust = 6.5, marker.tolerance = 0.02, intermediate = FALSE)
+  #print(dp[[i]]$peaks)
   
   
   if(save.density){
