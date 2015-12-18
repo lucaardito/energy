@@ -69,7 +69,7 @@ outliers <- function(x,iqm=4,index=F,logic=F){
 #
 # - nois: the estimated length of noise runs
 #
-extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tolerance=0.1, intermediate=FALSE){
+extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tolerance=0.1, intermediate=FALSE, generation.number = 5){
   if(! "P" %in% names(data)){
      stop("data must have a 'P' column" )
   }
@@ -167,7 +167,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   mark.sum$score = dim(mark.sum)[1]*(rank(abs(mark.sum$n-N))-1)+rank(mark.sum$tv)-1
   marker = subset(mark.sum,(tag==max(tag.levels))) # score==min(score))
   if(dim(marker)[1]==0){
-    return(result)
+    return(list())
   }
   marker.tag = marker$tag
   
@@ -179,7 +179,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   generation = 0
   while(!is.null(initial.markers)){
     generation <- generation + 1
-    if(generation > 2) break
+    if(generation > generation.number) break
     new.markers=c()
     for(id in initial.markers$runid){
       #cat(id,"\n")
@@ -222,6 +222,8 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
     }
   }
   selected.markers <- unique(selected.markers)
+  if(is.null(selected.markers))
+    return(list())
   selected.markers <- selected.markers[order(selected.markers$runid),]
   
   #if(intermediate){

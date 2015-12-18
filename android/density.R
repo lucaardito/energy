@@ -22,9 +22,6 @@ if(save.peaks){
 
 dp = list()
 for(i in 1:length(data.sources)){
-  print(syscall[[i]])
-  #if(i==7)
-  #  next
   data <- read.delim2(paste0(base.folder,data.sources[i]), header = FALSE, skip = 7)
   names(data)="I"
   
@@ -33,18 +30,23 @@ for(i in 1:length(data.sources)){
   
   ## extract the power
   adj = 1.5
-  for(j in 1:10){
+  #print(syscall[[i]])
+  for(j in 1:16){
     dp[[i]] <- extract.power(data, adjust = adj, marker.tolerance = 0.02, intermediate = FALSE)
+    dp[[i]]$name <- syscall[[i]]
+    dp[[i]]$adjust <- adj
     if(is.null(dp[[i]]$work) || length(dp[[i]]$work$length) != 30){
       adj <- adj + 0.5
       next
     }else{
-      print(paste("Work ok: ", adj))
       break
     }
-    
   }
-  
+  if(is.null(dp[[i]]$work) || length(dp[[i]]$work$length) != 30){
+    warning("Error in processing ", syscall[[i]], "(). Please review the data manually.
+            This can be caused by an incorrent energy level for the marker or a wrong noise length")
+    next
+  }
   
   if(save.density){
     p <- ggplot(data,aes(x=P))
