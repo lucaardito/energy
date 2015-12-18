@@ -9,8 +9,8 @@ save.power = FALSE
 save.peaks = FALSE
 #
 
-data.sources <- list.files(base.folder,pattern = "current_.*\\.txt",full.names = F)
-syscall <- sub("current_", "",sub("\\.txt$","",data.sources))
+data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
+syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
 
 #data.sources <- list.files(base.folder,pattern = "apk_.*\\.txt",full.names = F)
 #syscall <- sub("apk_", "",sub("\\.txt$","",data.sources))
@@ -32,8 +32,18 @@ for(i in 1:length(data.sources)){
   data$P <- with(data, I*voltage )
   
   ## extract the power
-  dp[[i]] <- extract.power(data, adjust = 5.5, marker.tolerance = 0.02, intermediate = FALSE)
-  #print(dp[[i]]$peaks)
+  adj = 1.5
+  for(j in 1:10){
+    dp[[i]] <- extract.power(data, adjust = adj, marker.tolerance = 0.02, intermediate = FALSE)
+    if(is.null(dp[[i]]$work) || length(dp[[i]]$work$length) != 30){
+      adj <- adj + 0.5
+      next
+    }else{
+      print(paste("Work ok: ", adj))
+      break
+    }
+    
+  }
   
   
   if(save.density){

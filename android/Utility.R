@@ -122,7 +122,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   })]
   noise=thresholds[1]
   #if(noise<70)
-  noise=70
+  #noise=70
   result$noise = noise
   ## identify noise runs by means of a run length threshold
   id.tab$tag[id.tab$length<noise] = "NOISE"
@@ -166,13 +166,16 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   )
   mark.sum$score = dim(mark.sum)[1]*(rank(abs(mark.sum$n-N))-1)+rank(mark.sum$tv)-1
   marker = subset(mark.sum,(tag==max(tag.levels))) # score==min(score))
+  if(dim(marker)[1]==0){
+    return(result)
+  }
   marker.tag = marker$tag
   
   potential.markers = subset(id.tab,tag==marker$tag)
   
   selected.markers = c()
   initial.markers = subset(markers,tag==marker$tag)
-  #print(initial.markers$runid)
+  #print(initial.markers)
   generation = 0
   while(!is.null(initial.markers)){
     generation <- generation + 1

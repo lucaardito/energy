@@ -24,7 +24,7 @@ int main(int argc, char * argv[]){
 		for(j=0; j<30; j++){
 			marker(len);
 			//gettimeofday(&start,NULL);	// Execution time begin
-			for(i=0; i<3000000; i++)
+			for(i=0; i<2000000; i++)
 				prctl(PR_GET_TIMING, NULL, NULL, NULL, NULL);
 			//gettimeofday(&end,NULL);	// Execution time end
 			//timersub(&end,&start,&time_len);	// Execution time
