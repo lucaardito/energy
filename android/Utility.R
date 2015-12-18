@@ -122,7 +122,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   })]
   noise=thresholds[1]
   #if(noise<70)
-  #noise=70
+  noise=70
   result$noise = noise
   ## identify noise runs by means of a run length threshold
   id.tab$tag[id.tab$length<noise] = "NOISE"
