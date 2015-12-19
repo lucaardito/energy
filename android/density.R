@@ -4,37 +4,42 @@ library("ggplot2")
 base.folder = "./data/"
 #noise = 25
 voltage = 5.03
-save.density = FALSE
-save.power = FALSE
-save.peaks = FALSE
+save.power = TRUE
+source.type = 1
 #
 
-data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
-syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
+if(source.type == 0){ # SYSCALL
+  data.sources <- list.files(base.folder,pattern = "syscall_.*\\.txt",full.names = F)
+  syscall <- sub("syscall_", "",sub("\\.txt$","",data.sources))
+}else if(source.type==1){ # APPLICATIONS
+  data.sources <- list.files(base.folder,pattern = "current_.*\\.txt",full.names = F)
+  syscall <- sub("current_", "",sub("\\.txt$","",data.sources))
+}
 
 #data.sources <- list.files(base.folder,pattern = "apk_.*\\.txt",full.names = F)
 #syscall <- sub("apk_", "",sub("\\.txt$","",data.sources))
 
-if(save.peaks){
-  out.filename = paste0(base.folder,"power_density_peaks_values.txt")
-  file.create(file = out.filename)
-}
-
-dp = list()
+dp <- list()
 for(i in 1:length(data.sources)){
+  noise = -1
   data <- read.delim2(paste0(base.folder,data.sources[i]), header = FALSE, skip = 7)
   names(data)="I"
   
   ## compute the power
   data$P <- with(data, I*voltage )
   
+  # custom noise for webimage_2, automatic detection is insufficient
+  if(source.type==1 && i==6)
+    noise=50
+  
   ## extract the power
   adj = 1.5
   #print(syscall[[i]])
   for(j in 1:16){
-    dp[[i]] <- extract.power(data, adjust = adj, marker.tolerance = 0.02, intermediate = FALSE)
+    dp[[i]] <- extract.power(data, adjust = adj, marker.tolerance = 0.02, intermediate = FALSE, noise.force = noise)
     dp[[i]]$name <- syscall[[i]]
     dp[[i]]$adjust <- adj
+    # check output parameters
     if(is.null(dp[[i]]$work) || length(dp[[i]]$work$length) != 30){
       adj <- adj + 0.5
       next
@@ -45,34 +50,13 @@ for(i in 1:length(data.sources)){
   if(is.null(dp[[i]]$work) || length(dp[[i]]$work$length) != 30){
     warning("Error in processing ", syscall[[i]], "(). Please review the data manually.
             This can be caused by an incorrent energy level for the marker or a wrong noise length")
-    next
-  }
-  
-  if(save.density){
-    p <- ggplot(data,aes(x=P))
-    p <- p + geom_line(stat="density",adjust=2) + expand_limits(y=0)
-    p <- p + geom_line(data=dens.gap,aes(x=x,y=y),color="red")
-    p <- p + geom_point(data=data.frame(x=dens$x,y=dens$y)[dens$peaks,],aes(x=x,y=y),col="red",size=5, pch=1)
-    #p <- p + annotate("rect", xmin=min(dens$x), xmax=gap.min, ymin=0, ymax=max(dens$y), alpha=.1,
-    #                  fill="blue")
-    #p <- p + annotate("rect", xmax=max(dens$x), xmin=gap.max, ymin=0, ymax=max(dens$y), alpha=.1,
-    #                  fill="green")
-    p <- p + annotate("segment", x=discr.power,xend=discr.power,y=0,yend=max(dens$y), color="red",linewidth=2)
-    
-    p <- p + xlab("Power [w]")
-    p <- p + ggtitle(syscall[i])
-    
-    ggsave(paste0(base.folder,"plot/density_",syscall[i],".png"), plot = p)
+    #next
   }
   
   if(save.power){
     rp <- ggplot(data,aes(x=seq_along(data$P),y=P))
     #rp <- rp + geom_line(size=.5)
     rp <- rp + geom_point(size=.5)
-    #for(j in 1:length(dens$peaks)){
-    #  rp <- rp + annotate("segment", x=0,xend=length(data$P),y=dens$x[dens$peaks[j]],yend=dens$x[dens$peaks[j]], color="green",linewidth=2)
-    #}
-    #rp <- rp + annotate("segment", x=0,xend=length(data$P),y=discr.power,yend=discr.power, color="red",linewidth=2)
     rp <- rp + xlab("Sample")
     rp <- rp + ggtitle(syscall[i])
     for(j in 1:length(dp[[i]]$markers$start)){
