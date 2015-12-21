@@ -1,3 +1,0 @@
- [1] "clock_gettime" "epoll_pwait"   "futex"         "gettimeofday" 
- [5] "getuid32"      "ioctl"         "mmap2"         "mprotect"     
- [9] "prctl"         "read"          "write"        

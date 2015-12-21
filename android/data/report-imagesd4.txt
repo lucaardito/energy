@@ -1,0 +1,93 @@
+Processing strace.27125
+epoll_pwait	3	.528702
+clock_gettime	4	.000100
+getuid32	2	.000041
+read	1	.000023
+System call total time: 0.528866
+Begin: 15:49:32.678145
+End:   15:49:48.303622
+
+Processing strace.27130
+System call total time: 
+Begin: 15:49:32.677902
+End:   15:49:48.267665
+
+Processing strace.27131
+System call total time: 
+Begin: 15:49:32.677647
+End:   15:49:48.267485
+
+Processing strace.27132
+System call total time: 
+Begin: 15:49:32.677396
+End:   15:49:48.267307
+
+Processing strace.27134
+System call total time: 
+Begin: 15:49:32.677141
+End:   15:49:48.267128
+
+Processing strace.27135
+System call total time: 
+Begin: 15:49:32.676902
+End:   15:49:48.265937
+
+Processing strace.27136
+ioctl	1	.467845
+futex	4	.047646
+write	2	.000189
+prctl	2	.000160
+getpriority	1	.000131
+clock_gettime	1	.000131
+System call total time: 0.516102
+Begin: 15:49:32.676261
+End:   15:49:48.266954
+
+Processing strace.27137
+System call total time: 
+Begin: 15:49:32.676697
+End:   15:49:48.266778
+
+Processing strace.27146
+ioctl	1	.466999
+write	3	.019535
+futex	3	.002561
+prctl	2	.000691
+getpriority	1	.000128
+clock_gettime	1	.000128
+System call total time: 0.490042
+Begin: 15:49:32.676491
+End:   15:49:48.266598
+
+Processing strace.27150
+System call total time: 
+Begin: 15:49:32.675987
+End:   15:49:48.266420
+
+Processing strace.27152
+System call total time: 
+Begin: 15:49:32.675687
+End:   15:49:48.266217
+
+*** TOTAL ***
+* Frequency *
+futex	7
+clock_gettime	6
+write	5
+prctl	4
+epoll_pwait	3
+ioctl	2
+getuid32	2
+getpriority	2
+read	1
+
+*  Length  *
+ioctl	0.466999	0.467845	.934844
+getpriority	0.000128	0.000131	.000259
+write	0.000028	0.015803	.019724
+read	0.000023	0.000023	.000023
+prctl	0.000021	0.000548	.000851
+futex	0.000021	0.047362	.050207
+epoll_pwait	0.000021	0.528658	.528702
+clock_gettime	0.000021	0.000131	.000359
+getuid32	0.000020	0.000021	.000041

@@ -1,0 +1,200 @@
+Processing strace.24588
+epoll_pwait	7	.499326
+futex	1	.015005
+clock_gettime	24	.001206
+recvfrom	4	.000253
+getuid32	4	.000182
+read	3	.000142
+write	4	.000118
+ioctl	1	.000046
+System call total time: 0.516278
+Begin: 15:37:44.168249
+End:   15:37:59.823986
+
+Processing strace.24593
+System call total time: 
+Begin: 15:37:44.168477
+End:   15:37:59.791082
+
+Processing strace.24594
+System call total time: 
+Begin: 15:37:44.167816
+End:   15:37:59.790783
+
+Processing strace.24595
+System call total time: 
+Begin: 15:37:44.166718
+End:   15:37:59.790482
+
+Processing strace.24596
+System call total time: 
+Begin: 15:37:44.166149
+End:   15:37:59.790181
+
+Processing strace.24597
+System call total time: 
+Begin: 15:37:44.165691
+End:   15:37:59.789864
+
+Processing strace.24598
+ioctl	1	.534226
+clock_gettime	1	.003050
+write	2	.000120
+futex	2	.000112
+prctl	2	.000107
+getpriority	1	.000092
+System call total time: 0.537707
+Begin: 15:37:44.162434
+End:   15:37:59.789562
+
+Processing strace.24603
+ioctl	2	.489074
+mmap2	1	.001980
+getpriority	2	.001875
+clone	1	.000849
+futex	4	.000687
+write	5	.000469
+prctl	4	.000321
+mprotect	1	.000172
+clock_gettime	1	.000086
+System call total time: 0.495513
+Begin: 15:37:44.161213
+End:   15:37:59.789254
+
+Processing strace.24606
+recvfrom	74	.015503
+getuid32	1	.001116
+clone	1	.000643
+futex	2	.000240
+mmap2	2	.000230
+clock_gettime	2	.000158
+write	1	.000090
+openat	1	.000065
+ioctl	2	.000060
+mprotect	1	.000034
+close	1	.000033
+System call total time: 0.018172
+Begin: 15:37:44.165201
+End:   15:37:59.823657
+
+Processing strace.24608
+epoll_pwait	2	.076258
+ioctl	15	.002695
+mmap2	5	.001517
+clock_gettime	6	.000266
+read	2	.000121
+close	4	.000116
+dup	3	.000102
+futex	2	.000090
+madvise	1	.000058
+System call total time: 0.081223
+Begin: 15:37:44.160352
+End:   15:37:59.788905
+
+Processing strace.24610
+futex	2	.104866
+System call total time: 0.104866
+Begin: 15:37:44.159738
+End:   15:37:59.785777
+
+Processing strace.24611
+restart_syscall	1	3.894261
+openat	1	.003002
+madvise	3	.000643
+munmap	2	.000498
+write	1	.000446
+fchmod	1	.000187
+futex	1	.000176
+sigaltstack	1	.000148
+close	1	.000146
+rt_sigprocmask	1	.000134
+set_tid_address	1	.000130
+System call total time: 3.89978
+Begin: 15:37:44.159327
+End:   15:37:48.090680
+
+Processing strace.24629
+futex	2	.000253
+prctl	3	.000251
+mprotect	3	.000218
+mmap2	1	.000172
+clock_gettime	1	.000130
+madvise	1	.000122
+write	1	.000118
+setpriority	1	.000117
+getpriority	1	.000117
+sigaltstack	1	.000030
+System call total time: 0.001528
+Begin: 15:37:44.213684
+End:   15:37:59.785974
+
+Processing strace.24640
+prctl	6	.000616
+mprotect	3	.000510
+mmap2	2	.000202
+write	3	.000179
+madvise	1	.000140
+sigaltstack	1	.000125
+setpriority	1	.000125
+ioctl	3	.000068
+openat	1	.000035
+close	1	.000024
+futex	1	.000022
+getuid32	1	.000020
+getpriority	1	.000019
+System call total time: 0.002085
+Begin: 15:37:44.697019
+End:   15:37:59.785447
+
+*** TOTAL ***
+* Frequency *
+recvfrom	78
+clock_gettime	35
+ioctl	24
+write	17
+futex	17
+prctl	15
+mmap2	11
+epoll_pwait	9
+mprotect	8
+close	7
+madvise	6
+getuid32	6
+read	5
+getpriority	5
+sigaltstack	3
+openat	3
+dup	3
+setpriority	2
+munmap	2
+clone	2
+set_tid_address	1
+rt_sigprocmask	1
+restart_syscall	1
+fchmod	1
+
+*  Length  *
+restart_syscall	3.894261	3.894261	3.894261
+clone	0.000643	0.000849	.001492
+munmap	0.000238	0.000260	.000498
+fchmod	0.000187	0.000187	.000187
+rt_sigprocmask	0.000134	0.000134	.000134
+set_tid_address	0.000130	0.000130	.000130
+setpriority	0.000117	0.000125	.000242
+mmap2	0.000064	0.001980	.004101
+madvise	0.000058	0.000282	.000963
+openat	0.000035	0.003002	.003102
+mprotect	0.000034	0.000234	.000934
+recvfrom	0.000033	0.002554	.015756
+sigaltstack	0.000030	0.000148	.000303
+read	0.000025	0.000091	.000263
+dup	0.000025	0.000040	.000102
+write	0.000024	0.000446	.001540
+futex	0.000022	0.104748	.121451
+epoll_pwait	0.000022	0.440567	.575584
+close	0.000022	0.000146	.000319
+prctl	0.000021	0.000261	.001295
+clock_gettime	0.000021	0.003050	.004896
+ioctl	0.000020	0.534226	1.026169
+getuid32	0.000020	0.001116	.001318
+getpriority	0.000019	0.001830	.002103

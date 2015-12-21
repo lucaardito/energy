@@ -11,6 +11,7 @@ if [[ -z $1 ]]; then
 fi
 
 INPUT="./data/report-$1*"
+expected_runs=10
 
 declare -A mincallf
 declare -A maxcallf
@@ -51,15 +52,20 @@ do
   process_file "$f"
 done
 
+echo "<table>"
 for key in "${!cntcall[@]}"
 do
   echo -ne "<tr>"
 
   echo -ne "\t<td>$key</td>"
+  if [ ${cntcall[$key]} -lt $expected_runs ]
+  then
+    mincallf[$key]=0
+  fi
   echo -ne "\t<td>${mincallf[$key]}</td>"
   echo -ne "\t<td>${maxcallf[$key]}</td>"
   totcallf=${avgcallf[$key]}
-  avgcallf[$key]=$(bc -l <<< "scale=2;${avgcallf[$key]} / ${cntcall[$key]}")
+  avgcallf[$key]=$(bc -l <<< "scale=2;${avgcallf[$key]} / $expected_runs")
   x=$(echo ${avgcallf[$key]} | sed -e 's/^\./0./')
   echo -ne "\t<td>$x</td>"
 
@@ -72,3 +78,4 @@ do
 
   echo -e "\t</tr>"
 done | LC_ALL="C" sort -rg -k10
+echo "</table>"
