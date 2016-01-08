@@ -4,8 +4,8 @@ library("ggplot2")
 base.folder = "./data/"
 #noise = 25
 voltage = 5.03
-save.power = TRUE
-source.type = 1
+save.power = FALSE
+source.type = 0
 #
 
 if(source.type == 0){ # SYSCALL
@@ -26,7 +26,7 @@ for(i in 1:length(data.sources)){
   names(data)="I"
   
   ## compute the power
-  data$P <- with(data, I*voltage )
+  data$P <- with(data, I )
   
   # custom noise for webimage_2, automatic detection is insufficient
   if(source.type==1 && i==6)
@@ -58,16 +58,17 @@ for(i in 1:length(data.sources)){
     #rp <- rp + geom_line(size=.5)
     rp <- rp + geom_point(size=.5)
     rp <- rp + xlab("Sample")
+    rp <- rp + ylab("I (A)")
     rp <- rp + ggtitle(syscall[i])
-    for(j in 1:length(dp[[i]]$markers$start)){
-      rp <- rp + annotate("rect", xmin=dp[[i]]$markers$start[j], xmax=dp[[i]]$markers$end[j],
-                          ymin=0, ymax=max(data$P), alpha=.1, fill="red")
-    }
-    for(j in 1:length(dp[[i]]$work$start)){
-      rp <- rp + annotate("rect", xmin=dp[[i]]$work$start[j], xmax=dp[[i]]$work$end[j],
-                          ymin=0, ymax=max(data$P), alpha=.1, fill="green")
-    }
+    #for(j in 1:length(dp[[i]]$markers$start)){
+    #  rp <- rp + annotate("rect", xmin=dp[[i]]$markers$start[j], xmax=dp[[i]]$markers$end[j],
+    #                      ymin=0, ymax=max(data$P), alpha=.1, fill="red")
+    #}
+    #for(j in 1:length(dp[[i]]$work$start)){
+    #  rp <- rp + annotate("rect", xmin=dp[[i]]$work$start[j], xmax=dp[[i]]$work$end[j],
+    #                      ymin=0, ymax=max(data$P), alpha=.1, fill="green")
+    #}
   
-    ggsave(paste0(base.folder,"plot/power_",syscall[i],".png"), width = 25, plot = rp, limitsize = FALSE)
+    ggsave(paste0(base.folder,"plot/current_",syscall[i],".png"), width = 15, plot = rp, limitsize = FALSE)
   }
 }

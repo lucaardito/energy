@@ -294,10 +294,10 @@ First we need to understand at which level (tag) are located the markers.
         t= median(diff(start)),
 #        tv = sd(diff(start))
 #        tv = 2*diff(quantile(diff(start),c(.25,.75)))
-        tv = median(diff(start))*.1
+        tv = median(diff(start))*.02
         )
   mark.sum$score = dim(mark.sum)[1]*(rank(abs(mark.sum$n-N))-1)+rank(mark.sum$tv)-1
-  marker = subset(mark.sum,score==min(score))
+  marker = subset(mark.sum,tag==max(tag.levels))
   marker.tag = marker$tag
 
   kable(mark.sum)

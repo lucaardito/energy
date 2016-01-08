@@ -22,7 +22,7 @@ peaks <- function(series, span = 3, do.pad = TRUE) {
 outliers <- function(x,iqm=4,index=F,logic=F){
   qs = quantile(x,c(.25,.5,.75))
   iqr = abs(qs[1]-qs[3])
-  
+
   l = x < qs[2]-iqm*iqr | x > qs[2]+iqm*iqr
   if(logic){
     return( l )
@@ -44,7 +44,7 @@ outliers <- function(x,iqm=4,index=F,logic=F){
 #       |      |      |       |
 #       |      |      |       |
 # -------      --------       -....
-#  SLEEP: WAIT :SLEEP : WORK  :   
+#  SLEEP: WAIT :SLEEP : WORK  :
 #
 #  SLEEP : is a period of sleep for a given (marker.length) time
 #  WAIT  : is a period of busy waiting for a given (marker.length) time
@@ -64,8 +64,8 @@ outliers <- function(x,iqm=4,index=F,logic=F){
 # ------
 # A list containing the following elements:
 #
-# - work: a dataset, rows represent the work periods, for each period we report 
-#   start, end, lenght and P
+# - work: a dataset, rows represent the work periods, for each period we report
+#   start, end, length and P
 #
 # - baseline : the baseline power considered the idle level
 #
@@ -80,43 +80,43 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   # ----------------
   ## Distribution density of values
   dens <- density(data$P,adjust=adjust)
-  
+
   ## Find peaks in the distribution (the most common power levels)
   dens$peaks <- which(peaks(dens$y) & dens$y>mean(dens$y))
-  
+
   ## Identify thresholds between peaks as the points of minimum density between peaks
   thresholds = dens$x[apply(cbind(head(dens$peaks,-1),tail(dens$peaks,-1)),1,function(x){
     ss = dens$y[x[1]:x[2]]
     x[1] + which(ss == min(ss))
   })]
-  
+
   baseline=dens$x[dens$peaks[1]]
   result$baseline = dens$x[dens$peaks[1]]
-  
+
   #if(intermediate){
     result$peaks = dens$x[dens$peaks]
     result$thresholds = thresholds
   #}
-  
+
   # Tagging
   #---------
   ## tag levels are those corresponding to peaks plus a special NOISE tag
   tag.levels <- paste0("L",seq(dens$peaks))
   data$tag <- factor(tag.levels[findInterval(data$P,c(0,thresholds))],c(tag.levels,"NOISE"))
-  
+
   ## assign unique id to runs
   data$runid <- cumsum(c(1,abs(diff(as.numeric(data$tag))!=0) ) )
-  
+
   ## build run summary table
   id.tab = subset(melt(with(data,table(tag,runid)),id.vars="runid",value.name="length"),length!=0)
   id.tab$start=cumsum(c(1,head(id.tab$length,-1)))
   id.tab$end=cumsum(id.tab$length)
-  
+
   # Remove noise
   #--------------
   dens.noise = density(id.tab$length)
   dens.noise$peaks <- which(peaks(dens.noise$y) & dens.noise$y>mean(dens.noise$y))
-  
+
   ## Identify thresholds between peaks as the points of minimum density between peaks
   thresholds = dens.noise$x[apply(cbind(head(dens.noise$peaks,-1),tail(dens.noise$peaks,-1)),1,function(x){
     ss = dens$y[x[1]:x[2]]
@@ -129,7 +129,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   result$noise = noise
   ## identify noise runs by means of a run length threshold
   id.tab$tag[id.tab$length<noise] = "NOISE"
-  
+
   ## Remove noise
   if(id.tab$tag[1]=="NOISE"){
     id.tab$tag[1] = id.tab$tag[min(id.tab$runid[id.tab$tag!="NOISE"])]
@@ -140,8 +140,8 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
     id.tab$tag[id.noise] = id.tab$tag[id.noise-1]
     id.noise = which(id.tab$tag=="NOISE")
   }
-  
-  ## Merge consecutive runs havin the same tag
+
+  ## Merge consecutive runs having the same tag
   ## a) recompute the run id
   id.tab$runid = cumsum(c(1,abs(diff(as.numeric(id.tab$tag))!=0) ) )
   ## b) merge all the fragments with the same runid
@@ -153,7 +153,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
   if(intermediate){
     result$id.tab = id.tab
   }
-  
+
   # Identify markers
   #------------------
   l.min = marker.length*(1-marker.tolerance)
@@ -174,9 +174,9 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
     return(list())
   }
   marker.tag = marker$tag
-  
+
   potential.markers = subset(id.tab,tag==marker$tag)
-  
+
   selected.markers = c()
   initial.markers = subset(markers,tag==marker$tag)
   #print(initial.markers)
@@ -191,7 +191,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
       t.expected = current.marker$start + marker$t
       t.lower = t.expected - marker$tv
       t.upper = t.expected + marker$tv
-      
+
       successor = subset(potential.markers,start>=t.lower & start<=t.upper & length>marker.length/2)
       if(dim(successor)[1]>0){
         if(dim(successor)[1]>1){
@@ -202,7 +202,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
           new.markers <- rbind(new.markers,successor)
         }
       }
-      
+
       t.expected = current.marker$start - marker$t
       t.lower = t.expected - marker$tv
       t.upper = t.expected + marker$tv
@@ -220,7 +220,7 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
     initial.markers=new.markers
     if(!is.null(new.markers)){
       #print(new.markers$runid)
-      
+
       new.markers$Gen = generation
       selected.markers=rbind(selected.markers,new.markers)
     }
@@ -231,24 +231,37 @@ extract.power <- function(data, adjust=1.5, N=30, marker.length=5000, marker.tol
     return(list())
   }
   selected.markers <- selected.markers[order(selected.markers$runid),]
-  
+
   #if(intermediate){
     result$markers = selected.markers
   #}
-  
+
+  #if(intermediate){
+    markers.plot <- selected.markers
+    markers.plot$Gen = factor(markers.plot$Gen)
+
+    p <- ggplot(id.tab,aes(x=start,y=tag,color=tag))
+    p <- p+geom_segment(aes(xend=end,yend=tag))
+    p <- p+geom_rect(data=markers.plot,aes(xmin=start,xmax=end,ymin=0.5,ymax=as.numeric(tag)+0.5,fill=Gen),alpha=0.2,color=NA)
+    p <- p + xlab("Sample")
+    p <- p + ylab("Tag")
+    result$plot <- p
+  #}
+
   # Identify work
   #---------------
   work.run = data.frame(
     start = head(selected.markers,-1)$start+2*marker.length,
+    #start = head(selected.markers,-1)$end+marker.length,
     end = tail(selected.markers,-1)$start-marker.length
   )
   work.run <- within(work.run,
                      length <- end-start+1
   )
   #work.run = ddply(work.run,.(start),transform,P = mean(data[start:end,]$P)-result$baseline)
-  work.run$P <- apply(work.run,1,function(x) 
+  work.run$P <- apply(work.run,1,function(x)
                       mean(data[x["start"]:x["end"],]$P)-baseline)
   result$work = work.run
-  
+
   return( result )
 }

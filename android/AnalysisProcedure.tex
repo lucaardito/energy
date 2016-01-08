@@ -206,7 +206,7 @@ identify the typical working levels.
 \includegraphics{AnalysisProcedure_files/figure-latex/density-1.pdf}
 
 The baseline, representing the idle level of consumption correspond to
-the first peak in the density plot: 0.6256976 W.
+the first peak in the density plot: 1.1566972 W.
 
 \subsection{Tagging}\label{tagging}
 
@@ -274,7 +274,7 @@ Generally there are series of a few points that have a different value.
 
 \includegraphics{AnalysisProcedure_files/figure-latex/noise_density-1.pdf}
 
-A possible suggested threshold for noise is: 89.2087986
+A possible suggested threshold for noise is: 185.7085706
 
 In most cases the nois is a small variation around the expected value.
 Though, in some cases the noise is so large to cause a different tag to
@@ -337,16 +337,16 @@ Then, we can remove the noise using some strategy:
 runid & tag & length & start & end\tabularnewline
 \midrule
 \endhead
-1 & L1 & 22947 & 1 & 22947\tabularnewline
-2 & L3 & 4922 & 22948 & 27869\tabularnewline
-3 & L2 & 2315 & 27870 & 30184\tabularnewline
-4 & L1 & 2742 & 30185 & 32926\tabularnewline
-5 & L3 & 11874 & 32927 & 44800\tabularnewline
-6 & L2 & 3423 & 44801 & 48223\tabularnewline
-7 & L1 & 1646 & 48224 & 49869\tabularnewline
-8 & L3 & 4935 & 49870 & 54804\tabularnewline
-9 & L2 & 2588 & 54805 & 57392\tabularnewline
-10 & L1 & 2474 & 57393 & 59866\tabularnewline
+1 & L1 & 7305 & 1 & 7305\tabularnewline
+2 & L2 & 1070 & 7306 & 8375\tabularnewline
+3 & L1 & 41624 & 8376 & 49999\tabularnewline
+4 & L3 & 4910 & 50000 & 54909\tabularnewline
+5 & L2 & 2355 & 54910 & 57264\tabularnewline
+6 & L1 & 2725 & 57265 & 59989\tabularnewline
+7 & L3 & 14171 & 59990 & 74160\tabularnewline
+8 & L1 & 2872 & 74161 & 77032\tabularnewline
+9 & L3 & 6448 & 77033 & 83480\tabularnewline
+10 & L1 & 3559 & 83481 & 87039\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -392,10 +392,10 @@ For each distinct level/run:
         \DataTypeTok{t=} \KeywordTok{median}\NormalTok{(}\KeywordTok{diff}\NormalTok{(start)),}
 \CommentTok{#        tv = sd(diff(start))}
 \CommentTok{#        tv = 2*diff(quantile(diff(start),c(.25,.75)))}
-        \DataTypeTok{tv =} \KeywordTok{median}\NormalTok{(}\KeywordTok{diff}\NormalTok{(start))*.}\DecValTok{1}
+        \DataTypeTok{tv =} \KeywordTok{median}\NormalTok{(}\KeywordTok{diff}\NormalTok{(start))*.}\DecValTok{02}
         \NormalTok{)}
   \NormalTok{mark.sum$score =}\StringTok{ }\KeywordTok{dim}\NormalTok{(mark.sum)[}\DecValTok{1}\NormalTok{]*(}\KeywordTok{rank}\NormalTok{(}\KeywordTok{abs}\NormalTok{(mark.sum$n-N))-}\DecValTok{1}\NormalTok{)+}\KeywordTok{rank}\NormalTok{(mark.sum$tv)-}\DecValTok{1}
-  \NormalTok{marker =}\StringTok{ }\KeywordTok{subset}\NormalTok{(mark.sum,score==}\KeywordTok{min}\NormalTok{(score))}
+  \NormalTok{marker =}\StringTok{ }\KeywordTok{subset}\NormalTok{(mark.sum,tag==}\KeywordTok{max}\NormalTok{(tag.levels))}
   \NormalTok{marker.tag =}\StringTok{ }\NormalTok{marker$tag}
 
   \KeywordTok{kable}\NormalTok{(mark.sum)}
@@ -407,8 +407,7 @@ For each distinct level/run:
 tag & n & length & t & tv & score\tabularnewline
 \midrule
 \endhead
-L2 & 2 & 5072.5 & 90771 & 9077.1 & 3\tabularnewline
-L3 & 24 & 4938.5 & 26977 & 2697.7 & 0\tabularnewline
+L3 & 6 & 5037.5 & 80680 & 1613.6 & 0\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -431,8 +430,7 @@ L3 & 24 & 4938.5 & 26977 & 2697.7 & 0\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]   2   8  14  20  26  34  40  46  52  57  63  69  81  87  93  99 105
-## [18] 121 131 141 146 152 164 170
+## [1]   4  13  17  51 130 145
 \end{verbatim}
 
 \begin{Shaded}
@@ -486,9 +484,11 @@ L3 & 24 & 4938.5 & 26977 & 2697.7 & 0\tabularnewline
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]   8  14   2  20  26  34  40  46  52  57  63  69  75  87  93  81  99
-## [18] 105 111 126 116 137 146 152 141 158 170 164
-## [1] 131 121
+## [1]  17  27  31   4  65  35 145 114 130
+## [1]  40  13  45  80  51  22 101
+## [1] 57 61 95  9 85
+## [1]  70  75 110
+## [1]  90 124
 \end{verbatim}
 
 \begin{Shaded}
@@ -500,44 +500,40 @@ L3 & 24 & 4938.5 & 26977 & 2697.7 & 0\tabularnewline
 
 \includegraphics{AnalysisProcedure_files/figure-latex/runs_with_markers-1.pdf}
 
-The procedure identified 30 markers. The average length of markers is
-5202.3666667, median: 4942, sd: 594.3077389.
+The procedure identified 26 markers. The average length of markers is
+5873.2692308, median: 5735, sd: 757.292364.
 
 \begin{longtable}[c]{@{}lrlrrrl@{}}
 \toprule
 & runid & tag & length & start & end & Gen\tabularnewline
 \midrule
 \endhead
-2 & 2 & L3 & 4922 & 22948 & 27869 & 1\tabularnewline
-8 & 8 & L3 & 4935 & 49870 & 54804 & 1\tabularnewline
-14 & 14 & L3 & 4946 & 76886 & 81831 & 1\tabularnewline
-20 & 20 & L3 & 4933 & 103900 & 108832 & 1\tabularnewline
-26 & 26 & L3 & 4937 & 130909 & 135845 & 1\tabularnewline
-34 & 34 & L3 & 4943 & 157859 & 162801 & 1\tabularnewline
-40 & 40 & L3 & 4938 & 184709 & 189646 & 1\tabularnewline
-46 & 46 & L3 & 4939 & 211727 & 216665 & 1\tabularnewline
-52 & 52 & L3 & 4938 & 238747 & 243684 & 1\tabularnewline
-57 & 57 & L3 & 5096 & 265785 & 270880 & 1\tabularnewline
-63 & 63 & L3 & 4937 & 292589 & 297525 & 1\tabularnewline
-69 & 69 & L3 & 4942 & 319547 & 324488 & 1\tabularnewline
-75 & 75 & L3 & 5392 & 346489 & 351880 & 1\tabularnewline
-811 & 81 & L3 & 4992 & 373369 & 378360 & 1\tabularnewline
-87 & 87 & L3 & 4942 & 400259 & 405200 & 1\tabularnewline
-93 & 93 & L3 & 5003 & 427060 & 432062 & 1\tabularnewline
-99 & 99 & L3 & 4940 & 454008 & 458947 & 1\tabularnewline
-105 & 105 & L3 & 4933 & 480985 & 485917 & 1\tabularnewline
-111 & 111 & L3 & 5862 & 507947 & 513808 & 1\tabularnewline
-116 & 116 & L3 & 6348 & 534817 & 541164 & 1\tabularnewline
-121 & 121 & L3 & 4942 & 561628 & 566569 & 2\tabularnewline
-126 & 126 & L3 & 7098 & 588477 & 595574 & 1\tabularnewline
-131 & 131 & L3 & 4936 & 615369 & 620304 & 2\tabularnewline
-137 & 137 & L3 & 7008 & 642299 & 649306 & 1\tabularnewline
-1411 & 141 & L3 & 4935 & 669240 & 674174 & 1\tabularnewline
-146 & 146 & L3 & 5053 & 696128 & 701180 & 1\tabularnewline
-152 & 152 & L3 & 4944 & 723087 & 728030 & 1\tabularnewline
-158 & 158 & L3 & 5481 & 750060 & 755540 & 1\tabularnewline
-164 & 164 & L3 & 4937 & 777058 & 781994 & 1\tabularnewline
-170 & 170 & L3 & 4919 & 803906 & 808824 & 1\tabularnewline
+4 & 4 & L3 & 4910 & 50000 & 54909 & 1\tabularnewline
+9 & 9 & L3 & 6448 & 77033 & 83480 & 3\tabularnewline
+13 & 13 & L3 & 5037 & 104139 & 109175 & 2\tabularnewline
+17 & 17 & L3 & 5083 & 131211 & 136293 & 1\tabularnewline
+22 & 22 & L3 & 5798 & 158363 & 164160 & 2\tabularnewline
+27 & 27 & L3 & 5738 & 185470 & 191207 & 1\tabularnewline
+31 & 31 & L3 & 6414 & 212542 & 218955 & 1\tabularnewline
+35 & 35 & L3 & 5398 & 239762 & 245159 & 1\tabularnewline
+40 & 40 & L3 & 6530 & 266903 & 273432 & 2\tabularnewline
+45 & 45 & L3 & 5188 & 294112 & 299299 & 2\tabularnewline
+51 & 51 & L3 & 4953 & 321150 & 326102 & 2\tabularnewline
+57 & 57 & L3 & 7268 & 348290 & 355557 & 3\tabularnewline
+61 & 61 & L3 & 6281 & 375390 & 381670 & 3\tabularnewline
+65 & 65 & L3 & 5446 & 402502 & 407947 & 1\tabularnewline
+70 & 70 & L3 & 6512 & 429432 & 435943 & 4\tabularnewline
+75 & 75 & L3 & 7278 & 456313 & 463590 & 4\tabularnewline
+80 & 80 & L3 & 5218 & 483249 & 488466 & 2\tabularnewline
+85 & 85 & L3 & 6392 & 510141 & 516532 & 3\tabularnewline
+90 & 90 & L3 & 6583 & 536983 & 543565 & 5\tabularnewline
+95 & 95 & L3 & 5601 & 564060 & 569660 & 3\tabularnewline
+101 & 101 & L3 & 5732 & 590792 & 596523 & 2\tabularnewline
+110 & 110 & L3 & 7074 & 644492 & 651565 & 4\tabularnewline
+114 & 114 & L3 & 5244 & 671302 & 676545 & 1\tabularnewline
+124 & 124 & L3 & 6455 & 725003 & 731457 & 5\tabularnewline
+130 & 130 & L3 & 5086 & 751932 & 757017 & 1\tabularnewline
+145 & 145 & L3 & 5038 & 832612 & 837649 & 1\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -572,12 +568,12 @@ Possible options:
 
 \begin{verbatim}
 ##      start             end             length     
-##  Min.   : 32869   Min.   : 44870   Min.   : 9795  
-##  1st Qu.:221665   1st Qu.:233747   1st Qu.:11860  
-##  Median :410200   Median :422060   Median :11954  
-##  Mean   :410341   Mean   :422059   Mean   :11718  
-##  3rd Qu.:600574   3rd Qu.:610369   3rd Qu.:12030  
-##  Max.   :786994   Max.   :798906   Max.   :12101
+##  Min.   : 59909   Min.   : 72033   Min.   : 9659  
+##  1st Qu.:223955   1st Qu.:234762   1st Qu.:10495  
+##  Median :386670   Median :397502   Median :11310  
+##  Mean   :392128   Mean   :407527   Mean   :15399  
+##  3rd Qu.:548565   3rd Qu.:559060   3rd Qu.:12036  
+##  Max.   :762017   Max.   :827612   Max.   :65595
 \end{verbatim}
 
 \begin{enumerate}
@@ -606,12 +602,12 @@ Possible options:
 
 \begin{verbatim}
 ##      start             end             length     
-##  Min.   : 32948   Min.   : 44870   Min.   :11802  
-##  1st Qu.:221727   1st Qu.:233747   1st Qu.:11881  
-##  Median :410259   Median :422060   Median :11943  
-##  Mean   :410130   Mean   :422059   Mean   :11931  
-##  3rd Qu.:598477   3rd Qu.:610369   3rd Qu.:11978  
-##  Max.   :787058   Max.   :798906   Max.   :12039
+##  Min.   : 60000   Min.   : 72033   Min.   :11733  
+##  1st Qu.:222542   1st Qu.:234762   1st Qu.:11931  
+##  Median :385390   Median :397502   Median :12078  
+##  Mean   :391223   Mean   :407527   Mean   :16305  
+##  3rd Qu.:546983   3rd Qu.:559060   3rd Qu.:12142  
+##  Max.   :761932   Max.   :827612   Max.   :65681
 \end{verbatim}
 
 The second approach consistently gives better and more consistent
